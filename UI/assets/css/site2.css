@@ -1,0 +1,38 @@
+#site-logo img {
+    width: 50px;
+}
+
+#site-name {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+}
+
+#site-name h3 {
+    margin-top: 0px;
+}
+
+#site-header-form {
+    display: flex;
+    align-items: center;
+    height: 95px;
+}
+
+#site-header-form #nav-search {
+    position: relative;
+    display: inline-block;
+}
+
+#site-header-form #nav-search .form-search .input-icon input {
+    width: 200px;
+    height: 40px !important;
+}
+
+#site-header-form #nav-search .form-search .input-icon i {
+    top: 7px;
+}
+
+#newslist-header {
+    color: #8c1515;
+    font-weight: bold
+}

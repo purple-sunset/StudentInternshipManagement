@@ -1,8 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity;
+using System.Diagnostics;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 using Microsoft.AspNet.Identity;
@@ -10,16 +15,33 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
+using SendGrid.Helpers.Mail;
 using StudentInternshipManagement.Models;
 
 namespace StudentInternshipManagement
 {
     public class EmailService : IIdentityMessageService
     {
-        public Task SendAsync(IdentityMessage message)
+        public async Task SendAsync(IdentityMessage message)
         {
-            // Plug in your email service here to send an email.
-            return Task.FromResult(0);
+            await ConfigSmtpasync(message);
+        }
+
+        private async Task ConfigSmtpasync(IdentityMessage message)
+        {
+            MailMessage mail = new MailMessage(ConfigurationManager.AppSettings["mailAccount"], message.Destination);
+            SmtpClient client = new SmtpClient("smtp.gmail.com")
+            {
+                Port = 587,
+                Credentials = new System.Net.NetworkCredential(
+                    ConfigurationManager.AppSettings["mailAccount"],
+                    ConfigurationManager.AppSettings["mailPassword"])
+            };
+            mail.Subject = message.Subject;
+            mail.IsBodyHtml = true;
+            mail.Body = message.Body;
+            await client.SendMailAsync(mail);
+
         }
     }
 

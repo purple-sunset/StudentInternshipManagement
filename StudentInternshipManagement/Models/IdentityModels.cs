@@ -21,7 +21,7 @@ namespace StudentInternshipManagement.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection", throwIfV1Schema: false)
+            : base("StudentInternshipManagement", throwIfV1Schema: false)
         {
         }
 

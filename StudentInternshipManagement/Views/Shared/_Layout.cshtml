@@ -1,54 +1,88 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <title>@ViewBag.Title</title>
 
-	<!--This bundle was moved by the Telerik VS Extensions for compatibility reasons-->
-	@Scripts.Render("~/bundles/jquery")
-	<link href="@Url.Content("~/Content/kendo/2018.1.221/kendo.common.min.css")" rel="stylesheet" type="text/css" />
-	<link href="@Url.Content("~/Content/kendo/2018.1.221/kendo.mobile.all.min.css")" rel="stylesheet" type="text/css" />
-	<link href="@Url.Content("~/Content/kendo/2018.1.221/kendo.default.min.css")" rel="stylesheet" type="text/css" />
-	<script src="@Url.Content("~/Scripts/kendo/2018.1.221/jquery.min.js")"></script>
-	<script src="@Url.Content("~/Scripts/kendo/2018.1.221/jszip.min.js")"></script>
-	<script src="@Url.Content("~/Scripts/kendo/2018.1.221/kendo.all.min.js")"></script>
-	<script src="@Url.Content("~/Scripts/kendo/2018.1.221/kendo.aspnetmvc.min.js")"></script>
-	<script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    @Styles.Render("~/Content/site")
+    @RenderSection("Styles", required:false)
+    
+
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    <div id="navbar" class="navbar navbar-default">
+        <div class="navbar-container" id="navbar-container">
+            <div class="navbar-header pull-left">
+                <a href="/Home/Index" class="navbar-brand">
+                    <div id="site-logo">
+                        <img src="~/Images/placeholder/logo.jpg" />
+                        <div id="site-name">
+                            <h3>Trường Đại học Bách Khoa Hà Nội</h3>
+                            <h4>Trang quản lý thực tập</h4>
+                        </div>
+                    </div>
+
+                </a>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+
+            <div class="navbar-header pull-right" id="site-header-form">
+                <div class="nav-search" id="nav-search">
+                    <form class="form-search">
+                        <span class="input-icon">
+                            <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                            <i class="ace-icon fa fa-search nav-search-icon"></i>
+                        </span>
+                    </form>
+                </div>
+
                 @Html.Partial("_LoginPartial")
             </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+
+        </div><!-- /.navbar-container -->
     </div>
 
-    
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <div class="main-container" id="main-container" >
+        <div class="main-content">
+            @RenderBody()
+        </div><!-- /.main-content -->
+
+        <div class="footer">
+            <div class="footer-inner">
+                <div class="footer-content">
+                    <span class="bigger-120">
+                        <span class="blue bolder">Duc Tran</span>
+                        Hệ thống quản lý thực tập &copy; 2013-2014
+                    </span>
+
+                    &nbsp; &nbsp;
+                    <span class="action-buttons">
+                        <a href="#">
+                            <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ace-icon fa fa-rss-square orange bigger-150"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+        </a>
+    </div><!-- /.main-container -->
+    <script type="text/javascript">
+        if ('ontouchstart' in document.documentElement) document.write("<script src='Scripts/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+    </script>
+    @Scripts.Render("~/bundles/site")
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

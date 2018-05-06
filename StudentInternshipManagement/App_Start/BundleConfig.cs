@@ -26,6 +26,20 @@ namespace StudentInternshipManagement
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            bundles.Add(new StyleBundle("~/Content/site").Include(
+                "~/Content/bootstrap.min.css",
+                "~/Content/font-awesome.min.css",
+                "~/Content/jquery-ui.custom.min.css",
+                "~/Content/fonts.googleapis.com.css",
+                "~/Content/site.css",
+                "~/Content/site2.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/site").Include(
+                "~/Scripts/jquery-{version}.js",
+                "~/Scripts/bootstrap.min.js",
+                "~/Scripts/site-elements.js",
+                "~/Scripts/site.js"));
         }
     }
 }

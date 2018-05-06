@@ -12700,7 +12700,7 @@ tr.detail-row>td {
 }
 
 .light-login {
-    background: url(images/pattern.jpg) #DFE0E2
+    background: url(/Images/login/pattern.jpg) #DFE0E2
 }
 
 .light-login .widget-box {

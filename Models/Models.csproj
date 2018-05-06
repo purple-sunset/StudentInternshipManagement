@@ -47,14 +47,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aspiration.cs" />
     <Compile Include="Company.cs" />
     <Compile Include="DataInitializer.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="Group.cs" />
     <Compile Include="Message.cs" />
+    <Compile Include="News.cs" />
     <Compile Include="Notification.cs" />
+    <Compile Include="Orientation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Registration.cs" />
     <Compile Include="Semester.cs" />
     <Compile Include="Statistic.cs" />
     <Compile Include="Student.cs" />

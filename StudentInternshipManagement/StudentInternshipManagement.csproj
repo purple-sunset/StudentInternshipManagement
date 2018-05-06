@@ -2666,6 +2666,7 @@
     <Content Include="Scripts\site-elements.js" />
     <Content Include="Scripts\site-extra.js" />
     <Content Include="Scripts\site.js" />
+    <Content Include="Scripts\site\login.js" />
     <Content Include="Scripts\spin.js" />
     <Content Include="Scripts\spinbox.min.js" />
     <Content Include="Scripts\tree.min.js" />
@@ -2673,9 +2674,9 @@
     <Content Include="Views\blank.html" />
     <Content Include="Views\error-404.html" />
     <Content Include="Views\error-500.html" />
-    <Content Include="Views\homepage.html" />
+    <None Include="Views\Home\Index.cshtml" />
     <Content Include="Views\index.html" />
-    <Content Include="Views\login.html" />
+    <None Include="Views\Account\Login.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -2686,22 +2687,11 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
-    <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
-    <Content Include="Views\Account\ConfirmEmail.cshtml" />
-    <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
-    <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
+    <Content Include="Views\Shared\_LayoutKendo.cshtml" />
     <Content Include="Views\Account\ForgotPassword.cshtml" />
     <Content Include="Views\Account\ForgotPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\Login.cshtml" />
-    <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Account\ResetPassword.cshtml" />
     <Content Include="Views\Account\ResetPasswordConfirmation.cshtml" />
-    <Content Include="Views\Account\SendCode.cshtml" />
-    <Content Include="Views\Account\VerifyCode.cshtml" />
     <Content Include="Views\Manage\AddPhoneNumber.cshtml" />
     <Content Include="Views\Manage\ChangePassword.cshtml" />
     <Content Include="Views\Manage\Index.cshtml" />
@@ -2913,6 +2903,7 @@
     <Content Include="Views\Shared\EditorTemplates\String.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Time.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\Url.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

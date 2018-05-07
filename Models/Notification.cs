@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    class Notification
+    public class Notification
     {
     }
 }

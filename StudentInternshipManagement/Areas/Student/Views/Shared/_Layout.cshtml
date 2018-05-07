@@ -6,7 +6,7 @@
     <title>@ViewBag.Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
     @Styles.Render("~/Content/site")
-    @RenderSection("Styles", required:false)
+    @RenderSection("Styles", required: false)
 </head>
 <body class="no-skin">
     <div id="navbar" class="navbar navbar-default">
@@ -22,24 +22,12 @@
                     </div>
                 </a>
             </div>
-            <div class="navbar-header pull-right" id="site-header-form">
-                <div class="nav-search" id="nav-search">
-                    <form class="form-search">
-                        <span class="input-icon">
-                            <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-                            <i class="ace-icon fa fa-search nav-search-icon"></i>
-                        </span>
-                    </form>
-                </div>
-                <div class="nav">
-                    @Html.Partial("_LoginPartial")
-                </div>
-                </div>
-
-            </div><!-- /.navbar-container -->
+            @Html.Partial("_Navigation")
+        </div><!-- /.navbar-container -->
     </div>
 
-    <div class="main-container" id="main-container" >
+    <div class="main-container" id="main-container">
+        @Html.Partial("_SideBar")
         <div class="main-content">
             @RenderBody()
         </div><!-- /.main-content -->
@@ -74,6 +62,7 @@
             <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
         </a>
     </div><!-- /.main-container -->
+
     <script type="text/javascript">
         if ('ontouchstart' in document.documentElement) document.write("<script src='Scripts/jquery.mobile.custom.min.js'>" + "<" + "/script>");
     </script>

@@ -1,17 +1,50 @@
-﻿@using Microsoft.AspNet.Identity
+﻿@using System.Security.Claims
+@using Microsoft.AspNet.Identity
 @if (Request.IsAuthenticated)
 {
-    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
-    {
-    @Html.AntiForgeryToken()
 
-    <ul class="nav navbar-nav navbar-right">
-        <li>
-            @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+    var role = ((ClaimsIdentity) User.Identity).Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).FirstOrDefault();
+    
+    <ul class="nav ace-nav">
+        <li class="light-blue dropdown-modal">
+            <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                <img class="nav-user-photo" src="~/Images/avatars/user.jpg" alt="Duc's Photo" />
+                <span class="user-info">
+                    <small>Chào mừng,</small>
+                    @User.Identity.GetUserName()
+                </span>
+
+                <i class="ace-icon fa fa-caret-down"></i>
+            </a>
+
+            <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                <li>
+                    <a href='@($"/{role}/Profile/Index")'>
+                        <i class="ace-icon fa fa-user"></i>
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href='@($"/{role}/Profile/ChangePassword")'>
+                        <i class="ace-icon fa fa-cog"></i>
+                        Đổi mật khẩu
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:document.getElementById('logoutForm').submit()">
+                        <i class="ace-icon fa fa-power-off"></i>
+                        Đăng xuất
+                    </a>
+                </li>
+            </ul>
         </li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
     </ul>
-    }
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new {id = "logoutForm", @class = "navbar-right"}))
+     {
+         @Html.AntiForgeryToken()
+     }
+
 }
 else
 {

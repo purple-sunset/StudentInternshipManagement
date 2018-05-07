@@ -7,13 +7,14 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Subject
+    public class StudentClass
     {
-        public int SubjectId { get; set; }
+        [Key]
+        public int ClassId { get; set; }
 
         [Required]
         [MaxLength(50)]
-        public string SubjectName { get; set; }
+        public string ClassName { get; set; }
 
         public int DepartmentId { get; set; }
 

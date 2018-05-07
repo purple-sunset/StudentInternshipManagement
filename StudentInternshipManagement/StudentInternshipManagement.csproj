@@ -188,7 +188,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Student\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Student\StudentAreaRegistration.cs" />
+    <Compile Include="Areas\Teacher\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Teacher\TeacherAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -692,6 +694,11 @@
     <Content Include="Content\kendo\2018.1.221\fonts\glyphs\WebComponentsIcons.woff" />
     <Content Include="Content\kendo\2018.1.221\images\kendoui.ttf" />
     <Content Include="Content\kendo\2018.1.221\images\kendoui.woff" />
+    <Content Include="Areas\Student\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\Student\Views\Shared\_SideBar.cshtml" />
+    <Content Include="Areas\Student\Views\Shared\_Navigation.cshtml" />
+    <Content Include="Areas\Student\Views\Profile\Index.cshtml" />
+    <Content Include="Areas\Teacher\Views\Profile\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\avatars\avatar.png" />
     <Content Include="Images\avatars\avatar1.png" />
@@ -2910,10 +2917,7 @@
     <Folder Include="Areas\Admin\Controllers\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
-    <Folder Include="Areas\Student\Controllers\" />
     <Folder Include="Areas\Student\Models\" />
-    <Folder Include="Areas\Student\Views\Shared\" />
-    <Folder Include="Areas\Teacher\Controllers\" />
     <Folder Include="Areas\Teacher\Models\" />
     <Folder Include="Areas\Teacher\Views\Shared\" />
   </ItemGroup>

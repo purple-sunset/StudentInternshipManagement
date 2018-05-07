@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    class Statistic
+    public class Statistic
     {
     }
 }

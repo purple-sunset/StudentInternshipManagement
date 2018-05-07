@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Subject
+    public class TrainingMajor
     {
-        public int SubjectId { get; set; }
+        public int TrainingMajorId { get; set; }
 
         [Required]
         [MaxLength(50)]
-        public string SubjectName { get; set; }
+        public string TrainingMajorName { get; set; }
 
-        public int DepartmentId { get; set; }
+        public int SubjectId { get; set; }
 
-        public Department Department { get; set; }
+        public Subject Subject { get; set; }
     }
 }

@@ -23,5 +23,7 @@ namespace Models
         public int SemesterId { get; set; }
 
         public Semester Semester { get; set; }
+
+        public ICollection<Student> Students { get; set; }
     }
 }

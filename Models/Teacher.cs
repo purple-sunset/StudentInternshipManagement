@@ -28,10 +28,15 @@ namespace Models
 
         [Required]
         [MaxLength(15)]
+        [DataType(DataType.PhoneNumber)]
         public string Phone { get; set; }
 
         public int DepartmentId { get; set; }
 
         public Department Department { get; set; }
+
+        public ICollection<Message> Messages { get; set; }
+
+        public ICollection<Group> Groups { get; set; }
     }
 }

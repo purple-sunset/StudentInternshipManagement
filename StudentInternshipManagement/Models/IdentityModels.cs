@@ -4,6 +4,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using Models;
 
 namespace StudentInternshipManagement.Models
 {
@@ -19,6 +20,8 @@ namespace StudentInternshipManagement.Models
         }
 
         public int ProfileId { get; set; }
+
+        public ICollection<Notification> Notifications { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

@@ -28,6 +28,7 @@ namespace Models
 
         [Required]
         [MaxLength(15)]
+        [DataType(DataType.PhoneNumber)]
         public string Phone { get; set; }
 
         [Required]
@@ -37,5 +38,11 @@ namespace Models
         public int ClassId { get; set; }
 
         public StudentClass Class { get; set; }
+
+        public ICollection<LearningClass> LearningClasses { get; set; }
+
+        public ICollection<Message> Messages { get; set; }
+
+        public ICollection<Group> Groups { get; set; }
     }
 }

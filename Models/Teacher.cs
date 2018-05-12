@@ -12,7 +12,7 @@ namespace Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int TeacherId { get; set; }
+        public string TeacherId { get; set; }
 
         [Required]
         [MaxLength(50)]
@@ -30,6 +30,10 @@ namespace Models
         [MaxLength(15)]
         [DataType(DataType.PhoneNumber)]
         public string Phone { get; set; }
+
+        [Required]
+        [MaxLength(50)]
+        public string Avatar { get; set; }
 
         public int DepartmentId { get; set; }
 

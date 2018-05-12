@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "Homepage - Trang quản lý thực tập";
+    string message = ViewBag.Message ?? string.Empty;
 }
 
 <div class="main-content-inner">
@@ -54,4 +55,29 @@
             </div>
         </div>
     </div><!-- /.page-content -->
+    
+    @(Html.Kendo().Dialog()
+          .Name("messageDialog")
+          .Title("Notification")
+          .Content(message)
+          .Width(400)
+          .Modal(true)
+          .Actions(actions =>
+          {
+              actions.Add().Text("OK");
+          })
+          )
 </div>
+
+<script>
+    $(document).ready(
+        function showDialog() {
+            $('#messageDialog').data("kendoDialog").open();
+        }
+
+        @if (string.IsNullOrEmpty(message))
+        {
+            @:showDialog();
+        }
+    );
+</script>

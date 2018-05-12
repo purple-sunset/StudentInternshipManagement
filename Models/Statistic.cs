@@ -8,5 +8,6 @@ namespace Models
 {
     public class Statistic
     {
+        public int StatisticId { get; set; }
     }
 }

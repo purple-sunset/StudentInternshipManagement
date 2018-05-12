@@ -14,6 +14,20 @@ namespace Models
             Database.SetInitializer<WebContext>(new DataInitializer());
         }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<LearningClass>()
+                .HasRequired(c => c.Subject)
+                .WithMany()
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<LearningClass>()
+                .HasRequired(c => c.Semester)
+                .WithMany()
+                .WillCascadeOnDelete(false);
+
+        }
+
         public DbSet<Student> Students { get; set; }
 
         public DbSet<Teacher> Teachers { get; set; }

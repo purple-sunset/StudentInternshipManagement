@@ -182,8 +182,40 @@ namespace StudentInternshipManagement.Controllers
         }
 
         //
+        // GET: /Account/ChangePassword
+        public ActionResult ChangePassword()
+        {
+            return View();
+        }
+
+        //
+        // POST: /Account/ChangePassword
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> ChangePassword(ChangePasswordViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+            var result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword, model.NewPassword);
+            if (result.Succeeded)
+            {
+                var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
+                if (user != null)
+                {
+                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                }
+                return RedirectToAction("/Home/Index");
+            }
+            AddErrors(result);
+            return View(model);
+        }
+
+        //
         // POST: /Account/LogOff
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public ActionResult LogOff()
         {

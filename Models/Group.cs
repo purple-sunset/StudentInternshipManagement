@@ -26,11 +26,11 @@ namespace Models
         public ICollection<Student> Menbers { get; set; }
 
         [ForeignKey("Leader")]
-        public int LeaderId { get; set; }
+        public string LeaderId { get; set; }
 
         public Student Leader { get; set; }
 
-        public int TeacherId { get; set; }
+        public string TeacherId { get; set; }
 
         public Teacher Teacher { get; set; }
     }

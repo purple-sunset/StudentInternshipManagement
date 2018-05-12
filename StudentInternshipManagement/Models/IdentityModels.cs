@@ -18,9 +18,7 @@ namespace StudentInternshipManagement.Models
             // Add custom user claims here
             return userIdentity;
         }
-
-        public int ProfileId { get; set; }
-
+        
         public ICollection<Notification> Notifications { get; set; }
     }
 

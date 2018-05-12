@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Models;
+using StudentInternshipManagement.Models;
 
 namespace StudentInternshipManagement
 {
@@ -18,9 +19,6 @@ namespace StudentInternshipManagement
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            Database.SetInitializer(new DataInitializer());
-            WebContext context = new WebContext();
-            context.Database.Initialize(false);
             log4net.Config.XmlConfigurator.Configure();
         }
     }

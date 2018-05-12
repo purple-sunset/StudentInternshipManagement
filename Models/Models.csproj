@@ -49,6 +49,11 @@
   <ItemGroup>
     <Compile Include="Company.cs" />
     <Compile Include="CompanyTrainingMajor.cs" />
+    <Compile Include="DataContextMigrations\201805121019054_InitialCreate.cs" />
+    <Compile Include="DataContextMigrations\201805121019054_InitialCreate.Designer.cs">
+      <DependentUpon>201805121019054_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataContextMigrations\Configuration.cs" />
     <Compile Include="DataInitializer.cs" />
     <Compile Include="Department.cs" />
     <Compile Include="Enums.cs" />
@@ -71,6 +76,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DataContextMigrations\201805121019054_InitialCreate.resx">
+      <DependentUpon>201805121019054_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

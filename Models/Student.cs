@@ -41,12 +41,13 @@ namespace Models
 
         public int ClassId { get; set; }
 
-        public StudentClass Class { get; set; }
+        public virtual StudentClass Class { get; set; }
 
-        public ICollection<LearningClass> LearningClasses { get; set; }
+        public virtual ICollection<LearningClass> LearningClasses { get; set; }
 
-        public ICollection<Message> Messages { get; set; }
+        public virtual ICollection<Message> Messages { get; set; }
 
-        public ICollection<Group> Groups { get; set; }
+        [InverseProperty("Members")]
+        public virtual ICollection<Group> Groups { get; set; }
     }
 }

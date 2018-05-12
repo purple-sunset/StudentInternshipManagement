@@ -37,16 +37,6 @@
 
         <div class="row">
             <div class="col-xs-12">
-                <!-- PAGE CONTENT BEGINS -->
-                <div class="clearfix">
-                    <div class="pull-left alert alert-success no-margin alert-dismissable">
-                        <button type="button" class="close" data-dismiss="alert">
-                            <i class="ace-icon fa fa-times"></i>
-                        </button>
-
-                    </div>
-                </div>
-
                 <div class="hr dotted"></div>
 
                 <div>
@@ -182,9 +172,11 @@
                                     <div class="profile-info-name"> Lớp </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="about">@Model.Class</span>
+                                        <span class="editable" id="about">@Model.Class.ClassName</span>
                                     </div>
                                 </div>
+
+                                <button class="btn btn-info btn-lg" onclick="location.href='@Url.Action("Edit", "Profile", new {Area="Student"})'">Chỉnh sửa hồ sơ</button>
                             </div>
 
                             <div class="space-20"></div>

@@ -18,12 +18,12 @@ namespace Models
 
         public int SubjectId { get; set; }
 
-        public Subject Subject { get; set; }
+        public virtual Subject Subject { get; set; }
 
         public int SemesterId { get; set; }
 
-        public Semester Semester { get; set; }
+        public virtual Semester Semester { get; set; }
 
-        public ICollection<Student> Students { get; set; }
+        public virtual ICollection<Student> Students { get; set; }
     }
 }

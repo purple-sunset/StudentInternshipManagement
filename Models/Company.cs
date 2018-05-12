@@ -33,6 +33,6 @@ namespace Models
         [DataType(DataType.PhoneNumber)]
         public string Phone { get; set; }
 
-        public ICollection<CompanyTrainingMajor> CompanyTrainingMajors { get; set; }
+        public virtual ICollection<CompanyTrainingMajor> CompanyTrainingMajors { get; set; }
     }
 }

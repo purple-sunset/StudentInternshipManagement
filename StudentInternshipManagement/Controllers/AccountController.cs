@@ -57,6 +57,7 @@ namespace StudentInternshipManagement.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+            //ModelState.Clear();
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
@@ -66,16 +67,18 @@ namespace StudentInternshipManagement.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
+        public ActionResult Login(LoginViewModel model, string returnUrl)
         {
             if (!ModelState.IsValid)
             {
+                var states = ModelState.Values;
                 return View(model);
             }
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            var result = await SignInManager.PasswordSignInAsync(model.Email, model.Password, model.RememberMe, shouldLockout: false);
+            ApplicationUser signedUser = UserManager.FindByEmail(model.Email);
+            var result = SignInManager.PasswordSignIn(signedUser.UserName, model.Password, model.RememberMe, shouldLockout: false);
             switch (result)
             {
                 case SignInStatus.Success:

@@ -34,7 +34,7 @@ namespace StudentInternshipManagement.Areas.Student.Controllers
                 var file = files.FirstOrDefault();
                 file?.SaveAs(@"~/Images/Avatar/" + model.StudentId);
 
-
+                ViewBag.Message = _service.Update(model) ? "Thành công" : "Thất bại";
             }
 
             return RedirectToAction("Index");

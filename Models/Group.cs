@@ -17,13 +17,13 @@ namespace Models
 
         public int TrainingMajorId { get; set; }
 
-        public CompanyTrainingMajor Major { get; set; }
+        public virtual CompanyTrainingMajor Major { get; set; }
 
         public int ClassId { get; set; }
 
-        public LearningClass Class { get; set; }
+        public virtual LearningClass Class { get; set; }
 
-        public ICollection<Student> Menbers { get; set; }
+        public virtual ICollection<Student> Members { get; set; }
 
         [ForeignKey("Leader")]
         public string LeaderId { get; set; }
@@ -32,6 +32,6 @@ namespace Models
 
         public string TeacherId { get; set; }
 
-        public Teacher Teacher { get; set; }
+        public virtual Teacher Teacher { get; set; }
     }
 }

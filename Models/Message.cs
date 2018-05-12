@@ -25,11 +25,11 @@ namespace Models
 
         public string StudentId { get; set; }
 
-        public Student Student { get; set; }
+        public virtual Student Student { get; set; }
 
         public string TeacherId { get; set; }
 
-        public Teacher Teacher { get; set; }
+        public virtual Teacher Teacher { get; set; }
 
     }
 }

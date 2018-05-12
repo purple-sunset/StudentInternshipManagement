@@ -177,11 +177,6 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="UserDataContextMigrations\201805121017067_InitialCreate.cs" />
-    <Compile Include="UserDataContextMigrations\201805121017067_InitialCreate.Designer.cs">
-      <DependentUpon>201805121017067_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserDataContextMigrations\Configuration.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\admin.html" />
@@ -678,8 +673,9 @@
     <Content Include="Areas\Student\Views\Shared\_Navigation.cshtml" />
     <Content Include="Areas\Student\Views\Profile\Index.cshtml" />
     <Content Include="Areas\Teacher\Views\Profile\Index.cshtml" />
+    <Content Include="Areas\Student\Views\Profile\Edit.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
-    <Content Include="Images\avatars\avatar.png" />
+    <Content Include="Images\avatars\20131070.png" />
     <Content Include="Images\avatars\avatar1.png" />
     <Content Include="Images\avatars\avatar2.png" />
     <Content Include="Images\avatars\avatar3.png" />
@@ -2913,11 +2909,6 @@
       <Project>{f2b9efc1-b0a3-4d60-b1c9-184767d2d9ab}</Project>
       <Name>Utilities</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="UserDataContextMigrations\201805121017067_InitialCreate.resx">
-      <DependentUpon>201805121017067_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -17,8 +17,8 @@ namespace Models
 
         public int SubjectId { get; set; }
 
-        public Subject Subject { get; set; }
+        public virtual Subject Subject { get; set; }
 
-        public ICollection<CompanyTrainingMajor> CompanyTrainingMajors { get; set; }
+        public virtual ICollection<CompanyTrainingMajor> CompanyTrainingMajors { get; set; }
     }
 }

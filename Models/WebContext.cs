@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,21 +17,16 @@ namespace Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<LearningClass>()
-                .HasRequired(c => c.Subject)
-                .WithMany()
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<LearningClass>()
-                .HasRequired(c => c.Semester)
-                .WithMany()
-                .WillCascadeOnDelete(false);
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
         }
 
         public DbSet<Student> Students { get; set; }
 
         public DbSet<Teacher> Teachers { get; set; }
+
+        public DbSet<Admin> Admins { get; set; }
 
         public DbSet<Department> Departments { get; set; }
 

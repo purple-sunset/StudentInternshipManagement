@@ -16,16 +16,16 @@ namespace Models
 
         public string StudentId { get; set; }
 
-        public Student Student { get; set; }
+        public virtual Student Student { get; set; }
 
         public int ClassId { get; set; }
 
-        public LearningClass Class { get; set; }
+        public virtual LearningClass Class { get; set; }
 
         public int CompanyId { get; set; }
 
         public int TrainingMajorId { get; set; }
 
-        public CompanyTrainingMajor Major { get; set; }
+        public virtual CompanyTrainingMajor Major { get; set; }
     }
 }

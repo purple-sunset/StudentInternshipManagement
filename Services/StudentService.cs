@@ -17,9 +17,19 @@ namespace Services
             return _repository.GetById(id);
         }
 
+        public bool Add(Student student)
+        {
+            return _repository.Add(student);
+        }
+
         public bool Update(Student student)
         {
             return _repository.Update(student);
+        }
+
+        public bool Delete(Student student)
+        {
+            return _repository.Delete(student);
         }
 
     }

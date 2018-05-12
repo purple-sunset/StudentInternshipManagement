@@ -20,6 +20,8 @@ namespace StudentInternshipManagement
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             log4net.Config.XmlConfigurator.Configure();
+            WebContext context=new WebContext();
+            context.Database.Initialize(false);
         }
     }
 }

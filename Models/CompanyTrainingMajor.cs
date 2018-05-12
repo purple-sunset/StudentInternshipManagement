@@ -18,9 +18,9 @@ namespace Models
         [Column(Order = 2)]
         public int TrainingMajorId { get; set; }
 
-        public Company Company { get; set; }
+        public virtual Company Company { get; set; }
 
-        public TrainingMajor TrainingMajor { get; set; }
+        public virtual TrainingMajor TrainingMajor { get; set; }
 
         [Range(1,1000)]
         public int TotalTraineeCount { get; set; }

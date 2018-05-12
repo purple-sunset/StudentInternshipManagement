@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Teacher
+    public class Admin
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public string TeacherId { get; set; }
+        public string AdminId { get; set; }
 
         [Required]
         [MaxLength(50)]
-        public string TeacherName { get; set; }
+        public string AdminName { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
@@ -38,9 +38,5 @@ namespace Models
         public int DepartmentId { get; set; }
 
         public virtual Department Department { get; set; }
-
-        public virtual ICollection<Message> Messages { get; set; }
-
-        public virtual ICollection<Group> Groups { get; set; }
     }
 }

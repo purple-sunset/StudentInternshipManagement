@@ -19,7 +19,7 @@ namespace StudentInternshipManagement.Models
             return userIdentity;
         }
         
-        public ICollection<Notification> Notifications { get; set; }
+        public virtual ICollection<Notification> Notifications { get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

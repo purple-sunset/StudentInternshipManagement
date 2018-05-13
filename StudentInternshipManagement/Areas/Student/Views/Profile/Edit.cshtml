@@ -5,6 +5,12 @@
     Layout = "~/Areas/Student/Views/Shared/_Layout.cshtml";
 }
 
+@section Styles {
+    @Styles.Render("~/Content/kendo")
+}
+
+@Scripts.Render("~/Script/kendo")
+
 <div class="main-content-inner">
     <div class="breadcrumbs" id="breadcrumbs">
         <ul class="breadcrumb">
@@ -39,7 +45,7 @@
         <div class="row">
             <div class="col-xs-12">
                 <!-- PAGE CONTENT BEGINS -->
-                @using (Html.BeginForm("ForgotPassword", "Account", FormMethod.Post))
+                @using (Html.BeginForm("Edit", "Profile", FormMethod.Post, new { area = "Stydent", @class = "form-horizontal" }))
                 {
                     @Html.AntiForgeryToken()
                     @Html.ValidationSummary("", new { @class = "text-danger" })
@@ -47,7 +53,7 @@
                         <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Họ và tên </label>
 
                         <div class="col-sm-9">
-                            <input type="text" id="form-field-1" class="col-xs-10 col-sm-5" id="StudentName" name="StudentName" value="@Model.StudentName" />
+                            <input type="text" class="col-xs-10 col-sm-5" id="StudentName" name="StudentName" value="@Model.StudentName" />
                         </div>
                         @Html.ValidationMessageFor(m => m.StudentName, "", new { @class = "text-danger" })
                     </div>
@@ -56,9 +62,8 @@
 
                     <div class="form-group">
                         <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Ngày sinh </label>
-
                         <div class="col-sm-9">
-                            <input class="form-control date-picker" id="BirthDate" name="BirthDate" type="date" data-date-format="dd-mm-yyyy">
+                            <input type="date" class="col-xs-10 col-sm-5" id="BirthDate" name="BirthDate" value="@Model.BirthDate.ToString("yyyy-MM-dd")">
                         </div>
                         @Html.ValidationMessageFor(m => m.BirthDate, "", new { @class = "text-danger" })
                     </div>
@@ -69,7 +74,7 @@
                         <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Địa chỉ </label>
 
                         <div class="col-sm-9">
-                            <input type="text" id="form-field-1" class="col-xs-10 col-sm-5" id="Address" name="Address" value="@Model.Address" />
+                            <input type="text" class="col-xs-10 col-sm-5" id="Address" name="Address" value="@Model.Address" />
                         </div>
                         @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
                     </div>
@@ -80,15 +85,57 @@
                         <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Điện thoại </label>
 
                         <div class="col-sm-9">
-                            <input type="text" id="form-field-1" class="col-xs-10 col-sm-5" id="Phone" name="Phone" value="@Model.Phone" />
+                            <input type="text" class="col-xs-10 col-sm-5" id="Phone" name="Phone" value="@Model.Phone" />
                         </div>
                         @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
                     </div>
 
-                   @(Html.Kendo().Upload()
-                         .Name("files")
-                         .HtmlAttributes(new { aria_label = "files" })
-                     )
+                    <div class="form-group hidden">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Id </label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="col-xs-10 col-sm-5" id="StudentId" name="StudentId" value="@Model.StudentId" />
+                        </div>
+                    </div>
+
+                    <div class="form-group hidden">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Avatar </label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="col-xs-10 col-sm-5" id="Avatar" name="Avatar" value="@Model.Avatar" />
+                        </div>
+                    </div>
+
+                    <div class="form-group hidden">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Class </label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="col-xs-10 col-sm-5" id="ClassId" name="ClassId" value="@Model.ClassId" />
+                        </div>
+                    </div>
+
+                    <div class="form-group hidden">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Cpa </label>
+
+                        <div class="col-sm-9">
+                            <input type="text" class="col-xs-10 col-sm-5" id="Cpa" name="Cpa" value="@Model.Cpa" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Avatar </label>
+
+                        <div class="col-sm-9">
+                            <div class="kendo-upload col-xs-10 col-sm-5">
+                                @(Html.Kendo().Upload()
+                                      .Name("files")
+                                      .HtmlAttributes(new {aria_label = "files", accept = "image/*"})
+                                      )
+                            </div>
+                           
+                        </div>
+
+                    </div>
 
                     <div class="clearfix form-actions">
                         <div class="col-md-offset-3 col-md-9">
@@ -115,4 +162,3 @@
 
     </div><!-- /.page-content -->
 </div>
-

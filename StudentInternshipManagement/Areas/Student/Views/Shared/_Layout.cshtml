@@ -5,8 +5,10 @@
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    @Styles.Render("~/Content/bootstrap")
     @Styles.Render("~/Content/site")
     @RenderSection("Styles", required: false)
+    @Scripts.Render("~/Script/jquery")
 </head>
 <body class="no-skin">
     <div id="navbar" class="navbar navbar-default">
@@ -66,7 +68,9 @@
     <script type="text/javascript">
         if ('ontouchstart' in document.documentElement) document.write("<script src='Scripts/jquery.mobile.custom.min.js'>" + "<" + "/script>");
     </script>
-    @Scripts.Render("~/bundles/site")
+@Scripts.Render("~/Script/bootstrap")
+@Scripts.Render("~/Script/modernizr")
+@Scripts.Render("~/Script/site")
     @RenderSection("Scripts", required: false)
 </body>
 </html>

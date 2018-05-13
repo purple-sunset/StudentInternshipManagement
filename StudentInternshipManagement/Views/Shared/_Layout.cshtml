@@ -5,8 +5,9 @@
     <meta charset="utf-8" />
     <title>@ViewBag.Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    @Styles.Render("~/Content/bootstrap")
     @Styles.Render("~/Content/site")
-    @RenderSection("Styles", required:false)
+    @RenderSection("Styles", required: false)
 </head>
 <body class="no-skin">
     <div id="navbar" class="navbar navbar-default">
@@ -34,12 +35,12 @@
                 <div class="nav">
                     @Html.Partial("_LoginPartial")
                 </div>
-                </div>
+            </div>
 
-            </div><!-- /.navbar-container -->
+        </div><!-- /.navbar-container -->
     </div>
 
-    <div class="main-container" id="main-container" >
+    <div class="main-container" id="main-container">
         <div class="main-content">
             @RenderBody()
         </div><!-- /.main-content -->
@@ -77,7 +78,10 @@
     <script type="text/javascript">
         if ('ontouchstart' in document.documentElement) document.write("<script src='Scripts/jquery.mobile.custom.min.js'>" + "<" + "/script>");
     </script>
-    @Scripts.Render("~/bundles/site")
+    @Scripts.Render("~/Script/jquery")
+    @Scripts.Render("~/Script/bootstrap")
+    @Scripts.Render("~/Script/modernizr")
+    @Scripts.Render("~/Script/site")
     @RenderSection("Scripts", required: false)
 </body>
 </html>

@@ -36,3 +36,8 @@
     color: #8c1515;
     font-weight: bold
 }
+
+.kendo-upload {
+    padding-left: 0px;
+    padding-right: 0px
+}

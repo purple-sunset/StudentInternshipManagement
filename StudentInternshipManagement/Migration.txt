@@ -1,7 +1,7 @@
-﻿enable-migrations -ProjectName:Models -MigrationsDirectory:DataContextMigrations
-add-migration InitialCreate -ProjectName:Models
-update-database -ProjectName:Models -verbose
-
-enable-migrations -ProjectName:StudentInternshipManagement -MigrationsDirectory:UserDataContextMigrations
+﻿enable-migrations -ProjectName:StudentInternshipManagement -MigrationsDirectory:UserDataContextMigrations
 add-migration InitialCreate -ProjectName:StudentInternshipManagement
 update-database -ProjectName:StudentInternshipManagement -verbose
+
+enable-migrations -ProjectName:Models -MigrationsDirectory:DataContextMigrations
+add-migration InitialCreate -ProjectName:Models
+update-database -ProjectName:Models -verbose

@@ -3,6 +3,10 @@
     string message = ViewBag.Message ?? string.Empty;
 }
 
+@section Styles {
+    @Styles.Render("~/Content/kendo")
+}
+
 <div class="main-content-inner">
     <div class="breadcrumbs" id="breadcrumbs">
         <ul class="breadcrumb">
@@ -55,19 +59,23 @@
             </div>
         </div>
     </div><!-- /.page-content -->
-    
+
     @(Html.Kendo().Dialog()
-          .Name("messageDialog")
-          .Title("Notification")
-          .Content(message)
-          .Width(400)
-          .Modal(true)
-          .Actions(actions =>
-          {
-              actions.Add().Text("OK");
-          })
-          )
+                  .Name("messageDialog")
+                  .Title("Notification")
+                  .Content(message)
+                  .Width(400)
+                  .Modal(true)
+                  .Actions(actions =>
+                  {
+                      actions.Add().Text("OK");
+                  })
+    )
 </div>
+
+@section Scripts {
+    @Scripts.Render("~/Script/kendo")
+}
 
 <script>
     $(document).ready(

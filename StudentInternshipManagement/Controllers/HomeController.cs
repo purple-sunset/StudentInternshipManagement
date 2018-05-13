@@ -16,10 +16,10 @@ namespace StudentInternshipManagement.Controllers
 {
     public class HomeController : Controller
     {
-        private static bool isInit = false;
+        private static bool _isInit = false;
         public ActionResult Index()
         {
-            if (isInit)
+            if (_isInit)
             {
                 var usermanager = HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
                 var rolemanager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(new ApplicationDbContext()));
@@ -45,7 +45,7 @@ namespace StudentInternshipManagement.Controllers
                 var studenClass = new StudentClass()
                 {
                     ClassName = "CNTT 2.04",
-                    Department = department
+                    DepartmentId = department.DepartmentId
                 };
 
                 c = new StudentClassService().Add(studenClass);
@@ -57,14 +57,14 @@ namespace StudentInternshipManagement.Controllers
                     Avatar = "20131070.png",
                     Address = "MK",
                     BirthDate = new DateTime(1995, 5, 14),
-                    Class = studenClass,
+                    ClassId = studenClass.ClassId,
                     Cpa = 3.0f,
                     Phone = "0123456789"
                 };
 
                 c = new StudentService().Add(student);
 
-                isInit = false;
+                _isInit = false;
             }
             return View();
         }

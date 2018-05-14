@@ -1,7 +1,7 @@
-﻿@model Models.Teacher
+﻿@model Models.Admin
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Areas/Teacher/Views/Shared/_Layout.cshtml";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
 <div class="main-content-inner">
@@ -54,7 +54,7 @@
                                         <a href="#" class="user-title-label dropdown-toggle" data-toggle="dropdown">
                                             <i class="ace-icon fa fa-circle light-green"></i>
                                             &nbsp;
-                                            <span class="white">@Model.TeacherName</span>
+                                            <span class="white">@Model.AdminName</span>
                                         </a>
 
                                         <ul class="align-left dropdown-menu dropdown-caret dropdown-lighter">
@@ -139,7 +139,7 @@
                                     <div class="profile-info-name"> Họ và tên </div>
 
                                     <div class="profile-info-value">
-                                        <span class="editable" id="username">@Model.TeacherName</span>
+                                        <span class="editable" id="username">@Model.AdminName</span>
                                     </div>
                                 </div>
 
@@ -196,7 +196,7 @@
                             <div class="profile-info-row">
                                 <div class="profile-info-name"></div>
                                 <div class="profile-info-value">
-                                    <button class="btn btn-info btn-lg" onclick="location.href='@Url.Action("Edit", "Profile", new {Area="Teacher"})'">Chỉnh sửa hồ sơ</button>
+                                    <button class="btn btn-info btn-lg" onclick="location.href='@Url.Action("Edit", "Profile", new {Area="Admin"})'">Chỉnh sửa hồ sơ</button>
                                 </div>
                             </div>
                             

@@ -11,6 +11,12 @@
                     case "Student":
                         avatar = new StudentService().GetById(username).Avatar;
                         break;
+                    case "Teacher":
+                        avatar = new TeacherService().GetById(username).Avatar;
+                        break;
+                    case "Admin":
+                        avatar = new AdminService().GetById(username).Avatar;
+                        break;
                     default:
                         avatar = "avatar.png";
                         break;

@@ -10,15 +10,15 @@ using Utilities;
 
 namespace Repositories
 {
-    public class StudentRepository
+    public class AdminRepository
     {
         private readonly WebContext _context=new WebContext();
 
-        public Student GetById(string id)
+        public Admin GetById(string id)
         {
             try
             {
-                return _context.Students.Include("Class").FirstOrDefault(s => s.StudentId.Equals(id));
+                return _context.Admins.Include("Department").FirstOrDefault(s => s.AdminId.Equals(id));
             }
             catch (Exception ex)
             {
@@ -27,11 +27,11 @@ namespace Repositories
             }
         }
 
-        public bool Add(Student student)
+        public bool Add(Admin admin)
         {
             try
             {
-                _context.Students.Add(student);
+                _context.Admins.Add(admin);
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -41,11 +41,11 @@ namespace Repositories
             }
         }
 
-        public bool Update(Student student)
+        public bool Update(Admin admin)
         {
             try
             {
-                _context.Entry(student).State = EntityState.Modified;
+                _context.Entry(admin).State = EntityState.Modified;
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -55,15 +55,15 @@ namespace Repositories
             }
         }
 
-        public bool Delete(Student student)
+        public bool Delete(Admin admin)
         {
-            var curr = GetById(student.StudentId);
+            var curr = GetById(admin.AdminId);
             if (curr == null)
                 return false;
 
             try
             {
-                _context.Students.Remove(curr);
+                _context.Admins.Remove(curr);
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)

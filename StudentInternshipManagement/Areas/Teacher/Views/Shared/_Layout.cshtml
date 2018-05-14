@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    @Styles.Render("~/Content/bootstrap")
+    @Styles.Render("~/Content/site")
+    @RenderSection("Styles", required: false)
+    @Scripts.Render("~/Script/jquery")
+</head>
+<body class="no-skin">
+    <div id="navbar" class="navbar navbar-default">
+        <div class="navbar-container" id="navbar-container">
+            <div class="navbar-header pull-left">
+                <a href="/Home/Index" class="navbar-brand">
+                    <div id="site-logo">
+                        <img src="~/Images/placeholder/logo.jpg" />
+                        <div id="site-name">
+                            <h3>Trường Đại học Bách Khoa Hà Nội</h3>
+                            <h4>Trang quản lý thực tập</h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            @Html.Partial("_Navigation")
+        </div><!-- /.navbar-container -->
+    </div>
+
+    <div class="main-container" id="main-container">
+        @Html.Partial("_SideBar")
+        <div class="main-content">
+            @RenderBody()
+        </div><!-- /.main-content -->
+
+        <div class="footer">
+            <div class="footer-inner">
+                <div class="footer-content">
+                    <span class="bigger-120">
+                        <span class="blue bolder">Duc Tran</span>
+                        Hệ thống quản lý thực tập &copy; 2013-2014
+                    </span>
+
+                    &nbsp; &nbsp;
+                    <span class="action-buttons">
+                        <a href="#">
+                            <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ace-icon fa fa-rss-square orange bigger-150"></i>
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+        </a>
+    </div><!-- /.main-container -->
+
+    <script type="text/javascript">
+        if ('ontouchstart' in document.documentElement) document.write("<script src='Scripts/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+    </script>
+@Scripts.Render("~/Script/bootstrap")
+@Scripts.Render("~/Script/modernizr")
+@Scripts.Render("~/Script/site")
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

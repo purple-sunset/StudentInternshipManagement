@@ -66,6 +66,36 @@ namespace StudentInternshipManagement.Controllers
 
                 _isInit = false;
             }
+            else
+            {
+                var department = new Department()
+                {
+                    DepartmentId = 1,
+                    DepartmentName = "CNTT"
+                };
+
+                var studenClass = new StudentClass()
+                {
+                    ClassId = 1,
+                    ClassName = "CNTT 2.04",
+                    DepartmentId = department.DepartmentId
+                };
+                
+                var student = new Student()
+                {
+                    StudentId = "20131070",
+                    StudentName = "Tran Van Duc",
+                    Avatar = "20131070.png",
+                    Address = "MK",
+                    BirthDate = new DateTime(1995, 5, 14),
+                    ClassId = studenClass.ClassId,
+                    Cpa = 3.0f,
+                    Phone = "0123456789"
+                };
+
+                var c = new StudentService().Add(student);
+                //var d = new StudentService().Delete(student);
+            }
             return View();
         }
 

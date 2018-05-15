@@ -14,6 +14,10 @@ namespace Repositories
     {
         private readonly WebContext _context=new WebContext();
 
+        public IQueryable<Admin> GetAll()
+        {
+            return _context.Admins;
+        }
         public Admin GetById(string id)
         {
             try

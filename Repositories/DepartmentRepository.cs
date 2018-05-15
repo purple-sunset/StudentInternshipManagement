@@ -12,6 +12,10 @@ namespace Repositories
     {
         private readonly WebContext _context=new WebContext();
 
+        public IQueryable<Department> GetAll()
+        {
+            return _context.Departments;
+        }
         public Department GetById(string id)
         {
             return _context.Departments.FirstOrDefault(s => s.DepartmentId.Equals(id));

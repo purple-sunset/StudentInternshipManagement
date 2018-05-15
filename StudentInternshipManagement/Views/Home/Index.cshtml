@@ -3,8 +3,9 @@
     string message = ViewBag.Message ?? string.Empty;
 }
 
-@section Styles {
+@section Kendo {
     @Styles.Render("~/Content/kendo")
+    @Scripts.Render("~/Script/kendo")
 }
 
 <div class="main-content-inner">
@@ -61,31 +62,29 @@
     </div><!-- /.page-content -->
 
     @(Html.Kendo().Dialog()
-                  .Name("messageDialog")
-                  .Title("Notification")
-                  .Content(message)
-                  .Width(400)
-                  .Modal(true)
-                  .Actions(actions =>
-                  {
-                      actions.Add().Text("OK");
-                  })
+                          .Name("messageDialog")
+                          .Title("Notification")
+                          .Content(message)
+                          .Width(400)
+                          .Modal(true)
+                          .Actions(actions =>
+                          {
+                              actions.Add().Text("OK");
+                          })
     )
 </div>
 
 @section Scripts {
-    @Scripts.Render("~/Script/kendo")
-}
+    <script>
+        $(document).ready(
+            function showDialog() {
+                $('#messageDialog').data("kendoDialog").open();
+            }
 
-<script>
-    $(document).ready(
-        function showDialog() {
-            $('#messageDialog').data("kendoDialog").open();
-        }
-
-        @if (string.IsNullOrEmpty(message))
+        @if (!string.IsNullOrEmpty(message))
         {
             @:showDialog();
         }
-    );
-</script>
+        );
+    </script>
+}

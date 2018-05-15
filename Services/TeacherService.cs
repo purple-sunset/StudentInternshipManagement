@@ -12,6 +12,10 @@ namespace Services
     {
         private readonly TeacherRepository _repository=new TeacherRepository();
 
+        public IQueryable<Teacher> GetAll()
+        {
+            return _repository.GetAll();
+        }
         public Teacher GetById(string id)
         {
             return _repository.GetById(id);

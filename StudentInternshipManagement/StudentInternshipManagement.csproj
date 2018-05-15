@@ -164,7 +164,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DepartmentController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProfileController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StudentController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TeacherController.cs" />
     <Compile Include="Areas\Student\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Student\StudentAreaRegistration.cs" />
     <Compile Include="Areas\Teacher\Controllers\ProfileController.cs" />
@@ -689,6 +693,12 @@
     <Content Include="Areas\Teacher\Views\Profile\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Profile\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\Profile\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Student\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Teacher\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\EditorTemplates\DepartmentTemplate.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\EditorTemplates\StudentClassTemplate.cshtml" />
+    <Content Include="Areas\Admin\Views\Department\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\avatars\avatar.png" />
     <Content Include="Images\avatars\20131070.png" />
@@ -2904,6 +2914,10 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Student\Models\" />
     <Folder Include="Areas\Teacher\Models\" />
+    <Folder Include="Views\Admin\" />
+    <Folder Include="Views\Department\" />
+    <Folder Include="Views\Student\" />
+    <Folder Include="Views\Teacher\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

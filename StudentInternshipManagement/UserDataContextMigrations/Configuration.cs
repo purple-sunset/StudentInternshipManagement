@@ -1,3 +1,7 @@
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using StudentInternshipManagement.Models;
+
 namespace StudentInternshipManagement.UserDataContextMigrations
 {
     using System;
@@ -15,10 +19,39 @@ namespace StudentInternshipManagement.UserDataContextMigrations
 
         protected override void Seed(StudentInternshipManagement.Models.ApplicationDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
+            var usermanager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+            var rolemanager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
 
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data.
+            rolemanager.Create(new IdentityRole("Admin"));
+            rolemanager.Create(new IdentityRole("Teacher"));
+            rolemanager.Create(new IdentityRole("Student"));
+
+            var user = new ApplicationUser
+            {
+                UserName = "20131070",
+                Email = "20131070@student.hust.edu.vn"
+            };
+            var result = usermanager.Create(user, "Ab=123456789");
+
+            usermanager.AddToRole(usermanager.FindByName("20131070").Id, "Student");
+
+            var user2 = new ApplicationUser
+            {
+                UserName = "Admin",
+                Email = "Admin@student.hust.edu.vn"
+            };
+            result = usermanager.Create(user2, "Ab=123456789");
+
+            usermanager.AddToRole(usermanager.FindByName("Admin").Id, "Admin");
+
+            var user3 = new ApplicationUser
+            {
+                UserName = "Trung",
+                Email = "Trung@student.hust.edu.vn"
+            };
+            result = usermanager.Create(user3, "Ab=123456789");
+
+            usermanager.AddToRole(usermanager.FindByName("Admin").Id, "Teacher");
         }
     }
 }

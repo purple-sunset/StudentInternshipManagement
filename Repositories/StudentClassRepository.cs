@@ -12,6 +12,10 @@ namespace Repositories
     {
         private readonly WebContext _context=new WebContext();
 
+        public IQueryable<StudentClass> GetAll()
+        {
+            return _context.StudentClasses;
+        }
         public StudentClass GetById(string id)
         {
             return _context.StudentClasses.FirstOrDefault(s => s.ClassId.Equals(id));

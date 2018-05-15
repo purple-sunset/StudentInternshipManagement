@@ -12,6 +12,10 @@ namespace Services
     {
         private readonly DepartmentRepository _repository=new DepartmentRepository();
 
+        public IQueryable<Department> GetAll()
+        {
+            return _repository.GetAll();
+        }
         public Department GetById(string id)
         {
             return _repository.GetById(id);

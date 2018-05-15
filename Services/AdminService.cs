@@ -12,6 +12,10 @@ namespace Services
     {
         private readonly AdminRepository _repository=new AdminRepository();
 
+        public IQueryable<Admin> GetAll()
+        {
+            return _repository.GetAll();
+        }
         public Admin GetById(string id)
         {
             return _repository.GetById(id);

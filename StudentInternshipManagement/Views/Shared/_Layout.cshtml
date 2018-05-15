@@ -8,6 +8,8 @@
     @Styles.Render("~/Content/bootstrap")
     @Styles.Render("~/Content/site")
     @RenderSection("Styles", required: false)
+    @Scripts.Render("~/Script/jquery")
+    @RenderSection("Kendo", required: false)
 </head>
 <body class="no-skin">
     <div id="navbar" class="navbar navbar-default">
@@ -78,7 +80,6 @@
     <script type="text/javascript">
         if ('ontouchstart' in document.documentElement) document.write("<script src='Scripts/jquery.mobile.custom.min.js'>" + "<" + "/script>");
     </script>
-    @Scripts.Render("~/Script/jquery")
     @Scripts.Render("~/Script/bootstrap")
     @Scripts.Render("~/Script/modernizr")
     @Scripts.Render("~/Script/site")

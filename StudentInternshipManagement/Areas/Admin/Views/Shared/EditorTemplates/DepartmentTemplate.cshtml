@@ -1,12 +1,11 @@
 ﻿@using Kendo.Mvc.UI
 @using Models
 @model int
-@(
-    Html.Kendo().ComboBoxFor(m => m)  
-        .Filter("contains")
-        .Placeholder("Chọn Khoa/Viện")
-        .Suggest(true)
-        .DataValueField("DepartmentId")
-        .DataTextField("DepartmentName")
-        .BindTo((IQueryable<Department>)ViewBag.Department)
+@(Html.Kendo().ComboBoxFor(m => m)  
+      .Filter("contains")
+      .Placeholder("Chọn Khoa/Viện")
+      .Suggest(true)
+      .DataValueField("DepartmentId")
+      .DataTextField("DepartmentName")
+      .BindTo((IQueryable<Department>)ViewBag.Departments)
       )

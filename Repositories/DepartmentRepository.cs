@@ -8,7 +8,7 @@ using Models;
 
 namespace Repositories
 {
-    public class DepartmentRepository
+    public class DepartmentRepository : IDisposable
     {
         private readonly WebContext _context=new WebContext();
 
@@ -16,9 +16,9 @@ namespace Repositories
         {
             return _context.Departments;
         }
-        public Department GetById(string id)
+        public Department GetById(int id)
         {
-            return _context.Departments.FirstOrDefault(s => s.DepartmentId.Equals(id));
+            return _context.Departments.FirstOrDefault(s => s.DepartmentId==id);
         }
 
         public bool Add(Department department)
@@ -37,6 +37,11 @@ namespace Repositories
         {
             _context.Entry(department).State = EntityState.Deleted;
             return _context.SaveChanges() > 0;
+        }
+
+        public void Dispose()
+        {
+            _context?.Dispose();
         }
     }
 }

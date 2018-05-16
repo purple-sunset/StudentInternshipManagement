@@ -10,19 +10,19 @@ using Utilities;
 
 namespace Repositories
 {
-    public class AdminRepository:IDisposable
+    public class SubjectRepository : IDisposable
     {
         private readonly WebContext _context=new WebContext();
 
-        public IQueryable<Admin> GetAll()
+        public IQueryable<Subject> GetAll()
         {
-            return _context.Admins;
+            return _context.Subjects;
         }
-        public Admin GetById(string id)
+        public Subject GetById(string id)
         {
             try
             {
-                return _context.Admins.FirstOrDefault(s => s.AdminId.Equals(id));
+                return _context.Subjects.FirstOrDefault(s => s.SubjectId.Equals(id));
             }
             catch (Exception ex)
             {
@@ -31,11 +31,11 @@ namespace Repositories
             }
         }
 
-        public bool Add(Admin admin)
+        public bool Add(Subject subject)
         {
             try
             {
-                _context.Admins.Add(admin);
+                _context.Subjects.Add(subject);
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -45,11 +45,11 @@ namespace Repositories
             }
         }
 
-        public bool Update(Admin admin)
+        public bool Update(Subject subject)
         {
             try
             {
-                _context.Entry(admin).State = EntityState.Modified;
+                _context.Entry(subject).State = EntityState.Modified;
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -59,15 +59,15 @@ namespace Repositories
             }
         }
 
-        public bool Delete(Admin admin)
+        public bool Delete(Subject subject)
         {
-            var curr = GetById(admin.AdminId);
+            var curr = GetById(subject.SubjectId);
             if (curr == null)
                 return false;
 
             try
             {
-                _context.Admins.Remove(curr);
+                _context.Subjects.Remove(curr);
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)

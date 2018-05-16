@@ -15,13 +15,12 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
     public class TeacherController : Controller
     {
-        //private WebContext db = new WebContext();
         private readonly TeacherService  _service=new TeacherService();
         private readonly DepartmentService _departmentService = new DepartmentService();
 
         public ActionResult Index()
         {
-            ViewBag.Department = _departmentService.GetAll();
+            ViewBag.Departments = _departmentService.GetAll();
             return View();
         }
 

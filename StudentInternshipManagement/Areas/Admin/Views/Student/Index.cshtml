@@ -88,7 +88,7 @@
 <script type="text/javascript">
 
     function onEdit(e) {
-        if (e.model.isNew() == false) {
+        if (!e.model.isNew()) {
             $('[name="StudentId"]').attr("readonly", true);
         }
     }

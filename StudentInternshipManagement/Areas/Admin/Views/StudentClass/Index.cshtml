@@ -1,7 +1,7 @@
 ﻿@using Kendo.Mvc.UI
 @using Models
 @{
-    ViewBag.Title = "Quản lý Admin";
+    ViewBag.Title = "Quản lý lớp sinh viên";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
@@ -37,21 +37,18 @@
                 Quản lý
                 <small>
                     <i class="ace-icon fa fa-angle-double-right"></i>
-                    Quản lý
+                    Lớp sinh viên
                 </small>
             </h1>
         </div><!-- /.page-header -->
         <div class="row">
             <div class="col-xs-12">
-                @(Html.Kendo().Grid<Models.Admin>()
+                @(Html.Kendo().Grid<Models.StudentClass>()
                       .Name("grid")
                       .Columns(columns =>
                       {
-                          columns.Bound(c => c.AdminId);
-                          columns.Bound(c => c.AdminName);
-                          columns.Bound(c => c.BirthDate);
-                          columns.Bound(c => c.Address);
-                          columns.Bound(c => c.Phone);
+                          columns.Bound(c => c.ClassId);
+                          columns.Bound(c => c.ClassName);
                           columns.ForeignKey(p => p.DepartmentId, (IQueryable<Department>)ViewBag.Departments, "DepartmentId", "DepartmentName").EditorTemplateName("DepartmentTemplate");
                           columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
                       })
@@ -67,13 +64,14 @@
                       })
                       .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
                       .Scrollable()
+                      .ClientDetailTemplateId("template")
                       .DataSource(dataSource => dataSource
                           .Ajax()
-                          .Model(model => model.Id(p => p.AdminId))
-                          .Read(read => read.Action("Admins_Read", "Admin"))
-                          .Create(create => create.Action("Admins_Create", "Admin"))
-                          .Update(update => update.Action("Admins_Update", "Admin"))
-                          .Destroy(destroy => destroy.Action("Admins_Destroy", "Admin"))
+                          .Model(model => model.Id(p => p.ClassId))
+                          .Read(read => read.Action("StudentClasses_Read", "StudentClass"))
+                          .Create(create => create.Action("StudentClasses_Create", "StudentClass"))
+                          .Update(update => update.Action("StudentClasses_Update", "StudentClass"))
+                          .Destroy(destroy => destroy.Action("StudentClasses_Destroy", "StudentClass"))
                       )
                       .Events(events => events
                           .Edit("onEdit")
@@ -83,11 +81,31 @@
         </div>
     </div>
 </div>
+<script id="template" type="text/kendo-tmpl">
+    @(Html.Kendo().Grid<Student>()
+          .Name("grid_#=ClassId#") // template expression, to be evaluated in the master context
+          .Columns(columns =>
+          {
+              columns.Bound(o => o.StudentId);
+              columns.Bound(o => o.StudentName);
+              columns.Bound(o => o.BirthDate);
+              columns.Bound(o => o.Address);
+              columns.Bound(o => o.Phone);
+              columns.Bound(o => o.Cpa);
+          })
+          .DataSource(dataSource => dataSource
+              .Ajax()
+              .PageSize(10)
+              .Read(read => read.Action("Students_Read", "Student", new { area="Admin", classId = "#=ClassId#" }))
+          )
+          .Pageable()
+          .Sortable()
+          .ToClientTemplate()
+          )
+</script>
 <script type="text/javascript">
 
     function onEdit(e) {
-        if (!e.model.isNew()) {
-            $('[name="AdminId"]').attr("readonly", true);
-        }
+        $('[name="ClassId"]').attr("readonly", true);
     }
 </script>

@@ -16,7 +16,7 @@ namespace Models
         [MaxLength(50)]
         public string ClassName { get; set; }
 
-        public int SubjectId { get; set; }
+        public string SubjectId { get; set; }
 
         public virtual Subject Subject { get; set; }
 

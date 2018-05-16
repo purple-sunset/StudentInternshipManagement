@@ -10,7 +10,7 @@ using Utilities;
 
 namespace Repositories
 {
-    public class TeacherRepository
+    public class TeacherRepository : IDisposable
     {
         private readonly WebContext _context=new WebContext();
 
@@ -22,7 +22,7 @@ namespace Repositories
         {
             try
             {
-                return _context.Teachers.Include("Department").FirstOrDefault(s => s.TeacherId.Equals(id));
+                return _context.Teachers.FirstOrDefault(s => s.TeacherId.Equals(id));
             }
             catch (Exception ex)
             {
@@ -75,6 +75,11 @@ namespace Repositories
                 Logger.LogError(ex);
                 return false;
             }
+        }
+
+        public void Dispose()
+        {
+            _context?.Dispose();
         }
     }
 }

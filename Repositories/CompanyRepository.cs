@@ -10,19 +10,19 @@ using Utilities;
 
 namespace Repositories
 {
-    public class AdminRepository:IDisposable
+    public class CompanyRepository:IDisposable
     {
         private readonly WebContext _context=new WebContext();
 
-        public IQueryable<Admin> GetAll()
+        public IQueryable<Company> GetAll()
         {
-            return _context.Admins;
+            return _context.Companies;
         }
-        public Admin GetById(string id)
+        public Company GetById(int id)
         {
             try
             {
-                return _context.Admins.FirstOrDefault(s => s.AdminId.Equals(id));
+                return _context.Companies.FirstOrDefault(s => s.CompanyId == id);
             }
             catch (Exception ex)
             {
@@ -31,11 +31,11 @@ namespace Repositories
             }
         }
 
-        public bool Add(Admin admin)
+        public bool Add(Company company)
         {
             try
             {
-                _context.Admins.Add(admin);
+                _context.Companies.Add(company);
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -45,11 +45,11 @@ namespace Repositories
             }
         }
 
-        public bool Update(Admin admin)
+        public bool Update(Company company)
         {
             try
             {
-                _context.Entry(admin).State = EntityState.Modified;
+                _context.Entry(company).State = EntityState.Modified;
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -59,15 +59,15 @@ namespace Repositories
             }
         }
 
-        public bool Delete(Admin admin)
+        public bool Delete(Company company)
         {
-            var curr = GetById(admin.AdminId);
+            var curr = GetById(company.CompanyId);
             if (curr == null)
                 return false;
 
             try
             {
-                _context.Admins.Remove(curr);
+                _context.Companies.Remove(curr);
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)

@@ -10,19 +10,19 @@ using Utilities;
 
 namespace Repositories
 {
-    public class AdminRepository:IDisposable
+    public class SemesterRepository : IDisposable
     {
         private readonly WebContext _context=new WebContext();
 
-        public IQueryable<Admin> GetAll()
+        public IQueryable<Semester> GetAll()
         {
-            return _context.Admins;
+            return _context.Semesters;
         }
-        public Admin GetById(string id)
+        public Semester GetById(int id)
         {
             try
             {
-                return _context.Admins.FirstOrDefault(s => s.AdminId.Equals(id));
+                return _context.Semesters.FirstOrDefault(s => s.SemesterId == id);
             }
             catch (Exception ex)
             {
@@ -31,11 +31,11 @@ namespace Repositories
             }
         }
 
-        public bool Add(Admin admin)
+        public bool Add(Semester semester)
         {
             try
             {
-                _context.Admins.Add(admin);
+                _context.Semesters.Add(semester);
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -45,11 +45,11 @@ namespace Repositories
             }
         }
 
-        public bool Update(Admin admin)
+        public bool Update(Semester semester)
         {
             try
             {
-                _context.Entry(admin).State = EntityState.Modified;
+                _context.Entry(semester).State = EntityState.Modified;
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -59,15 +59,15 @@ namespace Repositories
             }
         }
 
-        public bool Delete(Admin admin)
+        public bool Delete(Semester semester)
         {
-            var curr = GetById(admin.AdminId);
+            var curr = GetById(semester.SemesterId);
             if (curr == null)
                 return false;
 
             try
             {
-                _context.Admins.Remove(curr);
+                _context.Semesters.Remove(curr);
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)

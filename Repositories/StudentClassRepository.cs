@@ -8,7 +8,7 @@ using Models;
 
 namespace Repositories
 {
-    public class StudentClassRepository
+    public class StudentClassRepository : IDisposable
     {
         private readonly WebContext _context=new WebContext();
 
@@ -16,9 +16,10 @@ namespace Repositories
         {
             return _context.StudentClasses;
         }
-        public StudentClass GetById(string id)
+
+        public StudentClass GetById(int id)
         {
-            return _context.StudentClasses.FirstOrDefault(s => s.ClassId.Equals(id));
+            return _context.StudentClasses.FirstOrDefault(s => s.ClassId == id);
         }
 
         public bool Add(StudentClass studentClass)
@@ -27,16 +28,21 @@ namespace Repositories
             return _context.SaveChanges() > 0;
         }
 
-        public bool Update(StudentClass StudentClass)
+        public bool Update(StudentClass studentClass)
         {
-            _context.Entry(StudentClass).State = EntityState.Modified;
+            _context.Entry(studentClass).State = EntityState.Modified;
             return _context.SaveChanges() > 0;
         }
 
-        public bool Delete(StudentClass StudentClass)
+        public bool Delete(StudentClass studentClass)
         {
-            _context.Entry(StudentClass).State = EntityState.Deleted;
+            _context.Entry(studentClass).State = EntityState.Deleted;
             return _context.SaveChanges() > 0;
+        }
+
+        public void Dispose()
+        {
+            _context?.Dispose();
         }
     }
 }

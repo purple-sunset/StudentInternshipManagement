@@ -47,6 +47,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompanyRepository.cs" />
+    <Compile Include="CompanyTrainingMajorRepository.cs" />
+    <Compile Include="TrainingMajorRepository.cs" />
+    <Compile Include="SubjectRepository.cs" />
+    <Compile Include="SemesterRepository.cs" />
     <Compile Include="TeacherRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StudentClassRepository.cs" />

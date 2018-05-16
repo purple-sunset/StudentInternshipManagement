@@ -52,7 +52,7 @@
                           columns.Bound(c => c.BirthDate);
                           columns.Bound(c => c.Address);
                           columns.Bound(c => c.Phone);
-                          columns.ForeignKey(p => p.DepartmentId, (IQueryable<Department>)ViewBag.Department, "DepartmentId", "DepartmentName").EditorTemplateName("DepartmentTemplate");
+                          columns.ForeignKey(p => p.DepartmentId, (IQueryable<Department>)ViewBag.Departments, "DepartmentId", "DepartmentName").EditorTemplateName("DepartmentTemplate");
                           columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
                       })
                       .ToolBar(toolbar =>
@@ -86,7 +86,7 @@
 <script type="text/javascript">
 
     function onEdit(e) {
-        if (e.model.isNew() == false) {
+        if (!e.model.isNew()) {
             $('[name="TeacherId"]').attr("readonly", true);
         }
     }

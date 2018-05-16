@@ -20,7 +20,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
 
         public ActionResult Index()
         {
-            ViewBag.Department = _departmentService.GetAll();
+            ViewBag.Departments = _departmentService.GetAll();
             return View();
         }
 
@@ -100,5 +100,11 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             return Json(new[] { admin }.ToDataSourceResult(request, ModelState));
         }
 
+        protected override void Dispose(bool disposing)
+        {
+            _service.Dispose();
+            _departmentService.Dispose();
+            base.Dispose(disposing);
+        }
     }
 }

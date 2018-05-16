@@ -8,7 +8,7 @@ using Repositories;
 
 namespace Services
 {
-    public class TeacherService
+    public class TeacherService : IDisposable
     {
         private readonly TeacherRepository _repository=new TeacherRepository();
 
@@ -36,5 +36,9 @@ namespace Services
             return _repository.Delete(teacher);
         }
 
+        public void Dispose()
+        {
+            _repository?.Dispose();
+        }
     }
 }

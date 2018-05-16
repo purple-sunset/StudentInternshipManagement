@@ -10,7 +10,7 @@ using Utilities;
 
 namespace Repositories
 {
-    public class StudentRepository
+    public class StudentRepository : IDisposable
     {
         private readonly WebContext _context=new WebContext();
 
@@ -19,11 +19,16 @@ namespace Repositories
             return _context.Students;
         }
 
+        public IQueryable<Student> GetByStudentClass(int classId)
+        {
+            return _context.Students.Where(s => s.ClassId == classId);
+        }
+
         public Student GetById(string id)
         {
             try
             {
-                return _context.Students.Include("Class").FirstOrDefault(s => s.StudentId.Equals(id));
+                return _context.Students.FirstOrDefault(s => s.StudentId.Equals(id));
             }
             catch (Exception ex)
             {
@@ -76,6 +81,11 @@ namespace Repositories
                 Logger.LogError(ex);
                 return false;
             }
+        }
+
+        public void Dispose()
+        {
+            _context?.Dispose();
         }
     }
 }

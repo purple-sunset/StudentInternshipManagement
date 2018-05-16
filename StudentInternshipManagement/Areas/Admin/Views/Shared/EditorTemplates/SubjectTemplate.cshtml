@@ -1,0 +1,11 @@
+﻿@using Kendo.Mvc.UI
+@using Models
+@model int
+@(Html.Kendo().ComboBoxFor(m => m)  
+      .Filter("contains")
+      .Placeholder("Chọn Môn học")
+      .Suggest(true)
+      .DataValueField("SubjectId")
+      .DataTextField("SubjectName")
+      .BindTo((IQueryable<Subject>)ViewBag.Subjects)
+      )

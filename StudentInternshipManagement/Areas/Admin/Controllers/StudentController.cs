@@ -40,6 +40,21 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             return Json(result);
         }
 
+        public ActionResult Students_ReadByClass(int classId, [DataSourceRequest]DataSourceRequest request)
+        {
+            DataSourceResult result = _service.GetByStudentClass(classId).ToDataSourceResult(request, student => new {
+                StudentId = student.StudentId,
+                StudentName = student.StudentName,
+                BirthDate = student.BirthDate,
+                Address = student.Address,
+                Phone = student.Phone,
+                Cpa = student.Cpa,
+                ClassId = student.ClassId
+            });
+
+            return Json(result);
+        }
+
         [AcceptVerbs(HttpVerbs.Post)]
         public ActionResult Students_Create([DataSourceRequest]DataSourceRequest request, global::Models.Student student)
         {

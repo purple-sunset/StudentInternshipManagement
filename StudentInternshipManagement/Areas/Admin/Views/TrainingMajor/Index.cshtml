@@ -1,0 +1,108 @@
+﻿@using Kendo.Mvc.UI
+@using Models
+@{
+    ViewBag.Title = "Quản lý lớp sinh viên";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section Kendo
+{
+    @Styles.Render("~/Content/kendo")
+    @Scripts.Render("~/Script/kendo")
+}
+
+<div class="main-content-inner">
+    <div class="breadcrumbs" id="breadcrumbs">
+        <ul class="breadcrumb">
+            <li>
+                <i class="ace-icon fa fa-home home-icon"></i>
+                <a href="#">Trang chủ</a>
+            </li>
+            <li class="active">Quản lý</li>
+        </ul><!-- /.breadcrumb -->
+
+        <div class="nav-search" id="nav-search">
+            <form class="form-search">
+                <span class="input-icon">
+                    <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
+                    <i class="ace-icon fa fa-search nav-search-icon"></i>
+                </span>
+            </form>
+        </div><!-- /.nav-search -->
+    </div>
+
+    <div class="page-content">
+        <div class="page-header">
+            <h1>
+                Quản lý
+                <small>
+                    <i class="ace-icon fa fa-angle-double-right"></i>
+                    Lớp sinh viên
+                </small>
+            </h1>
+        </div><!-- /.page-header -->
+        <div class="row">
+            <div class="col-xs-12">
+                @(Html.Kendo().Grid<Models.TrainingMajor>()
+                          .Name("grid")
+                          .Columns(columns =>
+                          {
+                              columns.Bound(c => c.TrainingMajorId);
+                              columns.Bound(c => c.TrainingMajorName);
+                              columns.ForeignKey(p => p.SubjectId, (IQueryable<Subject>)ViewBag.Subjects, "SubjectId", "SubjectName").EditorTemplateName("SubjectTemplate");
+                              columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+                          })
+                          .ToolBar(toolbar =>
+                          {
+                              toolbar.Create();
+                          })
+                          .Editable(editable => editable.Mode(GridEditMode.PopUp))
+                          .Pageable()
+                          .Sortable(sortable =>
+                          {
+                              sortable.SortMode(GridSortMode.SingleColumn);
+                          })
+                          .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
+                          .Scrollable()
+                          .Events(events =>
+                          {
+                              events.Edit("onEdit");
+                          })
+                          .DataSource(dataSource => dataSource
+                              .Ajax()
+                              .Model(model => model.Id(p => p.TrainingMajorId))
+                              .Read(read => read.Action("TrainingMajors_Read", "TrainingMajor"))
+                              .Create(create => create.Action("TrainingMajors_Create", "TrainingMajor"))
+                              .Update(update => update.Action("TrainingMajors_Update", "TrainingMajor"))
+                              .Destroy(destroy => destroy.Action("TrainingMajors_Destroy", "TrainingMajor"))
+                          )
+                )
+
+            </div><!-- /.page-content -->
+        </div>
+    </div>
+</div>
+<script id="template" type="text/kendo-tmpl">
+    @(Html.Kendo().Grid<CompanyTrainingMajor>()
+                  .Name("grid_#=TrainingMajorId#") // template expression, to be evaluated in the master context
+                  .Columns(columns =>
+                  {
+                      columns.ForeignKey(p => p.CompanyId, (IQueryable<Company>)ViewBag.Companies, "CompanyId", "CompanyName").EditorTemplateName("CompanyTemplate");
+                      columns.Bound(o => o.TotalTraineeCount);
+                  })
+                  .DataSource(dataSource => dataSource
+                      .Ajax()
+                      .PageSize(10)
+                      .Read(read => read.Action("CompanyTrainingMajors_Read", "TrainingMajor", new { area = "Admin", trainingMajorId = "#=TrainingMajorId#" }))
+                  )
+                  .Pageable()
+                  .Sortable()
+                  .ToClientTemplate()
+    )
+</script>
+<script type="text/javascript">
+
+    function onEdit(e) {
+        $('[name="ClassId"]').attr("readonly", true);
+    }
+</script>

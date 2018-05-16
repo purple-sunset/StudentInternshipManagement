@@ -35,6 +35,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <NoWarn>
+    </NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -165,10 +167,15 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CompanyTrainingMajorController.cs" />
     <Compile Include="Areas\Admin\Controllers\DepartmentController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProfileController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SemesterController.cs" />
+    <Compile Include="Areas\Admin\Controllers\StudentClassController.cs" />
     <Compile Include="Areas\Admin\Controllers\StudentController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SubjectController.cs" />
     <Compile Include="Areas\Admin\Controllers\TeacherController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TrainingMajorController.cs" />
     <Compile Include="Areas\Student\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Student\StudentAreaRegistration.cs" />
     <Compile Include="Areas\Teacher\Controllers\ProfileController.cs" />
@@ -699,6 +706,14 @@
     <Content Include="Areas\Admin\Views\Shared\EditorTemplates\DepartmentTemplate.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\EditorTemplates\StudentClassTemplate.cshtml" />
     <Content Include="Areas\Admin\Views\Department\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\StudentClass\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Subject\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Semester\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TrainingMajor\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\EditorTemplates\SubjectTemplate.cshtml" />
+    <Content Include="Areas\Admin\Views\CompanyTrainingMajor\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\EditorTemplates\CompanyTemplate.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\EditorTemplates\TrainingMajorTemplate.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\avatars\avatar.png" />
     <Content Include="Images\avatars\20131070.png" />
@@ -2688,7 +2703,9 @@
     <None Include="Views\Home\Index.cshtml" />
     <Content Include="Views\index.html" />
     <None Include="Views\Account\Login.cshtml" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -2915,9 +2932,14 @@
     <Folder Include="Areas\Student\Models\" />
     <Folder Include="Areas\Teacher\Models\" />
     <Folder Include="Views\Admin\" />
+    <Folder Include="Views\CompanyTrainingMajor\" />
     <Folder Include="Views\Department\" />
+    <Folder Include="Views\Semester\" />
+    <Folder Include="Views\StudentClass\" />
     <Folder Include="Views\Student\" />
+    <Folder Include="Views\Subject\" />
     <Folder Include="Views\Teacher\" />
+    <Folder Include="Views\TrainingMajor\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

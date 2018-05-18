@@ -1,158 +1,120 @@
 ﻿@using Kendo.Mvc.UI
 @model Models.Student
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Chỉnh sửa hồ sơ";
+    ViewBag.Category = "Hồ sơ";
+    ViewBag.Section = "Chỉnh sửa";
     Layout = "~/Areas/Student/Views/Shared/_Layout.cshtml";
 }
 
-<div class="main-content-inner">
-    <div class="breadcrumbs" id="breadcrumbs">
-        <ul class="breadcrumb">
-            <li>
-                <i class="ace-icon fa fa-home home-icon"></i>
-                <a href="#">Trang chủ</a>
-            </li>
-            <li class="active">Hồ sơ</li>
-        </ul><!-- /.breadcrumb -->
 
-        <div class="nav-search" id="nav-search">
-            <form class="form-search">
-                <span class="input-icon">
-                    <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-                    <i class="ace-icon fa fa-search nav-search-icon"></i>
-                </span>
-            </form>
-        </div><!-- /.nav-search -->
+@using (Html.BeginForm("Edit", "Profile", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Họ và tên </label>
+
+        <div class="col-sm-9">
+            <input type="text" class="col-xs-10 col-sm-5" id="StudentName" name="StudentName" value="@Model.StudentName" />
+        </div>
+        @Html.ValidationMessageFor(m => m.StudentName, "", new { @class = "text-danger" })
     </div>
 
-    <div class="page-content">
-        <div class="page-header">
-            <h1>
-                Hồ sơ
-                <small>
-                    <i class="ace-icon fa fa-angle-double-right"></i>
-                    overview &amp; stats
-                </small>
-            </h1>
-        </div><!-- /.page-header -->
+    <div class="space-4"></div>
 
-        <div class="row">
-            <div class="col-xs-12">
-                <!-- PAGE CONTENT BEGINS -->
-                @using (Html.BeginForm("Edit", "Profile", FormMethod.Post, new { enctype = "multipart/form-data", @class = "form-horizontal" }))
-                {
-                    @Html.AntiForgeryToken()
-                    @Html.ValidationSummary("", new { @class = "text-danger" })
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Họ và tên </label>
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Ngày sinh </label>
+        <div class="col-sm-9">
+            <input type="date" class="col-xs-10 col-sm-5" id="BirthDate" name="BirthDate" value="@Model.BirthDate.ToString("yyyy-MM-dd")">
+        </div>
+        @Html.ValidationMessageFor(m => m.BirthDate, "", new { @class = "text-danger" })
+    </div>
 
-                        <div class="col-sm-9">
-                            <input type="text" class="col-xs-10 col-sm-5" id="StudentName" name="StudentName" value="@Model.StudentName" />
-                        </div>
-                        @Html.ValidationMessageFor(m => m.StudentName, "", new { @class = "text-danger" })
-                    </div>
+    <div class="space-4"></div>
 
-                    <div class="space-4"></div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Địa chỉ </label>
 
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Ngày sinh </label>
-                        <div class="col-sm-9">
-                            <input type="date" class="col-xs-10 col-sm-5" id="BirthDate" name="BirthDate" value="@Model.BirthDate.ToString("yyyy-MM-dd")">
-                        </div>
-                        @Html.ValidationMessageFor(m => m.BirthDate, "", new { @class = "text-danger" })
-                    </div>
+        <div class="col-sm-9">
+            <input type="text" class="col-xs-10 col-sm-5" id="Address" name="Address" value="@Model.Address" />
+        </div>
+        @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
+    </div>
 
-                    <div class="space-4"></div>
+    <div class="space-4"></div>
 
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Địa chỉ </label>
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Điện thoại </label>
 
-                        <div class="col-sm-9">
-                            <input type="text" class="col-xs-10 col-sm-5" id="Address" name="Address" value="@Model.Address" />
-                        </div>
-                        @Html.ValidationMessageFor(m => m.Address, "", new { @class = "text-danger" })
-                    </div>
+        <div class="col-sm-9">
+            <input type="text" class="col-xs-10 col-sm-5" id="Phone" name="Phone" value="@Model.Phone" />
+        </div>
+        @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
+    </div>
 
-                    <div class="space-4"></div>
+    <div class="form-group hidden">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Id </label>
 
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Điện thoại </label>
+        <div class="col-sm-9">
+            <input type="text" class="col-xs-10 col-sm-5" id="StudentId" name="StudentId" value="@Model.StudentId" />
+        </div>
+    </div>
 
-                        <div class="col-sm-9">
-                            <input type="text" class="col-xs-10 col-sm-5" id="Phone" name="Phone" value="@Model.Phone" />
-                        </div>
-                        @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
-                    </div>
+    <div class="form-group hidden">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Avatar </label>
 
-                    <div class="form-group hidden">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Id </label>
+        <div class="col-sm-9">
+            <input type="text" class="col-xs-10 col-sm-5" id="Avatar" name="Avatar" value="@Model.Avatar" />
+        </div>
+    </div>
 
-                        <div class="col-sm-9">
-                            <input type="text" class="col-xs-10 col-sm-5" id="StudentId" name="StudentId" value="@Model.StudentId" />
-                        </div>
-                    </div>
+    <div class="form-group hidden">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Class </label>
 
-                    <div class="form-group hidden">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Avatar </label>
+        <div class="col-sm-9">
+            <input type="text" class="col-xs-10 col-sm-5" id="ClassId" name="ClassId" value="@Model.ClassId" />
+        </div>
+    </div>
 
-                        <div class="col-sm-9">
-                            <input type="text" class="col-xs-10 col-sm-5" id="Avatar" name="Avatar" value="@Model.Avatar" />
-                        </div>
-                    </div>
+    <div class="form-group hidden">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Cpa </label>
 
-                    <div class="form-group hidden">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Class </label>
+        <div class="col-sm-9">
+            <input type="text" class="col-xs-10 col-sm-5" id="Cpa" name="Cpa" value="@Model.Cpa" />
+        </div>
+    </div>
 
-                        <div class="col-sm-9">
-                            <input type="text" class="col-xs-10 col-sm-5" id="ClassId" name="ClassId" value="@Model.ClassId" />
-                        </div>
-                    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Avatar </label>
 
-                    <div class="form-group hidden">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Cpa </label>
+        <div class="col-sm-9">
+            <div class="padding-left-right-none col-xs-10 col-sm-5">
+                <input type="file" id="file" name="file" />
+            </div>
 
-                        <div class="col-sm-9">
-                            <input type="text" class="col-xs-10 col-sm-5" id="Cpa" name="Cpa" value="@Model.Cpa" />
-                        </div>
-                    </div>
+        </div>
 
-                    <div class="form-group">
-                        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Avatar </label>
+    </div>
 
-                        <div class="col-sm-9">
-                            <div class="padding-left-right-none col-xs-10 col-sm-5">
-                                <input type="file" id="file" name="file" />
-                            </div>
-                            
-                        </div>
+    <div class="clearfix form-actions">
+        <div class="col-md-offset-3 col-md-9">
+            <button class="btn btn-info" type="submit">
+                <i class="ace-icon fa fa-check bigger-110"></i>
+                Submit
+            </button>
 
-                    </div>
+            &nbsp; &nbsp; &nbsp;
+            <button class="btn" type="reset">
+                <i class="ace-icon fa fa-undo bigger-110"></i>
+                Reset
+            </button>
+        </div>
+    </div>
 
-                    <div class="clearfix form-actions">
-                        <div class="col-md-offset-3 col-md-9">
-                            <button class="btn btn-info" type="submit">
-                                <i class="ace-icon fa fa-check bigger-110"></i>
-                                Submit
-                            </button>
+    <div class="hr hr-24"></div>
+}
 
-                            &nbsp; &nbsp; &nbsp;
-                            <button class="btn" type="reset">
-                                <i class="ace-icon fa fa-undo bigger-110"></i>
-                                Reset
-                            </button>
-                        </div>
-                    </div>
-
-                    <div class="hr hr-24"></div>
-                }
-
-
-
-            </div><!-- /.col -->
-        </div><!-- /.row -->
-
-    </div><!-- /.page-content -->
-</div>
 @section Scripts
 {
     @Scripts.Render("~/Scripts/site/profile_edit.js")

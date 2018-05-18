@@ -1,26 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration.Conventions;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
 
 namespace Models
 {
-    public class WebContext : DbContext
+    public class WebContext : ApplicationDbContext
     {
-        public WebContext():base("name=StudentInternshipManagement")
+        public WebContext()
         {
-            Database.SetInitializer<WebContext>(new DataInitializer());
+            Database.SetInitializer(new DataInitializer());
         }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
-            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        //{
+        //    modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+        //    modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
-        }
+        //}
 
         public DbSet<Student> Students { get; set; }
 

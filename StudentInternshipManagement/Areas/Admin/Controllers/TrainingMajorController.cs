@@ -17,10 +17,12 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
     {
         private readonly TrainingMajorService _service=new TrainingMajorService();
         private readonly SubjectService _subjectService=new SubjectService();
+        private readonly CompanyService _companyService = new CompanyService();
 
         public ActionResult Index()
         {
             ViewBag.Subjects = _subjectService.GetAll();
+            ViewBag.Companies = _companyService.GetAll();
             return View();
         }
 
@@ -103,6 +105,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         {
             _service.Dispose();
             _subjectService.Dispose();
+            _companyService.Dispose();
             base.Dispose(disposing);
         }
     }

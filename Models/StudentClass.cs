@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 
 namespace Models
 {
@@ -23,8 +24,10 @@ namespace Models
         [UIHint("DepartmentTemplate")]
         public int DepartmentId { get; set; }
 
+        [ScriptIgnore(ApplyToOverrides = true)]
         public virtual Department Department { get; set; }
 
+        [ScriptIgnore(ApplyToOverrides = true)]
         [DisplayName("Danh sách sinh viên")]
         public virtual ICollection<Student> Students { get; set; }
     }

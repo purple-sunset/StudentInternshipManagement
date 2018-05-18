@@ -2,6 +2,8 @@
 @using Models
 @{
     ViewBag.Title = "Quản lý Admin";
+    ViewBag.Category = "Quản lý";
+    ViewBag.Section = "Admin";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
@@ -11,78 +13,44 @@
     @Scripts.Render("~/Script/kendo")
 }
 
-<div class="main-content-inner">
-    <div class="breadcrumbs" id="breadcrumbs">
-        <ul class="breadcrumb">
-            <li>
-                <i class="ace-icon fa fa-home home-icon"></i>
-                <a href="#">Trang chủ</a>
-            </li>
-            <li class="active">Quản lý</li>
-        </ul><!-- /.breadcrumb -->
 
-        <div class="nav-search" id="nav-search">
-            <form class="form-search">
-                <span class="input-icon">
-                    <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-                    <i class="ace-icon fa fa-search nav-search-icon"></i>
-                </span>
-            </form>
-        </div><!-- /.nav-search -->
-    </div>
+@(Html.Kendo().Grid<Models.Admin>()
+              .Name("grid")
+              .Columns(columns =>
+              {
+                  columns.Bound(c => c.AdminId);
+                  columns.Bound(c => c.AdminName);
+                  columns.Bound(c => c.BirthDate);
+                  columns.Bound(c => c.Address);
+                  columns.Bound(c => c.Phone);
+                  columns.ForeignKey(p => p.DepartmentId, (IQueryable<Department>)ViewBag.Departments, "DepartmentId", "DepartmentName").EditorTemplateName("DepartmentTemplate");
+                  columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+              })
+              .ToolBar(toolbar =>
+              {
+                  toolbar.Create();
+              })
+              .Editable(editable => editable.Mode(GridEditMode.PopUp))
+              .Pageable()
+              .Sortable(sortable =>
+              {
+                  sortable.SortMode(GridSortMode.SingleColumn);
+              })
+              .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
+              .Scrollable()
+              .DataSource(dataSource => dataSource
+                  .Ajax()
+                  .Model(model => model.Id(p => p.AdminId))
+                  .Read(read => read.Action("Admins_Read", "Admin"))
+                  .Create(create => create.Action("Admins_Create", "Admin"))
+                  .Update(update => update.Action("Admins_Update", "Admin"))
+                  .Destroy(destroy => destroy.Action("Admins_Destroy", "Admin"))
+              )
+              .Events(events => events
+                  .Edit("onEdit")
+              )
+)
 
-    <div class="page-content">
-        <div class="page-header">
-            <h1>
-                Quản lý
-                <small>
-                    <i class="ace-icon fa fa-angle-double-right"></i>
-                    Quản lý
-                </small>
-            </h1>
-        </div><!-- /.page-header -->
-        <div class="row">
-            <div class="col-xs-12">
-                @(Html.Kendo().Grid<Models.Admin>()
-                      .Name("grid")
-                      .Columns(columns =>
-                      {
-                          columns.Bound(c => c.AdminId);
-                          columns.Bound(c => c.AdminName);
-                          columns.Bound(c => c.BirthDate);
-                          columns.Bound(c => c.Address);
-                          columns.Bound(c => c.Phone);
-                          columns.ForeignKey(p => p.DepartmentId, (IQueryable<Department>)ViewBag.Departments, "DepartmentId", "DepartmentName").EditorTemplateName("DepartmentTemplate");
-                          columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
-                      })
-                      .ToolBar(toolbar =>
-                      {
-                          toolbar.Create();
-                      })
-                      .Editable(editable => editable.Mode(GridEditMode.PopUp))
-                      .Pageable()
-                      .Sortable(sortable =>
-                      {
-                          sortable.SortMode(GridSortMode.SingleColumn);
-                      })
-                      .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
-                      .Scrollable()
-                      .DataSource(dataSource => dataSource
-                          .Ajax()
-                          .Model(model => model.Id(p => p.AdminId))
-                          .Read(read => read.Action("Admins_Read", "Admin"))
-                          .Create(create => create.Action("Admins_Create", "Admin"))
-                          .Update(update => update.Action("Admins_Update", "Admin"))
-                          .Destroy(destroy => destroy.Action("Admins_Destroy", "Admin"))
-                      )
-                      .Events(events => events
-                          .Edit("onEdit")
-                      )
-                      )
-            </div><!-- /.page-content -->
-        </div>
-    </div>
-</div>
 <script type="text/javascript">
 
     function onEdit(e) {

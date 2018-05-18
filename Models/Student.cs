@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 
 namespace Models
 {
@@ -53,12 +54,16 @@ namespace Models
         [UIHint("StudentClassTemplate")]
         public int ClassId { get; set; }
 
+        [ScriptIgnore(ApplyToOverrides = true)]
         public virtual StudentClass Class { get; set; }
 
+        [ScriptIgnore(ApplyToOverrides = true)]
         public virtual ICollection<LearningClass> LearningClasses { get; set; }
 
+        [ScriptIgnore(ApplyToOverrides = true)]
         public virtual ICollection<Message> Messages { get; set; }
 
+        [ScriptIgnore(ApplyToOverrides = true)]
         [InverseProperty("Members")]
         public virtual ICollection<Group> Groups { get; set; }
     }

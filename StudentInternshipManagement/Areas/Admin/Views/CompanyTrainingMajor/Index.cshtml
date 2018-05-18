@@ -2,6 +2,8 @@
 @using Models
 @{
     ViewBag.Title = "Quản lý định hướng thực tập của công ty";
+    ViewBag.Category = "Quản lý";
+    ViewBag.Section = "Định hướng thực tập của công ty";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
@@ -11,78 +13,43 @@
     @Scripts.Render("~/Script/kendo")
 }
 
-<div class="main-content-inner">
-    <div class="breadcrumbs" id="breadcrumbs">
-        <ul class="breadcrumb">
-            <li>
-                <i class="ace-icon fa fa-home home-icon"></i>
-                <a href="#">Trang chủ</a>
-            </li>
-            <li class="active">Quản lý</li>
-        </ul><!-- /.breadcrumb -->
 
-        <div class="nav-search" id="nav-search">
-            <form class="form-search">
-                <span class="input-icon">
-                    <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-                    <i class="ace-icon fa fa-search nav-search-icon"></i>
-                </span>
-            </form>
-        </div><!-- /.nav-search -->
-    </div>
+@(Html.Kendo().Grid<Models.CompanyTrainingMajor>()
+                  .Name("grid")
+                  .Columns(columns =>
+                  {
+                      columns.ForeignKey(p => p.CompanyId, (IQueryable<Company>)ViewBag.Companies, "CompanyId", "CompanyName").EditorTemplateName("CompanyTemplate");
+                      columns.ForeignKey(p => p.TrainingMajorId, (IQueryable<TrainingMajor>)ViewBag.TrainingMajors, "TrainingMajorId", "TrainingMajorName").EditorTemplateName("TrainingMajorTemplate");
+                      columns.Bound(c => c.TotalTraineeCount);
+                      columns.Bound(c => c.AvailableTraineeCount);
+                      columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+                  })
+                  .ToolBar(toolbar =>
+                  {
+                      toolbar.Create();
+                  })
+                  .Editable(editable => editable.Mode(GridEditMode.InLine))
+                  .Pageable()
+                  .Sortable(sortable =>
+                  {
+                      sortable.SortMode(GridSortMode.SingleColumn);
+                  })
+                  .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
+                  .Scrollable()
+                  .Events(events =>
+                  {
+                      events.Edit("onEdit");
+                  })
+                  .DataSource(dataSource => dataSource
+                      .Ajax()
+                      .Model(model => model.Id(p => p.CompanyId))
+                      .Read(read => read.Action("CompanyTrainingMajors_Read", "CompanyTrainingMajor"))
+                      .Create(create => create.Action("CompanyTrainingMajors_Create", "CompanyTrainingMajor"))
+                      .Update(update => update.Action("CompanyTrainingMajors_Update", "CompanyTrainingMajor"))
+                      .Destroy(destroy => destroy.Action("CompanyTrainingMajors_Destroy", "CompanyTrainingMajor"))
+                  )
+)
 
-    <div class="page-content">
-        <div class="page-header">
-            <h1>
-                Quản lý
-                <small>
-                    <i class="ace-icon fa fa-angle-double-right"></i>
-                    Định hướng thực tập của công ty
-                </small>
-            </h1>
-        </div><!-- /.page-header -->
-        <div class="row">
-            <div class="col-xs-12">
-                @(Html.Kendo().Grid<Models.CompanyTrainingMajor>()
-                          .Name("grid")
-                          .Columns(columns =>
-                          {
-                              columns.ForeignKey(p => p.CompanyId, (IQueryable<Company>)ViewBag.Companies, "CompanyId", "CompanyName").EditorTemplateName("CompanyTemplate");
-                              columns.ForeignKey(p => p.TrainingMajorId, (IQueryable<TrainingMajor>)ViewBag.TrainingMajors, "TrainingMajorId", "TrainingMajorName").EditorTemplateName("TrainingMajorTemplate");
-                              columns.Bound(c => c.TotalTraineeCount);
-                              columns.Bound(c => c.AvailableTraineeCount);
-                              columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
-                          })
-                          .ToolBar(toolbar =>
-                          {
-                              toolbar.Create();
-                          })
-                          .Editable(editable => editable.Mode(GridEditMode.InLine))
-                          .Pageable()
-                          .Sortable(sortable =>
-                          {
-                              sortable.SortMode(GridSortMode.SingleColumn);
-                          })
-                          .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
-                          .Scrollable()
-                          .Events(events =>
-                          {
-                              events.Edit("onEdit");
-                          })
-                          .DataSource(dataSource => dataSource
-                              .Ajax()
-                              .Model(model => model.Id(p => p.CompanyId))
-                              .Read(read => read.Action("CompanyTrainingMajors_Read", "CompanyTrainingMajor"))
-                              .Create(create => create.Action("CompanyTrainingMajors_Create", "CompanyTrainingMajor"))
-                              .Update(update => update.Action("CompanyTrainingMajors_Update", "CompanyTrainingMajor"))
-                              .Destroy(destroy => destroy.Action("CompanyTrainingMajors_Destroy", "CompanyTrainingMajor"))
-                          )
-                )
-
-            </div><!-- /.page-content -->
-        </div>
-    </div>
-</div>
 <script type="text/javascript">
 
     function onEdit(e) {

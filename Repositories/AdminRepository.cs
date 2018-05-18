@@ -12,7 +12,7 @@ namespace Repositories
 {
     public class AdminRepository:IDisposable
     {
-        private readonly WebContext _context=new WebContext();
+        private WebContext _context = new WebContext();
 
         public IQueryable<Admin> GetAll()
         {

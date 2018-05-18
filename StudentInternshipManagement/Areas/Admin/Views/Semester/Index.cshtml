@@ -2,6 +2,8 @@
 @using Models
 @{
     ViewBag.Title = "Quản lý học kỳ";
+    ViewBag.Category = "Quản lý";
+    ViewBag.Section = "Học kỳ";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
@@ -11,75 +13,40 @@
     @Scripts.Render("~/Script/kendo")
 }
 
-<div class="main-content-inner">
-    <div class="breadcrumbs" id="breadcrumbs">
-        <ul class="breadcrumb">
-            <li>
-                <i class="ace-icon fa fa-home home-icon"></i>
-                <a href="#">Trang chủ</a>
-            </li>
-            <li class="active">Quản lý</li>
-        </ul><!-- /.breadcrumb -->
+@(Html.Kendo().Grid<Models.Semester>()
+                  .Name("grid")
+                  .Columns(columns =>
+                  {
+                      columns.Bound(c => c.SemesterId);
+                      columns.Bound(c => c.StartDate);
+                      columns.Bound(c => c.EndDate);
+                      columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+                  })
+                  .ToolBar(toolbar =>
+                  {
+                      toolbar.Create();
+                  })
+                  .Editable(editable => editable.Mode(GridEditMode.PopUp))
+                  .Pageable()
+                  .Sortable(sortable =>
+                  {
+                      sortable.SortMode(GridSortMode.SingleColumn);
+                  })
+                  .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
+                  .Scrollable()
+                  .DataSource(dataSource => dataSource
+                      .Ajax()
+                      .Model(model => model.Id(p => p.SemesterId))
+                      .Read(read => read.Action("Semesters_Read", "Semester"))
+                      .Create(create => create.Action("Semesters_Create", "Semester"))
+                      .Update(update => update.Action("Semesters_Update", "Semester"))
+                      .Destroy(destroy => destroy.Action("Semesters_Destroy", "Semester"))
+                  )
+                  .Events(events => events
+                      .Edit("onEdit")
+                  )
+)
 
-        <div class="nav-search" id="nav-search">
-            <form class="form-search">
-                <span class="input-icon">
-                    <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-                    <i class="ace-icon fa fa-search nav-search-icon"></i>
-                </span>
-            </form>
-        </div><!-- /.nav-search -->
-    </div>
-
-    <div class="page-content">
-        <div class="page-header">
-            <h1>
-                Quản lý
-                <small>
-                    <i class="ace-icon fa fa-angle-double-right"></i>
-                    Học kỳ
-                </small>
-            </h1>
-        </div><!-- /.page-header -->
-        <div class="row">
-            <div class="col-xs-12">
-                @(Html.Kendo().Grid<Models.Semester>()
-                          .Name("grid")
-                          .Columns(columns =>
-                          {
-                              columns.Bound(c => c.SemesterId);
-                              columns.Bound(c => c.StartDate);
-                              columns.Bound(c => c.EndDate);
-                              columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
-                          })
-                          .ToolBar(toolbar =>
-                          {
-                              toolbar.Create();
-                          })
-                          .Editable(editable => editable.Mode(GridEditMode.PopUp))
-                          .Pageable()
-                          .Sortable(sortable =>
-                          {
-                              sortable.SortMode(GridSortMode.SingleColumn);
-                          })
-                          .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
-                          .Scrollable()
-                          .DataSource(dataSource => dataSource
-                              .Ajax()
-                              .Model(model => model.Id(p => p.SemesterId))
-                              .Read(read => read.Action("Semesters_Read", "Semester"))
-                              .Create(create => create.Action("Semesters_Create", "Semester"))
-                              .Update(update => update.Action("Semesters_Update", "Semester"))
-                              .Destroy(destroy => destroy.Action("Semesters_Destroy", "Semester"))
-                          )
-                          .Events(events => events
-                              .Edit("onEdit")
-                          )
-                )
-            </div><!-- /.page-content -->
-        </div>
-    </div>
-</div>
 <script type="text/javascript">
 
     function onEdit(e) {

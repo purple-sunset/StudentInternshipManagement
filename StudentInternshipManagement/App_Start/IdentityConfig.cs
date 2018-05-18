@@ -15,6 +15,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
+using Models;
 using SendGrid.Helpers.Mail;
 using StudentInternshipManagement.Models;
 

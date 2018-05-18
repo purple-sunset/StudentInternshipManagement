@@ -167,6 +167,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CompanyController.cs" />
     <Compile Include="Areas\Admin\Controllers\CompanyTrainingMajorController.cs" />
     <Compile Include="Areas\Admin\Controllers\DepartmentController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProfileController.cs" />
@@ -186,14 +187,8 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="UserDataContextMigrations\201805131350267_InitialCreate.cs" />
-    <Compile Include="UserDataContextMigrations\201805131350267_InitialCreate.Designer.cs">
-      <DependentUpon>201805131350267_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserDataContextMigrations\Configuration.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Admin\Views\admin.html" />
@@ -570,9 +565,6 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="ApplicationInsights.config">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
@@ -714,6 +706,7 @@
     <Content Include="Areas\Admin\Views\CompanyTrainingMajor\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\EditorTemplates\CompanyTemplate.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\EditorTemplates\TrainingMajorTemplate.cshtml" />
+    <Content Include="Areas\Admin\Views\Company\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Images\avatars\avatar.png" />
     <Content Include="Images\avatars\20131070.png" />
@@ -2931,15 +2924,6 @@
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Student\Models\" />
     <Folder Include="Areas\Teacher\Models\" />
-    <Folder Include="Views\Admin\" />
-    <Folder Include="Views\CompanyTrainingMajor\" />
-    <Folder Include="Views\Department\" />
-    <Folder Include="Views\Semester\" />
-    <Folder Include="Views\StudentClass\" />
-    <Folder Include="Views\Student\" />
-    <Folder Include="Views\Subject\" />
-    <Folder Include="Views\Teacher\" />
-    <Folder Include="Views\TrainingMajor\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -2959,11 +2943,6 @@
       <Project>{f2b9efc1-b0a3-4d60-b1c9-184767d2d9ab}</Project>
       <Name>Utilities</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="UserDataContextMigrations\201805131350267_InitialCreate.resx">
-      <DependentUpon>201805131350267_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

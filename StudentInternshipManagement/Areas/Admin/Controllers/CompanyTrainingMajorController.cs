@@ -26,9 +26,26 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             return View();
         }
 
-        public ActionResult CompanyTrainingMajors_Read([DataSourceRequest]DataSourceRequest request)
+        public ActionResult CompanyTrainingMajors_Read([DataSourceRequest]DataSourceRequest request, int? companyId, int? majorId)
         {
-            DataSourceResult result = _service.GetAll().ToDataSourceResult(request, companyTrainingMajor => new {
+            IQueryable<CompanyTrainingMajor> datasource = null;
+
+            if (companyId != null)
+            {
+                
+                datasource = _service.GetByCompany(companyId.Value);
+            }
+            else if (majorId != null)
+            {
+                
+                datasource = _service.GetByTrainingMajor(majorId.Value);
+            }
+            else
+            {
+                datasource = _service.GetAll();
+            }
+
+            DataSourceResult result = datasource.ToDataSourceResult(request, companyTrainingMajor => new {
                 CompanyId = companyTrainingMajor.CompanyId,
                 TrainingMajorId = companyTrainingMajor.TrainingMajorId,
                 TotalTraineeCount = companyTrainingMajor.TotalTraineeCount,
@@ -39,7 +56,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult CompanyTrainingMajors_Create([DataSourceRequest]DataSourceRequest request, CompanyTrainingMajor companyTrainingMajor)
+        public ActionResult CompanyTrainingMajors_Create([DataSourceRequest]DataSourceRequest request, int? companyId, int? majorId, CompanyTrainingMajor companyTrainingMajor)
         {
             if (ModelState.IsValid)
             {
@@ -50,6 +67,15 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
                     TotalTraineeCount = companyTrainingMajor.TotalTraineeCount,
                     AvailableTraineeCount = companyTrainingMajor.AvailableTraineeCount
                 };
+
+                if (companyId != null)
+                {
+                    entity.CompanyId = companyId.Value;
+                }
+                if (majorId != null)
+                {
+                    entity.TrainingMajorId = majorId.Value;
+                }
 
                 _service.Add(entity);
             }
@@ -98,6 +124,8 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         protected override void Dispose(bool disposing)
         {
             _service.Dispose();
+            _companyService.Dispose();
+            _trainingMajorService.Dispose();
             base.Dispose(disposing);
         }
     }

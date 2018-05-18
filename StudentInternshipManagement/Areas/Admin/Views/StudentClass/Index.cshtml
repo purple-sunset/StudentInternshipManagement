@@ -2,6 +2,8 @@
 @using Models
 @{
     ViewBag.Title = "Quản lý lớp sinh viên";
+    ViewBag.Category = "Quản lý";
+    ViewBag.Section = "Lớp sinh viên";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
@@ -11,97 +13,63 @@
     @Scripts.Render("~/Script/kendo")
 }
 
-<div class="main-content-inner">
-    <div class="breadcrumbs" id="breadcrumbs">
-        <ul class="breadcrumb">
-            <li>
-                <i class="ace-icon fa fa-home home-icon"></i>
-                <a href="#">Trang chủ</a>
-            </li>
-            <li class="active">Quản lý</li>
-        </ul><!-- /.breadcrumb -->
 
-        <div class="nav-search" id="nav-search">
-            <form class="form-search">
-                <span class="input-icon">
-                    <input type="text" placeholder="Search ..." class="nav-search-input" id="nav-search-input" autocomplete="off" />
-                    <i class="ace-icon fa fa-search nav-search-icon"></i>
-                </span>
-            </form>
-        </div><!-- /.nav-search -->
-    </div>
+@(Html.Kendo().Grid<Models.StudentClass>()
+              .Name("grid")
+              .Columns(columns =>
+              {
+                  columns.Bound(c => c.ClassId);
+                  columns.Bound(c => c.ClassName);
+                  columns.ForeignKey(p => p.DepartmentId, (IQueryable<Department>)ViewBag.Departments, "DepartmentId", "DepartmentName").EditorTemplateName("DepartmentTemplate");
+                  columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+              })
+              .ToolBar(toolbar =>
+              {
+                  toolbar.Create();
+              })
+              .Editable(editable => editable.Mode(GridEditMode.PopUp))
+              .Pageable()
+              .Sortable(sortable =>
+              {
+                  sortable.SortMode(GridSortMode.SingleColumn);
+              })
+              .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
+              .Scrollable()
+              .ClientDetailTemplateId("template")
+              .DataSource(dataSource => dataSource
+                  .Ajax()
+                  .Model(model => model.Id(p => p.ClassId))
+                  .Read(read => read.Action("StudentClasses_Read", "StudentClass"))
+                  .Create(create => create.Action("StudentClasses_Create", "StudentClass"))
+                  .Update(update => update.Action("StudentClasses_Update", "StudentClass"))
+                  .Destroy(destroy => destroy.Action("StudentClasses_Destroy", "StudentClass"))
+              )
+              .Events(events => events
+                  .Edit("onEdit")
+              )
+)
 
-    <div class="page-content">
-        <div class="page-header">
-            <h1>
-                Quản lý
-                <small>
-                    <i class="ace-icon fa fa-angle-double-right"></i>
-                    Lớp sinh viên
-                </small>
-            </h1>
-        </div><!-- /.page-header -->
-        <div class="row">
-            <div class="col-xs-12">
-                @(Html.Kendo().Grid<Models.StudentClass>()
-                      .Name("grid")
-                      .Columns(columns =>
-                      {
-                          columns.Bound(c => c.ClassId);
-                          columns.Bound(c => c.ClassName);
-                          columns.ForeignKey(p => p.DepartmentId, (IQueryable<Department>)ViewBag.Departments, "DepartmentId", "DepartmentName").EditorTemplateName("DepartmentTemplate");
-                          columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
-                      })
-                      .ToolBar(toolbar =>
-                      {
-                          toolbar.Create();
-                      })
-                      .Editable(editable => editable.Mode(GridEditMode.PopUp))
-                      .Pageable()
-                      .Sortable(sortable =>
-                      {
-                          sortable.SortMode(GridSortMode.SingleColumn);
-                      })
-                      .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
-                      .Scrollable()
-                      .ClientDetailTemplateId("template")
-                      .DataSource(dataSource => dataSource
-                          .Ajax()
-                          .Model(model => model.Id(p => p.ClassId))
-                          .Read(read => read.Action("StudentClasses_Read", "StudentClass"))
-                          .Create(create => create.Action("StudentClasses_Create", "StudentClass"))
-                          .Update(update => update.Action("StudentClasses_Update", "StudentClass"))
-                          .Destroy(destroy => destroy.Action("StudentClasses_Destroy", "StudentClass"))
-                      )
-                      .Events(events => events
-                          .Edit("onEdit")
-                      )
-                      )
-            </div><!-- /.page-content -->
-        </div>
-    </div>
-</div>
 <script id="template" type="text/kendo-tmpl">
     @(Html.Kendo().Grid<Student>()
-          .Name("grid_#=ClassId#") // template expression, to be evaluated in the master context
-          .Columns(columns =>
-          {
-              columns.Bound(o => o.StudentId);
-              columns.Bound(o => o.StudentName);
-              columns.Bound(o => o.BirthDate);
-              columns.Bound(o => o.Address);
-              columns.Bound(o => o.Phone);
-              columns.Bound(o => o.Cpa);
-          })
-          .DataSource(dataSource => dataSource
-              .Ajax()
-              .PageSize(10)
-              .Read(read => read.Action("Students_Read", "Student", new { area="Admin", classId = "#=ClassId#" }))
-          )
-          .Pageable()
-          .Sortable()
-          .ToClientTemplate()
-          )
+                  .Name("grid_#=ClassId#") // template expression, to be evaluated in the master context
+                  .Columns(columns =>
+                  {
+                      columns.Bound(o => o.StudentId);
+                      columns.Bound(o => o.StudentName);
+                      columns.Bound(o => o.BirthDate);
+                      columns.Bound(o => o.Address);
+                      columns.Bound(o => o.Phone);
+                      columns.Bound(o => o.Cpa);
+                  })
+                  .DataSource(dataSource => dataSource
+                      .Ajax()
+                      .PageSize(10)
+                      .Read(read => read.Action("Students_ReadByClass", "Student", new { area = "Admin", classId = "#=ClassId#" }))
+                  )
+                  .Pageable()
+                  .Sortable()
+                  .ToClientTemplate()
+    )
 </script>
 <script type="text/javascript">
 

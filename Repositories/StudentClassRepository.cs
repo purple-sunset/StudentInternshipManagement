@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Models;
+using Utilities;
 
 namespace Repositories
 {
@@ -14,30 +15,74 @@ namespace Repositories
 
         public IQueryable<StudentClass> GetAll()
         {
-            return _context.StudentClasses;
+            try
+            {
+                return _context.StudentClasses;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
         }
 
         public StudentClass GetById(int id)
         {
-            return _context.StudentClasses.FirstOrDefault(s => s.ClassId == id);
+            try
+            {
+                return _context.StudentClasses.FirstOrDefault(s => s.ClassId == id);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
         }
 
         public bool Add(StudentClass studentClass)
         {
-            _context.Entry(studentClass).State = EntityState.Added;
-            return _context.SaveChanges() > 0;
+            try
+            {
+                _context.StudentClasses.Add(studentClass);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return false;
+            }
         }
 
         public bool Update(StudentClass studentClass)
         {
-            _context.Entry(studentClass).State = EntityState.Modified;
-            return _context.SaveChanges() > 0;
+            try
+            {
+                _context.Entry(studentClass).State = EntityState.Modified;
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return false;
+            }
         }
 
         public bool Delete(StudentClass studentClass)
         {
-            _context.Entry(studentClass).State = EntityState.Deleted;
-            return _context.SaveChanges() > 0;
+            var curr = GetById(studentClass.ClassId);
+            if (curr == null)
+                return false;
+
+            try
+            {
+                _context.StudentClasses.Remove(curr);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return false;
+            }
         }
 
         public void Dispose()

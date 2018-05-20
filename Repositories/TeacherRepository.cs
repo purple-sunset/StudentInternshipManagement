@@ -16,7 +16,15 @@ namespace Repositories
 
         public IQueryable<Teacher> GetAll()
         {
-            return _context.Teachers;
+            try
+            {
+                return _context.Teachers;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
         }
         public Teacher GetById(string id)
         {

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Models;
+using Utilities;
 
 namespace Repositories
 {
@@ -18,25 +19,61 @@ namespace Repositories
         }
         public Department GetById(int id)
         {
-            return _context.Departments.FirstOrDefault(s => s.DepartmentId==id);
+            try
+            {
+                return _context.Departments.FirstOrDefault(s => s.DepartmentId == id);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
         }
 
         public bool Add(Department department)
         {
-            _context.Entry(department).State = EntityState.Added;
-            return _context.SaveChanges() > 0;
+            try
+            {
+                _context.Departments.Add(department);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return false;
+            }
         }
 
         public bool Update(Department department)
         {
-            _context.Entry(department).State = EntityState.Modified;
-            return _context.SaveChanges() > 0;
+            try
+            {
+                _context.Entry(department).State = EntityState.Modified;
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return false;
+            }
         }
 
         public bool Delete(Department department)
         {
-            _context.Entry(department).State = EntityState.Deleted;
-            return _context.SaveChanges() > 0;
+            var curr = GetById(department.DepartmentId);
+            if (curr == null)
+                return false;
+
+            try
+            {
+                _context.Departments.Remove(curr);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return false;
+            }
         }
 
         public void Dispose()

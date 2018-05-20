@@ -16,7 +16,15 @@ namespace Repositories
 
         public IQueryable<Semester> GetAll()
         {
-            return _context.Semesters;
+            try
+            {
+                return _context.Semesters;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
         }
         public Semester GetById(int id)
         {

@@ -75,12 +75,15 @@
                   model.Id(p => p.TrainingMajorId);
               })
               .Read(read => read.Action("CompanyTrainingMajors_Read", "CompanyTrainingMajor", new {companyId = "#=CompanyId#"}))
-              .Create(create => create.Action("CompanyTrainingMajors_Create", "CompanyTrainingMajor", new {companyId = "#=CompanyId#"}))
+              .Create(create => create.Action("CompanyTrainingMajors_Create", "CompanyTrainingMajor"))
               .Update(update => update.Action("CompanyTrainingMajors_Update", "CompanyTrainingMajor"))
               .Destroy(destroy => destroy.Action("CompanyTrainingMajors_Destroy", "CompanyTrainingMajor"))
           )
           .Pageable()
           .Sortable()
+          .Events(events => events
+              .Edit("onChildEdit")
+          )
           .ToClientTemplate()
           )
 </script>
@@ -88,5 +91,15 @@
 
     function onEdit(e) {
         $('[name="CompanyId"]').attr("readonly", true);
+    }
+
+    function onChildEdit(e) {
+        if (e.model.isNew()) {
+            var parentGrid = $("#grid").data("kendoGrid");                        
+            var parentRow = e.container.closest(".k-detail-row").prev(".k-master-row");                        
+            var parentDataItem = parentGrid.dataItem(parentRow);
+
+            e.model.set("CompanyId", parentDataItem.CompanyId);
+        }
     }
 </script>

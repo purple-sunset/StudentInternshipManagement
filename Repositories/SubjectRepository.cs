@@ -16,7 +16,15 @@ namespace Repositories
 
         public IQueryable<Subject> GetAll()
         {
-            return _context.Subjects;
+            try
+            {
+                return _context.Subjects;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
         }
         public Subject GetById(string id)
         {

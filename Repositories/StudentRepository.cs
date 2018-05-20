@@ -16,12 +16,28 @@ namespace Repositories
 
         public IQueryable<Student> GetAll()
         {
-            return _context.Students;
+            try
+            {
+                return _context.Students;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
         }
 
         public IQueryable<Student> GetByStudentClass(int classId)
         {
-            return _context.Students.Where(s => s.ClassId == classId);
+            try
+            {
+                return _context.Students.Where(s => s.ClassId == classId);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
         }
 
         public Student GetById(string id)

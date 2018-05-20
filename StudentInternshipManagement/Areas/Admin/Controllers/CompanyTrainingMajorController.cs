@@ -56,7 +56,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult CompanyTrainingMajors_Create([DataSourceRequest]DataSourceRequest request, int? companyId, int? majorId, CompanyTrainingMajor companyTrainingMajor)
+        public ActionResult CompanyTrainingMajors_Create([DataSourceRequest]DataSourceRequest request, CompanyTrainingMajor companyTrainingMajor)
         {
             if (ModelState.IsValid)
             {
@@ -67,15 +67,6 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
                     TotalTraineeCount = companyTrainingMajor.TotalTraineeCount,
                     AvailableTraineeCount = companyTrainingMajor.AvailableTraineeCount
                 };
-
-                if (companyId != null)
-                {
-                    entity.CompanyId = companyId.Value;
-                }
-                if (majorId != null)
-                {
-                    entity.TrainingMajorId = majorId.Value;
-                }
 
                 _service.Add(entity);
             }

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Models;
+using Utilities;
 
 namespace Repositories
 {
@@ -14,39 +15,99 @@ namespace Repositories
 
         public IQueryable<CompanyTrainingMajor> GetAll()
         {
-            return _context.CompanyTrainingMajors;
+            try
+            {
+                return _context.CompanyTrainingMajors;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
         }
         public CompanyTrainingMajor GetById(int companyId, int trainingMajorId)
         {
-            return _context.CompanyTrainingMajors.FirstOrDefault(s => (s.CompanyId==companyId && s.TrainingMajorId== trainingMajorId));
+            try
+            {
+                return _context.CompanyTrainingMajors.FirstOrDefault(s => (s.CompanyId == companyId && s.TrainingMajorId == trainingMajorId));
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
         }
 
         public IQueryable<CompanyTrainingMajor> GetByCompany(int companyId)
         {
-            return _context.CompanyTrainingMajors.Where(s => s.CompanyId == companyId);
+            try
+            {
+                return _context.CompanyTrainingMajors.Where(s => s.CompanyId == companyId);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
         }
 
         public IQueryable<CompanyTrainingMajor> GetByTrainingMajor(int trainingMajorId)
         {
-            return _context.CompanyTrainingMajors.Where(s => s.TrainingMajorId == trainingMajorId);
+            try
+            {
+                return _context.CompanyTrainingMajors.Where(s => s.TrainingMajorId == trainingMajorId);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
         }
 
         public bool Add(CompanyTrainingMajor companyTrainingMajor)
         {
-            _context.Entry(companyTrainingMajor).State = EntityState.Added;
-            return _context.SaveChanges() > 0;
+            try
+            {
+                _context.CompanyTrainingMajors.Add(companyTrainingMajor);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return false;
+            }
         }
 
         public bool Update(CompanyTrainingMajor companyTrainingMajor)
         {
-            _context.Entry(companyTrainingMajor).State = EntityState.Modified;
-            return _context.SaveChanges() > 0;
+            try
+            {
+                _context.Entry(companyTrainingMajor).State = EntityState.Modified;
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return false;
+            }
         }
 
         public bool Delete(CompanyTrainingMajor companyTrainingMajor)
         {
-            _context.Entry(companyTrainingMajor).State = EntityState.Deleted;
-            return _context.SaveChanges() > 0;
+            var curr = GetById(companyTrainingMajor.CompanyId, companyTrainingMajor.TrainingMajorId);
+            if (curr == null)
+                return false;
+
+            try
+            {
+                _context.CompanyTrainingMajors.Remove(curr);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return false;
+            }
         }
 
         public void Dispose()

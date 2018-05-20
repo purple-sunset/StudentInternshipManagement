@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Models;
+using Utilities;
 
 namespace Repositories
 {
@@ -14,29 +15,73 @@ namespace Repositories
 
         public IQueryable<TrainingMajor> GetAll()
         {
-            return _context.TrainingMajors;
+            try
+            {
+                return _context.TrainingMajors;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
         }
         public TrainingMajor GetById(int id)
         {
-            return _context.TrainingMajors.FirstOrDefault(s => s.TrainingMajorId==id);
+            try
+            {
+                return _context.TrainingMajors.FirstOrDefault(s => s.TrainingMajorId == id);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
         }
 
         public bool Add(TrainingMajor trainingMajor)
         {
-            _context.Entry(trainingMajor).State = EntityState.Added;
-            return _context.SaveChanges() > 0;
+            try
+            {
+                _context.TrainingMajors.Add(trainingMajor);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return false;
+            }
         }
 
         public bool Update(TrainingMajor trainingMajor)
         {
-            _context.Entry(trainingMajor).State = EntityState.Modified;
-            return _context.SaveChanges() > 0;
+            try
+            {
+                _context.Entry(trainingMajor).State = EntityState.Modified;
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return false;
+            }
         }
 
         public bool Delete(TrainingMajor trainingMajor)
         {
-            _context.Entry(trainingMajor).State = EntityState.Deleted;
-            return _context.SaveChanges() > 0;
+            var curr = GetById(trainingMajor.TrainingMajorId);
+            if (curr == null)
+                return false;
+
+            try
+            {
+                _context.TrainingMajors.Remove(curr);
+                return _context.SaveChanges() > 0;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return false;
+            }
         }
 
         public void Dispose()

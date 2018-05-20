@@ -16,7 +16,15 @@ namespace Repositories
 
         public IQueryable<Company> GetAll()
         {
-            return _context.Companies;
+            try
+            {
+                return _context.Companies;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
         }
         public Company GetById(int id)
         {

@@ -16,7 +16,15 @@ namespace Repositories
 
         public IQueryable<Admin> GetAll()
         {
-            return _context.Admins;
+            try
+            {
+                return _context.Admins;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
         }
         public Admin GetById(string id)
         {

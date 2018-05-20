@@ -19,9 +19,9 @@ namespace StudentInternshipManagement
                 "~/Content/site2.css"));
 
             bundles.Add(new StyleBundle("~/Content/kendo").Include(
-                "~/Content/kendo/2018.1.221/kendo.common.min.css",
-                "~/Content/kendo/2018.1.221/kendo.mobile.all.min.css",
-                "~/Content/kendo/2018.1.221/kendo.default.min.css"));
+                "~/Content/kendo/2018.2.516/kendo.common.min.css",
+                "~/Content/kendo/2018.2.516/kendo.mobile.all.min.css",
+                "~/Content/kendo/2018.2.516/kendo.default.min.css"));
 
             bundles.Add(new ScriptBundle("~/Script/jquery").Include(
                 "~/Scripts/jquery-{version}.js"));
@@ -39,9 +39,9 @@ namespace StudentInternshipManagement
                 "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/Script/kendo").Include(
-                "~/Scripts/kendo/2018.1.221/jszip.min.js",
-                "~/Scripts/kendo/2018.1.221/kendo.all.min.js",
-                "~/Scripts/kendo/2018.1.221/kendo.aspnetmvc.min.js",
+                "~/Scripts/kendo/2018.2.516/jszip.min.js",
+                "~/Scripts/kendo/2018.2.516/kendo.all.min.js",
+                "~/Scripts/kendo/2018.2.516/kendo.aspnetmvc.min.js",
                 "~/Scripts/kendo.modernizr.custom.js"));
 
             bundles.Add(new ScriptBundle("~/Script/site").Include(

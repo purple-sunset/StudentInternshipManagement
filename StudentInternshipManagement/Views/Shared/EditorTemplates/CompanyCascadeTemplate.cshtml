@@ -1,0 +1,29 @@
+﻿@using Kendo.Mvc.UI
+@using Models
+
+@(Html.Kendo().ComboBoxFor(m => m)
+      .Filter("contains")
+      .Placeholder("Chọn Công ty")
+      .Suggest(true)
+      .DataValueField("CompanyId")
+      .DataTextField("CompanyName")
+      .DataSource(source =>
+      {
+          source.Read(read =>
+          {
+              read.Action("GetCompanyList", "TrainingMajor")
+                  .Data("filterMajor");
+          })
+              .ServerFiltering(true);
+      })
+      .Enable(false)
+      .AutoBind(false)
+      .CascadeFrom("TrainingMajorId")
+      )
+<script>
+    function filterMajor() {
+        return {
+            majorId: $("#TrainingMajorId").val()
+        };
+    }
+</script>

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.Infrastructure.Interception;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,15 +10,15 @@ using Utilities;
 
 namespace Repositories
 {
-    public class TrainingMajorRepository : IDisposable
+    public class MessageRepository:IDisposable
     {
-        private readonly WebContext _context=new WebContext();
+        private readonly WebContext _context = new WebContext();
 
-        public IQueryable<TrainingMajor> GetAll()
+        public IQueryable<Message> GetAll()
         {
             try
             {
-                return _context.TrainingMajors;
+                return _context.Messages;
             }
             catch (Exception ex)
             {
@@ -25,26 +26,11 @@ namespace Repositories
                 return null;
             }
         }
-        public TrainingMajor GetById(int id)
+        public Message GetById(int id)
         {
             try
             {
-                return _context.TrainingMajors.FirstOrDefault(s => s.TrainingMajorId == id);
-            }
-            catch (Exception ex)
-            {
-                Logger.LogError(ex);
-                return null;
-            }
-        }
-
-        public IQueryable<Company> GetCompanyList(int id)
-        {
-            try
-            {
-                return _context.CompanyTrainingMajors
-                    .Where(s => s.TrainingMajorId == id)
-                    .Select(m => m.Company);
+                return _context.Messages.FirstOrDefault(s => s.MessageId == id);
             }
             catch (Exception ex)
             {
@@ -53,11 +39,11 @@ namespace Repositories
             }
         }
 
-        public bool Add(TrainingMajor trainingMajor)
+        public bool Add(Message message)
         {
             try
             {
-                _context.TrainingMajors.Add(trainingMajor);
+                _context.Messages.Add(message);
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -67,11 +53,11 @@ namespace Repositories
             }
         }
 
-        public bool Update(TrainingMajor trainingMajor)
+        public bool Update(Message message)
         {
             try
             {
-                _context.Entry(trainingMajor).State = EntityState.Modified;
+                _context.Entry(message).State = EntityState.Modified;
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -81,15 +67,15 @@ namespace Repositories
             }
         }
 
-        public bool Delete(TrainingMajor trainingMajor)
+        public bool Delete(Message message)
         {
-            var curr = GetById(trainingMajor.TrainingMajorId);
+            var curr = GetById(message.MessageId);
             if (curr == null)
                 return false;
 
             try
             {
-                _context.TrainingMajors.Remove(curr);
+                _context.Messages.Remove(curr);
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)

@@ -21,6 +21,10 @@ namespace Services
             return _repository.GetById(id);
         }
 
+        public IQueryable<TrainingMajor> GetMajorList(int id)
+        {
+            return _repository.GetMajorList(id);
+        }
         public bool Add(Company company)
         {
             return _repository.Add(company);

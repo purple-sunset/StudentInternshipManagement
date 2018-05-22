@@ -58,7 +58,7 @@ namespace Models
         public virtual StudentClass Class { get; set; }
 
         [ScriptIgnore(ApplyToOverrides = true)]
-        public virtual ICollection<LearningClass> LearningClasses { get; set; }
+        public virtual ICollection<LearningClassStudent> LearningClassStudents { get; set; }
 
         [ScriptIgnore(ApplyToOverrides = true)]
         public virtual ICollection<Message> Messages { get; set; }

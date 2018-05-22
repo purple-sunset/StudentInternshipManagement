@@ -53,8 +53,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LearningClassStudentRepository.cs" />
+    <Compile Include="StatisticRepository.cs" />
+    <Compile Include="NotificationRepository.cs" />
+    <Compile Include="NewsRepository.cs" />
+    <Compile Include="MessageRepository.cs" />
+    <Compile Include="InternshipRepository.cs" />
+    <Compile Include="GroupRepository.cs" />
     <Compile Include="CompanyRepository.cs" />
     <Compile Include="CompanyTrainingMajorRepository.cs" />
+    <Compile Include="LearningClassRepository.cs" />
     <Compile Include="TrainingMajorRepository.cs" />
     <Compile Include="SubjectRepository.cs" />
     <Compile Include="SemesterRepository.cs" />

@@ -27,6 +27,11 @@ namespace Services
             return _repository.GetById(id);
         }
 
+        public IQueryable<LearningClass> GetLearningClassList(int id)
+        {
+            return _repository.GetLearningClassList(id);
+        }
+
         public bool Add(Student student)
         {
             return _repository.Add(student);

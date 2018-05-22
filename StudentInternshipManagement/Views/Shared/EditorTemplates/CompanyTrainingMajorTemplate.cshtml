@@ -1,0 +1,16 @@
+﻿@using Kendo.Mvc.UI
+@using Models
+@model int
+@(Html.Kendo().ComboBoxFor(m => m)  
+      .Filter("contains")
+      .Placeholder("Chọn Định hướng")
+      .Suggest(true)
+      .DataValueField("TrainingMajorId")
+      .DataTextField("TrainingMajorName")
+      .DataSource(dataSource =>
+      {
+          dataSource.Read(read => read.Action("GetProducts", "Home").Data("filterCompany"))
+              .ServerFiltering(true);
+      })
+      .CascadeFrom("CompanyId")
+      )

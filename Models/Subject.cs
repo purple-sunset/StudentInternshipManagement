@@ -28,5 +28,8 @@ namespace Models
 
         [ScriptIgnore(ApplyToOverrides = true)]
         public virtual Department Department { get; set; }
+
+        [ScriptIgnore(ApplyToOverrides = true)]
+        public virtual ICollection<TrainingMajor> TrainingMajors { get; set; }
     }
 }

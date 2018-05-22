@@ -88,5 +88,27 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             return Json(new[] { studentClass }.ToDataSourceResult(request, ModelState));
         }
 
+        public ActionResult GetStudentList(int classId, [DataSourceRequest]DataSourceRequest request)
+        {
+            DataSourceResult result = _service.GetById(classId).Students.ToDataSourceResult(request, student => new {
+                StudentId = student.StudentId,
+                StudentName = student.StudentName,
+                BirthDate = student.BirthDate,
+                Address = student.Address,
+                Phone = student.Phone,
+                Cpa = student.Cpa,
+                ClassId = student.ClassId
+            });
+
+            return Json(result);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _service.Dispose();
+            _departmentService.Dispose();
+            base.Dispose(disposing);
+        }
+
     }
 }

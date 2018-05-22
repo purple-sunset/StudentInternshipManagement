@@ -53,6 +53,19 @@ namespace Repositories
             }
         }
 
+        public IQueryable<LearningClass> GetLearningClassList(int id)
+        {
+            try
+            {
+                return _context.LearningClassStudents.Where(s => s.StudentId.Equals(id)).Select(m => m.Class);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
+        }
+
         public bool Add(Student student)
         {
             try

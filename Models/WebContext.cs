@@ -34,6 +34,8 @@ namespace Models
 
         public DbSet<LearningClass> LearningClasses { get; set; }
 
+        public DbSet<LearningClassStudent> LearningClassStudents { get; set; }
+
         public DbSet<TrainingMajor> TrainingMajors { get; set; }
 
         public DbSet<CompanyTrainingMajor> CompanyTrainingMajors { get; set; }

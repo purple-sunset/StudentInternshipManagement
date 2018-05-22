@@ -101,6 +101,20 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             return Json(result);
         }
 
+
+        public ActionResult GetCompanyList(int majorId, [DataSourceRequest]DataSourceRequest request)
+        {
+            DataSourceResult result = _service.GetCompanyList(majorId).ToDataSourceResult(request, company => new {
+                CompanyId = company.CompanyId,
+                CompanyName = company.CompanyName,
+                CompanyDescription = company.CompanyDescription,
+                Address = company.Address,
+                Email = company.Email,
+                Phone = company.Phone
+            });
+
+            return Json(result);
+        }
         protected override void Dispose(bool disposing)
         {
             _service.Dispose();

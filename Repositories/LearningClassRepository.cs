@@ -9,27 +9,15 @@ using Utilities;
 
 namespace Repositories
 {
-    public class TrainingMajorRepository : IDisposable
+    public class LearningClassRepository : IDisposable
     {
         private readonly WebContext _context=new WebContext();
 
-        public IQueryable<TrainingMajor> GetAll()
+        public IQueryable<LearningClass> GetAll()
         {
             try
             {
-                return _context.TrainingMajors;
-            }
-            catch (Exception ex)
-            {
-                Logger.LogError(ex);
-                return null;
-            }
-        }
-        public TrainingMajor GetById(int id)
-        {
-            try
-            {
-                return _context.TrainingMajors.FirstOrDefault(s => s.TrainingMajorId == id);
+                return _context.LearningClasses;
             }
             catch (Exception ex)
             {
@@ -38,13 +26,11 @@ namespace Repositories
             }
         }
 
-        public IQueryable<Company> GetCompanyList(int id)
+        public LearningClass GetById(int id)
         {
             try
             {
-                return _context.CompanyTrainingMajors
-                    .Where(s => s.TrainingMajorId == id)
-                    .Select(m => m.Company);
+                return _context.LearningClasses.FirstOrDefault(s => s.ClassId == id);
             }
             catch (Exception ex)
             {
@@ -53,11 +39,24 @@ namespace Repositories
             }
         }
 
-        public bool Add(TrainingMajor trainingMajor)
+        public IQueryable<Student> GetStudentList(int id)
         {
             try
             {
-                _context.TrainingMajors.Add(trainingMajor);
+                return _context.LearningClassStudents.Where(s => s.ClassId == id).Select(m => m.Student);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
+        }
+
+        public bool Add(LearningClass learningClass)
+        {
+            try
+            {
+                _context.LearningClasses.Add(learningClass);
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -67,11 +66,11 @@ namespace Repositories
             }
         }
 
-        public bool Update(TrainingMajor trainingMajor)
+        public bool Update(LearningClass learningClass)
         {
             try
             {
-                _context.Entry(trainingMajor).State = EntityState.Modified;
+                _context.Entry(learningClass).State = EntityState.Modified;
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)
@@ -81,15 +80,15 @@ namespace Repositories
             }
         }
 
-        public bool Delete(TrainingMajor trainingMajor)
+        public bool Delete(LearningClass learningClass)
         {
-            var curr = GetById(trainingMajor.TrainingMajorId);
+            var curr = GetById(learningClass.ClassId);
             if (curr == null)
                 return false;
 
             try
             {
-                _context.TrainingMajors.Remove(curr);
+                _context.LearningClasses.Remove(curr);
                 return _context.SaveChanges() > 0;
             }
             catch (Exception ex)

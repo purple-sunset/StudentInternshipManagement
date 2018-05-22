@@ -15,40 +15,35 @@
 
 
 @(Html.Kendo().Grid<Models.CompanyTrainingMajor>()
-                  .Name("grid")
-                  .Columns(columns =>
-                  {
-                      columns.ForeignKey(p => p.CompanyId, (IQueryable<Company>)ViewBag.Companies, "CompanyId", "CompanyName").EditorTemplateName("CompanyTemplate");
-                      columns.ForeignKey(p => p.TrainingMajorId, (IQueryable<TrainingMajor>)ViewBag.TrainingMajors, "TrainingMajorId", "TrainingMajorName").EditorTemplateName("TrainingMajorTemplate");
-                      columns.Bound(c => c.TotalTraineeCount);
-                      columns.Bound(c => c.AvailableTraineeCount);
-                      columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
-                  })
-                  .ToolBar(toolbar =>
-                  {
-                      toolbar.Create();
-                  })
-                  .Editable(editable => editable.Mode(GridEditMode.InLine))
-                  .Pageable()
-                  .Sortable(sortable =>
-                  {
-                      sortable.SortMode(GridSortMode.SingleColumn);
-                  })
-                  .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
-                  .Scrollable()
-                  .Events(events =>
-                  {
-                      events.Edit("onEdit");
-                  })
-                  .DataSource(dataSource => dataSource
-                      .Ajax()
-                      .Model(model => model.Id(p => p.CompanyId))
-                      .Read(read => read.Action("CompanyTrainingMajors_Read", "CompanyTrainingMajor"))
-                      .Create(create => create.Action("CompanyTrainingMajors_Create", "CompanyTrainingMajor"))
-                      .Update(update => update.Action("CompanyTrainingMajors_Update", "CompanyTrainingMajor"))
-                      .Destroy(destroy => destroy.Action("CompanyTrainingMajors_Destroy", "CompanyTrainingMajor"))
-                  )
-)
+      .Name("grid")
+      .Columns(columns =>
+      {
+          columns.ForeignKey(p => p.CompanyId, (IQueryable<Company>) ViewBag.Companies, "CompanyId", "CompanyName").EditorTemplateName("CompanyTemplate");
+          columns.ForeignKey(p => p.TrainingMajorId, (IQueryable<TrainingMajor>) ViewBag.TrainingMajors, "TrainingMajorId", "TrainingMajorName").EditorTemplateName("TrainingMajorTemplate");
+          columns.Bound(c => c.TotalTraineeCount);
+          columns.Bound(c => c.AvailableTraineeCount);
+          columns.Command(command =>
+          {
+              command.Edit();
+              command.Destroy();
+          }).Width(180);
+      })
+      .ToolBar(toolbar => { toolbar.Create(); })
+      .Editable(editable => editable.Mode(GridEditMode.InLine))
+      .Pageable()
+      .Sortable(sortable => { sortable.SortMode(GridSortMode.SingleColumn); })
+      .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
+      .Scrollable()
+      .Events(events => { events.Edit("onEdit"); })
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model => model.Id(p => p.CompanyId))
+          .Read(read => read.Action("CompanyTrainingMajors_Read", "CompanyTrainingMajor"))
+          .Create(create => create.Action("CompanyTrainingMajors_Create", "CompanyTrainingMajor"))
+          .Update(update => update.Action("CompanyTrainingMajors_Update", "CompanyTrainingMajor"))
+          .Destroy(destroy => destroy.Action("CompanyTrainingMajors_Destroy", "CompanyTrainingMajor"))
+      )
+      )
 
 <script type="text/javascript">
 

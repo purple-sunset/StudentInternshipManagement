@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Models
+{
+    public class LearningClassStudent
+    {
+        [Key]
+        [Column(Order = 1)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DisplayName("Lớp")]
+        [UIHint("LearningClassTemplate")]
+        public int ClassId { get; set; }
+
+        [Key]
+        [Column(Order = 2)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DisplayName("Sinh viên")]
+        [UIHint("StudentTemplate")]
+        public string StudentId { get; set; }
+
+        [Required]
+        [Range(0,10)]
+        [DisplayName("Điểm giữa kỳ")]
+        public float MidTermPoint { get; set; }
+
+        [Required]
+        [Range(0, 10)]
+        [DisplayName("Điểm cuối kỳ")]
+        public float EndTermPoint { get; set; }
+
+        [Required]
+        [Range(0, 10)]
+        [DisplayName("Điểm tổng kết")]
+        public float TotalPoint { get; set; }
+
+        public virtual LearningClass Class { get; set; }
+
+        public virtual Student Student { get; set; }
+    }
+}

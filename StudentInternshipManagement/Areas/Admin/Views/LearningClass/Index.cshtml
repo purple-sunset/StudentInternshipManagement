@@ -1,9 +1,9 @@
 ﻿@using Kendo.Mvc.UI
 @using Models
 @{
-    ViewBag.Title = "Quản lý lớp sinh viên";
+    ViewBag.Title = "Quản lý sinh viên";
     ViewBag.Category = "Quản lý";
-    ViewBag.Section = "Lớp sinh viên";
+    ViewBag.Section = "Sinh viên";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
@@ -13,14 +13,14 @@
     @Scripts.Render("~/Script/kendo")
 }
 
-
-@(Html.Kendo().Grid<Models.StudentClass>()
+@(Html.Kendo().Grid<Models.LearningClass>()
       .Name("grid")
       .Columns(columns =>
       {
           columns.Bound(c => c.ClassId);
           columns.Bound(c => c.ClassName);
-          columns.ForeignKey(p => p.DepartmentId, (IQueryable<Department>) ViewBag.Departments, "DepartmentId", "DepartmentName").EditorTemplateName("DepartmentTemplate");
+          columns.ForeignKey(p => p.SubjectId, (IQueryable<Subject>) ViewBag.Subjects, "SubjectId", "SubjectName").EditorTemplateName("SubjectTemplate");
+          columns.Bound(p => p.SemesterId).EditorTemplateName("SemesterTemplate");
           columns.Command(command =>
           {
               command.Edit();
@@ -37,10 +37,10 @@
       .DataSource(dataSource => dataSource
           .Ajax()
           .Model(model => model.Id(p => p.ClassId))
-          .Read(read => read.Action("StudentClasses_Read", "StudentClass"))
-          .Create(create => create.Action("StudentClasses_Create", "StudentClass"))
-          .Update(update => update.Action("StudentClasses_Update", "StudentClass"))
-          .Destroy(destroy => destroy.Action("StudentClasses_Destroy", "StudentClass"))
+          .Read(read => read.Action("LearningClasses_Read", "LearningClass"))
+          .Create(create => create.Action("LearningClasses_Create", "LearningClass"))
+          .Update(update => update.Action("LearningClasses_Update", "LearningClass"))
+          .Destroy(destroy => destroy.Action("LearningClasses_Destroy", "LearningClass"))
       )
       .Events(events => events
           .Edit("onEdit")
@@ -48,21 +48,19 @@
       )
 
 <script id="template" type="text/kendo-tmpl">
-    @(Html.Kendo().Grid<Student>()
+    @(Html.Kendo().Grid<LearningClassStudent>()
           .Name("grid_#=ClassId#") // template expression, to be evaluated in the master context
           .Columns(columns =>
           {
-              columns.Bound(o => o.StudentId);
-              columns.Bound(o => o.StudentName);
-              columns.Bound(o => o.BirthDate);
-              columns.Bound(o => o.Address);
-              columns.Bound(o => o.Phone);
-              columns.Bound(o => o.Cpa);
+              columns.ForeignKey(p => p.StudentId, (IQueryable<Student>) ViewBag.Students, "StudentId", "StudentName").EditorTemplateName("StudentTemplate");
+              columns.Bound(o => o.MidTermPoint);
+              columns.Bound(o => o.EndTermPoint);
+              columns.Bound(o => o.TotalPoint).Hidden();
           })
           .DataSource(dataSource => dataSource
               .Ajax()
               .PageSize(10)
-              .Read(read => read.Action("GetStudentList", "StudentClass", new {classId = "#=ClassId#"}))
+              .Read(read => read.Action("GetStudentList", "LearningClass", new {classId = "#=ClassId#" }))
           )
           .Pageable()
           .Sortable()

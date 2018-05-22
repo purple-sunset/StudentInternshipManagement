@@ -208,6 +208,8 @@
     <Compile Include="Areas\Admin\Controllers\CompanyController.cs" />
     <Compile Include="Areas\Admin\Controllers\CompanyTrainingMajorController.cs" />
     <Compile Include="Areas\Admin\Controllers\DepartmentController.cs" />
+    <Compile Include="Areas\Admin\Controllers\InternshipController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LearningClassController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Admin\Controllers\SemesterController.cs" />
     <Compile Include="Areas\Admin\Controllers\StudentClassController.cs" />
@@ -770,11 +772,11 @@
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Navigation.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_SideBar.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\EditorTemplates\CompanyTemplate.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\EditorTemplates\DepartmentTemplate.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\EditorTemplates\StudentClassTemplate.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\EditorTemplates\SubjectTemplate.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\EditorTemplates\TrainingMajorTemplate.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\CompanyTemplate.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\DepartmentTemplate.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\StudentClassTemplate.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\SubjectTemplate.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\TrainingMajorTemplate.cshtml" />
     <Content Include="Areas\Student\Views\Profile\Edit.cshtml" />
     <Content Include="Areas\Student\Views\Profile\Index.cshtml" />
     <Content Include="Areas\Student\Views\Shared\_Layout.cshtml" />
@@ -785,6 +787,12 @@
     <Content Include="Areas\Teacher\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Teacher\Views\Shared\_Navigation.cshtml" />
     <Content Include="Areas\Teacher\Views\Shared\_SideBar.cshtml" />
+    <Content Include="Areas\Admin\Views\Internship\Index.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\CompanyTrainingMajorTemplate.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\LearningClassTemplate.cshtml" />
+    <Content Include="Areas\Admin\Views\LearningClass\Index.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\CompanyCascadeTemplate.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\TrainingMajorCascadeTemplate.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\buttons.colVis.min.js" />
     <Content Include="Scripts\buttons.flash.min.js" />
@@ -2949,12 +2957,15 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\SemesterTemplate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Student\Models\" />
     <Folder Include="Areas\Teacher\Models\" />
+    <Folder Include="Views\Internship\" />
+    <Folder Include="Views\LearningClass\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

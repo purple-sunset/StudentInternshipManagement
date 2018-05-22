@@ -64,6 +64,7 @@
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Internship.cs" />
     <Compile Include="LearningClass.cs" />
+    <Compile Include="LearningClassStudent.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="News.cs" />
     <Compile Include="Notification.cs" />

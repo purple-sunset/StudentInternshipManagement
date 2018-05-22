@@ -39,6 +39,21 @@ namespace Repositories
             }
         }
 
+        public IQueryable<TrainingMajor> GetMajorList(int id)
+        {
+            try
+            {
+                return _context.CompanyTrainingMajors
+                    .Where(s => s.CompanyId == id)
+                    .Select(m => m.TrainingMajor);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
+        }
+
         public bool Add(Company company)
         {
             try

@@ -15,13 +15,14 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
     public class StudentController : Controller
     {
-        //private WebContext db = new WebContext();
         private readonly StudentService _service=new StudentService();
         private readonly StudentClassService _classServiceservice = new StudentClassService();
+        private readonly LearningClassService _learningClassService=new LearningClassService();
 
         public ActionResult Index()
         {
             ViewBag.StudentClasses = _classServiceservice.GetAll();
+            ViewBag.LearningClasses = _learningClassService.GetAll();
             return View();
         }
 
@@ -35,21 +36,6 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
                 Phone = student.Phone,
                 Cpa = student.Cpa,
                 ClassId=student.ClassId
-            });
-
-            return Json(result);
-        }
-
-        public ActionResult Students_ReadByClass(int classId, [DataSourceRequest]DataSourceRequest request)
-        {
-            DataSourceResult result = _service.GetByStudentClass(classId).ToDataSourceResult(request, student => new {
-                StudentId = student.StudentId,
-                StudentName = student.StudentName,
-                BirthDate = student.BirthDate,
-                Address = student.Address,
-                Phone = student.Phone,
-                Cpa = student.Cpa,
-                ClassId = student.ClassId
             });
 
             return Json(result);
@@ -121,5 +107,24 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             return Json(new[] { student }.ToDataSourceResult(request, ModelState));
         }
 
+        public ActionResult GetLearningClassList(string studentId, [DataSourceRequest]DataSourceRequest request)
+        {
+            DataSourceResult result = _service.GetById(studentId).LearningClassStudents.ToDataSourceResult(request, student => new {
+                StudentId = student.StudentId,
+                ClassId = student.ClassId,
+                MidTermPoint = student.MidTermPoint,
+                EndTermPoint = student.EndTermPoint,
+                TotalPoint = student.TotalPoint
+            });
+
+            return Json(result);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _service.Dispose();
+            _classServiceservice.Dispose();
+            base.Dispose(disposing);
+        }
     }
 }

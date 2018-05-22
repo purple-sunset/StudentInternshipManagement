@@ -51,6 +51,21 @@ namespace Models
             userManager.Create(user3, "Ab=123456789");
             userManager.AddToRole(user3.Id, "Admin");
 
+            var semesters = new List<Semester>
+            {
+                new Semester()
+                {
+                    SemesterId = 20171,
+                    StartDate = DateTime.Now,
+                    EndDate = DateTime.Now
+                }
+            };
+
+            foreach (var item in semesters)
+            {
+                context.Semesters.Add(item);
+            }
+
             var departments = new List<Department>
             {
                 new Department()
@@ -151,6 +166,21 @@ namespace Models
                 context.Subjects.Add(item);
             }
 
+            var learningClasses = new List<LearningClass>
+            {
+                new LearningClass()
+                {
+                    ClassName="IT1110 - 1",
+                    Subject = subjects[0],
+                    Semester = semesters[0]
+                }
+            };
+
+            foreach (var item in learningClasses)
+            {
+                context.LearningClasses.Add(item);
+            }
+
             var majors = new List<TrainingMajor>
             {
                 new TrainingMajor()
@@ -223,6 +253,23 @@ namespace Models
             foreach (var item in companyMajors)
             {
                 context.CompanyTrainingMajors.Add(item);
+            }
+
+            var internships = new List<Internship>
+            {
+                new Internship()
+                {
+                    RegistrationDate=DateTime.Now,
+                    Status=InternshipStatus.Registered,
+                    Student=students[0],
+                    Class=learningClasses[0],
+                    Major=companyMajors[0]
+                }
+            };
+
+            foreach (var item in internships)
+            {
+                context.Internships.Add(item);
             }
 
             base.Seed(context);

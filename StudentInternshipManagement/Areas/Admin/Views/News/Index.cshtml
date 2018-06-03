@@ -1,0 +1,43 @@
+﻿@using Kendo.Mvc.UI
+@using Models
+@{
+    ViewBag.Title = "Quản lý tin tức";
+    ViewBag.Category = "Quản lý";
+    ViewBag.Section = "Tin tức";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section Kendo
+{
+    @Styles.Render("~/Content/kendo")
+    @Scripts.Render("~/Script/kendo")
+}
+
+@(Html.Kendo().Grid<Models.News>()
+      .Name("grid")
+      .Columns(columns =>
+      {
+          columns.Bound(c => c.Title);
+          columns.Bound(c => c.Content);
+          columns.Bound(c => c.Time).Format("{0:dd/MM/yyyy}");
+          columns.Command(command =>
+          {
+              command.Edit();
+              command.Destroy();
+          }).Width(180);
+      })
+      .ToolBar(toolbar => { toolbar.Create(); })
+      .Editable(editable => editable.Mode(GridEditMode.PopUp))
+      .Pageable()
+      .Sortable(sortable => { sortable.SortMode(GridSortMode.SingleColumn); })
+      .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
+      .Scrollable()
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model => model.Id(p => p.NewsId))
+          .Read(read => read.Action("Newses_Read", "News"))
+          .Create(create => create.Action("Newses_Create", "News"))
+          .Update(update => update.Action("Newses_Update", "News"))
+          .Destroy(destroy => destroy.Action("Newses_Destroy", "News"))
+      )
+      )

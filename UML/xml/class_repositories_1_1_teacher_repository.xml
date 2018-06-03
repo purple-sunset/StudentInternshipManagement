@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_repositories_1_1_teacher_repository" kind="class" language="C#" prot="public">
+    <compoundname>Repositories::TeacherRepository</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_repositories_1_1_teacher_repository_1a5355ef55ef80d62a8ba0c6b81eb51e48" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref></type>
+        <definition>readonly WebContext Repositories.TeacherRepository._context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <initializer>=new <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TeacherRepository.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TeacherRepository.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_repositories_1_1_teacher_repository_1a19a41730272a337e792cf0a0e1346d07" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_teacher" kindref="compound">Teacher</ref> &gt;</type>
+        <definition>IQueryable&lt;Teacher&gt; Repositories.TeacherRepository.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TeacherRepository.cs" line="17" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TeacherRepository.cs" bodystart="17" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_teacher_repository_1ae0f2635cfa21cbb3df33717d20335d38" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_teacher" kindref="compound">Teacher</ref></type>
+        <definition>Teacher Repositories.TeacherRepository.GetById</definition>
+        <argsstring>(string id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TeacherRepository.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TeacherRepository.cs" bodystart="29" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_teacher_repository_1a66a98235f8602b6d265fb892c4969dba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.TeacherRepository.Add</definition>
+        <argsstring>(Teacher teacher)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_teacher" kindref="compound">Teacher</ref></type>
+          <declname>teacher</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TeacherRepository.cs" line="42" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TeacherRepository.cs" bodystart="42" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_teacher_repository_1af413cbb925f501f62d9099c61a687dee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.TeacherRepository.Update</definition>
+        <argsstring>(Teacher teacher)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_teacher" kindref="compound">Teacher</ref></type>
+          <declname>teacher</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TeacherRepository.cs" line="56" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TeacherRepository.cs" bodystart="56" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_teacher_repository_1a292b5eb64707d27bff6bd56e6b4831a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.TeacherRepository.Delete</definition>
+        <argsstring>(Teacher teacher)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_teacher" kindref="compound">Teacher</ref></type>
+          <declname>teacher</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TeacherRepository.cs" line="70" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TeacherRepository.cs" bodystart="70" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_teacher_repository_1ab1b448e324b49e1988f177dc437e1420" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Repositories.TeacherRepository.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TeacherRepository.cs" line="88" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TeacherRepository.cs" bodystart="88" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="300">
+        <label>IDisposable</label>
+      </node>
+      <node id="299">
+        <label>Repositories.TeacherRepository</label>
+        <link refid="class_repositories_1_1_teacher_repository"/>
+        <childnode refid="300" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="302">
+        <label>IDisposable</label>
+      </node>
+      <node id="301">
+        <label>Repositories.TeacherRepository</label>
+        <link refid="class_repositories_1_1_teacher_repository"/>
+        <childnode refid="302" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TeacherRepository.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TeacherRepository.cs" bodystart="13" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_repositories_1_1_teacher_repository_1a5355ef55ef80d62a8ba0c6b81eb51e48" prot="private" virt="non-virtual"><scope>Repositories::TeacherRepository</scope><name>_context</name></member>
+      <member refid="class_repositories_1_1_teacher_repository_1a66a98235f8602b6d265fb892c4969dba" prot="public" virt="non-virtual"><scope>Repositories::TeacherRepository</scope><name>Add</name></member>
+      <member refid="class_repositories_1_1_teacher_repository_1a292b5eb64707d27bff6bd56e6b4831a0" prot="public" virt="non-virtual"><scope>Repositories::TeacherRepository</scope><name>Delete</name></member>
+      <member refid="class_repositories_1_1_teacher_repository_1ab1b448e324b49e1988f177dc437e1420" prot="public" virt="non-virtual"><scope>Repositories::TeacherRepository</scope><name>Dispose</name></member>
+      <member refid="class_repositories_1_1_teacher_repository_1a19a41730272a337e792cf0a0e1346d07" prot="public" virt="non-virtual"><scope>Repositories::TeacherRepository</scope><name>GetAll</name></member>
+      <member refid="class_repositories_1_1_teacher_repository_1ae0f2635cfa21cbb3df33717d20335d38" prot="public" virt="non-virtual"><scope>Repositories::TeacherRepository</scope><name>GetById</name></member>
+      <member refid="class_repositories_1_1_teacher_repository_1af413cbb925f501f62d9099c61a687dee" prot="public" virt="non-virtual"><scope>Repositories::TeacherRepository</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

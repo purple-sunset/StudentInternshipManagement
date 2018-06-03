@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_models_1_1_subject" kind="class" language="C#" prot="public">
+    <compoundname>Models::Subject</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_models_1_1_subject_1afdc9e83985f60073e8256d21bb7bfd33" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Subject.SubjectId</definition>
+        <argsstring></argsstring>
+        <name>SubjectId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Subject.cs" line="18" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Subject.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_subject_1a77ebe530ac397b6ba21fd0ff67548207" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Subject.SubjectName</definition>
+        <argsstring></argsstring>
+        <name>SubjectName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Subject.cs" line="23" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Subject.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_subject_1a8c5c223af83b072351b0b475e80e29d8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.Subject.DepartmentId</definition>
+        <argsstring></argsstring>
+        <name>DepartmentId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Subject.cs" line="27" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Subject.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_subject_1a7fbdae3a3937a3549a9fa4b76025aea4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_models_1_1_department" kindref="compound">Department</ref></type>
+        <definition>virtual Department Models.Subject.Department</definition>
+        <argsstring></argsstring>
+        <name>Department</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Subject.cs" line="30" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Subject.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_subject_1ae3e026d1d9820478e0eca4f8ccd5dfe7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ICollection&lt; <ref refid="class_models_1_1_training_major" kindref="compound">TrainingMajor</ref> &gt;</type>
+        <definition>virtual ICollection&lt;TrainingMajor&gt; Models.Subject.TrainingMajors</definition>
+        <argsstring></argsstring>
+        <name>TrainingMajors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Subject.cs" line="33" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Subject.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Subject.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Subject.cs" bodystart="13" bodyend="34"/>
+    <listofallmembers>
+      <member refid="class_models_1_1_subject_1a7fbdae3a3937a3549a9fa4b76025aea4" prot="public" virt="non-virtual"><scope>Models::Subject</scope><name>Department</name></member>
+      <member refid="class_models_1_1_subject_1a8c5c223af83b072351b0b475e80e29d8" prot="public" virt="non-virtual"><scope>Models::Subject</scope><name>DepartmentId</name></member>
+      <member refid="class_models_1_1_subject_1afdc9e83985f60073e8256d21bb7bfd33" prot="public" virt="non-virtual"><scope>Models::Subject</scope><name>SubjectId</name></member>
+      <member refid="class_models_1_1_subject_1a77ebe530ac397b6ba21fd0ff67548207" prot="public" virt="non-virtual"><scope>Models::Subject</scope><name>SubjectName</name></member>
+      <member refid="class_models_1_1_subject_1ae3e026d1d9820478e0eca4f8ccd5dfe7" prot="public" virt="non-virtual"><scope>Models::Subject</scope><name>TrainingMajors</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

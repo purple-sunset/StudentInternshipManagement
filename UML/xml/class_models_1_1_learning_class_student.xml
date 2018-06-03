@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_models_1_1_learning_class_student" kind="class" language="C#" prot="public">
+    <compoundname>Models::LearningClassStudent</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_models_1_1_learning_class_student_1a46b5ac66377d5de2ab9fa0cfe6665b78" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.LearningClassStudent.ClassId</definition>
+        <argsstring></argsstring>
+        <name>ClassId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClassStudent.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClassStudent.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_learning_class_student_1ac73087658b25b77a09c46a4b90541c50" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.LearningClassStudent.StudentId</definition>
+        <argsstring></argsstring>
+        <name>StudentId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClassStudent.cs" line="26" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClassStudent.cs" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_learning_class_student_1af28fb64872a1ec479b79d205a28ffedd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>float</type>
+        <definition>float Models.LearningClassStudent.MidTermPoint</definition>
+        <argsstring></argsstring>
+        <name>MidTermPoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClassStudent.cs" line="31" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClassStudent.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_learning_class_student_1a78708b291d705d658dfeb32dd2816fc9" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>float</type>
+        <definition>float Models.LearningClassStudent.EndTermPoint</definition>
+        <argsstring></argsstring>
+        <name>EndTermPoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClassStudent.cs" line="36" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClassStudent.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_learning_class_student_1afe71225837fc2b58d8f4c80b91306917" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>float</type>
+        <definition>float Models.LearningClassStudent.TotalPoint</definition>
+        <argsstring></argsstring>
+        <name>TotalPoint</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClassStudent.cs" line="41" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClassStudent.cs" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_learning_class_student_1a747b2ad3a29d753c00c37bf8ff7c8bea" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_models_1_1_learning_class" kindref="compound">LearningClass</ref></type>
+        <definition>virtual LearningClass Models.LearningClassStudent.Class</definition>
+        <argsstring></argsstring>
+        <name>Class</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClassStudent.cs" line="43" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClassStudent.cs" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_learning_class_student_1a21f36c2044cf2db5ede55cdc1f37fe2b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_models_1_1_student" kindref="compound">Student</ref></type>
+        <definition>virtual Student Models.LearningClassStudent.Student</definition>
+        <argsstring></argsstring>
+        <name>Student</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClassStudent.cs" line="45" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClassStudent.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClassStudent.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClassStudent.cs" bodystart="12" bodyend="46"/>
+    <listofallmembers>
+      <member refid="class_models_1_1_learning_class_student_1a747b2ad3a29d753c00c37bf8ff7c8bea" prot="public" virt="non-virtual"><scope>Models::LearningClassStudent</scope><name>Class</name></member>
+      <member refid="class_models_1_1_learning_class_student_1a46b5ac66377d5de2ab9fa0cfe6665b78" prot="public" virt="non-virtual"><scope>Models::LearningClassStudent</scope><name>ClassId</name></member>
+      <member refid="class_models_1_1_learning_class_student_1a78708b291d705d658dfeb32dd2816fc9" prot="public" virt="non-virtual"><scope>Models::LearningClassStudent</scope><name>EndTermPoint</name></member>
+      <member refid="class_models_1_1_learning_class_student_1af28fb64872a1ec479b79d205a28ffedd" prot="public" virt="non-virtual"><scope>Models::LearningClassStudent</scope><name>MidTermPoint</name></member>
+      <member refid="class_models_1_1_learning_class_student_1a21f36c2044cf2db5ede55cdc1f37fe2b" prot="public" virt="non-virtual"><scope>Models::LearningClassStudent</scope><name>Student</name></member>
+      <member refid="class_models_1_1_learning_class_student_1ac73087658b25b77a09c46a4b90541c50" prot="public" virt="non-virtual"><scope>Models::LearningClassStudent</scope><name>StudentId</name></member>
+      <member refid="class_models_1_1_learning_class_student_1afe71225837fc2b58d8f4c80b91306917" prot="public" virt="non-virtual"><scope>Models::LearningClassStudent</scope><name>TotalPoint</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

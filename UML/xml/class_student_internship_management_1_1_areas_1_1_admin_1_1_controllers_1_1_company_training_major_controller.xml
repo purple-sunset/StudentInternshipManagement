@@ -1,0 +1,215 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::Areas::Admin::Controllers::CompanyTrainingMajorController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Controller</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a55710ff102f7a7f9813928dca11ba833" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_services_1_1_company_training_major_service" kindref="compound">CompanyTrainingMajorService</ref></type>
+        <definition>readonly CompanyTrainingMajorService StudentInternshipManagement.Areas.Admin.Controllers.CompanyTrainingMajorController._service</definition>
+        <argsstring></argsstring>
+        <name>_service</name>
+        <initializer>=new <ref refid="class_services_1_1_company_training_major_service" kindref="compound">CompanyTrainingMajorService</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" line="18" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a94619cd462c753bd39953060ecb38403" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_services_1_1_training_major_service" kindref="compound">TrainingMajorService</ref></type>
+        <definition>readonly TrainingMajorService StudentInternshipManagement.Areas.Admin.Controllers.CompanyTrainingMajorController._trainingMajorService</definition>
+        <argsstring></argsstring>
+        <name>_trainingMajorService</name>
+        <initializer>= new <ref refid="class_services_1_1_training_major_service" kindref="compound">TrainingMajorService</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1acdc79132a0345d0d9ba9f1bed7d99ace" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_services_1_1_company_service" kindref="compound">CompanyService</ref></type>
+        <definition>readonly CompanyService StudentInternshipManagement.Areas.Admin.Controllers.CompanyTrainingMajorController._companyService</definition>
+        <argsstring></argsstring>
+        <name>_companyService</name>
+        <initializer>= new <ref refid="class_services_1_1_company_service" kindref="compound">CompanyService</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" line="20" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a2715671a8790f516b106974e0a1ba3cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.CompanyTrainingMajorController.Index</definition>
+        <argsstring>()</argsstring>
+        <name>Index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" line="22" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" bodystart="22" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1ae6a5b083cdf711f9661adaf7176bdae0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.CompanyTrainingMajorController.CompanyTrainingMajors_Read</definition>
+        <argsstring>([DataSourceRequest]DataSourceRequest request, int? companyId, int? majorId)</argsstring>
+        <name>CompanyTrainingMajors_Read</name>
+        <param>
+          <attributes>[DataSourceRequest]</attributes>
+          <type>DataSourceRequest</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>int?</type>
+          <declname>companyId</declname>
+        </param>
+        <param>
+          <type>int?</type>
+          <declname>majorId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" bodystart="29" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1af53904c821d71304a9dfb22f823f97b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.CompanyTrainingMajorController.CompanyTrainingMajors_Create</definition>
+        <argsstring>([DataSourceRequest]DataSourceRequest request, CompanyTrainingMajor companyTrainingMajor)</argsstring>
+        <name>CompanyTrainingMajors_Create</name>
+        <param>
+          <attributes>[DataSourceRequest]</attributes>
+          <type>DataSourceRequest</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type><ref refid="class_models_1_1_company_training_major" kindref="compound">CompanyTrainingMajor</ref></type>
+          <declname>companyTrainingMajor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" line="59" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" bodystart="59" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a5edb64f6389b9973c434fd63a2083a4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.CompanyTrainingMajorController.CompanyTrainingMajors_Update</definition>
+        <argsstring>([DataSourceRequest]DataSourceRequest request, CompanyTrainingMajor companyTrainingMajor)</argsstring>
+        <name>CompanyTrainingMajors_Update</name>
+        <param>
+          <attributes>[DataSourceRequest]</attributes>
+          <type>DataSourceRequest</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type><ref refid="class_models_1_1_company_training_major" kindref="compound">CompanyTrainingMajor</ref></type>
+          <declname>companyTrainingMajor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" line="78" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" bodystart="78" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a244b42c0ea03048fadb1947d725867d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.CompanyTrainingMajorController.CompanyTrainingMajors_Destroy</definition>
+        <argsstring>([DataSourceRequest]DataSourceRequest request, CompanyTrainingMajor companyTrainingMajor)</argsstring>
+        <name>CompanyTrainingMajors_Destroy</name>
+        <param>
+          <attributes>[DataSourceRequest]</attributes>
+          <type>DataSourceRequest</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type><ref refid="class_models_1_1_company_training_major" kindref="compound">CompanyTrainingMajor</ref></type>
+          <declname>companyTrainingMajor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" line="97" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" bodystart="97" bodyend="113"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a778b988e75c1986fcee9edb1f6f826b4" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void StudentInternshipManagement.Areas.Admin.Controllers.CompanyTrainingMajorController.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" line="115" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" bodystart="115" bodyend="121"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="63">
+        <label>StudentInternshipManagement.Areas.Admin.Controllers.CompanyTrainingMajorController</label>
+        <link refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller"/>
+        <childnode refid="64" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="64">
+        <label>Controller</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="65">
+        <label>StudentInternshipManagement.Areas.Admin.Controllers.CompanyTrainingMajorController</label>
+        <link refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller"/>
+        <childnode refid="66" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>Controller</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" line="17" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/CompanyTrainingMajorController.cs" bodystart="16" bodyend="122"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1acdc79132a0345d0d9ba9f1bed7d99ace" prot="private" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::CompanyTrainingMajorController</scope><name>_companyService</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a55710ff102f7a7f9813928dca11ba833" prot="private" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::CompanyTrainingMajorController</scope><name>_service</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a94619cd462c753bd39953060ecb38403" prot="private" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::CompanyTrainingMajorController</scope><name>_trainingMajorService</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1af53904c821d71304a9dfb22f823f97b8" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::CompanyTrainingMajorController</scope><name>CompanyTrainingMajors_Create</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a244b42c0ea03048fadb1947d725867d2" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::CompanyTrainingMajorController</scope><name>CompanyTrainingMajors_Destroy</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1ae6a5b083cdf711f9661adaf7176bdae0" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::CompanyTrainingMajorController</scope><name>CompanyTrainingMajors_Read</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a5edb64f6389b9973c434fd63a2083a4a" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::CompanyTrainingMajorController</scope><name>CompanyTrainingMajors_Update</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a778b988e75c1986fcee9edb1f6f826b4" prot="protected" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::CompanyTrainingMajorController</scope><name>Dispose</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a2715671a8790f516b106974e0a1ba3cb" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::CompanyTrainingMajorController</scope><name>Index</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

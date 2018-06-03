@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_repositories_1_1_student_repository" kind="class" language="C#" prot="public">
+    <compoundname>Repositories::StudentRepository</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_repositories_1_1_student_repository_1a220acf08059da834ed91dab17edde91f" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref></type>
+        <definition>readonly WebContext Repositories.StudentRepository._context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <initializer>=new <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_repositories_1_1_student_repository_1a88444ff6d5720c3dbc99b1b875046562" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_student" kindref="compound">Student</ref> &gt;</type>
+        <definition>IQueryable&lt;Student&gt; Repositories.StudentRepository.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" line="17" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" bodystart="17" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_student_repository_1a0e086b40350faeb861068fdf1a5b0801" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_student" kindref="compound">Student</ref> &gt;</type>
+        <definition>IQueryable&lt;Student&gt; Repositories.StudentRepository.GetByStudentClass</definition>
+        <argsstring>(int classId)</argsstring>
+        <name>GetByStudentClass</name>
+        <param>
+          <type>int</type>
+          <declname>classId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" line="30" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" bodystart="30" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_student_repository_1a86706622fa20fea4e57caf09b00fe2fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_student" kindref="compound">Student</ref></type>
+        <definition>Student Repositories.StudentRepository.GetById</definition>
+        <argsstring>(string id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" line="43" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" bodystart="43" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_student_repository_1a03241c174504820a317905a19eae99ab" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_learning_class" kindref="compound">LearningClass</ref> &gt;</type>
+        <definition>IQueryable&lt;LearningClass&gt; Repositories.StudentRepository.GetLearningClassList</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetLearningClassList</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" line="56" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" bodystart="56" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_student_repository_1a109bbcd47a600a4e2d087f1e10432e85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.StudentRepository.Add</definition>
+        <argsstring>(Student student)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_student" kindref="compound">Student</ref></type>
+          <declname>student</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" line="69" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" bodystart="69" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_student_repository_1a37060a6713996302c85bf6b074976b41" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.StudentRepository.Update</definition>
+        <argsstring>(Student student)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_student" kindref="compound">Student</ref></type>
+          <declname>student</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" line="83" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" bodystart="83" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_student_repository_1a2e3ca434c969c0803f8e947e54169388" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.StudentRepository.Delete</definition>
+        <argsstring>(Student student)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_student" kindref="compound">Student</ref></type>
+          <declname>student</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" line="97" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" bodystart="97" bodyend="113"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_student_repository_1a8745b2e5126ca067552d86b9b0ca54a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Repositories.StudentRepository.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" line="115" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" bodystart="115" bodyend="118"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="267">
+        <label>Repositories.StudentRepository</label>
+        <link refid="class_repositories_1_1_student_repository"/>
+        <childnode refid="268" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="268">
+        <label>IDisposable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="269">
+        <label>Repositories.StudentRepository</label>
+        <link refid="class_repositories_1_1_student_repository"/>
+        <childnode refid="270" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="270">
+        <label>IDisposable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StudentRepository.cs" bodystart="13" bodyend="119"/>
+    <listofallmembers>
+      <member refid="class_repositories_1_1_student_repository_1a220acf08059da834ed91dab17edde91f" prot="private" virt="non-virtual"><scope>Repositories::StudentRepository</scope><name>_context</name></member>
+      <member refid="class_repositories_1_1_student_repository_1a109bbcd47a600a4e2d087f1e10432e85" prot="public" virt="non-virtual"><scope>Repositories::StudentRepository</scope><name>Add</name></member>
+      <member refid="class_repositories_1_1_student_repository_1a2e3ca434c969c0803f8e947e54169388" prot="public" virt="non-virtual"><scope>Repositories::StudentRepository</scope><name>Delete</name></member>
+      <member refid="class_repositories_1_1_student_repository_1a8745b2e5126ca067552d86b9b0ca54a6" prot="public" virt="non-virtual"><scope>Repositories::StudentRepository</scope><name>Dispose</name></member>
+      <member refid="class_repositories_1_1_student_repository_1a88444ff6d5720c3dbc99b1b875046562" prot="public" virt="non-virtual"><scope>Repositories::StudentRepository</scope><name>GetAll</name></member>
+      <member refid="class_repositories_1_1_student_repository_1a86706622fa20fea4e57caf09b00fe2fc" prot="public" virt="non-virtual"><scope>Repositories::StudentRepository</scope><name>GetById</name></member>
+      <member refid="class_repositories_1_1_student_repository_1a0e086b40350faeb861068fdf1a5b0801" prot="public" virt="non-virtual"><scope>Repositories::StudentRepository</scope><name>GetByStudentClass</name></member>
+      <member refid="class_repositories_1_1_student_repository_1a03241c174504820a317905a19eae99ab" prot="public" virt="non-virtual"><scope>Repositories::StudentRepository</scope><name>GetLearningClassList</name></member>
+      <member refid="class_repositories_1_1_student_repository_1a37060a6713996302c85bf6b074976b41" prot="public" virt="non-virtual"><scope>Repositories::StudentRepository</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

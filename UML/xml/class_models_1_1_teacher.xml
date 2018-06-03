@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_models_1_1_teacher" kind="class" language="C#" prot="public">
+    <compoundname>Models::Teacher</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_models_1_1_teacher_1a293c325babd9a425ce4ddb17ea48d896" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Teacher.TeacherId</definition>
+        <argsstring></argsstring>
+        <name>TeacherId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" line="18" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_teacher_1a79d021229c73a3a713cf4b19935260e3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Teacher.TeacherName</definition>
+        <argsstring></argsstring>
+        <name>TeacherName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" line="23" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_teacher_1a6b53602ebce09b854fb795fe9b82a791" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime Models.Teacher.BirthDate</definition>
+        <argsstring></argsstring>
+        <name>BirthDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" line="28" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_teacher_1a2d5ce8fadb876419589eba6b17b3fa04" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Teacher.Address</definition>
+        <argsstring></argsstring>
+        <name>Address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" line="33" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_teacher_1ab31e62640c9fa7f708957bdf24d5c933" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Teacher.Phone</definition>
+        <argsstring></argsstring>
+        <name>Phone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" line="39" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_teacher_1ae59ca3db32a70ada4ffee355b01b151e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Teacher.Avatar</definition>
+        <argsstring></argsstring>
+        <name>Avatar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" line="46" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_teacher_1a8ed95122c6a72f9a3629603ada2c69c3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.Teacher.DepartmentId</definition>
+        <argsstring></argsstring>
+        <name>DepartmentId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" line="50" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_teacher_1afd0467e6fe53f732e107ae745c7cc3ce" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_models_1_1_department" kindref="compound">Department</ref></type>
+        <definition>virtual Department Models.Teacher.Department</definition>
+        <argsstring></argsstring>
+        <name>Department</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" line="53" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_teacher_1a0e61738f60ed057c6156f015f01d4769" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ICollection&lt; <ref refid="class_models_1_1_message" kindref="compound">Message</ref> &gt;</type>
+        <definition>virtual ICollection&lt;Message&gt; Models.Teacher.Messages</definition>
+        <argsstring></argsstring>
+        <name>Messages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" line="56" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_teacher_1a8835bf53ccc0fde73ea6c9c8cd1864af" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ICollection&lt; <ref refid="class_models_1_1_group" kindref="compound">Group</ref> &gt;</type>
+        <definition>virtual ICollection&lt;Group&gt; Models.Teacher.Groups</definition>
+        <argsstring></argsstring>
+        <name>Groups</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" line="59" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" bodystart="59" bodyend="59"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Teacher.cs" bodystart="13" bodyend="60"/>
+    <listofallmembers>
+      <member refid="class_models_1_1_teacher_1a2d5ce8fadb876419589eba6b17b3fa04" prot="public" virt="non-virtual"><scope>Models::Teacher</scope><name>Address</name></member>
+      <member refid="class_models_1_1_teacher_1ae59ca3db32a70ada4ffee355b01b151e" prot="public" virt="non-virtual"><scope>Models::Teacher</scope><name>Avatar</name></member>
+      <member refid="class_models_1_1_teacher_1a6b53602ebce09b854fb795fe9b82a791" prot="public" virt="non-virtual"><scope>Models::Teacher</scope><name>BirthDate</name></member>
+      <member refid="class_models_1_1_teacher_1afd0467e6fe53f732e107ae745c7cc3ce" prot="public" virt="non-virtual"><scope>Models::Teacher</scope><name>Department</name></member>
+      <member refid="class_models_1_1_teacher_1a8ed95122c6a72f9a3629603ada2c69c3" prot="public" virt="non-virtual"><scope>Models::Teacher</scope><name>DepartmentId</name></member>
+      <member refid="class_models_1_1_teacher_1a8835bf53ccc0fde73ea6c9c8cd1864af" prot="public" virt="non-virtual"><scope>Models::Teacher</scope><name>Groups</name></member>
+      <member refid="class_models_1_1_teacher_1a0e61738f60ed057c6156f015f01d4769" prot="public" virt="non-virtual"><scope>Models::Teacher</scope><name>Messages</name></member>
+      <member refid="class_models_1_1_teacher_1ab31e62640c9fa7f708957bdf24d5c933" prot="public" virt="non-virtual"><scope>Models::Teacher</scope><name>Phone</name></member>
+      <member refid="class_models_1_1_teacher_1a293c325babd9a425ce4ddb17ea48d896" prot="public" virt="non-virtual"><scope>Models::Teacher</scope><name>TeacherId</name></member>
+      <member refid="class_models_1_1_teacher_1a79d021229c73a3a713cf4b19935260e3" prot="public" virt="non-virtual"><scope>Models::Teacher</scope><name>TeacherName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

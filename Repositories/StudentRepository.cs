@@ -53,7 +53,7 @@ namespace Repositories
             }
         }
 
-        public IQueryable<LearningClass> GetLearningClassList(int id)
+        public IQueryable<LearningClass> GetLearningClassList(string id)
         {
             try
             {

@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_repositories_1_1_group_repository" kind="class" language="C#" prot="public">
+    <compoundname>Repositories::GroupRepository</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_repositories_1_1_group_repository_1a3bc782848449bc4817e988ad1ce69425" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref></type>
+        <definition>readonly WebContext Repositories.GroupRepository._context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <initializer>= new <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/GroupRepository.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/GroupRepository.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_repositories_1_1_group_repository_1a85fb6513d5f0df3b52710e46e868a1bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_group" kindref="compound">Group</ref> &gt;</type>
+        <definition>IQueryable&lt;Group&gt; Repositories.GroupRepository.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/GroupRepository.cs" line="17" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/GroupRepository.cs" bodystart="17" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_group_repository_1abb5731b852457fd540741582e9a6220f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_group" kindref="compound">Group</ref></type>
+        <definition>Group Repositories.GroupRepository.GetById</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/GroupRepository.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/GroupRepository.cs" bodystart="29" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_group_repository_1a9907726ad2746374e1f752bdcbe696f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.GroupRepository.Add</definition>
+        <argsstring>(Group group)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_group" kindref="compound">Group</ref></type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/GroupRepository.cs" line="42" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/GroupRepository.cs" bodystart="42" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_group_repository_1a3d9429cbc4fc3d071e2c4485aabfe9b8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.GroupRepository.Update</definition>
+        <argsstring>(Group group)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_group" kindref="compound">Group</ref></type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/GroupRepository.cs" line="56" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/GroupRepository.cs" bodystart="56" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_group_repository_1a230e1654255a80b2b7e1d1c848d0418f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.GroupRepository.Delete</definition>
+        <argsstring>(Group group)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_group" kindref="compound">Group</ref></type>
+          <declname>group</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/GroupRepository.cs" line="70" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/GroupRepository.cs" bodystart="70" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_group_repository_1a31fd379a0dcef89645aee4b5073555c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Repositories.GroupRepository.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/GroupRepository.cs" line="88" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/GroupRepository.cs" bodystart="88" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="110">
+        <label>IDisposable</label>
+      </node>
+      <node id="109">
+        <label>Repositories.GroupRepository</label>
+        <link refid="class_repositories_1_1_group_repository"/>
+        <childnode refid="110" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="112">
+        <label>IDisposable</label>
+      </node>
+      <node id="111">
+        <label>Repositories.GroupRepository</label>
+        <link refid="class_repositories_1_1_group_repository"/>
+        <childnode refid="112" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/GroupRepository.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/GroupRepository.cs" bodystart="13" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_repositories_1_1_group_repository_1a3bc782848449bc4817e988ad1ce69425" prot="private" virt="non-virtual"><scope>Repositories::GroupRepository</scope><name>_context</name></member>
+      <member refid="class_repositories_1_1_group_repository_1a9907726ad2746374e1f752bdcbe696f0" prot="public" virt="non-virtual"><scope>Repositories::GroupRepository</scope><name>Add</name></member>
+      <member refid="class_repositories_1_1_group_repository_1a230e1654255a80b2b7e1d1c848d0418f" prot="public" virt="non-virtual"><scope>Repositories::GroupRepository</scope><name>Delete</name></member>
+      <member refid="class_repositories_1_1_group_repository_1a31fd379a0dcef89645aee4b5073555c3" prot="public" virt="non-virtual"><scope>Repositories::GroupRepository</scope><name>Dispose</name></member>
+      <member refid="class_repositories_1_1_group_repository_1a85fb6513d5f0df3b52710e46e868a1bb" prot="public" virt="non-virtual"><scope>Repositories::GroupRepository</scope><name>GetAll</name></member>
+      <member refid="class_repositories_1_1_group_repository_1abb5731b852457fd540741582e9a6220f" prot="public" virt="non-virtual"><scope>Repositories::GroupRepository</scope><name>GetById</name></member>
+      <member refid="class_repositories_1_1_group_repository_1a3d9429cbc4fc3d071e2c4485aabfe9b8" prot="public" virt="non-virtual"><scope>Repositories::GroupRepository</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

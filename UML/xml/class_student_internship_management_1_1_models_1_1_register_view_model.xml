@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_models_1_1_register_view_model" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::Models::RegisterViewModel</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_student_internship_management_1_1_models_1_1_register_view_model_1a8a3d5aa196959efd550298322410a1cc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string StudentInternshipManagement.Models.RegisterViewModel.Email</definition>
+        <argsstring></argsstring>
+        <name>Email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="70" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="property" id="class_student_internship_management_1_1_models_1_1_register_view_model_1ae83c6adf6e776420dc5fa61f3760e6da" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string StudentInternshipManagement.Models.RegisterViewModel.Password</definition>
+        <argsstring></argsstring>
+        <name>Password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="76" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="property" id="class_student_internship_management_1_1_models_1_1_register_view_model_1a8bde112b6ad75a8a39e80ca5a5dc1bc4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string StudentInternshipManagement.Models.RegisterViewModel.ConfirmPassword</definition>
+        <argsstring></argsstring>
+        <name>ConfirmPassword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="81" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="81" bodyend="81"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="66" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="65" bodyend="82"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_models_1_1_register_view_model_1a8bde112b6ad75a8a39e80ca5a5dc1bc4" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Models::RegisterViewModel</scope><name>ConfirmPassword</name></member>
+      <member refid="class_student_internship_management_1_1_models_1_1_register_view_model_1a8a3d5aa196959efd550298322410a1cc" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Models::RegisterViewModel</scope><name>Email</name></member>
+      <member refid="class_student_internship_management_1_1_models_1_1_register_view_model_1ae83c6adf6e776420dc5fa61f3760e6da" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Models::RegisterViewModel</scope><name>Password</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

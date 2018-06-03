@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_student_internship_management_1_1_controllers" kind="namespace" language="C#">
+    <compoundname>StudentInternshipManagement::Controllers</compoundname>
+    <innerclass refid="class_student_internship_management_1_1_controllers_1_1_account_controller" prot="public">StudentInternshipManagement::Controllers::AccountController</innerclass>
+    <innerclass refid="class_student_internship_management_1_1_controllers_1_1_home_controller" prot="public">StudentInternshipManagement::Controllers::HomeController</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="15" column="1"/>
+  </compounddef>
+</doxygen>

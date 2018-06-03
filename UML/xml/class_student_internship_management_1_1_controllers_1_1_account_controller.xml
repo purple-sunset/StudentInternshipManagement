@@ -1,0 +1,404 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_controllers_1_1_account_controller" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::Controllers::AccountController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Controller</basecompoundref>
+    <innerclass refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result" prot="package">StudentInternshipManagement::Controllers::AccountController::ChallengeResult</innerclass>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1aeb1e2ec6b1825904f4dc8eddec4e6a30" prot="private" static="no" mutable="no">
+        <type><ref refid="class_student_internship_management_1_1_application_sign_in_manager" kindref="compound">ApplicationSignInManager</ref></type>
+        <definition>ApplicationSignInManager StudentInternshipManagement.Controllers.AccountController._signInManager</definition>
+        <argsstring></argsstring>
+        <name>_signInManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1aedde44d4f9e273b32ea20236ac84524b" prot="private" static="no" mutable="no">
+        <type><ref refid="class_student_internship_management_1_1_application_user_manager" kindref="compound">ApplicationUserManager</ref></type>
+        <definition>ApplicationUserManager StudentInternshipManagement.Controllers.AccountController._userManager</definition>
+        <argsstring></argsstring>
+        <name>_userManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="20" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1aece8faf19f2cb90b9a198b77a63f127e" prot="private" static="no" mutable="no">
+        <type>const string</type>
+        <definition>const string StudentInternshipManagement.Controllers.AccountController.XsrfKey</definition>
+        <argsstring></argsstring>
+        <name>XsrfKey</name>
+        <initializer>= &quot;XsrfId&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="253" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="253" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1a913c93383b716603bb361bb466297d4f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_student_internship_management_1_1_application_sign_in_manager" kindref="compound">ApplicationSignInManager</ref></type>
+        <definition>ApplicationSignInManager StudentInternshipManagement.Controllers.AccountController.SignInManager</definition>
+        <argsstring></argsstring>
+        <name>SignInManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="32" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="33" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="property" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1a4e7bc3c367083007d70212a7b6fc8709" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="class_student_internship_management_1_1_application_user_manager" kindref="compound">ApplicationUserManager</ref></type>
+        <definition>ApplicationUserManager StudentInternshipManagement.Controllers.AccountController.UserManager</definition>
+        <argsstring></argsstring>
+        <name>UserManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="44" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="45" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="property" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1af5762c5ff4df0f842b4c4d9e09777a09" prot="private" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>IAuthenticationManager</type>
+        <definition>IAuthenticationManager StudentInternshipManagement.Controllers.AccountController.AuthenticationManager</definition>
+        <argsstring></argsstring>
+        <name>AuthenticationManager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="255" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="256" bodyend="261"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1ab3e927d160ac2e2e509c4b9eeb046977" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>StudentInternshipManagement.Controllers.AccountController.AccountController</definition>
+        <argsstring>()</argsstring>
+        <name>AccountController</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="22" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="22" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1a6d647fdec0c2405ce01c02c1caaf3250" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>StudentInternshipManagement.Controllers.AccountController.AccountController</definition>
+        <argsstring>(ApplicationUserManager userManager, ApplicationSignInManager signInManager)</argsstring>
+        <name>AccountController</name>
+        <param>
+          <type><ref refid="class_student_internship_management_1_1_application_user_manager" kindref="compound">ApplicationUserManager</ref></type>
+          <declname>userManager</declname>
+        </param>
+        <param>
+          <type><ref refid="class_student_internship_management_1_1_application_sign_in_manager" kindref="compound">ApplicationSignInManager</ref></type>
+          <declname>signInManager</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="26" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="26" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1ab028baa97cfbf18c69ad77b994a72141" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Controllers.AccountController.Login</definition>
+        <argsstring>(string returnUrl)</argsstring>
+        <name>Login</name>
+        <param>
+          <type>string</type>
+          <declname>returnUrl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="59" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="59" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1a9d7146d59df94db4cbfd70abd3950444" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Controllers.AccountController.Login</definition>
+        <argsstring>(LoginViewModel model, string returnUrl)</argsstring>
+        <name>Login</name>
+        <param>
+          <type><ref refid="class_student_internship_management_1_1_models_1_1_login_view_model" kindref="compound">LoginViewModel</ref></type>
+          <declname>model</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>returnUrl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="71" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="71" bodyend="96"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1ac9d3e7281277bda201bffe98512e0b00" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Controllers.AccountController.ForgotPassword</definition>
+        <argsstring>()</argsstring>
+        <name>ForgotPassword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="101" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1a7386f68ba6a13d748a731b52962bf61e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; ActionResult &gt;</type>
+        <definition>async Task&lt;ActionResult&gt; StudentInternshipManagement.Controllers.AccountController.ForgotPassword</definition>
+        <argsstring>(ForgotPasswordViewModel model)</argsstring>
+        <name>ForgotPassword</name>
+        <param>
+          <type><ref refid="class_student_internship_management_1_1_models_1_1_forgot_password_view_model" kindref="compound">ForgotPasswordViewModel</ref></type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="111" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="111" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1a44eeb2361345381ae52601315fde5312" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Controllers.AccountController.ForgotPasswordConfirmation</definition>
+        <argsstring>()</argsstring>
+        <name>ForgotPasswordConfirmation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="139" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="139" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1a8d386179ad25d1e9fe791b6f03824d5f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Controllers.AccountController.ResetPassword</definition>
+        <argsstring>(string code)</argsstring>
+        <name>ResetPassword</name>
+        <param>
+          <type>string</type>
+          <declname>code</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="147" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="147" bodyend="150"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1ac4d2dd7269df661c12fa9c13236591f3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; ActionResult &gt;</type>
+        <definition>async Task&lt;ActionResult&gt; StudentInternshipManagement.Controllers.AccountController.ResetPassword</definition>
+        <argsstring>(ResetPasswordViewModel model)</argsstring>
+        <name>ResetPassword</name>
+        <param>
+          <type><ref refid="class_student_internship_management_1_1_models_1_1_reset_password_view_model" kindref="compound">ResetPasswordViewModel</ref></type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="157" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="157" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1a3db549cedec0852c48fcfe3a1903073b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Controllers.AccountController.ResetPasswordConfirmation</definition>
+        <argsstring>()</argsstring>
+        <name>ResetPasswordConfirmation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="183" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="183" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1adf3c9ae4739ecca89d0e27bf38d79357" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Controllers.AccountController.ChangePassword</definition>
+        <argsstring>()</argsstring>
+        <name>ChangePassword</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="190" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="190" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1a5343d31a936c416b991ae662f9d0926a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; ActionResult &gt;</type>
+        <definition>async Task&lt;ActionResult&gt; StudentInternshipManagement.Controllers.AccountController.ChangePassword</definition>
+        <argsstring>(ChangePasswordViewModel model)</argsstring>
+        <name>ChangePassword</name>
+        <param>
+          <type><ref refid="class_student_internship_management_1_1_models_1_1_change_password_view_model" kindref="compound">ChangePasswordViewModel</ref></type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="199" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="199" bodyend="217"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1ac35bf484fc0d431aa3342b831090c753" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Controllers.AccountController.LogOff</definition>
+        <argsstring>()</argsstring>
+        <name>LogOff</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="224" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="224" bodyend="228"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1aba2953b87c76061b8f8d0ff27df14741" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void StudentInternshipManagement.Controllers.AccountController.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="231" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="231" bodyend="249"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1a985d58cefea6a542adda8236fb718da0" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void StudentInternshipManagement.Controllers.AccountController.AddErrors</definition>
+        <argsstring>(IdentityResult result)</argsstring>
+        <name>AddErrors</name>
+        <param>
+          <type>IdentityResult</type>
+          <declname>result</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="263" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="263" bodyend="269"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1a75028071d29b3aab7f07912655a049f7" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Controllers.AccountController.RedirectToLocal</definition>
+        <argsstring>(string returnUrl)</argsstring>
+        <name>RedirectToLocal</name>
+        <param>
+          <type>string</type>
+          <declname>returnUrl</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="271" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="271" bodyend="278"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="0">
+        <label>StudentInternshipManagement.Controllers.AccountController</label>
+        <link refid="class_student_internship_management_1_1_controllers_1_1_account_controller"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Controller</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>StudentInternshipManagement.Controllers.AccountController</label>
+        <link refid="class_student_internship_management_1_1_controllers_1_1_account_controller"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Controller</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="18" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="17" bodyend="309"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1aeb1e2ec6b1825904f4dc8eddec4e6a30" prot="private" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>_signInManager</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1aedde44d4f9e273b32ea20236ac84524b" prot="private" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>_userManager</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1ab3e927d160ac2e2e509c4b9eeb046977" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>AccountController</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a6d647fdec0c2405ce01c02c1caaf3250" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>AccountController</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a985d58cefea6a542adda8236fb718da0" prot="private" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>AddErrors</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1af5762c5ff4df0f842b4c4d9e09777a09" prot="private" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>AuthenticationManager</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1adf3c9ae4739ecca89d0e27bf38d79357" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>ChangePassword</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a5343d31a936c416b991ae662f9d0926a" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>ChangePassword</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1aba2953b87c76061b8f8d0ff27df14741" prot="protected" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>Dispose</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1ac9d3e7281277bda201bffe98512e0b00" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>ForgotPassword</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a7386f68ba6a13d748a731b52962bf61e" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>ForgotPassword</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a44eeb2361345381ae52601315fde5312" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>ForgotPasswordConfirmation</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1ab028baa97cfbf18c69ad77b994a72141" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>Login</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a9d7146d59df94db4cbfd70abd3950444" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>Login</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1ac35bf484fc0d431aa3342b831090c753" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>LogOff</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a75028071d29b3aab7f07912655a049f7" prot="private" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>RedirectToLocal</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a8d386179ad25d1e9fe791b6f03824d5f" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>ResetPassword</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1ac4d2dd7269df661c12fa9c13236591f3" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>ResetPassword</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a3db549cedec0852c48fcfe3a1903073b" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>ResetPasswordConfirmation</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a913c93383b716603bb361bb466297d4f" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>SignInManager</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a4e7bc3c367083007d70212a7b6fc8709" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>UserManager</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1aece8faf19f2cb90b9a198b77a63f127e" prot="private" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController</scope><name>XsrfKey</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_443aa20e6474a3f3f3367fd4f2815233" kind="dir">
+    <compoundname>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start</compoundname>
+    <innerfile refid="_bundle_config_8cs">BundleConfig.cs</innerfile>
+    <innerfile refid="_filter_config_8cs">FilterConfig.cs</innerfile>
+    <innerfile refid="_identity_config_8cs">IdentityConfig.cs</innerfile>
+    <innerfile refid="_route_config_8cs">RouteConfig.cs</innerfile>
+    <innerfile refid="_startup_8_auth_8cs">Startup.Auth.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/"/>
+  </compounddef>
+</doxygen>

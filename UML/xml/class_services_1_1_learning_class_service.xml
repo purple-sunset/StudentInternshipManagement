@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_services_1_1_learning_class_service" kind="class" language="C#" prot="public">
+    <compoundname>Services::LearningClassService</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_services_1_1_learning_class_service_1adb32a9354a0d7f5b9b39e617a2bb2ae1" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_repositories_1_1_learning_class_repository" kindref="compound">LearningClassRepository</ref></type>
+        <definition>readonly LearningClassRepository Services.LearningClassService._repository</definition>
+        <argsstring></argsstring>
+        <name>_repository</name>
+        <initializer>=new <ref refid="class_repositories_1_1_learning_class_repository" kindref="compound">LearningClassRepository</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_services_1_1_learning_class_service_1adc0fba0483adc54d6f4a2123e79495a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_learning_class" kindref="compound">LearningClass</ref> &gt;</type>
+        <definition>IQueryable&lt;LearningClass&gt; Services.LearningClassService.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_learning_class_service_1ab17810c9144053b9d0804832d0a28786" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_learning_class" kindref="compound">LearningClass</ref></type>
+        <definition>LearningClass Services.LearningClassService.GetById</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" line="20" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_learning_class_service_1ac34ad9a02876d08a11494f8c1c070800" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_student" kindref="compound">Student</ref> &gt;</type>
+        <definition>IQueryable&lt;Student&gt; Services.LearningClassService.GetStudentList</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetStudentList</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" line="25" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_learning_class_service_1a546800c150788af68b94a2368b752c6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.LearningClassService.Add</definition>
+        <argsstring>(LearningClass learningClass)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_learning_class" kindref="compound">LearningClass</ref></type>
+          <declname>learningClass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" line="30" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_learning_class_service_1a390f640bfb3ec932c7468ac6424b6e45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.LearningClassService.Update</definition>
+        <argsstring>(LearningClass learningClass)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_learning_class" kindref="compound">LearningClass</ref></type>
+          <declname>learningClass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" line="35" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_learning_class_service_1a318d4d7f9ece9f63ba7de718002e4daf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.LearningClassService.Delete</definition>
+        <argsstring>(LearningClass learningClass)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_learning_class" kindref="compound">LearningClass</ref></type>
+          <declname>learningClass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" line="40" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_learning_class_service_1a96b0d2dafbfef737670e6690935cc419" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Services.LearningClassService.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" line="45" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" bodystart="45" bodyend="48"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="146">
+        <label>IDisposable</label>
+      </node>
+      <node id="145">
+        <label>Services.LearningClassService</label>
+        <link refid="class_services_1_1_learning_class_service"/>
+        <childnode refid="146" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="148">
+        <label>IDisposable</label>
+      </node>
+      <node id="147">
+        <label>Services.LearningClassService</label>
+        <link refid="class_services_1_1_learning_class_service"/>
+        <childnode refid="148" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" line="12" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/LearningClassService.cs" bodystart="11" bodyend="49"/>
+    <listofallmembers>
+      <member refid="class_services_1_1_learning_class_service_1adb32a9354a0d7f5b9b39e617a2bb2ae1" prot="private" virt="non-virtual"><scope>Services::LearningClassService</scope><name>_repository</name></member>
+      <member refid="class_services_1_1_learning_class_service_1a546800c150788af68b94a2368b752c6d" prot="public" virt="non-virtual"><scope>Services::LearningClassService</scope><name>Add</name></member>
+      <member refid="class_services_1_1_learning_class_service_1a318d4d7f9ece9f63ba7de718002e4daf" prot="public" virt="non-virtual"><scope>Services::LearningClassService</scope><name>Delete</name></member>
+      <member refid="class_services_1_1_learning_class_service_1a96b0d2dafbfef737670e6690935cc419" prot="public" virt="non-virtual"><scope>Services::LearningClassService</scope><name>Dispose</name></member>
+      <member refid="class_services_1_1_learning_class_service_1adc0fba0483adc54d6f4a2123e79495a2" prot="public" virt="non-virtual"><scope>Services::LearningClassService</scope><name>GetAll</name></member>
+      <member refid="class_services_1_1_learning_class_service_1ab17810c9144053b9d0804832d0a28786" prot="public" virt="non-virtual"><scope>Services::LearningClassService</scope><name>GetById</name></member>
+      <member refid="class_services_1_1_learning_class_service_1ac34ad9a02876d08a11494f8c1c070800" prot="public" virt="non-virtual"><scope>Services::LearningClassService</scope><name>GetStudentList</name></member>
+      <member refid="class_services_1_1_learning_class_service_1a390f640bfb3ec932c7468ac6424b6e45" prot="public" virt="non-virtual"><scope>Services::LearningClassService</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_models_1_1_semester" kind="class" language="C#" prot="public">
+    <compoundname>Models::Semester</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_models_1_1_semester_1a0c0c946a23355856ef279ee53963ed7a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.Semester.SemesterId</definition>
+        <argsstring></argsstring>
+        <name>SemesterId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Semester.cs" line="17" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Semester.cs" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_semester_1afb5866668f4c7217cb0de04badde5beb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime Models.Semester.StartDate</definition>
+        <argsstring></argsstring>
+        <name>StartDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Semester.cs" line="22" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Semester.cs" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_semester_1acaa58e70740edcbd1c074988eb6544c6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime Models.Semester.EndDate</definition>
+        <argsstring></argsstring>
+        <name>EndDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Semester.cs" line="27" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Semester.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Semester.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Semester.cs" bodystart="12" bodyend="28"/>
+    <listofallmembers>
+      <member refid="class_models_1_1_semester_1acaa58e70740edcbd1c074988eb6544c6" prot="public" virt="non-virtual"><scope>Models::Semester</scope><name>EndDate</name></member>
+      <member refid="class_models_1_1_semester_1a0c0c946a23355856ef279ee53963ed7a" prot="public" virt="non-virtual"><scope>Models::Semester</scope><name>SemesterId</name></member>
+      <member refid="class_models_1_1_semester_1afb5866668f4c7217cb0de04badde5beb" prot="public" virt="non-virtual"><scope>Models::Semester</scope><name>StartDate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

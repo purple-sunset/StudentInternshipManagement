@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_student_internship_management" kind="namespace" language="C#">
+    <compoundname>StudentInternshipManagement</compoundname>
+    <innerclass refid="class_student_internship_management_1_1_application_sign_in_manager" prot="public">StudentInternshipManagement::ApplicationSignInManager</innerclass>
+    <innerclass refid="class_student_internship_management_1_1_application_user_manager" prot="public">StudentInternshipManagement::ApplicationUserManager</innerclass>
+    <innerclass refid="class_student_internship_management_1_1_bundle_config" prot="public">StudentInternshipManagement::BundleConfig</innerclass>
+    <innerclass refid="class_student_internship_management_1_1_email_service" prot="public">StudentInternshipManagement::EmailService</innerclass>
+    <innerclass refid="class_student_internship_management_1_1_filter_config" prot="public">StudentInternshipManagement::FilterConfig</innerclass>
+    <innerclass refid="class_student_internship_management_1_1_mvc_application" prot="public">StudentInternshipManagement::MvcApplication</innerclass>
+    <innerclass refid="class_student_internship_management_1_1_route_config" prot="public">StudentInternshipManagement::RouteConfig</innerclass>
+    <innerclass refid="class_student_internship_management_1_1_startup" prot="public">StudentInternshipManagement::Startup</innerclass>
+    <innernamespace refid="namespace_student_internship_management_1_1_areas">StudentInternshipManagement::Areas</innernamespace>
+    <innernamespace refid="namespace_student_internship_management_1_1_controllers">StudentInternshipManagement::Controllers</innernamespace>
+    <innernamespace refid="namespace_student_internship_management_1_1_models">StudentInternshipManagement::Models</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/BundleConfig.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

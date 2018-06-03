@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers_1_1_profile_controller" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::Areas::Teacher::Controllers::ProfileController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Controller</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers_1_1_profile_controller_1a7a31d8309c6c75349e65266c21b68b72" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_services_1_1_teacher_service" kindref="compound">TeacherService</ref></type>
+        <definition>readonly TeacherService StudentInternshipManagement.Areas.Teacher.Controllers.ProfileController._service</definition>
+        <argsstring></argsstring>
+        <name>_service</name>
+        <initializer>= new <ref refid="class_services_1_1_teacher_service" kindref="compound">TeacherService</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/Controllers/ProfileController.cs" line="16" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/Controllers/ProfileController.cs" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers_1_1_profile_controller_1acfa10cb1c9bc69fedecfd4085c9f80e4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Teacher.Controllers.ProfileController.Index</definition>
+        <argsstring>()</argsstring>
+        <name>Index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/Controllers/ProfileController.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/Controllers/ProfileController.cs" bodystart="19" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers_1_1_profile_controller_1a70f6ed8b980a8ca0a0e3b05235347642" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Teacher.Controllers.ProfileController.Edit</definition>
+        <argsstring>()</argsstring>
+        <name>Edit</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/Controllers/ProfileController.cs" line="28" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/Controllers/ProfileController.cs" bodystart="28" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers_1_1_profile_controller_1ae9f64db65bf3ab711343b2ec311d6b0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Teacher.Controllers.ProfileController.Edit</definition>
+        <argsstring>(HttpPostedFileBase file, global::Models.Teacher model)</argsstring>
+        <name>Edit</name>
+        <param>
+          <type>HttpPostedFileBase</type>
+          <declname>file</declname>
+        </param>
+        <param>
+          <type>global::Models.Teacher</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/Controllers/ProfileController.cs" line="37" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/Controllers/ProfileController.cs" bodystart="37" bodyend="54"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="205">
+        <label>StudentInternshipManagement.Areas.Teacher.Controllers.ProfileController</label>
+        <link refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers_1_1_profile_controller"/>
+        <childnode refid="206" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="206">
+        <label>Controller</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="207">
+        <label>StudentInternshipManagement.Areas.Teacher.Controllers.ProfileController</label>
+        <link refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers_1_1_profile_controller"/>
+        <childnode refid="208" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="208">
+        <label>Controller</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/Controllers/ProfileController.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/Controllers/ProfileController.cs" bodystart="14" bodyend="55"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers_1_1_profile_controller_1a7a31d8309c6c75349e65266c21b68b72" prot="private" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Teacher::Controllers::ProfileController</scope><name>_service</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers_1_1_profile_controller_1a70f6ed8b980a8ca0a0e3b05235347642" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Teacher::Controllers::ProfileController</scope><name>Edit</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers_1_1_profile_controller_1ae9f64db65bf3ab711343b2ec311d6b0b" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Teacher::Controllers::ProfileController</scope><name>Edit</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers_1_1_profile_controller_1acfa10cb1c9bc69fedecfd4085c9f80e4" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Teacher::Controllers::ProfileController</scope><name>Index</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

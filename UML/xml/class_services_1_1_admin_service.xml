@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_services_1_1_admin_service" kind="class" language="C#" prot="public">
+    <compoundname>Services::AdminService</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_services_1_1_admin_service_1a22167c8e6c82661a95fbb7c87df5f088" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_repositories_1_1_admin_repository" kindref="compound">AdminRepository</ref></type>
+        <definition>readonly AdminRepository Services.AdminService._repository</definition>
+        <argsstring></argsstring>
+        <name>_repository</name>
+        <initializer>=new <ref refid="class_repositories_1_1_admin_repository" kindref="compound">AdminRepository</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/AdminService.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/AdminService.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_services_1_1_admin_service_1aea9f6d2a62e679ba0363e20bcb454553" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_admin" kindref="compound">Admin</ref> &gt;</type>
+        <definition>IQueryable&lt;Admin&gt; Services.AdminService.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/AdminService.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/AdminService.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_admin_service_1adf9801128bd959e4be29245d0af96354" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_admin" kindref="compound">Admin</ref></type>
+        <definition>Admin Services.AdminService.GetById</definition>
+        <argsstring>(string id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/AdminService.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/AdminService.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_admin_service_1a79ecd25e9af1db741429e9764285a536" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.AdminService.Add</definition>
+        <argsstring>(Admin admin)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_admin" kindref="compound">Admin</ref></type>
+          <declname>admin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/AdminService.cs" line="24" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/AdminService.cs" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_admin_service_1a590fc5461a34cbf5b5750c11f8b1fc3b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.AdminService.Update</definition>
+        <argsstring>(Admin admin)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_admin" kindref="compound">Admin</ref></type>
+          <declname>admin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/AdminService.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/AdminService.cs" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_admin_service_1a51cbbb47a4b0bb9358a5ee3125f4fdbf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.AdminService.Delete</definition>
+        <argsstring>(Admin admin)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_admin" kindref="compound">Admin</ref></type>
+          <declname>admin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/AdminService.cs" line="34" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/AdminService.cs" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_admin_service_1a626cacb8412e590c8da62f26974e0ad7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Services.AdminService.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/AdminService.cs" line="39" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/AdminService.cs" bodystart="39" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="18">
+        <label>Services.AdminService</label>
+        <link refid="class_services_1_1_admin_service"/>
+        <childnode refid="19" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>IDisposable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="20">
+        <label>Services.AdminService</label>
+        <link refid="class_services_1_1_admin_service"/>
+        <childnode refid="21" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>IDisposable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/AdminService.cs" line="12" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/AdminService.cs" bodystart="11" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_services_1_1_admin_service_1a22167c8e6c82661a95fbb7c87df5f088" prot="private" virt="non-virtual"><scope>Services::AdminService</scope><name>_repository</name></member>
+      <member refid="class_services_1_1_admin_service_1a79ecd25e9af1db741429e9764285a536" prot="public" virt="non-virtual"><scope>Services::AdminService</scope><name>Add</name></member>
+      <member refid="class_services_1_1_admin_service_1a51cbbb47a4b0bb9358a5ee3125f4fdbf" prot="public" virt="non-virtual"><scope>Services::AdminService</scope><name>Delete</name></member>
+      <member refid="class_services_1_1_admin_service_1a626cacb8412e590c8da62f26974e0ad7" prot="public" virt="non-virtual"><scope>Services::AdminService</scope><name>Dispose</name></member>
+      <member refid="class_services_1_1_admin_service_1aea9f6d2a62e679ba0363e20bcb454553" prot="public" virt="non-virtual"><scope>Services::AdminService</scope><name>GetAll</name></member>
+      <member refid="class_services_1_1_admin_service_1adf9801128bd959e4be29245d0af96354" prot="public" virt="non-virtual"><scope>Services::AdminService</scope><name>GetById</name></member>
+      <member refid="class_services_1_1_admin_service_1a590fc5461a34cbf5b5750c11f8b1fc3b" prot="public" virt="non-virtual"><scope>Services::AdminService</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

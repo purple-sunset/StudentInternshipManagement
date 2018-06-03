@@ -1,0 +1,46 @@
+﻿@using Kendo.Mvc.UI
+@using Microsoft.AspNet.Identity
+@using Models
+@{
+    ViewBag.Title = "Nguyện vọng thực tập";
+    ViewBag.Category = "Thực tập";
+    ViewBag.Section = "Nguyện vọng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var studentId = User.Identity.GetUserName();
+}
+
+@section Kendo
+{
+    @Styles.Render("~/Content/kendo")
+    @Scripts.Render("~/Script/kendo")
+}
+
+@(Html.Kendo().Grid<Models.Internship>()
+          .Name("grid")
+          .Columns(columns =>
+          {
+              columns.Bound(c => c.InternshipId);
+              columns.ForeignKey(p => p.StudentId, (IQueryable<Student>)ViewBag.Students, "StudentId", "StudentName");
+              columns.ForeignKey(p => p.ClassId, (IQueryable<LearningClass>)ViewBag.LearningClasses, "ClassId", "ClassName");
+              columns.ForeignKey(p => p.TrainingMajorId, (IQueryable<TrainingMajor>)ViewBag.TrainingMajors, "TrainingMajorId", "TrainingMajorName");
+              columns.ForeignKey(p => p.CompanyId, (IQueryable<Company>)ViewBag.Companies, "CompanyId", "CompanyName");
+              columns.Bound(c => c.RegistrationDate);
+              columns.Bound(c => c.Status);
+          })
+          .Editable(editable => editable.Mode(GridEditMode.PopUp).TemplateName("InternshipRegistration"))
+      .Pageable()
+      .Sortable(sortable => { sortable.SortMode(GridSortMode.SingleColumn); })
+      .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
+      .Scrollable()
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model =>
+          {
+              model.Id(p => p.InternshipId);
+              model.Field(p => p.StudentId).DefaultValue(studentId);
+              model.Field(p => p.RegistrationDate).DefaultValue(DateTime.Now);
+              model.Field(p => p.Status).DefaultValue(InternshipStatus.Registered);
+          })
+          .Read(read => read.Action("Internships_Read", "Internship"))
+      )
+      )

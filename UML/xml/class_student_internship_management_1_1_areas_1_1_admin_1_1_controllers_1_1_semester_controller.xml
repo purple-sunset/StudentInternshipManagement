@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::Areas::Admin::Controllers::SemesterController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Controller</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1a11ddda0615f5f92134da63514ca3ec08" prot="private" static="no" mutable="no">
+        <type><ref refid="class_services_1_1_semester_service" kindref="compound">SemesterService</ref></type>
+        <definition>SemesterService StudentInternshipManagement.Areas.Admin.Controllers.SemesterController._service</definition>
+        <argsstring></argsstring>
+        <name>_service</name>
+        <initializer>=new <ref refid="class_services_1_1_semester_service" kindref="compound">SemesterService</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SemesterController.cs" line="18" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SemesterController.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1af273398820f7ac6cfd0bcebb63d4b982" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.SemesterController.Index</definition>
+        <argsstring>()</argsstring>
+        <name>Index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SemesterController.cs" line="20" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SemesterController.cs" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1a56d9c1605f8a75332af7d09cb765f6f1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.SemesterController.Semesters_Read</definition>
+        <argsstring>([DataSourceRequest]DataSourceRequest request)</argsstring>
+        <name>Semesters_Read</name>
+        <param>
+          <attributes>[DataSourceRequest]</attributes>
+          <type>DataSourceRequest</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SemesterController.cs" line="25" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SemesterController.cs" bodystart="25" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1a7dc787981ea5b8f77c75df3da4788dc1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.SemesterController.Semesters_Create</definition>
+        <argsstring>([DataSourceRequest]DataSourceRequest request, Semester semester)</argsstring>
+        <name>Semesters_Create</name>
+        <param>
+          <attributes>[DataSourceRequest]</attributes>
+          <type>DataSourceRequest</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type><ref refid="class_models_1_1_semester" kindref="compound">Semester</ref></type>
+          <declname>semester</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SemesterController.cs" line="37" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SemesterController.cs" bodystart="37" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1ab508aff5c4d55c5a1cc7ace5156d43fd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.SemesterController.Semesters_Update</definition>
+        <argsstring>([DataSourceRequest]DataSourceRequest request, Semester semester)</argsstring>
+        <name>Semesters_Update</name>
+        <param>
+          <attributes>[DataSourceRequest]</attributes>
+          <type>DataSourceRequest</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type><ref refid="class_models_1_1_semester" kindref="compound">Semester</ref></type>
+          <declname>semester</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SemesterController.cs" line="55" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SemesterController.cs" bodystart="55" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1aecfb7e907828fc0f17d5b2adee3d22b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.SemesterController.Semesters_Destroy</definition>
+        <argsstring>([DataSourceRequest]DataSourceRequest request, Semester semester)</argsstring>
+        <name>Semesters_Destroy</name>
+        <param>
+          <attributes>[DataSourceRequest]</attributes>
+          <type>DataSourceRequest</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type><ref refid="class_models_1_1_semester" kindref="compound">Semester</ref></type>
+          <declname>semester</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SemesterController.cs" line="73" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SemesterController.cs" bodystart="73" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1a97c39317aea03467f58e80de4c9b3ad6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void StudentInternshipManagement.Areas.Admin.Controllers.SemesterController.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SemesterController.cs" line="90" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SemesterController.cs" bodystart="90" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="218">
+        <label>Controller</label>
+      </node>
+      <node id="217">
+        <label>StudentInternshipManagement.Areas.Admin.Controllers.SemesterController</label>
+        <link refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller"/>
+        <childnode refid="218" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="220">
+        <label>Controller</label>
+      </node>
+      <node id="219">
+        <label>StudentInternshipManagement.Areas.Admin.Controllers.SemesterController</label>
+        <link refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller"/>
+        <childnode refid="220" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SemesterController.cs" line="17" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SemesterController.cs" bodystart="16" bodyend="95"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1a11ddda0615f5f92134da63514ca3ec08" prot="private" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::SemesterController</scope><name>_service</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1a97c39317aea03467f58e80de4c9b3ad6" prot="protected" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::SemesterController</scope><name>Dispose</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1af273398820f7ac6cfd0bcebb63d4b982" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::SemesterController</scope><name>Index</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1a7dc787981ea5b8f77c75df3da4788dc1" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::SemesterController</scope><name>Semesters_Create</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1aecfb7e907828fc0f17d5b2adee3d22b3" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::SemesterController</scope><name>Semesters_Destroy</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1a56d9c1605f8a75332af7d09cb765f6f1" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::SemesterController</scope><name>Semesters_Read</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1ab508aff5c4d55c5a1cc7ace5156d43fd" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::SemesterController</scope><name>Semesters_Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

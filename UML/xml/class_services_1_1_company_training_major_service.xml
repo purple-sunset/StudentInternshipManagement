@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_services_1_1_company_training_major_service" kind="class" language="C#" prot="public">
+    <compoundname>Services::CompanyTrainingMajorService</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_services_1_1_company_training_major_service_1aa485001c97e73f62a54d7398e33ee88b" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_repositories_1_1_company_training_major_repository" kindref="compound">CompanyTrainingMajorRepository</ref></type>
+        <definition>readonly CompanyTrainingMajorRepository Services.CompanyTrainingMajorService._repository</definition>
+        <argsstring></argsstring>
+        <name>_repository</name>
+        <initializer>=new <ref refid="class_repositories_1_1_company_training_major_repository" kindref="compound">CompanyTrainingMajorRepository</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_services_1_1_company_training_major_service_1ab49c27ea59b8ca9858e5f1fe7bcc2324" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_company_training_major" kindref="compound">CompanyTrainingMajor</ref> &gt;</type>
+        <definition>IQueryable&lt;CompanyTrainingMajor&gt; Services.CompanyTrainingMajorService.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_company_training_major_service_1ad8aba88ca4e93708ac9fe648b94afda0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_company_training_major" kindref="compound">CompanyTrainingMajor</ref></type>
+        <definition>CompanyTrainingMajor Services.CompanyTrainingMajorService.GetById</definition>
+        <argsstring>(int companyId, int trainingMajorId)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>int</type>
+          <declname>companyId</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>trainingMajorId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_company_training_major_service_1a0acae8ac513d34fc2e20dcbc45c1c4bb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_company_training_major" kindref="compound">CompanyTrainingMajor</ref> &gt;</type>
+        <definition>IQueryable&lt;CompanyTrainingMajor&gt; Services.CompanyTrainingMajorService.GetByCompany</definition>
+        <argsstring>(int companyId)</argsstring>
+        <name>GetByCompany</name>
+        <param>
+          <type>int</type>
+          <declname>companyId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" line="24" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_company_training_major_service_1aa70d7c1a044801112d00e0e9d8a68ce0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_company_training_major" kindref="compound">CompanyTrainingMajor</ref> &gt;</type>
+        <definition>IQueryable&lt;CompanyTrainingMajor&gt; Services.CompanyTrainingMajorService.GetByTrainingMajor</definition>
+        <argsstring>(int trainingMajorId)</argsstring>
+        <name>GetByTrainingMajor</name>
+        <param>
+          <type>int</type>
+          <declname>trainingMajorId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_company_training_major_service_1ab8d65cc6a6edcc65bd09cbdac4e3254a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.CompanyTrainingMajorService.Add</definition>
+        <argsstring>(CompanyTrainingMajor companyTrainingMajor)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_company_training_major" kindref="compound">CompanyTrainingMajor</ref></type>
+          <declname>companyTrainingMajor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" line="34" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_company_training_major_service_1a5b20373818e161af0c71e7a38597c97e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.CompanyTrainingMajorService.Update</definition>
+        <argsstring>(CompanyTrainingMajor companyTrainingMajor)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_company_training_major" kindref="compound">CompanyTrainingMajor</ref></type>
+          <declname>companyTrainingMajor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" line="39" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" bodystart="39" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_company_training_major_service_1addf468008568420f94eaa4e20eb3bcb7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.CompanyTrainingMajorService.Delete</definition>
+        <argsstring>(CompanyTrainingMajor companyTrainingMajor)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_company_training_major" kindref="compound">CompanyTrainingMajor</ref></type>
+          <declname>companyTrainingMajor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" line="44" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" bodystart="44" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_company_training_major_service_1aacc44320107f4bd3e9158fafc812a451" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Services.CompanyTrainingMajorService.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" line="49" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" bodystart="49" bodyend="52"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="72">
+        <label>IDisposable</label>
+      </node>
+      <node id="71">
+        <label>Services.CompanyTrainingMajorService</label>
+        <link refid="class_services_1_1_company_training_major_service"/>
+        <childnode refid="72" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="74">
+        <label>IDisposable</label>
+      </node>
+      <node id="73">
+        <label>Services.CompanyTrainingMajorService</label>
+        <link refid="class_services_1_1_company_training_major_service"/>
+        <childnode refid="74" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" line="12" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/CompanyTrainingMajorService.cs" bodystart="11" bodyend="53"/>
+    <listofallmembers>
+      <member refid="class_services_1_1_company_training_major_service_1aa485001c97e73f62a54d7398e33ee88b" prot="private" virt="non-virtual"><scope>Services::CompanyTrainingMajorService</scope><name>_repository</name></member>
+      <member refid="class_services_1_1_company_training_major_service_1ab8d65cc6a6edcc65bd09cbdac4e3254a" prot="public" virt="non-virtual"><scope>Services::CompanyTrainingMajorService</scope><name>Add</name></member>
+      <member refid="class_services_1_1_company_training_major_service_1addf468008568420f94eaa4e20eb3bcb7" prot="public" virt="non-virtual"><scope>Services::CompanyTrainingMajorService</scope><name>Delete</name></member>
+      <member refid="class_services_1_1_company_training_major_service_1aacc44320107f4bd3e9158fafc812a451" prot="public" virt="non-virtual"><scope>Services::CompanyTrainingMajorService</scope><name>Dispose</name></member>
+      <member refid="class_services_1_1_company_training_major_service_1ab49c27ea59b8ca9858e5f1fe7bcc2324" prot="public" virt="non-virtual"><scope>Services::CompanyTrainingMajorService</scope><name>GetAll</name></member>
+      <member refid="class_services_1_1_company_training_major_service_1a0acae8ac513d34fc2e20dcbc45c1c4bb" prot="public" virt="non-virtual"><scope>Services::CompanyTrainingMajorService</scope><name>GetByCompany</name></member>
+      <member refid="class_services_1_1_company_training_major_service_1ad8aba88ca4e93708ac9fe648b94afda0" prot="public" virt="non-virtual"><scope>Services::CompanyTrainingMajorService</scope><name>GetById</name></member>
+      <member refid="class_services_1_1_company_training_major_service_1aa70d7c1a044801112d00e0e9d8a68ce0" prot="public" virt="non-virtual"><scope>Services::CompanyTrainingMajorService</scope><name>GetByTrainingMajor</name></member>
+      <member refid="class_services_1_1_company_training_major_service_1a5b20373818e161af0c71e7a38597c97e" prot="public" virt="non-virtual"><scope>Services::CompanyTrainingMajorService</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

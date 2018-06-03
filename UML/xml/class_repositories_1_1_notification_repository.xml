@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_repositories_1_1_notification_repository" kind="class" language="C#" prot="public">
+    <compoundname>Repositories::NotificationRepository</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_repositories_1_1_notification_repository_1ac7c38b4c493a70c413f7713aecb3b24c" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref></type>
+        <definition>readonly WebContext Repositories.NotificationRepository._context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <initializer>= new <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/NotificationRepository.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/NotificationRepository.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_repositories_1_1_notification_repository_1a9daa59c3392919371db7c01c37fb84e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_notification" kindref="compound">Notification</ref> &gt;</type>
+        <definition>IQueryable&lt;Notification&gt; Repositories.NotificationRepository.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/NotificationRepository.cs" line="17" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/NotificationRepository.cs" bodystart="17" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_notification_repository_1af663b186c6501d011de91fd6bd262ea1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_notification" kindref="compound">Notification</ref></type>
+        <definition>Notification Repositories.NotificationRepository.GetById</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/NotificationRepository.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/NotificationRepository.cs" bodystart="29" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_notification_repository_1ab9e38e2449eb0dd41f50cfbf90a2bc11" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.NotificationRepository.Add</definition>
+        <argsstring>(Notification notification)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_notification" kindref="compound">Notification</ref></type>
+          <declname>notification</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/NotificationRepository.cs" line="42" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/NotificationRepository.cs" bodystart="42" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_notification_repository_1af5dd732fe7ddcdc04778375f2867c418" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.NotificationRepository.Update</definition>
+        <argsstring>(Notification notification)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_notification" kindref="compound">Notification</ref></type>
+          <declname>notification</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/NotificationRepository.cs" line="56" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/NotificationRepository.cs" bodystart="56" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_notification_repository_1a5fc91211d4bf58a24e0d070468f81bc6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.NotificationRepository.Delete</definition>
+        <argsstring>(Notification notification)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_notification" kindref="compound">Notification</ref></type>
+          <declname>notification</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/NotificationRepository.cs" line="70" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/NotificationRepository.cs" bodystart="70" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_notification_repository_1a67aa29520bee7ca454d0b82b0c3c8743" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Repositories.NotificationRepository.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/NotificationRepository.cs" line="88" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/NotificationRepository.cs" bodystart="88" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="190">
+        <label>IDisposable</label>
+      </node>
+      <node id="189">
+        <label>Repositories.NotificationRepository</label>
+        <link refid="class_repositories_1_1_notification_repository"/>
+        <childnode refid="190" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="192">
+        <label>IDisposable</label>
+      </node>
+      <node id="191">
+        <label>Repositories.NotificationRepository</label>
+        <link refid="class_repositories_1_1_notification_repository"/>
+        <childnode refid="192" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/NotificationRepository.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/NotificationRepository.cs" bodystart="13" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_repositories_1_1_notification_repository_1ac7c38b4c493a70c413f7713aecb3b24c" prot="private" virt="non-virtual"><scope>Repositories::NotificationRepository</scope><name>_context</name></member>
+      <member refid="class_repositories_1_1_notification_repository_1ab9e38e2449eb0dd41f50cfbf90a2bc11" prot="public" virt="non-virtual"><scope>Repositories::NotificationRepository</scope><name>Add</name></member>
+      <member refid="class_repositories_1_1_notification_repository_1a5fc91211d4bf58a24e0d070468f81bc6" prot="public" virt="non-virtual"><scope>Repositories::NotificationRepository</scope><name>Delete</name></member>
+      <member refid="class_repositories_1_1_notification_repository_1a67aa29520bee7ca454d0b82b0c3c8743" prot="public" virt="non-virtual"><scope>Repositories::NotificationRepository</scope><name>Dispose</name></member>
+      <member refid="class_repositories_1_1_notification_repository_1a9daa59c3392919371db7c01c37fb84e8" prot="public" virt="non-virtual"><scope>Repositories::NotificationRepository</scope><name>GetAll</name></member>
+      <member refid="class_repositories_1_1_notification_repository_1af663b186c6501d011de91fd6bd262ea1" prot="public" virt="non-virtual"><scope>Repositories::NotificationRepository</scope><name>GetById</name></member>
+      <member refid="class_repositories_1_1_notification_repository_1af5dd732fe7ddcdc04778375f2867c418" prot="public" virt="non-virtual"><scope>Repositories::NotificationRepository</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

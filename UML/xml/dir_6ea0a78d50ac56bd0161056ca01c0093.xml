@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_6ea0a78d50ac56bd0161056ca01c0093" kind="dir">
+    <compoundname>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers</compoundname>
+    <innerfile refid="_admin_controller_8cs">AdminController.cs</innerfile>
+    <innerfile refid="_company_controller_8cs">CompanyController.cs</innerfile>
+    <innerfile refid="_company_training_major_controller_8cs">CompanyTrainingMajorController.cs</innerfile>
+    <innerfile refid="_department_controller_8cs">DepartmentController.cs</innerfile>
+    <innerfile refid="_internship_controller_8cs">InternshipController.cs</innerfile>
+    <innerfile refid="_learning_class_controller_8cs">LearningClassController.cs</innerfile>
+    <innerfile refid="_admin_2_controllers_2_profile_controller_8cs">ProfileController.cs</innerfile>
+    <innerfile refid="_semester_controller_8cs">SemesterController.cs</innerfile>
+    <innerfile refid="_student_class_controller_8cs">StudentClassController.cs</innerfile>
+    <innerfile refid="_student_controller_8cs">StudentController.cs</innerfile>
+    <innerfile refid="_subject_controller_8cs">SubjectController.cs</innerfile>
+    <innerfile refid="_teacher_controller_8cs">TeacherController.cs</innerfile>
+    <innerfile refid="_training_major_controller_8cs">TrainingMajorController.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/"/>
+  </compounddef>
+</doxygen>

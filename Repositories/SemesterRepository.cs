@@ -39,6 +39,19 @@ namespace Repositories
             }
         }
 
+        public Semester GetLatest()
+        {
+            try
+            {
+                return _context.Semesters.OrderByDescending(s => s.SemesterId).FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
+        }
+
         public bool Add(Semester semester)
         {
             try

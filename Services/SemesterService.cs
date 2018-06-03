@@ -21,6 +21,11 @@ namespace Services
             return _repository.GetById(id);
         }
 
+        public Semester GetLatest()
+        {
+            return _repository.GetLatest();
+        }
+
         public bool Add(Semester semester)
         {
             return _repository.Add(semester);

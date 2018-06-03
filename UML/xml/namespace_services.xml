@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_services" kind="namespace" language="C#">
+    <compoundname>Services</compoundname>
+    <innerclass refid="class_services_1_1_admin_service" prot="public">Services::AdminService</innerclass>
+    <innerclass refid="class_services_1_1_company_service" prot="public">Services::CompanyService</innerclass>
+    <innerclass refid="class_services_1_1_company_training_major_service" prot="public">Services::CompanyTrainingMajorService</innerclass>
+    <innerclass refid="class_services_1_1_department_service" prot="public">Services::DepartmentService</innerclass>
+    <innerclass refid="class_services_1_1_group_service" prot="public">Services::GroupService</innerclass>
+    <innerclass refid="class_services_1_1_internship_service" prot="public">Services::InternshipService</innerclass>
+    <innerclass refid="class_services_1_1_learning_class_service" prot="public">Services::LearningClassService</innerclass>
+    <innerclass refid="class_services_1_1_learning_class_student_service" prot="public">Services::LearningClassStudentService</innerclass>
+    <innerclass refid="class_services_1_1_message_service" prot="public">Services::MessageService</innerclass>
+    <innerclass refid="class_services_1_1_news_service" prot="public">Services::NewsService</innerclass>
+    <innerclass refid="class_services_1_1_notification_service" prot="public">Services::NotificationService</innerclass>
+    <innerclass refid="class_services_1_1_semester_service" prot="public">Services::SemesterService</innerclass>
+    <innerclass refid="class_services_1_1_statistic_service" prot="public">Services::StatisticService</innerclass>
+    <innerclass refid="class_services_1_1_student_class_service" prot="public">Services::StudentClassService</innerclass>
+    <innerclass refid="class_services_1_1_student_service" prot="public">Services::StudentService</innerclass>
+    <innerclass refid="class_services_1_1_subject_service" prot="public">Services::SubjectService</innerclass>
+    <innerclass refid="class_services_1_1_teacher_service" prot="public">Services::TeacherService</innerclass>
+    <innerclass refid="class_services_1_1_training_major_service" prot="public">Services::TrainingMajorService</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/AdminService.cs" line="10" column="1"/>
+  </compounddef>
+</doxygen>

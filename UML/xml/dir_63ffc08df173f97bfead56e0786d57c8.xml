@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_63ffc08df173f97bfead56e0786d57c8" kind="dir">
+    <compoundname>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement</compoundname>
+    <innerdir refid="dir_443aa20e6474a3f3f3367fd4f2815233">C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start</innerdir>
+    <innerdir refid="dir_43f0f8bf2332b75560483ee6e817ff9d">C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas</innerdir>
+    <innerdir refid="dir_3916165d52b054e376288155d0545846">C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers</innerdir>
+    <innerdir refid="dir_2eb6396c7ae37eec39545ebe41b68fb7">C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models</innerdir>
+    <innerdir refid="dir_53e85f5f4329ff80a09bb5b5fb1be8db">C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/obj</innerdir>
+    <innerdir refid="dir_ee647971a32e74cef2fa442815086e26">C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Properties</innerdir>
+    <innerfile refid="_global_8asax_8cs">Global.asax.cs</innerfile>
+    <innerfile refid="_startup_8cs">Startup.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/"/>
+  </compounddef>
+</doxygen>

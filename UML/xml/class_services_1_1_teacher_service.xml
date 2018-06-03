@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_services_1_1_teacher_service" kind="class" language="C#" prot="public">
+    <compoundname>Services::TeacherService</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_services_1_1_teacher_service_1a0ae84209faf2d90947258ba23fe9a934" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_repositories_1_1_teacher_repository" kindref="compound">TeacherRepository</ref></type>
+        <definition>readonly TeacherRepository Services.TeacherService._repository</definition>
+        <argsstring></argsstring>
+        <name>_repository</name>
+        <initializer>=new <ref refid="class_repositories_1_1_teacher_repository" kindref="compound">TeacherRepository</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/TeacherService.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/TeacherService.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_services_1_1_teacher_service_1a373a7f7ab1d9afc23bff1adc5a00476b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_teacher" kindref="compound">Teacher</ref> &gt;</type>
+        <definition>IQueryable&lt;Teacher&gt; Services.TeacherService.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/TeacherService.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/TeacherService.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_teacher_service_1a0cbd5477244ac976a0128803a67da042" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_teacher" kindref="compound">Teacher</ref></type>
+        <definition>Teacher Services.TeacherService.GetById</definition>
+        <argsstring>(string id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/TeacherService.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/TeacherService.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_teacher_service_1a9eeaaeef346ab3c2ca90d7c2a642c5b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.TeacherService.Add</definition>
+        <argsstring>(Teacher teacher)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_teacher" kindref="compound">Teacher</ref></type>
+          <declname>teacher</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/TeacherService.cs" line="24" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/TeacherService.cs" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_teacher_service_1a1ca76bb1d7e101740045d208e6ab9cb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.TeacherService.Update</definition>
+        <argsstring>(Teacher teacher)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_teacher" kindref="compound">Teacher</ref></type>
+          <declname>teacher</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/TeacherService.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/TeacherService.cs" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_teacher_service_1a4de98fd5d1dca3e4d86060e5d599b8a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.TeacherService.Delete</definition>
+        <argsstring>(Teacher teacher)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_teacher" kindref="compound">Teacher</ref></type>
+          <declname>teacher</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/TeacherService.cs" line="34" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/TeacherService.cs" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_teacher_service_1a49b1acccb7d021716e1224100af0c241" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Services.TeacherService.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/TeacherService.cs" line="39" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/TeacherService.cs" bodystart="39" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="304">
+        <label>IDisposable</label>
+      </node>
+      <node id="303">
+        <label>Services.TeacherService</label>
+        <link refid="class_services_1_1_teacher_service"/>
+        <childnode refid="304" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="306">
+        <label>IDisposable</label>
+      </node>
+      <node id="305">
+        <label>Services.TeacherService</label>
+        <link refid="class_services_1_1_teacher_service"/>
+        <childnode refid="306" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/TeacherService.cs" line="12" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/TeacherService.cs" bodystart="11" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_services_1_1_teacher_service_1a0ae84209faf2d90947258ba23fe9a934" prot="private" virt="non-virtual"><scope>Services::TeacherService</scope><name>_repository</name></member>
+      <member refid="class_services_1_1_teacher_service_1a9eeaaeef346ab3c2ca90d7c2a642c5b1" prot="public" virt="non-virtual"><scope>Services::TeacherService</scope><name>Add</name></member>
+      <member refid="class_services_1_1_teacher_service_1a4de98fd5d1dca3e4d86060e5d599b8a4" prot="public" virt="non-virtual"><scope>Services::TeacherService</scope><name>Delete</name></member>
+      <member refid="class_services_1_1_teacher_service_1a49b1acccb7d021716e1224100af0c241" prot="public" virt="non-virtual"><scope>Services::TeacherService</scope><name>Dispose</name></member>
+      <member refid="class_services_1_1_teacher_service_1a373a7f7ab1d9afc23bff1adc5a00476b" prot="public" virt="non-virtual"><scope>Services::TeacherService</scope><name>GetAll</name></member>
+      <member refid="class_services_1_1_teacher_service_1a0cbd5477244ac976a0128803a67da042" prot="public" virt="non-virtual"><scope>Services::TeacherService</scope><name>GetById</name></member>
+      <member refid="class_services_1_1_teacher_service_1a1ca76bb1d7e101740045d208e6ab9cb5" prot="public" virt="non-virtual"><scope>Services::TeacherService</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

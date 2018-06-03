@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_1e0ed068568e7edc74f4479eb029a341" kind="dir">
+    <compoundname>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/Controllers</compoundname>
+    <innerfile refid="_teacher_2_controllers_2_profile_controller_8cs">ProfileController.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/Controllers/"/>
+  </compounddef>
+</doxygen>

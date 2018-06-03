@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_f0d58b08711bc7b758db9299572765ed" kind="dir">
+    <compoundname>C:/Users/Duc/source/repos/StudentInternshipManagement</compoundname>
+    <innerdir refid="dir_b6505a542a863c1c59320a03a8ee114e">C:/Users/Duc/source/repos/StudentInternshipManagement/Models</innerdir>
+    <innerdir refid="dir_8153579474e3295de1c0c4d9e9076b8b">C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories</innerdir>
+    <innerdir refid="dir_f4ccb79f94e3610b3d0238552b6ecb5d">C:/Users/Duc/source/repos/StudentInternshipManagement/Services</innerdir>
+    <innerdir refid="dir_63ffc08df173f97bfead56e0786d57c8">C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement</innerdir>
+    <innerdir refid="dir_f3680f45e4f192081a73d69d8e9711db">C:/Users/Duc/source/repos/StudentInternshipManagement/Utilities</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/"/>
+  </compounddef>
+</doxygen>

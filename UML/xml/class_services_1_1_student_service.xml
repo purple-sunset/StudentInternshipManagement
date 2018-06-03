@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_services_1_1_student_service" kind="class" language="C#" prot="public">
+    <compoundname>Services::StudentService</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_services_1_1_student_service_1a3b8916a6160073884007e4602f04b15e" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_repositories_1_1_student_repository" kindref="compound">StudentRepository</ref></type>
+        <definition>readonly StudentRepository Services.StudentService._repository</definition>
+        <argsstring></argsstring>
+        <name>_repository</name>
+        <initializer>=new <ref refid="class_repositories_1_1_student_repository" kindref="compound">StudentRepository</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_services_1_1_student_service_1afef5addf51823287c68167cfcb1114cf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_student" kindref="compound">Student</ref> &gt;</type>
+        <definition>IQueryable&lt;Student&gt; Services.StudentService.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_student_service_1a57f831d36850fb41ec674b48ffbc0c03" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_student" kindref="compound">Student</ref> &gt;</type>
+        <definition>IQueryable&lt;Student&gt; Services.StudentService.GetByStudentClass</definition>
+        <argsstring>(int classId)</argsstring>
+        <name>GetByStudentClass</name>
+        <param>
+          <type>int</type>
+          <declname>classId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" line="20" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_student_service_1a863fca9cc2a16904a01294b39ebb73d5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_student" kindref="compound">Student</ref></type>
+        <definition>Student Services.StudentService.GetById</definition>
+        <argsstring>(string id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" line="25" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_student_service_1a4417978fd0ff092c381349e1d178d5ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_learning_class" kindref="compound">LearningClass</ref> &gt;</type>
+        <definition>IQueryable&lt;LearningClass&gt; Services.StudentService.GetLearningClassList</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetLearningClassList</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" line="30" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_student_service_1ae53bb504b537bce503e042544ab1afa2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.StudentService.Add</definition>
+        <argsstring>(Student student)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_student" kindref="compound">Student</ref></type>
+          <declname>student</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" line="35" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" bodystart="35" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_student_service_1aa82262b951e5ef2e33aeca1bb550cf3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.StudentService.Update</definition>
+        <argsstring>(Student student)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_student" kindref="compound">Student</ref></type>
+          <declname>student</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" line="40" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_student_service_1a281049b64b7b69a2e56ea633214d080e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.StudentService.Delete</definition>
+        <argsstring>(Student student)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_student" kindref="compound">Student</ref></type>
+          <declname>student</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" line="45" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_student_service_1af1de20d829b5e659eaad779a876bdd2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Services.StudentService.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" line="50" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" bodystart="50" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="272">
+        <label>IDisposable</label>
+      </node>
+      <node id="271">
+        <label>Services.StudentService</label>
+        <link refid="class_services_1_1_student_service"/>
+        <childnode refid="272" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="274">
+        <label>IDisposable</label>
+      </node>
+      <node id="273">
+        <label>Services.StudentService</label>
+        <link refid="class_services_1_1_student_service"/>
+        <childnode refid="274" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" line="12" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StudentService.cs" bodystart="11" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_services_1_1_student_service_1a3b8916a6160073884007e4602f04b15e" prot="private" virt="non-virtual"><scope>Services::StudentService</scope><name>_repository</name></member>
+      <member refid="class_services_1_1_student_service_1ae53bb504b537bce503e042544ab1afa2" prot="public" virt="non-virtual"><scope>Services::StudentService</scope><name>Add</name></member>
+      <member refid="class_services_1_1_student_service_1a281049b64b7b69a2e56ea633214d080e" prot="public" virt="non-virtual"><scope>Services::StudentService</scope><name>Delete</name></member>
+      <member refid="class_services_1_1_student_service_1af1de20d829b5e659eaad779a876bdd2c" prot="public" virt="non-virtual"><scope>Services::StudentService</scope><name>Dispose</name></member>
+      <member refid="class_services_1_1_student_service_1afef5addf51823287c68167cfcb1114cf" prot="public" virt="non-virtual"><scope>Services::StudentService</scope><name>GetAll</name></member>
+      <member refid="class_services_1_1_student_service_1a863fca9cc2a16904a01294b39ebb73d5" prot="public" virt="non-virtual"><scope>Services::StudentService</scope><name>GetById</name></member>
+      <member refid="class_services_1_1_student_service_1a57f831d36850fb41ec674b48ffbc0c03" prot="public" virt="non-virtual"><scope>Services::StudentService</scope><name>GetByStudentClass</name></member>
+      <member refid="class_services_1_1_student_service_1a4417978fd0ff092c381349e1d178d5ca" prot="public" virt="non-virtual"><scope>Services::StudentService</scope><name>GetLearningClassList</name></member>
+      <member refid="class_services_1_1_student_service_1aa82262b951e5ef2e33aeca1bb550cf3f" prot="public" virt="non-virtual"><scope>Services::StudentService</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

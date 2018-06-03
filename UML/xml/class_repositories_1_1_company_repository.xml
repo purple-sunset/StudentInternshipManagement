@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_repositories_1_1_company_repository" kind="class" language="C#" prot="public">
+    <compoundname>Repositories::CompanyRepository</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_repositories_1_1_company_repository_1a4764d4db924668348065f4c3f0810796" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref></type>
+        <definition>readonly WebContext Repositories.CompanyRepository._context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <initializer>=new <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_repositories_1_1_company_repository_1a4096fc8f54dfbc60f3bb97a906f52dee" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_company" kindref="compound">Company</ref> &gt;</type>
+        <definition>IQueryable&lt;Company&gt; Repositories.CompanyRepository.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" line="17" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" bodystart="17" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_company_repository_1a13769b3fe7cb52661a14e072d22d478d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_company" kindref="compound">Company</ref></type>
+        <definition>Company Repositories.CompanyRepository.GetById</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" bodystart="29" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_company_repository_1a4dc6fc4dfcb9fd6f25c8e1cf04d44a39" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_training_major" kindref="compound">TrainingMajor</ref> &gt;</type>
+        <definition>IQueryable&lt;TrainingMajor&gt; Repositories.CompanyRepository.GetMajorList</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetMajorList</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" line="42" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" bodystart="42" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_company_repository_1a0d2fd42d9fffefe416c4790322a8a660" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.CompanyRepository.Add</definition>
+        <argsstring>(Company company)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_company" kindref="compound">Company</ref></type>
+          <declname>company</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" line="57" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" bodystart="57" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_company_repository_1ae9079cb4753e8fc81b49c546f35837a6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.CompanyRepository.Update</definition>
+        <argsstring>(Company company)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_company" kindref="compound">Company</ref></type>
+          <declname>company</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" line="71" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" bodystart="71" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_company_repository_1a90458aca67d253134c889fc7769ede45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.CompanyRepository.Delete</definition>
+        <argsstring>(Company company)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_company" kindref="compound">Company</ref></type>
+          <declname>company</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" line="85" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" bodystart="85" bodyend="101"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_company_repository_1a13c78a0406078065f466647f2db0949e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Repositories.CompanyRepository.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" line="103" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" bodystart="103" bodyend="106"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="54">
+        <label>IDisposable</label>
+      </node>
+      <node id="53">
+        <label>Repositories.CompanyRepository</label>
+        <link refid="class_repositories_1_1_company_repository"/>
+        <childnode refid="54" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="56">
+        <label>IDisposable</label>
+      </node>
+      <node id="55">
+        <label>Repositories.CompanyRepository</label>
+        <link refid="class_repositories_1_1_company_repository"/>
+        <childnode refid="56" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/CompanyRepository.cs" bodystart="13" bodyend="107"/>
+    <listofallmembers>
+      <member refid="class_repositories_1_1_company_repository_1a4764d4db924668348065f4c3f0810796" prot="private" virt="non-virtual"><scope>Repositories::CompanyRepository</scope><name>_context</name></member>
+      <member refid="class_repositories_1_1_company_repository_1a0d2fd42d9fffefe416c4790322a8a660" prot="public" virt="non-virtual"><scope>Repositories::CompanyRepository</scope><name>Add</name></member>
+      <member refid="class_repositories_1_1_company_repository_1a90458aca67d253134c889fc7769ede45" prot="public" virt="non-virtual"><scope>Repositories::CompanyRepository</scope><name>Delete</name></member>
+      <member refid="class_repositories_1_1_company_repository_1a13c78a0406078065f466647f2db0949e" prot="public" virt="non-virtual"><scope>Repositories::CompanyRepository</scope><name>Dispose</name></member>
+      <member refid="class_repositories_1_1_company_repository_1a4096fc8f54dfbc60f3bb97a906f52dee" prot="public" virt="non-virtual"><scope>Repositories::CompanyRepository</scope><name>GetAll</name></member>
+      <member refid="class_repositories_1_1_company_repository_1a13769b3fe7cb52661a14e072d22d478d" prot="public" virt="non-virtual"><scope>Repositories::CompanyRepository</scope><name>GetById</name></member>
+      <member refid="class_repositories_1_1_company_repository_1a4dc6fc4dfcb9fd6f25c8e1cf04d44a39" prot="public" virt="non-virtual"><scope>Repositories::CompanyRepository</scope><name>GetMajorList</name></member>
+      <member refid="class_repositories_1_1_company_repository_1ae9079cb4753e8fc81b49c546f35837a6" prot="public" virt="non-virtual"><scope>Repositories::CompanyRepository</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

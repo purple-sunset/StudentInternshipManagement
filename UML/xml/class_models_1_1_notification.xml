@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_models_1_1_notification" kind="class" language="C#" prot="public">
+    <compoundname>Models::Notification</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_models_1_1_notification_1abfaee39390369904e2b569c2aca0c63e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.Notification.NotificationId</definition>
+        <argsstring></argsstring>
+        <name>NotificationId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Notification.cs" line="12" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Notification.cs" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_notification_1a24cc1e7b796b0c0a44d7fec45fabfaac" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Notification.Content</definition>
+        <argsstring></argsstring>
+        <name>Content</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Notification.cs" line="16" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Notification.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_notification_1ad8354aa222a205c590d0a9349610fd6d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Notification.Url</definition>
+        <argsstring></argsstring>
+        <name>Url</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Notification.cs" line="20" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Notification.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_notification_1a590902bbf6eeb0b9623cb22393239096" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime Models.Notification.Time</definition>
+        <argsstring></argsstring>
+        <name>Time</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Notification.cs" line="22" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Notification.cs" bodystart="22" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Notification.cs" line="11" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Notification.cs" bodystart="10" bodyend="23"/>
+    <listofallmembers>
+      <member refid="class_models_1_1_notification_1a24cc1e7b796b0c0a44d7fec45fabfaac" prot="public" virt="non-virtual"><scope>Models::Notification</scope><name>Content</name></member>
+      <member refid="class_models_1_1_notification_1abfaee39390369904e2b569c2aca0c63e" prot="public" virt="non-virtual"><scope>Models::Notification</scope><name>NotificationId</name></member>
+      <member refid="class_models_1_1_notification_1a590902bbf6eeb0b9623cb22393239096" prot="public" virt="non-virtual"><scope>Models::Notification</scope><name>Time</name></member>
+      <member refid="class_models_1_1_notification_1ad8354aa222a205c590d0a9349610fd6d" prot="public" virt="non-virtual"><scope>Models::Notification</scope><name>Url</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

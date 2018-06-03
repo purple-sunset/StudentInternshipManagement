@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_f4ccb79f94e3610b3d0238552b6ecb5d" kind="dir">
+    <compoundname>C:/Users/Duc/source/repos/StudentInternshipManagement/Services</compoundname>
+    <innerdir refid="dir_55602bf4396232dc18aff3891b774df3">C:/Users/Duc/source/repos/StudentInternshipManagement/Services/obj</innerdir>
+    <innerdir refid="dir_40b2875a30347cb92cedaba47e846d24">C:/Users/Duc/source/repos/StudentInternshipManagement/Services/Properties</innerdir>
+    <innerfile refid="_admin_service_8cs">AdminService.cs</innerfile>
+    <innerfile refid="_company_service_8cs">CompanyService.cs</innerfile>
+    <innerfile refid="_company_training_major_service_8cs">CompanyTrainingMajorService.cs</innerfile>
+    <innerfile refid="_department_service_8cs">DepartmentService.cs</innerfile>
+    <innerfile refid="_group_service_8cs">GroupService.cs</innerfile>
+    <innerfile refid="_intership_service_8cs">IntershipService.cs</innerfile>
+    <innerfile refid="_learning_class_service_8cs">LearningClassService.cs</innerfile>
+    <innerfile refid="_learning_class_student_service_8cs">LearningClassStudentService.cs</innerfile>
+    <innerfile refid="_message_service_8cs">MessageService.cs</innerfile>
+    <innerfile refid="_news_service_8cs">NewsService.cs</innerfile>
+    <innerfile refid="_notification_service_8cs">NotificationService.cs</innerfile>
+    <innerfile refid="_semester_service_8cs">SemesterService.cs</innerfile>
+    <innerfile refid="_statistic_service_8cs">StatisticService.cs</innerfile>
+    <innerfile refid="_student_class_service_8cs">StudentClassService.cs</innerfile>
+    <innerfile refid="_student_service_8cs">StudentService.cs</innerfile>
+    <innerfile refid="_subject_service_8cs">SubjectService.cs</innerfile>
+    <innerfile refid="_teacher_service_8cs">TeacherService.cs</innerfile>
+    <innerfile refid="_training_major_service_8cs">TrainingMajorService.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/"/>
+  </compounddef>
+</doxygen>

@@ -25,17 +25,15 @@ namespace Models
         [UIHint("StudentTemplate")]
         public string StudentId { get; set; }
 
-        [Required]
         [Range(0,10)]
         [DisplayName("Điểm giữa kỳ")]
         public float MidTermPoint { get; set; }
 
-        [Required]
         [Range(0, 10)]
         [DisplayName("Điểm cuối kỳ")]
         public float EndTermPoint { get; set; }
 
-        [Required]
+
         [Range(0, 10)]
         [DisplayName("Điểm tổng kết")]
         public float TotalPoint { get; set; }

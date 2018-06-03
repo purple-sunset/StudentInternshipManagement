@@ -1,0 +1,41 @@
+﻿@using Kendo.Mvc.UI
+@using Models
+@{
+    ViewBag.Title = "Tin tức";
+    ViewBag.Category = "Tin tức";
+    ViewBag.Section = "Tin tức";
+}
+@Styles.Render("~/Content/kendo")
+@Scripts.Render("~/Script/kendo")
+
+@(Html.Kendo().ListView<News>()
+      .Name("listView")
+      .TagName("div")
+      .ClientTemplateId("template")
+      .DataSource(dataSource =>
+      {
+          dataSource.Read(read => read.Action("News_Read", "News", new{areas=""}));
+          dataSource.PageSize(5);
+      })
+      .Pageable()
+      )
+
+<script type="text/x-kendo-tmpl" id="template">
+    <div class="media search-media">
+        <div class="media-left">
+            <a href="">
+                <h3>#:kendo.toString(Time, "dd/MM")#</h3>
+            </a>
+        </div>
+
+        <div class="media-body">
+            <div>
+                <h3 class="media-heading">
+                    <a href="" class="blue">#:Title#</a>
+                </h3>
+            </div>
+            <p>#:Content#</p>
+        </div>
+    </div>
+
+</script>

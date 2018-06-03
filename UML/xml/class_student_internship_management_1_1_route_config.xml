@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_route_config" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::RouteConfig</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_route_config_1a975a3094ab9e3daea4dbea51c3a00643" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void StudentInternshipManagement.RouteConfig.RegisterRoutes</definition>
+        <argsstring>(RouteCollection routes)</argsstring>
+        <name>RegisterRoutes</name>
+        <param>
+          <type>RouteCollection</type>
+          <declname>routes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/RouteConfig.cs" line="12" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/RouteConfig.cs" bodystart="12" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/RouteConfig.cs" line="11" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/RouteConfig.cs" bodystart="10" bodyend="22"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_route_config_1a975a3094ab9e3daea4dbea51c3a00643" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::RouteConfig</scope><name>RegisterRoutes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

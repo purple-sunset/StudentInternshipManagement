@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_services_1_1_subject_service" kind="class" language="C#" prot="public">
+    <compoundname>Services::SubjectService</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_services_1_1_subject_service_1a27d0f33abb0f0d0e9acfd3da39bd24d4" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_repositories_1_1_subject_repository" kindref="compound">SubjectRepository</ref></type>
+        <definition>readonly SubjectRepository Services.SubjectService._repository</definition>
+        <argsstring></argsstring>
+        <name>_repository</name>
+        <initializer>=new <ref refid="class_repositories_1_1_subject_repository" kindref="compound">SubjectRepository</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SubjectService.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SubjectService.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_services_1_1_subject_service_1ab01760e5982873134b40ee33dd7fb67c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_subject" kindref="compound">Subject</ref> &gt;</type>
+        <definition>IQueryable&lt;Subject&gt; Services.SubjectService.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SubjectService.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SubjectService.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_subject_service_1aeb90c5b8bb5dacb41baa0bac7e1ba5d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_subject" kindref="compound">Subject</ref></type>
+        <definition>Subject Services.SubjectService.GetById</definition>
+        <argsstring>(string id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SubjectService.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SubjectService.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_subject_service_1a468da73900d59eac182384d462704bd3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.SubjectService.Add</definition>
+        <argsstring>(Subject subject)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_subject" kindref="compound">Subject</ref></type>
+          <declname>subject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SubjectService.cs" line="24" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SubjectService.cs" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_subject_service_1a68b737f633bf0a1ea9e4c417a54d5943" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.SubjectService.Update</definition>
+        <argsstring>(Subject subject)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_subject" kindref="compound">Subject</ref></type>
+          <declname>subject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SubjectService.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SubjectService.cs" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_subject_service_1a3a7be630be6f4b9a3cd5a3fe22d767b2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.SubjectService.Delete</definition>
+        <argsstring>(Subject subject)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_subject" kindref="compound">Subject</ref></type>
+          <declname>subject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SubjectService.cs" line="34" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SubjectService.cs" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_subject_service_1abe1511a34d5b0acaf1fc407de65a135d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Services.SubjectService.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SubjectService.cs" line="39" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SubjectService.cs" bodystart="39" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="286">
+        <label>IDisposable</label>
+      </node>
+      <node id="285">
+        <label>Services.SubjectService</label>
+        <link refid="class_services_1_1_subject_service"/>
+        <childnode refid="286" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="288">
+        <label>IDisposable</label>
+      </node>
+      <node id="287">
+        <label>Services.SubjectService</label>
+        <link refid="class_services_1_1_subject_service"/>
+        <childnode refid="288" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SubjectService.cs" line="12" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SubjectService.cs" bodystart="11" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_services_1_1_subject_service_1a27d0f33abb0f0d0e9acfd3da39bd24d4" prot="private" virt="non-virtual"><scope>Services::SubjectService</scope><name>_repository</name></member>
+      <member refid="class_services_1_1_subject_service_1a468da73900d59eac182384d462704bd3" prot="public" virt="non-virtual"><scope>Services::SubjectService</scope><name>Add</name></member>
+      <member refid="class_services_1_1_subject_service_1a3a7be630be6f4b9a3cd5a3fe22d767b2" prot="public" virt="non-virtual"><scope>Services::SubjectService</scope><name>Delete</name></member>
+      <member refid="class_services_1_1_subject_service_1abe1511a34d5b0acaf1fc407de65a135d" prot="public" virt="non-virtual"><scope>Services::SubjectService</scope><name>Dispose</name></member>
+      <member refid="class_services_1_1_subject_service_1ab01760e5982873134b40ee33dd7fb67c" prot="public" virt="non-virtual"><scope>Services::SubjectService</scope><name>GetAll</name></member>
+      <member refid="class_services_1_1_subject_service_1aeb90c5b8bb5dacb41baa0bac7e1ba5d7" prot="public" virt="non-virtual"><scope>Services::SubjectService</scope><name>GetById</name></member>
+      <member refid="class_services_1_1_subject_service_1a68b737f633bf0a1ea9e4c417a54d5943" prot="public" virt="non-virtual"><scope>Services::SubjectService</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

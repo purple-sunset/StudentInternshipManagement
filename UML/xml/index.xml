@@ -1,0 +1,1208 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.14">
+  <compound refid="class_student_internship_management_1_1_controllers_1_1_account_controller" kind="class"><name>StudentInternshipManagement::Controllers::AccountController</name>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1aeb1e2ec6b1825904f4dc8eddec4e6a30" kind="variable"><name>_signInManager</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1aedde44d4f9e273b32ea20236ac84524b" kind="variable"><name>_userManager</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1aece8faf19f2cb90b9a198b77a63f127e" kind="variable"><name>XsrfKey</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a913c93383b716603bb361bb466297d4f" kind="property"><name>SignInManager</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a4e7bc3c367083007d70212a7b6fc8709" kind="property"><name>UserManager</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1af5762c5ff4df0f842b4c4d9e09777a09" kind="property"><name>AuthenticationManager</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1ab3e927d160ac2e2e509c4b9eeb046977" kind="function"><name>AccountController</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a6d647fdec0c2405ce01c02c1caaf3250" kind="function"><name>AccountController</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1ab028baa97cfbf18c69ad77b994a72141" kind="function"><name>Login</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a9d7146d59df94db4cbfd70abd3950444" kind="function"><name>Login</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1ac9d3e7281277bda201bffe98512e0b00" kind="function"><name>ForgotPassword</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a7386f68ba6a13d748a731b52962bf61e" kind="function"><name>ForgotPassword</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a44eeb2361345381ae52601315fde5312" kind="function"><name>ForgotPasswordConfirmation</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a8d386179ad25d1e9fe791b6f03824d5f" kind="function"><name>ResetPassword</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1ac4d2dd7269df661c12fa9c13236591f3" kind="function"><name>ResetPassword</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a3db549cedec0852c48fcfe3a1903073b" kind="function"><name>ResetPasswordConfirmation</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1adf3c9ae4739ecca89d0e27bf38d79357" kind="function"><name>ChangePassword</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a5343d31a936c416b991ae662f9d0926a" kind="function"><name>ChangePassword</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1ac35bf484fc0d431aa3342b831090c753" kind="function"><name>LogOff</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1aba2953b87c76061b8f8d0ff27df14741" kind="function"><name>Dispose</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a985d58cefea6a542adda8236fb718da0" kind="function"><name>AddErrors</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1a75028071d29b3aab7f07912655a049f7" kind="function"><name>RedirectToLocal</name></member>
+  </compound>
+  <compound refid="class_models_1_1_admin" kind="class"><name>Models::Admin</name>
+    <member refid="class_models_1_1_admin_1a7f356df3a70b1df254f743a10a9206c4" kind="property"><name>AdminId</name></member>
+    <member refid="class_models_1_1_admin_1a50bad8abf8da0eedaf74412ce0ad4d30" kind="property"><name>AdminName</name></member>
+    <member refid="class_models_1_1_admin_1a2f5171823360a955ba8fed2a3b66b797" kind="property"><name>BirthDate</name></member>
+    <member refid="class_models_1_1_admin_1a6df15c6a2b97ce04ac359d2ff0b67a36" kind="property"><name>Address</name></member>
+    <member refid="class_models_1_1_admin_1aada4e8886744500d60e96400aa3f5245" kind="property"><name>Phone</name></member>
+    <member refid="class_models_1_1_admin_1a620598c0f0f7d1ce2e0b7f5360556eab" kind="property"><name>Avatar</name></member>
+    <member refid="class_models_1_1_admin_1afcccad65f5ca975eb07f68f71ff5e557" kind="property"><name>DepartmentId</name></member>
+    <member refid="class_models_1_1_admin_1a58f6147870f7ea198c3eefd6a380454a" kind="property"><name>Department</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_admin_area_registration" kind="class"><name>StudentInternshipManagement::Areas::Admin::AdminAreaRegistration</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_admin_area_registration_1a290d8fe8e960d5df8f064e7a8b98c83e" kind="property"><name>AreaName</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_admin_area_registration_1aa33f1f606ec5410aa57e855134f8a9bb" kind="function"><name>RegisterArea</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_admin_controller" kind="class"><name>StudentInternshipManagement::Areas::Admin::Controllers::AdminController</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_admin_controller_1aacac32f72049bce883b7c8c1b6f15bed" kind="variable"><name>_service</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_admin_controller_1ae3cd6d5f6a855762d2420448a0820512" kind="variable"><name>_departmentService</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_admin_controller_1ad1cc1d8252b39c472c0bf239e56b86c8" kind="function"><name>Index</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_admin_controller_1abeb8828e5939080aefbdd5da0128b9a4" kind="function"><name>Admins_Read</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_admin_controller_1af744bde92dee3f83c6462d4884d9f3d2" kind="function"><name>Admins_Create</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_admin_controller_1ad0be5f50e3879a334adb1b7b8c1dbed5" kind="function"><name>Admins_Update</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_admin_controller_1a28a88ba9c72364cadc06a5573f8347d9" kind="function"><name>Admins_Destroy</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_admin_controller_1afe18871f9333ebf85517bc3872018ca2" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_admin_repository" kind="class"><name>Repositories::AdminRepository</name>
+    <member refid="class_repositories_1_1_admin_repository_1a0bd82e688f19487b8ceec420e139fe37" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_admin_repository_1a8e43f25d2faa8a6eead059caf2f3956d" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_admin_repository_1a9e67e6291897fb2e240e0c1d644a0a4b" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_admin_repository_1a82d67322f5c7efe3bc9e87dea689aca5" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_admin_repository_1a80957b8a24cc76440d1fe1ab7ffee01d" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_admin_repository_1a64c9f1e02aeaa7650223ca17c310cb39" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_admin_repository_1a65cc12c19da5233e262b915af42a56a8" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_admin_service" kind="class"><name>Services::AdminService</name>
+    <member refid="class_services_1_1_admin_service_1a22167c8e6c82661a95fbb7c87df5f088" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_admin_service_1aea9f6d2a62e679ba0363e20bcb454553" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_admin_service_1adf9801128bd959e4be29245d0af96354" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_admin_service_1a79ecd25e9af1db741429e9764285a536" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_admin_service_1a590fc5461a34cbf5b5750c11f8b1fc3b" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_admin_service_1a51cbbb47a4b0bb9358a5ee3125f4fdbf" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_admin_service_1a626cacb8412e590c8da62f26974e0ad7" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_models_1_1_application_db_context" kind="class"><name>Models::ApplicationDbContext</name>
+    <member refid="class_models_1_1_application_db_context_1a9087b15263dda7332b605805e3a80314" kind="function"><name>ApplicationDbContext</name></member>
+    <member refid="class_models_1_1_application_db_context_1aedb3506e014ef32a40c39e8e05fa1409" kind="function"><name>Create</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_application_sign_in_manager" kind="class"><name>StudentInternshipManagement::ApplicationSignInManager</name>
+    <member refid="class_student_internship_management_1_1_application_sign_in_manager_1acd29409a2c08f9ce3e7e394a7cbcb2bb" kind="function"><name>ApplicationSignInManager</name></member>
+    <member refid="class_student_internship_management_1_1_application_sign_in_manager_1a95737ff5cc2ea6045f50722bbdebff92" kind="function"><name>CreateUserIdentityAsync</name></member>
+    <member refid="class_student_internship_management_1_1_application_sign_in_manager_1afccaaae6014f7badc568793917edde7c" kind="function"><name>Create</name></member>
+  </compound>
+  <compound refid="class_models_1_1_application_user" kind="class"><name>Models::ApplicationUser</name>
+    <member refid="class_models_1_1_application_user_1afa09a65456a406e799cdb2850decb3b1" kind="property"><name>Notifications</name></member>
+    <member refid="class_models_1_1_application_user_1a94f08fe175a533e7aa234a07ada08bda" kind="function"><name>GenerateUserIdentityAsync</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_application_user_manager" kind="class"><name>StudentInternshipManagement::ApplicationUserManager</name>
+    <member refid="class_student_internship_management_1_1_application_user_manager_1aa4aed3044c40e887a5700be2b8edab20" kind="function"><name>ApplicationUserManager</name></member>
+    <member refid="class_student_internship_management_1_1_application_user_manager_1aea21ec2e9e9331e106b78aaa9dbe5436" kind="function"><name>Create</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_bundle_config" kind="class"><name>StudentInternshipManagement::BundleConfig</name>
+    <member refid="class_student_internship_management_1_1_bundle_config_1af7c9ad6ab37a90eb7b179aed3d6b579d" kind="function"><name>RegisterBundles</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result" kind="class"><name>StudentInternshipManagement::Controllers::AccountController::ChallengeResult</name>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1ad0fd5c2733a9b817a3c410c7ffd6ad2d" kind="property"><name>LoginProvider</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1ab4de2de590155f601825452afcb5ceca" kind="property"><name>RedirectUri</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1a9222203103ace8282c7e76a642db87fc" kind="property"><name>UserId</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1a41fd8b25b9500fafab9ef649fb69fc6f" kind="function"><name>ChallengeResult</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1a17494ad9eafd7c155e06038fa6bdd9c3" kind="function"><name>ChallengeResult</name></member>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1ade5ed022bd33c94e6e61dd9012b2d2e8" kind="function"><name>ExecuteResult</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_models_1_1_change_password_view_model" kind="class"><name>StudentInternshipManagement::Models::ChangePasswordViewModel</name>
+    <member refid="class_student_internship_management_1_1_models_1_1_change_password_view_model_1a9fb9cb7e684eaecf801f04705ed86dd2" kind="property"><name>OldPassword</name></member>
+    <member refid="class_student_internship_management_1_1_models_1_1_change_password_view_model_1ac6f8536758ff202c1630a5b0cb17ea86" kind="property"><name>NewPassword</name></member>
+    <member refid="class_student_internship_management_1_1_models_1_1_change_password_view_model_1ae84c3e1fd482fe8dee8b9be144e4d3b7" kind="property"><name>ConfirmPassword</name></member>
+  </compound>
+  <compound refid="class_models_1_1_company" kind="class"><name>Models::Company</name>
+    <member refid="class_models_1_1_company_1a5e00273ca508676fe64bb1ba64c3b55b" kind="property"><name>CompanyId</name></member>
+    <member refid="class_models_1_1_company_1a71461a3acada980472feb1d5d866dcdb" kind="property"><name>CompanyName</name></member>
+    <member refid="class_models_1_1_company_1a2e207c8567f741e9958fa8f23fc4bdee" kind="property"><name>CompanyDescription</name></member>
+    <member refid="class_models_1_1_company_1a3a4088e28819c678120b1f19ad0c1458" kind="property"><name>Address</name></member>
+    <member refid="class_models_1_1_company_1aa733d689179f530daf1b94df5e96a581" kind="property"><name>Email</name></member>
+    <member refid="class_models_1_1_company_1a23eac967c98a8da565e063e2333ff2fd" kind="property"><name>Phone</name></member>
+    <member refid="class_models_1_1_company_1a41391e84bbb36cdd21c72f1c02447d88" kind="property"><name>CompanyTrainingMajors</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_controller" kind="class"><name>StudentInternshipManagement::Areas::Admin::Controllers::CompanyController</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_controller_1ae3426e72243cd37e5c865ec963d72e5f" kind="variable"><name>_service</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_controller_1a4944c07c044c66305bf8c19eddbb9c5a" kind="variable"><name>_trainingMajorService</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_controller_1a86d860bbb2e2a31053fdf1e787bf6591" kind="function"><name>Index</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_controller_1a66444403cf8bc849d3f0eee19a04b6d1" kind="function"><name>Companies_Read</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_controller_1a47d660fd4afc02d5946deb7603ffa9f4" kind="function"><name>Companies_Create</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_controller_1aacccde4f4c0e82133462eecafd8f7549" kind="function"><name>Companies_Update</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_controller_1a280ba9f21eb10fcdf9adfec9d35180d7" kind="function"><name>Companies_Destroy</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_controller_1aba965dbe8a3e2d787d31bd6b90a2d19c" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_company_repository" kind="class"><name>Repositories::CompanyRepository</name>
+    <member refid="class_repositories_1_1_company_repository_1a4764d4db924668348065f4c3f0810796" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_company_repository_1a4096fc8f54dfbc60f3bb97a906f52dee" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_company_repository_1a13769b3fe7cb52661a14e072d22d478d" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_company_repository_1a4dc6fc4dfcb9fd6f25c8e1cf04d44a39" kind="function"><name>GetMajorList</name></member>
+    <member refid="class_repositories_1_1_company_repository_1a0d2fd42d9fffefe416c4790322a8a660" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_company_repository_1ae9079cb4753e8fc81b49c546f35837a6" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_company_repository_1a90458aca67d253134c889fc7769ede45" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_company_repository_1a13c78a0406078065f466647f2db0949e" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_company_service" kind="class"><name>Services::CompanyService</name>
+    <member refid="class_services_1_1_company_service_1a7d80fe3f0f4f7ec38c664ca2e0e8a802" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_company_service_1aad1ef1bf5496721f0dc220bbaa16c958" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_company_service_1a1ec1e13fa512f5d184bc30633f05d838" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_company_service_1a5727e546f12b3fe6c405a7ec9e179f69" kind="function"><name>GetMajorList</name></member>
+    <member refid="class_services_1_1_company_service_1a000ad13ef8a465dac75ec30e55c8b9ae" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_company_service_1a8cd1d0d977ec29b4f89b047914db85f9" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_company_service_1a038e12a9b7316a02dd0e60e27fac07d3" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_company_service_1aa5f0f2ff9ff2bf73de0a385730feefa6" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_models_1_1_company_training_major" kind="class"><name>Models::CompanyTrainingMajor</name>
+    <member refid="class_models_1_1_company_training_major_1aac297b700543ac22a25a45343bf154de" kind="property"><name>CompanyId</name></member>
+    <member refid="class_models_1_1_company_training_major_1a0eb41aed82ffeb1607f9ff6c9eb38cfb" kind="property"><name>TrainingMajorId</name></member>
+    <member refid="class_models_1_1_company_training_major_1a9ad6b540e4193df29c55040d6bb706f1" kind="property"><name>Company</name></member>
+    <member refid="class_models_1_1_company_training_major_1a97c11d38de78e730d5c6fba1de36237c" kind="property"><name>TrainingMajor</name></member>
+    <member refid="class_models_1_1_company_training_major_1a63187264004c0381901ec53bda5ee5fe" kind="property"><name>TotalTraineeCount</name></member>
+    <member refid="class_models_1_1_company_training_major_1ae5e61824a170c3c91e5a3db8e5aa4d74" kind="property"><name>AvailableTraineeCount</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller" kind="class"><name>StudentInternshipManagement::Areas::Admin::Controllers::CompanyTrainingMajorController</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a55710ff102f7a7f9813928dca11ba833" kind="variable"><name>_service</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a94619cd462c753bd39953060ecb38403" kind="variable"><name>_trainingMajorService</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1acdc79132a0345d0d9ba9f1bed7d99ace" kind="variable"><name>_companyService</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a2715671a8790f516b106974e0a1ba3cb" kind="function"><name>Index</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1ae6a5b083cdf711f9661adaf7176bdae0" kind="function"><name>CompanyTrainingMajors_Read</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1af53904c821d71304a9dfb22f823f97b8" kind="function"><name>CompanyTrainingMajors_Create</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a5edb64f6389b9973c434fd63a2083a4a" kind="function"><name>CompanyTrainingMajors_Update</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a244b42c0ea03048fadb1947d725867d2" kind="function"><name>CompanyTrainingMajors_Destroy</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_company_training_major_controller_1a778b988e75c1986fcee9edb1f6f826b4" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_company_training_major_repository" kind="class"><name>Repositories::CompanyTrainingMajorRepository</name>
+    <member refid="class_repositories_1_1_company_training_major_repository_1af736d5292a5e83a276f87f40a55cf991" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_company_training_major_repository_1ac07ca233af4bc62e87d0667dba8660b2" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_company_training_major_repository_1a345010c27e2222e46dcdd95b2fba6228" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_company_training_major_repository_1aee854971b1d7baffde0d19033c1c5083" kind="function"><name>GetByCompany</name></member>
+    <member refid="class_repositories_1_1_company_training_major_repository_1a0c24648336ef8c7c26652d639e3fce40" kind="function"><name>GetByTrainingMajor</name></member>
+    <member refid="class_repositories_1_1_company_training_major_repository_1a176dd5e20c3c4c6689b391ba890df2ee" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_company_training_major_repository_1a655cef98d1627a5472ee5f786d814865" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_company_training_major_repository_1a87a6b39156658fad68bd5735d492a504" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_company_training_major_repository_1a3c9de1f0d8dbf222032265716cc33068" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_company_training_major_service" kind="class"><name>Services::CompanyTrainingMajorService</name>
+    <member refid="class_services_1_1_company_training_major_service_1aa485001c97e73f62a54d7398e33ee88b" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_company_training_major_service_1ab49c27ea59b8ca9858e5f1fe7bcc2324" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_company_training_major_service_1ad8aba88ca4e93708ac9fe648b94afda0" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_company_training_major_service_1a0acae8ac513d34fc2e20dcbc45c1c4bb" kind="function"><name>GetByCompany</name></member>
+    <member refid="class_services_1_1_company_training_major_service_1aa70d7c1a044801112d00e0e9d8a68ce0" kind="function"><name>GetByTrainingMajor</name></member>
+    <member refid="class_services_1_1_company_training_major_service_1ab8d65cc6a6edcc65bd09cbdac4e3254a" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_company_training_major_service_1a5b20373818e161af0c71e7a38597c97e" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_company_training_major_service_1addf468008568420f94eaa4e20eb3bcb7" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_company_training_major_service_1aacc44320107f4bd3e9158fafc812a451" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_models_1_1_data_initializer" kind="class"><name>Models::DataInitializer</name>
+    <member refid="class_models_1_1_data_initializer_1a5b46af35f708e919016f6f5309fbba0e" kind="function"><name>Seed</name></member>
+  </compound>
+  <compound refid="class_models_1_1_department" kind="class"><name>Models::Department</name>
+    <member refid="class_models_1_1_department_1a886869844fcb4ae54b0d21d3c93a68fc" kind="property"><name>DepartmentId</name></member>
+    <member refid="class_models_1_1_department_1a6972516b0880da7d18cc6e2bb211f853" kind="property"><name>DepartmentName</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_department_controller" kind="class"><name>StudentInternshipManagement::Areas::Admin::Controllers::DepartmentController</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_department_controller_1a701bffdd6f9e2281e2b6360377ef0e78" kind="variable"><name>_service</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_department_controller_1ac71a5d4f839e5e454d847c6e5e1b030f" kind="function"><name>Index</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_department_controller_1af0636eae1bbbc1462f1261a31ed1f078" kind="function"><name>Departments_Read</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_department_controller_1ac18b2cf0155b604814ec9287f28244b3" kind="function"><name>Departments_Create</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_department_controller_1a4b41f80cdad965bfa20ec6a0e3430eed" kind="function"><name>Departments_Update</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_department_controller_1abf7c5be360962a884ea2967e86320adf" kind="function"><name>Departments_Destroy</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_department_repository" kind="class"><name>Repositories::DepartmentRepository</name>
+    <member refid="class_repositories_1_1_department_repository_1a080c2ece271a2b76cd2bae633d276de5" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_department_repository_1a7b4453984ad4a631181ab1df165b18cd" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_department_repository_1a45d9ed9c233d3b52a8dfb97e68f633f6" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_department_repository_1a341bb8aedff8e2827d63f623b64b9146" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_department_repository_1af9175315f64b479b55cfbcc7d2bd0194" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_department_repository_1a2c71f7ec83e4e91457b5688ce07dcf71" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_department_repository_1a8791a64c589b5ba840967bda0e9f1b45" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_department_service" kind="class"><name>Services::DepartmentService</name>
+    <member refid="class_services_1_1_department_service_1ae45a5ec07fe05c8138dd1cf793209866" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_department_service_1a3f02f9ac0dedc07f8a94069b95be42bd" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_department_service_1a7a81c6e6122a322585a68b9c104198b3" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_department_service_1a5ca1cb07ad84b6c6d19bbcc093d8199d" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_department_service_1a1377b0568510269533fef71d77567c3f" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_department_service_1a51ede894b9c1d4dd765c0c6f0da4f1d6" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_department_service_1a3b7ccd2a5b649c68cad54eff505fbc86" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_email_service" kind="class"><name>StudentInternshipManagement::EmailService</name>
+    <member refid="class_student_internship_management_1_1_email_service_1a56bffa8c15ba6409a4e5133d7432920d" kind="function"><name>SendAsync</name></member>
+    <member refid="class_student_internship_management_1_1_email_service_1aae4c015b8ddaf7763c105daefc50c8f1" kind="function"><name>ConfigSmtpasync</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_models_1_1_external_login_confirmation_view_model" kind="class"><name>StudentInternshipManagement::Models::ExternalLoginConfirmationViewModel</name>
+    <member refid="class_student_internship_management_1_1_models_1_1_external_login_confirmation_view_model_1a23ee126fae754ae6e7edb1e6f16c416b" kind="property"><name>Email</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_models_1_1_external_login_list_view_model" kind="class"><name>StudentInternshipManagement::Models::ExternalLoginListViewModel</name>
+    <member refid="class_student_internship_management_1_1_models_1_1_external_login_list_view_model_1ad85888ea446d53ddeb20a756fd96dd49" kind="property"><name>ReturnUrl</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_filter_config" kind="class"><name>StudentInternshipManagement::FilterConfig</name>
+    <member refid="class_student_internship_management_1_1_filter_config_1a8d917325b1836053d3ec1cddba74d514" kind="function"><name>RegisterGlobalFilters</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_models_1_1_forgot_password_view_model" kind="class"><name>StudentInternshipManagement::Models::ForgotPasswordViewModel</name>
+    <member refid="class_student_internship_management_1_1_models_1_1_forgot_password_view_model_1abddf36737951f31fa96e3d6e0683acea" kind="property"><name>Email</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_models_1_1_forgot_view_model" kind="class"><name>StudentInternshipManagement::Models::ForgotViewModel</name>
+    <member refid="class_student_internship_management_1_1_models_1_1_forgot_view_model_1a55f878fc52f0052825ccc06ff3fd600d" kind="property"><name>Email</name></member>
+  </compound>
+  <compound refid="class_models_1_1_group" kind="class"><name>Models::Group</name>
+    <member refid="class_models_1_1_group_1ad7129f71832498054b9aa8074bc98754" kind="property"><name>GroupId</name></member>
+    <member refid="class_models_1_1_group_1ade6bb0f1d2a898ef6a69ac8b70c3792d" kind="property"><name>GroupName</name></member>
+    <member refid="class_models_1_1_group_1a8ebed6a1cd138a4eafec344a2c6f581c" kind="property"><name>CompanyId</name></member>
+    <member refid="class_models_1_1_group_1a7b196517666f58b4c335facb00061d51" kind="property"><name>TrainingMajorId</name></member>
+    <member refid="class_models_1_1_group_1a2deef6106834c5617e3444ee58f3d01d" kind="property"><name>Major</name></member>
+    <member refid="class_models_1_1_group_1ac06c10434fcd35308867335b32621a42" kind="property"><name>ClassId</name></member>
+    <member refid="class_models_1_1_group_1a2b71f10e8164ae8d6eb0992bd992b2a4" kind="property"><name>Class</name></member>
+    <member refid="class_models_1_1_group_1afe08133429f67d8510f10f5ae54f0ce7" kind="property"><name>Members</name></member>
+    <member refid="class_models_1_1_group_1afa326148a52d5ce344fecde88a248fc9" kind="property"><name>LeaderId</name></member>
+    <member refid="class_models_1_1_group_1a2d27dc5fa839fa15797a28d0fe34de5c" kind="property"><name>Leader</name></member>
+    <member refid="class_models_1_1_group_1a7c7304f82f85f95bfbbd89f8e0f48f41" kind="property"><name>TeacherId</name></member>
+    <member refid="class_models_1_1_group_1aa9d037cdb040ec74001fef64c2948cea" kind="property"><name>Teacher</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_group_repository" kind="class"><name>Repositories::GroupRepository</name>
+    <member refid="class_repositories_1_1_group_repository_1a3bc782848449bc4817e988ad1ce69425" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_group_repository_1a85fb6513d5f0df3b52710e46e868a1bb" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_group_repository_1abb5731b852457fd540741582e9a6220f" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_group_repository_1a9907726ad2746374e1f752bdcbe696f0" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_group_repository_1a3d9429cbc4fc3d071e2c4485aabfe9b8" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_group_repository_1a230e1654255a80b2b7e1d1c848d0418f" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_group_repository_1a31fd379a0dcef89645aee4b5073555c3" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_group_service" kind="class"><name>Services::GroupService</name>
+    <member refid="class_services_1_1_group_service_1aa6fe938bcd7c25c42ecccfbe5611c8d0" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_group_service_1aef63953899ad54de3ff654b640c4860d" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_group_service_1a77fdddf46e9244117f8990ee891b9da8" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_group_service_1a164aa806f13268f85fd50202e24e09bb" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_group_service_1a4e1b096cfe73446f8d790ca5c83c51a3" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_group_service_1a4ddfec7759d25dbec33f1a2c265008d6" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_group_service_1a54b41ed0121db7ac42262767f284d4ab" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_controllers_1_1_home_controller" kind="class"><name>StudentInternshipManagement::Controllers::HomeController</name>
+    <member refid="class_student_internship_management_1_1_controllers_1_1_home_controller_1a39fd8acf93c094a7d25180afec892b0b" kind="function"><name>Index</name></member>
+  </compound>
+  <compound refid="class_models_1_1_internship" kind="class"><name>Models::Internship</name>
+    <member refid="class_models_1_1_internship_1ab5293d9ad4fb5323da7d99b75434802a" kind="property"><name>InternshipId</name></member>
+    <member refid="class_models_1_1_internship_1a52554e95b34af0a7ad5a56ae1edd482b" kind="property"><name>RegistrationDate</name></member>
+    <member refid="class_models_1_1_internship_1a401655fb6972301c0504e7137fc5be35" kind="property"><name>Status</name></member>
+    <member refid="class_models_1_1_internship_1a3dbba49f4e5f714f0b41ce6886c25fd7" kind="property"><name>StudentId</name></member>
+    <member refid="class_models_1_1_internship_1a9d962d48d0edf20c0787cce69c003a8b" kind="property"><name>Student</name></member>
+    <member refid="class_models_1_1_internship_1af8fa96321d7c460ef1fd3da293e9961f" kind="property"><name>ClassId</name></member>
+    <member refid="class_models_1_1_internship_1aaef4c2c34a4bed1138428609a74806a3" kind="property"><name>Class</name></member>
+    <member refid="class_models_1_1_internship_1a6bdbda854cd1e328b382a27b40da2a88" kind="property"><name>CompanyId</name></member>
+    <member refid="class_models_1_1_internship_1a80c0cf97eb69ad4126ae1e768d06064e" kind="property"><name>TrainingMajorId</name></member>
+    <member refid="class_models_1_1_internship_1afbbc16c3d565b125b9ce88999a37410b" kind="property"><name>Major</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_internship_controller" kind="class"><name>StudentInternshipManagement::Areas::Admin::Controllers::InternshipController</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_internship_controller_1a55ab60dd47192ad889f30a9d8337d21e" kind="variable"><name>_service</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_internship_controller_1a0c22ff3c60ca41dce3efd5f85e95e33a" kind="variable"><name>_studentService</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_internship_controller_1a1e49c659e1aacf8ce228e8e890bd148d" kind="variable"><name>_learningClassService</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_internship_controller_1a0315af0748b30cb0ecab673ae22a766f" kind="variable"><name>_companyService</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_internship_controller_1a793ba76f7771c660a3f0874ad637d9e6" kind="variable"><name>_trainingMajorService</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_internship_controller_1a2747ed51cafc8f28c5022533cc01316d" kind="function"><name>Index</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_internship_controller_1a27e3f5d265e3fd0d19d57883da7a4e42" kind="function"><name>Internships_Read</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_internship_controller_1a86417bc04ccf32963000b1187704ea9c" kind="function"><name>Internships_Create</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_internship_controller_1a574af75b8e3f2b5273a3f89274c0cd1c" kind="function"><name>Internships_Update</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_internship_controller_1a1193f6d2c7818155da51f4d8d417a15b" kind="function"><name>Internships_Destroy</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_internship_controller_1a1785ceb90d16610008455f9689c7f57a" kind="function"><name>Pdf_Export_Save</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_internship_controller_1aed09fca35b514d9141caa3817da0ddb1" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_internship_repository" kind="class"><name>Repositories::InternshipRepository</name>
+    <member refid="class_repositories_1_1_internship_repository_1a78dacf5243c30c843d87b04cc4b38333" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_internship_repository_1a7a15857582a062e031bd8f904bd84992" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_internship_repository_1a9a6f93875dc7ceee867519ec33e681e5" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_internship_repository_1afbcd4d7b6b8c1fb15de77a092a9b6e7a" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_internship_repository_1ae1bdca19cdec8bb54a7a85e9adbb9d39" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_internship_repository_1aa5713fd00bee370c7d5ab76eeb567f00" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_internship_repository_1a5c35752f3a84802415ba1e3687562d49" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_internship_service" kind="class"><name>Services::InternshipService</name>
+    <member refid="class_services_1_1_internship_service_1af70ff64f857f8b5c88fd50b15b3d43d6" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_internship_service_1a5806e5c3683b3ee46a4c040febbe3510" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_internship_service_1ae78ccfd0926f888c5944539719ca8150" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_internship_service_1a4632ef311c19167f29e14b1b6f3b176e" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_internship_service_1adfcc14bf1343ed25432e524cda10d97e" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_internship_service_1a6af01d7101f355f4164193a8e8c59fd3" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_internship_service_1a608b89963931fc025408e6ea14ba4c29" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_models_1_1_learning_class" kind="class"><name>Models::LearningClass</name>
+    <member refid="class_models_1_1_learning_class_1a753f23fbde48ae7038fd396305e6bcd8" kind="property"><name>ClassId</name></member>
+    <member refid="class_models_1_1_learning_class_1a8461395cd76086f96f3dcb8340ddf35c" kind="property"><name>ClassName</name></member>
+    <member refid="class_models_1_1_learning_class_1a8c7179e817315a24ca72b1dcfd13a16f" kind="property"><name>SubjectId</name></member>
+    <member refid="class_models_1_1_learning_class_1ac0a650a2e18bfb426711cdf4914ad914" kind="property"><name>Subject</name></member>
+    <member refid="class_models_1_1_learning_class_1abdb63c27d29a4feef2e55a2040aa0543" kind="property"><name>SemesterId</name></member>
+    <member refid="class_models_1_1_learning_class_1afff62a1653ce67c52f94c3846108304b" kind="property"><name>Semester</name></member>
+    <member refid="class_models_1_1_learning_class_1a1bfdb059e6cd4af90d8dbc51bdd339cb" kind="property"><name>LearningClassStudents</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_learning_class_controller" kind="class"><name>StudentInternshipManagement::Areas::Admin::Controllers::LearningClassController</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_learning_class_controller_1ac81dcfba4b58b36c9afaa1376960855b" kind="variable"><name>_service</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_learning_class_controller_1ad7b3407560ce554009e6a673b9d45b07" kind="variable"><name>_studentService</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_learning_class_controller_1a5927a0b2ddfb8980e973d8e2292f5d47" kind="variable"><name>_subjectService</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_learning_class_controller_1a88ffc9575397808be76e5e61555e1aa0" kind="variable"><name>_semesterService</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_learning_class_controller_1a608eaacaee18600658af44fcb6e2875e" kind="function"><name>Index</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_learning_class_controller_1a61395ba6d7eebaddc303e798de68dfcd" kind="function"><name>LearningClasses_Read</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_learning_class_controller_1a5f3d6632446a975059d134d7e29c79b0" kind="function"><name>LearningClasses_Create</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_learning_class_controller_1a01971ad200b1b343b339086102685e3d" kind="function"><name>LearningClasses_Update</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_learning_class_controller_1a7f50d75755598e09d8b9d5ab396df7b1" kind="function"><name>LearningClasses_Destroy</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_learning_class_controller_1a1b6c01a9bd678b876e82c8d01a2832a9" kind="function"><name>GetStudentList</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_learning_class_controller_1ab1af7f212794bdf61a52f88921eb4a73" kind="function"><name>GetTrainingMajorList</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_learning_class_controller_1a5dee151ca7af2cf9583a33afe00857ad" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_learning_class_repository" kind="class"><name>Repositories::LearningClassRepository</name>
+    <member refid="class_repositories_1_1_learning_class_repository_1a6ec7f326be0e4418c6426e2c31e13869" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_learning_class_repository_1a94b626290e6d5ccc3d5245c82e97c817" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_learning_class_repository_1a9ab91c17a47172722ef364c7e1fb00a9" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_learning_class_repository_1ae58359cd280e106ac860a96aeca2c8c4" kind="function"><name>GetStudentList</name></member>
+    <member refid="class_repositories_1_1_learning_class_repository_1a7c918b756486a4c03ee30e64f98e229c" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_learning_class_repository_1ace3cd209c563317e8af00ba809f43616" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_learning_class_repository_1afe8d8969a419d3559dded679f8ab0dde" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_learning_class_repository_1a56ccb77e95ee2e2802ee530dc47ba3a0" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_learning_class_service" kind="class"><name>Services::LearningClassService</name>
+    <member refid="class_services_1_1_learning_class_service_1adb32a9354a0d7f5b9b39e617a2bb2ae1" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_learning_class_service_1adc0fba0483adc54d6f4a2123e79495a2" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_learning_class_service_1ab17810c9144053b9d0804832d0a28786" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_learning_class_service_1ac34ad9a02876d08a11494f8c1c070800" kind="function"><name>GetStudentList</name></member>
+    <member refid="class_services_1_1_learning_class_service_1a546800c150788af68b94a2368b752c6d" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_learning_class_service_1a390f640bfb3ec932c7468ac6424b6e45" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_learning_class_service_1a318d4d7f9ece9f63ba7de718002e4daf" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_learning_class_service_1a96b0d2dafbfef737670e6690935cc419" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_models_1_1_learning_class_student" kind="class"><name>Models::LearningClassStudent</name>
+    <member refid="class_models_1_1_learning_class_student_1a46b5ac66377d5de2ab9fa0cfe6665b78" kind="property"><name>ClassId</name></member>
+    <member refid="class_models_1_1_learning_class_student_1ac73087658b25b77a09c46a4b90541c50" kind="property"><name>StudentId</name></member>
+    <member refid="class_models_1_1_learning_class_student_1af28fb64872a1ec479b79d205a28ffedd" kind="property"><name>MidTermPoint</name></member>
+    <member refid="class_models_1_1_learning_class_student_1a78708b291d705d658dfeb32dd2816fc9" kind="property"><name>EndTermPoint</name></member>
+    <member refid="class_models_1_1_learning_class_student_1afe71225837fc2b58d8f4c80b91306917" kind="property"><name>TotalPoint</name></member>
+    <member refid="class_models_1_1_learning_class_student_1a747b2ad3a29d753c00c37bf8ff7c8bea" kind="property"><name>Class</name></member>
+    <member refid="class_models_1_1_learning_class_student_1a21f36c2044cf2db5ede55cdc1f37fe2b" kind="property"><name>Student</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_learning_class_student_repository" kind="class"><name>Repositories::LearningClassStudentRepository</name>
+    <member refid="class_repositories_1_1_learning_class_student_repository_1a8ca64b6e9bab372e3006abbeba870920" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_learning_class_student_repository_1abd3e0c2441d8ff9aad9909529ad7c09a" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_learning_class_student_repository_1af879281742497bf1b8fc14f8b7d64269" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_learning_class_student_repository_1a00b91a64a11c933476b24aa1b00f974d" kind="function"><name>GetByClass</name></member>
+    <member refid="class_repositories_1_1_learning_class_student_repository_1a01ab7f1014a6002b0cbaaed46f8ad7d1" kind="function"><name>GetByStudent</name></member>
+    <member refid="class_repositories_1_1_learning_class_student_repository_1a39f53b95b043a2cbc321db7fedcc4970" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_learning_class_student_repository_1a9648101549a39d2838f702acdae08a8e" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_learning_class_student_repository_1aff9bdc0e87e65624448b7f0e141da1e2" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_learning_class_student_repository_1ac9fcbf64541a468704d54a80ab4b65fd" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_learning_class_student_service" kind="class"><name>Services::LearningClassStudentService</name>
+    <member refid="class_services_1_1_learning_class_student_service_1aae90b58bb044c7c91ea232a4eed9e66c" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_learning_class_student_service_1aa3f6813430fa7190c45b331b5ea4c96f" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_learning_class_student_service_1a8384d6a65f0f534bba9263b396b694b8" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_learning_class_student_service_1aad484796295eb066809cdcdef06daed3" kind="function"><name>GetByClass</name></member>
+    <member refid="class_services_1_1_learning_class_student_service_1a951e022206f6f1bfbcd712a7864e553f" kind="function"><name>GetByStudent</name></member>
+    <member refid="class_services_1_1_learning_class_student_service_1a4fb670b2a4874018392b19e7d52785ef" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_learning_class_student_service_1a6d8838e2a39665bf68395f2b2b0021dc" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_learning_class_student_service_1aeced9d0e00e514374bb34d1d8c047ab4" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_learning_class_student_service_1a7ab38c61f68d6f2bab851b9fa4b53ab1" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_utilities_1_1_logger" kind="class"><name>Utilities::Logger</name>
+    <member refid="class_utilities_1_1_logger_1abd7af00e52a75d18662ddd1023c3dc1e" kind="variable"><name>log</name></member>
+    <member refid="class_utilities_1_1_logger_1acdb8f9eb5c281f881b22d8ecb41e554b" kind="function"><name>LogError</name></member>
+    <member refid="class_utilities_1_1_logger_1a60d962007bcce90e804b17e5deddef17" kind="function"><name>LogWarning</name></member>
+    <member refid="class_utilities_1_1_logger_1a9dbf48cdc774c1274b93f67b63c604b7" kind="function"><name>LogInfo</name></member>
+    <member refid="class_utilities_1_1_logger_1a78e0ea6cc1c7223668c0763222263186" kind="function"><name>LogFatal</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_models_1_1_login_view_model" kind="class"><name>StudentInternshipManagement::Models::LoginViewModel</name>
+    <member refid="class_student_internship_management_1_1_models_1_1_login_view_model_1ad26dc0eb0378d962f21d0fcb142fc080" kind="property"><name>Email</name></member>
+    <member refid="class_student_internship_management_1_1_models_1_1_login_view_model_1a62e2dfc1de868968df957749acb8046f" kind="property"><name>Password</name></member>
+    <member refid="class_student_internship_management_1_1_models_1_1_login_view_model_1a3a1a01d676224a89f0f52b7628143745" kind="property"><name>RememberMe</name></member>
+  </compound>
+  <compound refid="class_models_1_1_message" kind="class"><name>Models::Message</name>
+    <member refid="class_models_1_1_message_1a80e92ef36653e746f1843a00d9cf73df" kind="property"><name>MessageId</name></member>
+    <member refid="class_models_1_1_message_1a3a3035f166ec4f3721709f8b93108aa6" kind="property"><name>Content</name></member>
+    <member refid="class_models_1_1_message_1a70a57d8fbfb2bbece2e54131b2548302" kind="property"><name>File</name></member>
+    <member refid="class_models_1_1_message_1a22f2cabc0c406a0a6fd7cf8e86cd8d84" kind="property"><name>Time</name></member>
+    <member refid="class_models_1_1_message_1ae0b9bc0dee4d91cb3dedbb9f896b9c6f" kind="property"><name>StudentId</name></member>
+    <member refid="class_models_1_1_message_1abee71739393f9cce8aef67eaca9eecfa" kind="property"><name>Student</name></member>
+    <member refid="class_models_1_1_message_1a2af7be623659758e83598202b2216ffc" kind="property"><name>TeacherId</name></member>
+    <member refid="class_models_1_1_message_1a6640dc214542da8eb084f65f71072b5c" kind="property"><name>Teacher</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_message_repository" kind="class"><name>Repositories::MessageRepository</name>
+    <member refid="class_repositories_1_1_message_repository_1abd85b6feef4d1203ccbeea30e3a7a041" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_message_repository_1aa8274b793458a718ebedf7ae07a508cd" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_message_repository_1ad3a55c722b85caa3a207432e1e8bb7e9" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_message_repository_1afb36aa94b1cd9ed88fcc7d0c9a64fa2c" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_message_repository_1a09c111b60c489c585bce27e1169128fa" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_message_repository_1aafe56a88fd3d909020a0e9121748895a" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_message_repository_1a502505d7c2b1ed9f3fab56d09b94644d" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_message_service" kind="class"><name>Services::MessageService</name>
+    <member refid="class_services_1_1_message_service_1aa16af371355a3199667d64569b58877e" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_message_service_1a3703ffba877f639654e7855e4f11eb73" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_message_service_1a43d27d440acadb4605352ca8f48bebe3" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_message_service_1ab74d141177c0e1be8b331f44738347b6" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_message_service_1a1947e555590266b074336db86f2f76ef" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_message_service_1a2018d2c07ce04146714ceec6bc78fa73" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_message_service_1afe5659d8d06387948f114acd20ec2d22" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_mvc_application" kind="class"><name>StudentInternshipManagement::MvcApplication</name>
+    <member refid="class_student_internship_management_1_1_mvc_application_1a5a279866dfe048ec1cb606a337231d2a" kind="function"><name>Application_Start</name></member>
+  </compound>
+  <compound refid="class_models_1_1_news" kind="class"><name>Models::News</name>
+    <member refid="class_models_1_1_news_1a029e17677390d3fc98f0b482c21dd361" kind="property"><name>NewsId</name></member>
+    <member refid="class_models_1_1_news_1ae4bac9741f1f51b9b1bc0a16bd0cac38" kind="property"><name>Title</name></member>
+    <member refid="class_models_1_1_news_1a1b3ebefc54845a8a63233561b622e19b" kind="property"><name>Content</name></member>
+    <member refid="class_models_1_1_news_1a312489db692c5efefcf40675e9a227c2" kind="property"><name>Time</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_news_repository" kind="class"><name>Repositories::NewsRepository</name>
+    <member refid="class_repositories_1_1_news_repository_1abb587a2b830b8d17d1e3dcb095e186a4" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_news_repository_1af3ffdc8e1c964b1709aafee59b399460" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_news_repository_1ac8a3683d33c3ac69ebd49924bc1637a6" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_news_repository_1abe45fee798f3cb0b65854ea63d2b787e" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_news_repository_1a5c781ce966914e97f3f3b93d79c2a282" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_news_repository_1a7daa141aa3bc0951e51ebfbcec8e33e9" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_news_repository_1a55cab58dca25bffd69d52d041995ef8c" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_news_service" kind="class"><name>Services::NewsService</name>
+    <member refid="class_services_1_1_news_service_1a1c5f38afa3d924ceaada47ab0bd3bf48" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_news_service_1ac5d47300f2f1f836a53c30f051a2dea4" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_news_service_1a730a2616a86472c69d0e3f20233599cc" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_news_service_1a1114b01a9d783343b3426a6a5ce52757" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_news_service_1a66fb5c7047afa60983f35d4b52208395" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_news_service_1a343bdfd134ad15a59b321480ab953865" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_news_service_1a973a47110cf3e5859e39844d938fc21f" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_models_1_1_notification" kind="class"><name>Models::Notification</name>
+    <member refid="class_models_1_1_notification_1abfaee39390369904e2b569c2aca0c63e" kind="property"><name>NotificationId</name></member>
+    <member refid="class_models_1_1_notification_1a24cc1e7b796b0c0a44d7fec45fabfaac" kind="property"><name>Content</name></member>
+    <member refid="class_models_1_1_notification_1ad8354aa222a205c590d0a9349610fd6d" kind="property"><name>Url</name></member>
+    <member refid="class_models_1_1_notification_1a590902bbf6eeb0b9623cb22393239096" kind="property"><name>Time</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_notification_repository" kind="class"><name>Repositories::NotificationRepository</name>
+    <member refid="class_repositories_1_1_notification_repository_1ac7c38b4c493a70c413f7713aecb3b24c" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_notification_repository_1a9daa59c3392919371db7c01c37fb84e8" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_notification_repository_1af663b186c6501d011de91fd6bd262ea1" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_notification_repository_1ab9e38e2449eb0dd41f50cfbf90a2bc11" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_notification_repository_1af5dd732fe7ddcdc04778375f2867c418" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_notification_repository_1a5fc91211d4bf58a24e0d070468f81bc6" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_notification_repository_1a67aa29520bee7ca454d0b82b0c3c8743" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_notification_service" kind="class"><name>Services::NotificationService</name>
+    <member refid="class_services_1_1_notification_service_1adc91b8c5e08812a3fd9383a9f09618ad" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_notification_service_1a31243a22d64792eb86d61b9ffb01c413" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_notification_service_1a8e4a52d8885579f6cdc46244e3a11d2f" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_notification_service_1ad65c323016ad27b730d61384168cc6dd" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_notification_service_1a15a78eb09a208a5d6b10f24e6e57b44c" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_notification_service_1aed0efb43784935f9594525f51243ec4c" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_notification_service_1a4cfeac09db8369e06c81276ac48049f2" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_profile_controller" kind="class"><name>StudentInternshipManagement::Areas::Admin::Controllers::ProfileController</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_profile_controller_1ae76f13633a98e048006b0f1a115f87af" kind="variable"><name>_service</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_profile_controller_1a2cdf8b22f8a6f8aa469e6435b5e7403c" kind="function"><name>Index</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_profile_controller_1a09f34f34c6a0e3471338f54d9af11955" kind="function"><name>Edit</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_profile_controller_1af81bc8b061bdddc1a2364ac799abff6e" kind="function"><name>Edit</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_student_1_1_controllers_1_1_profile_controller" kind="class"><name>StudentInternshipManagement::Areas::Student::Controllers::ProfileController</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_student_1_1_controllers_1_1_profile_controller_1a94d18faa8b0971b47e252088f3f315e5" kind="variable"><name>_service</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_student_1_1_controllers_1_1_profile_controller_1a6d1bde9da79f347856b405a024b1f1fd" kind="function"><name>Index</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_student_1_1_controllers_1_1_profile_controller_1a45acd21a5f7220714b508e9f2adac75b" kind="function"><name>Edit</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_student_1_1_controllers_1_1_profile_controller_1a2ca830bb74f562071b3a2a8428e5c100" kind="function"><name>Edit</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers_1_1_profile_controller" kind="class"><name>StudentInternshipManagement::Areas::Teacher::Controllers::ProfileController</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers_1_1_profile_controller_1a7a31d8309c6c75349e65266c21b68b72" kind="variable"><name>_service</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers_1_1_profile_controller_1acfa10cb1c9bc69fedecfd4085c9f80e4" kind="function"><name>Index</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers_1_1_profile_controller_1a70f6ed8b980a8ca0a0e3b05235347642" kind="function"><name>Edit</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers_1_1_profile_controller_1ae9f64db65bf3ab711343b2ec311d6b0b" kind="function"><name>Edit</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_models_1_1_register_view_model" kind="class"><name>StudentInternshipManagement::Models::RegisterViewModel</name>
+    <member refid="class_student_internship_management_1_1_models_1_1_register_view_model_1a8a3d5aa196959efd550298322410a1cc" kind="property"><name>Email</name></member>
+    <member refid="class_student_internship_management_1_1_models_1_1_register_view_model_1ae83c6adf6e776420dc5fa61f3760e6da" kind="property"><name>Password</name></member>
+    <member refid="class_student_internship_management_1_1_models_1_1_register_view_model_1a8bde112b6ad75a8a39e80ca5a5dc1bc4" kind="property"><name>ConfirmPassword</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_models_1_1_reset_password_view_model" kind="class"><name>StudentInternshipManagement::Models::ResetPasswordViewModel</name>
+    <member refid="class_student_internship_management_1_1_models_1_1_reset_password_view_model_1a063cde90b49d82086e5729e426bc8d61" kind="property"><name>Email</name></member>
+    <member refid="class_student_internship_management_1_1_models_1_1_reset_password_view_model_1a082012bf07d36426ed997e3e469967c2" kind="property"><name>Password</name></member>
+    <member refid="class_student_internship_management_1_1_models_1_1_reset_password_view_model_1a63e4be46083817ccf3029b0c07232f2b" kind="property"><name>ConfirmPassword</name></member>
+    <member refid="class_student_internship_management_1_1_models_1_1_reset_password_view_model_1a71abb87c16729958356e0fbc2abe30b5" kind="property"><name>Code</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_route_config" kind="class"><name>StudentInternshipManagement::RouteConfig</name>
+    <member refid="class_student_internship_management_1_1_route_config_1a975a3094ab9e3daea4dbea51c3a00643" kind="function"><name>RegisterRoutes</name></member>
+  </compound>
+  <compound refid="class_models_1_1_semester" kind="class"><name>Models::Semester</name>
+    <member refid="class_models_1_1_semester_1a0c0c946a23355856ef279ee53963ed7a" kind="property"><name>SemesterId</name></member>
+    <member refid="class_models_1_1_semester_1afb5866668f4c7217cb0de04badde5beb" kind="property"><name>StartDate</name></member>
+    <member refid="class_models_1_1_semester_1acaa58e70740edcbd1c074988eb6544c6" kind="property"><name>EndDate</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller" kind="class"><name>StudentInternshipManagement::Areas::Admin::Controllers::SemesterController</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1a11ddda0615f5f92134da63514ca3ec08" kind="variable"><name>_service</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1af273398820f7ac6cfd0bcebb63d4b982" kind="function"><name>Index</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1a56d9c1605f8a75332af7d09cb765f6f1" kind="function"><name>Semesters_Read</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1a7dc787981ea5b8f77c75df3da4788dc1" kind="function"><name>Semesters_Create</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1ab508aff5c4d55c5a1cc7ace5156d43fd" kind="function"><name>Semesters_Update</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1aecfb7e907828fc0f17d5b2adee3d22b3" kind="function"><name>Semesters_Destroy</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_semester_controller_1a97c39317aea03467f58e80de4c9b3ad6" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_semester_repository" kind="class"><name>Repositories::SemesterRepository</name>
+    <member refid="class_repositories_1_1_semester_repository_1ad0d5b6030e344d37cc29ba57e85724a5" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_semester_repository_1a06f143c699cadd502760debb638831f0" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_semester_repository_1ac4b6cc8126c799c4100cb42fd9853a69" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_semester_repository_1a26718f9e57b90f0969a72fe6b63e5a45" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_semester_repository_1a077a998640c31e90002a9f81f7de221b" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_semester_repository_1a113f842756a96b21a126730bfb8b8d76" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_semester_repository_1afadbfbba21e32e6718d1662919f9cec7" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_semester_service" kind="class"><name>Services::SemesterService</name>
+    <member refid="class_services_1_1_semester_service_1a115f3acd46316acd2df7e4d6259aa6a6" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_semester_service_1a95a06d405fda0e0a3ccf6213c32ee395" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_semester_service_1ad935ecc72d06283e177388aac03f1944" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_semester_service_1a86ab303d5840def77cc12aaf99f0b445" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_semester_service_1a10e403f0f7921d3fa163cc6db791df49" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_semester_service_1a803beba8237150f247f0ed6c14dca566" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_semester_service_1ae89f9dec9f214afdb67ba91fd4dd52d0" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_models_1_1_send_code_view_model" kind="class"><name>StudentInternshipManagement::Models::SendCodeViewModel</name>
+    <member refid="class_student_internship_management_1_1_models_1_1_send_code_view_model_1ac45fa355cf0189558ee1cfce2067cd81" kind="property"><name>SelectedProvider</name></member>
+    <member refid="class_student_internship_management_1_1_models_1_1_send_code_view_model_1a77aa737b804ec4736018a2381d2a3e92" kind="property"><name>Providers</name></member>
+    <member refid="class_student_internship_management_1_1_models_1_1_send_code_view_model_1a72fee1834f9941734cc7df292718c212" kind="property"><name>ReturnUrl</name></member>
+    <member refid="class_student_internship_management_1_1_models_1_1_send_code_view_model_1a15cc784a7c151868c10e66e09c534531" kind="property"><name>RememberMe</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_startup" kind="class"><name>StudentInternshipManagement::Startup</name>
+    <member refid="class_student_internship_management_1_1_startup_1a560dbe31d6b0b87bba83a7d1bf1456df" kind="function"><name>ConfigureAuth</name></member>
+    <member refid="class_student_internship_management_1_1_startup_1a3a09908bc7795e17f3859643bf0b3ebf" kind="function"><name>Configuration</name></member>
+  </compound>
+  <compound refid="class_models_1_1_statistic" kind="class"><name>Models::Statistic</name>
+    <member refid="class_models_1_1_statistic_1a6e65d811355d3e3d3d00864a6bbf4e71" kind="property"><name>StatisticId</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_statistic_repository" kind="class"><name>Repositories::StatisticRepository</name>
+    <member refid="class_repositories_1_1_statistic_repository_1aff5c51ee99462eb0f4b575e5aeeb55cd" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_statistic_repository_1a132c952803b4b205520abc6645b7298b" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_statistic_repository_1a846e36b58289d153d76c855febff7b75" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_statistic_repository_1ad5f3d545c6a5a1c6d404fca29b189a34" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_statistic_repository_1a631ede70e8a610d0a2ee3b0bcb1effc8" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_statistic_repository_1a0af75f005a0f20b18497007ebdfcfa7b" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_statistic_repository_1a774085db07c5b26316af7d1f6c15c25f" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_statistic_service" kind="class"><name>Services::StatisticService</name>
+    <member refid="class_services_1_1_statistic_service_1ac1d5cb2c8388fb6aa7dc250fb83982f4" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_statistic_service_1acab088c0e4b42a924c0c82116d197903" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_statistic_service_1a66fa6cdf0e27fe1e868757194b0d2a19" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_statistic_service_1a1ed47089f86ab8611c9ccfcb2091b3d6" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_statistic_service_1abbbe292c911f25bc7d40c5675275a70b" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_statistic_service_1ab429cb911abd360535697b4829b0ce76" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_statistic_service_1aeea1650f8c42e53680731a8634640dfe" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_models_1_1_student" kind="class"><name>Models::Student</name>
+    <member refid="class_models_1_1_student_1a389525dc7933e0203895dfa1e1cd1ee9" kind="property"><name>StudentId</name></member>
+    <member refid="class_models_1_1_student_1a1345cc8246a481dd14517117bfd7177a" kind="property"><name>StudentName</name></member>
+    <member refid="class_models_1_1_student_1aeba0f49fdfa4bab0d81b8029c0371975" kind="property"><name>BirthDate</name></member>
+    <member refid="class_models_1_1_student_1afe4b05692f30e71040637082b88ee671" kind="property"><name>Address</name></member>
+    <member refid="class_models_1_1_student_1ae33b0321d711fa266470f9cea1a078fd" kind="property"><name>Phone</name></member>
+    <member refid="class_models_1_1_student_1afe2064d3df101bceb020aa0615ebb5d2" kind="property"><name>Avatar</name></member>
+    <member refid="class_models_1_1_student_1aa29b9acf070cfeec61f4c8d53ed174b7" kind="property"><name>Cpa</name></member>
+    <member refid="class_models_1_1_student_1a088023365510b1796c93cb730ad60b50" kind="property"><name>ClassId</name></member>
+    <member refid="class_models_1_1_student_1ae7c0fa39182d423fd8761d38ea4704d5" kind="property"><name>Class</name></member>
+    <member refid="class_models_1_1_student_1a57cff2f89c82eeafe975f5714199cdce" kind="property"><name>LearningClassStudents</name></member>
+    <member refid="class_models_1_1_student_1a02b6699125abd50800e5460163365ab0" kind="property"><name>Messages</name></member>
+    <member refid="class_models_1_1_student_1a5318dded6226cfcb0dc94b4a6d8fac46" kind="property"><name>Groups</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_student_1_1_student_area_registration" kind="class"><name>StudentInternshipManagement::Areas::Student::StudentAreaRegistration</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_student_1_1_student_area_registration_1a8a2d1cc14d887ae4b336507d080fcb12" kind="property"><name>AreaName</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_student_1_1_student_area_registration_1a11733fc2631f5ebf6654ff49082b8657" kind="function"><name>RegisterArea</name></member>
+  </compound>
+  <compound refid="class_models_1_1_student_class" kind="class"><name>Models::StudentClass</name>
+    <member refid="class_models_1_1_student_class_1a05949aeca013703da2263dac3fc8f34a" kind="property"><name>ClassId</name></member>
+    <member refid="class_models_1_1_student_class_1a8be8147da045aa3db78f19467e43698a" kind="property"><name>ClassName</name></member>
+    <member refid="class_models_1_1_student_class_1a03e897832bda95820f0b97fbc6eedb97" kind="property"><name>DepartmentId</name></member>
+    <member refid="class_models_1_1_student_class_1a34e97388b7de34973df6ee060ed3c504" kind="property"><name>Department</name></member>
+    <member refid="class_models_1_1_student_class_1a13ab80ee75c1f6957dc4e205ad913d41" kind="property"><name>Students</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_class_controller" kind="class"><name>StudentInternshipManagement::Areas::Admin::Controllers::StudentClassController</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_class_controller_1a84e8517231134b730a47a7ca7f1d141b" kind="variable"><name>_service</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_class_controller_1ad03adfeb7b8e2c5a5f6e420acde00260" kind="variable"><name>_departmentService</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_class_controller_1a5c41f6c85d8d014231663c582c5ffbde" kind="function"><name>Index</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_class_controller_1a5ff8513569b8ce7e3dccd3510742840b" kind="function"><name>StudentClasses_Read</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_class_controller_1aad22cfc9fc9749deaa6395767e3cd5ca" kind="function"><name>StudentClasses_Create</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_class_controller_1af8b6ea70d5a77c9112c58780c00881c5" kind="function"><name>StudentClasses_Update</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_class_controller_1a1642f5fd5c6a0519118047a700061d2d" kind="function"><name>StudentClasses_Destroy</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_class_controller_1a0847fe513e5ae086fc1759c36eedb442" kind="function"><name>GetStudentList</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_class_controller_1a0315ea646d4b38e7422e0ee39aeef56c" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_student_class_repository" kind="class"><name>Repositories::StudentClassRepository</name>
+    <member refid="class_repositories_1_1_student_class_repository_1a0e5599cb491696a4bd1850b093373792" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_student_class_repository_1a71997347da490381c08fd9d4bac585ab" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_student_class_repository_1ab8af9e04ff217b0fe3127fdf3ace119c" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_student_class_repository_1ab15b3c7ffccb709bb2151fe60d9e1dad" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_student_class_repository_1acddd7bc22cf1613caab94d6285054512" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_student_class_repository_1a1c05a45feedbbd479d70ce26405ff507" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_student_class_repository_1ad5b8b8d8cb0d31e2e3376d0b7d5efa8b" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_student_class_service" kind="class"><name>Services::StudentClassService</name>
+    <member refid="class_services_1_1_student_class_service_1a37c8001b75b4f75125b3525981984afb" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_student_class_service_1abcae6232a65286b3e4243f5718766322" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_student_class_service_1a55bebdf03dfe8f637ce770f2c437d713" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_student_class_service_1a161da25d022aab89ad8290358f9167a0" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_student_class_service_1af66d43d086d6d0b25e5c79f0a2804964" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_student_class_service_1a76689de5a7d9762f72d5b9aecc1756a4" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_student_class_service_1a1c8ab5950b0c0f1cce7e3c6c4e2b2174" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller" kind="class"><name>StudentInternshipManagement::Areas::Admin::Controllers::StudentController</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1a94e5bda7897cf7a37bb825f8a3419990" kind="variable"><name>_service</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1a4b525932a56b08d7510abc5f9a4bddde" kind="variable"><name>_classServiceservice</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1ad1ba74e40783b789b456b0b50da41abc" kind="variable"><name>_learningClassService</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1a47a044f7a9f57d29f1dd1e44c12891c7" kind="function"><name>Index</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1a8b8f616507769f803f2dbddeee87881b" kind="function"><name>Students_Read</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1ac752630d1d6d807eb9fcbf56ec617460" kind="function"><name>Students_Create</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1acf7a195a7ce4f9169e6231aea8f6cab9" kind="function"><name>Students_Update</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1a72926540353a0df5db22267e97b5a097" kind="function"><name>Students_Destroy</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1ab0c6755d28513a5f881171a1a057faca" kind="function"><name>GetLearningClassList</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1ae490ec892de231ce59718813e92b8a64" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_student_repository" kind="class"><name>Repositories::StudentRepository</name>
+    <member refid="class_repositories_1_1_student_repository_1a220acf08059da834ed91dab17edde91f" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_student_repository_1a88444ff6d5720c3dbc99b1b875046562" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_student_repository_1a0e086b40350faeb861068fdf1a5b0801" kind="function"><name>GetByStudentClass</name></member>
+    <member refid="class_repositories_1_1_student_repository_1a86706622fa20fea4e57caf09b00fe2fc" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_student_repository_1a03241c174504820a317905a19eae99ab" kind="function"><name>GetLearningClassList</name></member>
+    <member refid="class_repositories_1_1_student_repository_1a109bbcd47a600a4e2d087f1e10432e85" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_student_repository_1a37060a6713996302c85bf6b074976b41" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_student_repository_1a2e3ca434c969c0803f8e947e54169388" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_student_repository_1a8745b2e5126ca067552d86b9b0ca54a6" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_student_service" kind="class"><name>Services::StudentService</name>
+    <member refid="class_services_1_1_student_service_1a3b8916a6160073884007e4602f04b15e" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_student_service_1afef5addf51823287c68167cfcb1114cf" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_student_service_1a57f831d36850fb41ec674b48ffbc0c03" kind="function"><name>GetByStudentClass</name></member>
+    <member refid="class_services_1_1_student_service_1a863fca9cc2a16904a01294b39ebb73d5" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_student_service_1a4417978fd0ff092c381349e1d178d5ca" kind="function"><name>GetLearningClassList</name></member>
+    <member refid="class_services_1_1_student_service_1ae53bb504b537bce503e042544ab1afa2" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_student_service_1aa82262b951e5ef2e33aeca1bb550cf3f" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_student_service_1a281049b64b7b69a2e56ea633214d080e" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_student_service_1af1de20d829b5e659eaad779a876bdd2c" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_models_1_1_subject" kind="class"><name>Models::Subject</name>
+    <member refid="class_models_1_1_subject_1afdc9e83985f60073e8256d21bb7bfd33" kind="property"><name>SubjectId</name></member>
+    <member refid="class_models_1_1_subject_1a77ebe530ac397b6ba21fd0ff67548207" kind="property"><name>SubjectName</name></member>
+    <member refid="class_models_1_1_subject_1a8c5c223af83b072351b0b475e80e29d8" kind="property"><name>DepartmentId</name></member>
+    <member refid="class_models_1_1_subject_1a7fbdae3a3937a3549a9fa4b76025aea4" kind="property"><name>Department</name></member>
+    <member refid="class_models_1_1_subject_1ae3e026d1d9820478e0eca4f8ccd5dfe7" kind="property"><name>TrainingMajors</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller" kind="class"><name>StudentInternshipManagement::Areas::Admin::Controllers::SubjectController</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1ac1922b0193d364326491166db2e81be4" kind="variable"><name>_service</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1a4c8fba02815c248f13aeab4bf9a4f076" kind="variable"><name>_departmentService</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1a5f896fd81dedfe4401fbe93250ba1150" kind="function"><name>Index</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1a737d266dc118672650e12e2a8b2e6556" kind="function"><name>Subjects_Read</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1abbf384fef247b529fcf944b073d657d2" kind="function"><name>Subjects_Create</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1a516e2ccb47ff824a09c23964b608eced" kind="function"><name>Subjects_Update</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1aa5d1247fef3406c3c71013e665273096" kind="function"><name>Subjects_Destroy</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1a2f060f5262e79d5d8930ed1fa3208b5d" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_subject_repository" kind="class"><name>Repositories::SubjectRepository</name>
+    <member refid="class_repositories_1_1_subject_repository_1adee9edd02c18230bea7c263902f91932" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_subject_repository_1adcc77069fecc7b2698b1b1fc8b6aedca" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_subject_repository_1a11ec9e3683dc679888879632740ac5b2" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_subject_repository_1ac5003d7fbbd9a3658ea33572229c2f4f" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_subject_repository_1ac6764e3ef6d6db2a3bc8109de9b0bef1" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_subject_repository_1a643e46fe657a1b886c7148ebd7b0be54" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_subject_repository_1a1dcfb3f7c0c84db53442c40cf66c036b" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_subject_service" kind="class"><name>Services::SubjectService</name>
+    <member refid="class_services_1_1_subject_service_1a27d0f33abb0f0d0e9acfd3da39bd24d4" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_subject_service_1ab01760e5982873134b40ee33dd7fb67c" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_subject_service_1aeb90c5b8bb5dacb41baa0bac7e1ba5d7" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_subject_service_1a468da73900d59eac182384d462704bd3" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_subject_service_1a68b737f633bf0a1ea9e4c417a54d5943" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_subject_service_1a3a7be630be6f4b9a3cd5a3fe22d767b2" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_subject_service_1abe1511a34d5b0acaf1fc407de65a135d" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_models_1_1_teacher" kind="class"><name>Models::Teacher</name>
+    <member refid="class_models_1_1_teacher_1a293c325babd9a425ce4ddb17ea48d896" kind="property"><name>TeacherId</name></member>
+    <member refid="class_models_1_1_teacher_1a79d021229c73a3a713cf4b19935260e3" kind="property"><name>TeacherName</name></member>
+    <member refid="class_models_1_1_teacher_1a6b53602ebce09b854fb795fe9b82a791" kind="property"><name>BirthDate</name></member>
+    <member refid="class_models_1_1_teacher_1a2d5ce8fadb876419589eba6b17b3fa04" kind="property"><name>Address</name></member>
+    <member refid="class_models_1_1_teacher_1ab31e62640c9fa7f708957bdf24d5c933" kind="property"><name>Phone</name></member>
+    <member refid="class_models_1_1_teacher_1ae59ca3db32a70ada4ffee355b01b151e" kind="property"><name>Avatar</name></member>
+    <member refid="class_models_1_1_teacher_1a8ed95122c6a72f9a3629603ada2c69c3" kind="property"><name>DepartmentId</name></member>
+    <member refid="class_models_1_1_teacher_1afd0467e6fe53f732e107ae745c7cc3ce" kind="property"><name>Department</name></member>
+    <member refid="class_models_1_1_teacher_1a0e61738f60ed057c6156f015f01d4769" kind="property"><name>Messages</name></member>
+    <member refid="class_models_1_1_teacher_1a8835bf53ccc0fde73ea6c9c8cd1864af" kind="property"><name>Groups</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_teacher_area_registration" kind="class"><name>StudentInternshipManagement::Areas::Teacher::TeacherAreaRegistration</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_teacher_area_registration_1a4da4a8e06e161a040773f02d1f52a359" kind="property"><name>AreaName</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_teacher_area_registration_1a0cdc1479f3e2355be98ca874b61df0e6" kind="function"><name>RegisterArea</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_teacher_controller" kind="class"><name>StudentInternshipManagement::Areas::Admin::Controllers::TeacherController</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_teacher_controller_1a57968f037d950ad05cde05b7fe72d804" kind="variable"><name>_service</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_teacher_controller_1a155473ab3dca5d96dc0dec69a660e020" kind="variable"><name>_departmentService</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_teacher_controller_1a7d395a17dc6f3c2af3ff7d6a1b242664" kind="function"><name>Index</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_teacher_controller_1a2d8fd26d85aeb0c81525f280c183d39b" kind="function"><name>Teachers_Read</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_teacher_controller_1a113631a17ba19b833ed84e2af30b16f2" kind="function"><name>Teachers_Create</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_teacher_controller_1ae94a589d3a16eb806bb39dc6e217e42e" kind="function"><name>Teachers_Update</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_teacher_controller_1a0ea0d9a47ac644ddff778b4918f1ce2d" kind="function"><name>Teachers_Destroy</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_teacher_repository" kind="class"><name>Repositories::TeacherRepository</name>
+    <member refid="class_repositories_1_1_teacher_repository_1a5355ef55ef80d62a8ba0c6b81eb51e48" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_teacher_repository_1a19a41730272a337e792cf0a0e1346d07" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_teacher_repository_1ae0f2635cfa21cbb3df33717d20335d38" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_teacher_repository_1a66a98235f8602b6d265fb892c4969dba" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_teacher_repository_1af413cbb925f501f62d9099c61a687dee" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_teacher_repository_1a292b5eb64707d27bff6bd56e6b4831a0" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_teacher_repository_1ab1b448e324b49e1988f177dc437e1420" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_teacher_service" kind="class"><name>Services::TeacherService</name>
+    <member refid="class_services_1_1_teacher_service_1a0ae84209faf2d90947258ba23fe9a934" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_teacher_service_1a373a7f7ab1d9afc23bff1adc5a00476b" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_teacher_service_1a0cbd5477244ac976a0128803a67da042" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_teacher_service_1a9eeaaeef346ab3c2ca90d7c2a642c5b1" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_teacher_service_1a1ca76bb1d7e101740045d208e6ab9cb5" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_teacher_service_1a4de98fd5d1dca3e4d86060e5d599b8a4" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_teacher_service_1a49b1acccb7d021716e1224100af0c241" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_models_1_1_training_major" kind="class"><name>Models::TrainingMajor</name>
+    <member refid="class_models_1_1_training_major_1a0b66e86ea610c701aa5d0f6fddaa35fa" kind="property"><name>TrainingMajorId</name></member>
+    <member refid="class_models_1_1_training_major_1a24f3b6a1a33017fe6c3bf72310250bc6" kind="property"><name>TrainingMajorName</name></member>
+    <member refid="class_models_1_1_training_major_1a9dee8ff18d60b61f5ce5943d9cc6b911" kind="property"><name>SubjectId</name></member>
+    <member refid="class_models_1_1_training_major_1aecdd312f656c18817f74785c6938a866" kind="property"><name>Subject</name></member>
+    <member refid="class_models_1_1_training_major_1aba54a26dc5b47545453d4b80f23494ef" kind="property"><name>CompanyTrainingMajors</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_training_major_controller" kind="class"><name>StudentInternshipManagement::Areas::Admin::Controllers::TrainingMajorController</name>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_training_major_controller_1a81bd4996d699861b287876a63f586722" kind="variable"><name>_service</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_training_major_controller_1a7f7a0383b238a2e3b919976347888b8e" kind="variable"><name>_subjectService</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_training_major_controller_1a73dfbf68f25cb378f1b2d14d55cede47" kind="variable"><name>_companyService</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_training_major_controller_1aba37da406a9d71d38764be34f36edb34" kind="function"><name>Index</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_training_major_controller_1a901ca26c5e1fc640fcc7277875a7d8e4" kind="function"><name>TrainingMajors_Read</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_training_major_controller_1a56ab5182dd7aedc063e945466dc8e64b" kind="function"><name>TrainingMajors_Create</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_training_major_controller_1a43e385c02406e68fc2b1e2dd0ec7d8f5" kind="function"><name>TrainingMajors_Update</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_training_major_controller_1a919d35dd8513c45ec9ef3c7e4cbd583f" kind="function"><name>TrainingMajors_Destroy</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_training_major_controller_1ac924ea7718c9072fdc38151686d310ad" kind="function"><name>CompanyTrainingMajors_Read</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_training_major_controller_1a4a9718f7d8cb196cca0e627db64f4f1d" kind="function"><name>GetCompanyList</name></member>
+    <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_training_major_controller_1affb390b52a3dbaf830c238929006978c" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_repositories_1_1_training_major_repository" kind="class"><name>Repositories::TrainingMajorRepository</name>
+    <member refid="class_repositories_1_1_training_major_repository_1a3deb80624d5327af085cdf20a5075603" kind="variable"><name>_context</name></member>
+    <member refid="class_repositories_1_1_training_major_repository_1ab4b8c98f469fc7fa68d2909c7cc84604" kind="function"><name>GetAll</name></member>
+    <member refid="class_repositories_1_1_training_major_repository_1a5fd644e51c024469545ef9cc8169f3bd" kind="function"><name>GetById</name></member>
+    <member refid="class_repositories_1_1_training_major_repository_1a6ac2f44b25a52525d457b27cfb096cb3" kind="function"><name>GetCompanyList</name></member>
+    <member refid="class_repositories_1_1_training_major_repository_1a4a9ad4b067f68330c3dc786ebb609684" kind="function"><name>Add</name></member>
+    <member refid="class_repositories_1_1_training_major_repository_1ac217831083a1ed4e9e2433cad88cc77f" kind="function"><name>Update</name></member>
+    <member refid="class_repositories_1_1_training_major_repository_1aabbc00b61841e22de957e5edfd612966" kind="function"><name>Delete</name></member>
+    <member refid="class_repositories_1_1_training_major_repository_1ad89dca62455091610d12db3acd4d2570" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_services_1_1_training_major_service" kind="class"><name>Services::TrainingMajorService</name>
+    <member refid="class_services_1_1_training_major_service_1a5b6cc8880986820a690c91efaa77a4e8" kind="variable"><name>_repository</name></member>
+    <member refid="class_services_1_1_training_major_service_1ab74743df45ad2dec435a77c0d57bc780" kind="function"><name>GetAll</name></member>
+    <member refid="class_services_1_1_training_major_service_1abf15cce51977a2a66179863025885afe" kind="function"><name>GetById</name></member>
+    <member refid="class_services_1_1_training_major_service_1a21660fe7b2e407d9364c6012dd7dafd4" kind="function"><name>GetCompanyList</name></member>
+    <member refid="class_services_1_1_training_major_service_1aff272b212c408d2a1f9b1dfd50f7152f" kind="function"><name>Add</name></member>
+    <member refid="class_services_1_1_training_major_service_1ac0d7a53313044c6ca7ed20096ec900e4" kind="function"><name>Update</name></member>
+    <member refid="class_services_1_1_training_major_service_1a2ff86dec22ab4377cfead17d4938fdad" kind="function"><name>Delete</name></member>
+    <member refid="class_services_1_1_training_major_service_1abb6551aedc477f4e772e08061bf5de68" kind="function"><name>Dispose</name></member>
+  </compound>
+  <compound refid="class_student_internship_management_1_1_models_1_1_verify_code_view_model" kind="class"><name>StudentInternshipManagement::Models::VerifyCodeViewModel</name>
+    <member refid="class_student_internship_management_1_1_models_1_1_verify_code_view_model_1a5d5020e2c2a64de00375d5728ce4a532" kind="property"><name>Provider</name></member>
+    <member refid="class_student_internship_management_1_1_models_1_1_verify_code_view_model_1a6c0ded5a97eaf2ecf2b53f2535af2f35" kind="property"><name>Code</name></member>
+    <member refid="class_student_internship_management_1_1_models_1_1_verify_code_view_model_1a0c4dee1b052943868653e5075cd2bc02" kind="property"><name>ReturnUrl</name></member>
+    <member refid="class_student_internship_management_1_1_models_1_1_verify_code_view_model_1a66032038bcf04c5d7bb39e830191ecc1" kind="property"><name>RememberBrowser</name></member>
+    <member refid="class_student_internship_management_1_1_models_1_1_verify_code_view_model_1a760c9e64fa5aeff2e22e3c8ce49923f4" kind="property"><name>RememberMe</name></member>
+  </compound>
+  <compound refid="class_models_1_1_web_context" kind="class"><name>Models::WebContext</name>
+    <member refid="class_models_1_1_web_context_1a08462f65bffc182aae7dd258fd3abd78" kind="property"><name>Students</name></member>
+    <member refid="class_models_1_1_web_context_1a24d2c98b7edf3b3f6f7b7d447f1c6db5" kind="property"><name>Teachers</name></member>
+    <member refid="class_models_1_1_web_context_1a41504c1b2dece6fd830733214dc87db7" kind="property"><name>Admins</name></member>
+    <member refid="class_models_1_1_web_context_1adc7870190c9044d1e449986d7eed1dc3" kind="property"><name>Departments</name></member>
+    <member refid="class_models_1_1_web_context_1ad70124a84db95b4af13adfe0334c5036" kind="property"><name>Companies</name></member>
+    <member refid="class_models_1_1_web_context_1a092cc7618dc5dcf7b0c7d236a11045f7" kind="property"><name>Semesters</name></member>
+    <member refid="class_models_1_1_web_context_1ac77e2666c9a2d68c1ac096d85f34a823" kind="property"><name>Subjects</name></member>
+    <member refid="class_models_1_1_web_context_1a2714557416362754d22887519b348fbb" kind="property"><name>StudentClasses</name></member>
+    <member refid="class_models_1_1_web_context_1ac0e455964156a4f6d521c17696a2ccff" kind="property"><name>LearningClasses</name></member>
+    <member refid="class_models_1_1_web_context_1ac3c2ad7fa7ccdeb3b8ab8bd51b0319a0" kind="property"><name>LearningClassStudents</name></member>
+    <member refid="class_models_1_1_web_context_1a4db768f3e2cd9ff91e14a28034d3f5d0" kind="property"><name>TrainingMajors</name></member>
+    <member refid="class_models_1_1_web_context_1aa1e44084500cce120a909a8c7fd3c120" kind="property"><name>CompanyTrainingMajors</name></member>
+    <member refid="class_models_1_1_web_context_1a466804518086db5c5cb2d9dd801d1486" kind="property"><name>Internships</name></member>
+    <member refid="class_models_1_1_web_context_1af6eb3a5d9dc196cb2778fe142782194a" kind="property"><name>Groups</name></member>
+    <member refid="class_models_1_1_web_context_1aec42675dca04fa853c2c4a0241bc8a1c" kind="property"><name>Newses</name></member>
+    <member refid="class_models_1_1_web_context_1a86677c4e2b4d100add6f54363f947196" kind="property"><name>Notifications</name></member>
+    <member refid="class_models_1_1_web_context_1a3bc3e85d3afb665634bcebbd1c04cce5" kind="property"><name>Messages</name></member>
+    <member refid="class_models_1_1_web_context_1a9798e542441035579a5d594c20e9ec89" kind="property"><name>Statistics</name></member>
+    <member refid="class_models_1_1_web_context_1a9e4a78cd01929a8a0349e0895f739321" kind="function"><name>WebContext</name></member>
+  </compound>
+  <compound refid="namespace_kendo_1_1_mvc_1_1_extensions" kind="namespace"><name>Kendo::Mvc::Extensions</name>
+  </compound>
+  <compound refid="namespace_kendo_1_1_mvc_1_1_u_i" kind="namespace"><name>Kendo::Mvc::UI</name>
+  </compound>
+  <compound refid="namespacelog4net" kind="namespace"><name>log4net</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_asp_net_1_1_identity" kind="namespace"><name>Microsoft::AspNet::Identity</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_asp_net_1_1_identity_1_1_entity_framework" kind="namespace"><name>Microsoft::AspNet::Identity::EntityFramework</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_asp_net_1_1_identity_1_1_owin" kind="namespace"><name>Microsoft::AspNet::Identity::Owin</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_owin" kind="namespace"><name>Microsoft::Owin</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_owin_1_1_security" kind="namespace"><name>Microsoft::Owin::Security</name>
+  </compound>
+  <compound refid="namespace_microsoft_1_1_owin_1_1_security_1_1_cookies" kind="namespace"><name>Microsoft::Owin::Security::Cookies</name>
+  </compound>
+  <compound refid="namespace_models" kind="namespace"><name>Models</name>
+    <member refid="namespace_models_1a037297d6cb70ea046f77888f84e10399" kind="enum"><name>InternshipStatus</name></member>
+    <member refid="namespace_models_1a037297d6cb70ea046f77888f84e10399a6205cf9436aee7ccb42779ac5e69bd3f" kind="enumvalue"><name>Registered</name></member>
+    <member refid="namespace_models_1a037297d6cb70ea046f77888f84e10399a382ab522931673c11e398ead1b7b1678" kind="enumvalue"><name>Accepted</name></member>
+    <member refid="namespace_models_1a037297d6cb70ea046f77888f84e10399a642a740fc514dd91723cec8569544cee" kind="enumvalue"><name>OnTraining</name></member>
+    <member refid="namespace_models_1a037297d6cb70ea046f77888f84e10399af92965e2c8a7afb3c1b9a5c09a263636" kind="enumvalue"><name>Done</name></member>
+  </compound>
+  <compound refid="namespace_owin" kind="namespace"><name>Owin</name>
+  </compound>
+  <compound refid="namespace_repositories" kind="namespace"><name>Repositories</name>
+  </compound>
+  <compound refid="namespace_services" kind="namespace"><name>Services</name>
+  </compound>
+  <compound refid="namespace_student_internship_management" kind="namespace"><name>StudentInternshipManagement</name>
+  </compound>
+  <compound refid="namespace_student_internship_management_1_1_areas" kind="namespace"><name>StudentInternshipManagement::Areas</name>
+  </compound>
+  <compound refid="namespace_student_internship_management_1_1_areas_1_1_admin" kind="namespace"><name>StudentInternshipManagement::Areas::Admin</name>
+  </compound>
+  <compound refid="namespace_student_internship_management_1_1_areas_1_1_admin_1_1_controllers" kind="namespace"><name>StudentInternshipManagement::Areas::Admin::Controllers</name>
+  </compound>
+  <compound refid="namespace_student_internship_management_1_1_areas_1_1_student" kind="namespace"><name>StudentInternshipManagement::Areas::Student</name>
+  </compound>
+  <compound refid="namespace_student_internship_management_1_1_areas_1_1_student_1_1_controllers" kind="namespace"><name>StudentInternshipManagement::Areas::Student::Controllers</name>
+  </compound>
+  <compound refid="namespace_student_internship_management_1_1_areas_1_1_teacher" kind="namespace"><name>StudentInternshipManagement::Areas::Teacher</name>
+  </compound>
+  <compound refid="namespace_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers" kind="namespace"><name>StudentInternshipManagement::Areas::Teacher::Controllers</name>
+  </compound>
+  <compound refid="namespace_student_internship_management_1_1_controllers" kind="namespace"><name>StudentInternshipManagement::Controllers</name>
+  </compound>
+  <compound refid="namespace_student_internship_management_1_1_models" kind="namespace"><name>StudentInternshipManagement::Models</name>
+  </compound>
+  <compound refid="namespace_system" kind="namespace"><name>System</name>
+  </compound>
+  <compound refid="namespace_system_1_1_collections_1_1_generic" kind="namespace"><name>System::Collections::Generic</name>
+  </compound>
+  <compound refid="namespace_system_1_1_component_model" kind="namespace"><name>System::ComponentModel</name>
+  </compound>
+  <compound refid="namespace_system_1_1_component_model_1_1_data_annotations" kind="namespace"><name>System::ComponentModel::DataAnnotations</name>
+  </compound>
+  <compound refid="namespace_system_1_1_component_model_1_1_data_annotations_1_1_schema" kind="namespace"><name>System::ComponentModel::DataAnnotations::Schema</name>
+  </compound>
+  <compound refid="namespace_system_1_1_configuration" kind="namespace"><name>System::Configuration</name>
+  </compound>
+  <compound refid="namespace_system_1_1_data" kind="namespace"><name>System::Data</name>
+  </compound>
+  <compound refid="namespace_system_1_1_data_1_1_entity" kind="namespace"><name>System::Data::Entity</name>
+  </compound>
+  <compound refid="namespace_system_1_1_data_1_1_entity_1_1_infrastructure_1_1_interception" kind="namespace"><name>System::Data::Entity::Infrastructure::Interception</name>
+  </compound>
+  <compound refid="namespace_system_1_1_diagnostics" kind="namespace"><name>System::Diagnostics</name>
+  </compound>
+  <compound refid="namespace_system_1_1_globalization" kind="namespace"><name>System::Globalization</name>
+  </compound>
+  <compound refid="namespace_system_1_1_i_o" kind="namespace"><name>System::IO</name>
+  </compound>
+  <compound refid="namespace_system_1_1_linq" kind="namespace"><name>System::Linq</name>
+  </compound>
+  <compound refid="namespace_system_1_1_net" kind="namespace"><name>System::Net</name>
+  </compound>
+  <compound refid="namespace_system_1_1_net_1_1_mail" kind="namespace"><name>System::Net::Mail</name>
+  </compound>
+  <compound refid="namespace_system_1_1_reflection" kind="namespace"><name>System::Reflection</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_compiler_services" kind="namespace"><name>System::Runtime::CompilerServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_runtime_1_1_interop_services" kind="namespace"><name>System::Runtime::InteropServices</name>
+  </compound>
+  <compound refid="namespace_system_1_1_security_1_1_claims" kind="namespace"><name>System::Security::Claims</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="namespace_system_1_1_threading_1_1_tasks" kind="namespace"><name>System::Threading::Tasks</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web" kind="namespace"><name>System::Web</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web_1_1_mvc" kind="namespace"><name>System::Web::Mvc</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web_1_1_optimization" kind="namespace"><name>System::Web::Optimization</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web_1_1_routing" kind="namespace"><name>System::Web::Routing</name>
+  </compound>
+  <compound refid="namespace_system_1_1_web_1_1_script_1_1_serialization" kind="namespace"><name>System::Web::Script::Serialization</name>
+  </compound>
+  <compound refid="namespace_utilities" kind="namespace"><name>Utilities</name>
+  </compound>
+  <compound refid="_admin_8cs" kind="file"><name>Admin.cs</name>
+  </compound>
+  <compound refid="_company_8cs" kind="file"><name>Company.cs</name>
+  </compound>
+  <compound refid="_company_training_major_8cs" kind="file"><name>CompanyTrainingMajor.cs</name>
+  </compound>
+  <compound refid="_data_initializer_8cs" kind="file"><name>DataInitializer.cs</name>
+  </compound>
+  <compound refid="_department_8cs" kind="file"><name>Department.cs</name>
+  </compound>
+  <compound refid="_enums_8cs" kind="file"><name>Enums.cs</name>
+  </compound>
+  <compound refid="_group_8cs" kind="file"><name>Group.cs</name>
+  </compound>
+  <compound refid="_identity_models_8cs" kind="file"><name>IdentityModels.cs</name>
+  </compound>
+  <compound refid="_internship_8cs" kind="file"><name>Internship.cs</name>
+  </compound>
+  <compound refid="_learning_class_8cs" kind="file"><name>LearningClass.cs</name>
+  </compound>
+  <compound refid="_learning_class_student_8cs" kind="file"><name>LearningClassStudent.cs</name>
+  </compound>
+  <compound refid="_message_8cs" kind="file"><name>Message.cs</name>
+  </compound>
+  <compound refid="_news_8cs" kind="file"><name>News.cs</name>
+  </compound>
+  <compound refid="_notification_8cs" kind="file"><name>Notification.cs</name>
+  </compound>
+  <compound refid="_models_2obj_2_debug_2_temporary_generated_file__036_c0_b5_b-1481-4323-8_d20-8_f5_a_d_c_b23_d92_8cs" kind="file"><name>TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs</name>
+  </compound>
+  <compound refid="_repositories_2obj_2_debug_2_temporary_generated_file__036_c0_b5_b-1481-4323-8_d20-8_f5_a_d_c_b23_d92_8cs" kind="file"><name>TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs</name>
+  </compound>
+  <compound refid="_services_2obj_2_debug_2_temporary_generated_file__036_c0_b5_b-1481-4323-8_d20-8_f5_a_d_c_b23_d92_8cs" kind="file"><name>TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs</name>
+  </compound>
+  <compound refid="_student_internship_management_2obj_2_debug_2_temporary_generated_file__036_c0_b5_b-1481-4323-8_d20-8_f5_a_d_c_b23_d92_8cs" kind="file"><name>TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs</name>
+  </compound>
+  <compound refid="_utilities_2obj_2_debug_2_temporary_generated_file__036_c0_b5_b-1481-4323-8_d20-8_f5_a_d_c_b23_d92_8cs" kind="file"><name>TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs</name>
+  </compound>
+  <compound refid="_models_2obj_2_debug_2_temporary_generated_file__5937a670-0e60-4077-877b-f7221da3dda1_8cs" kind="file"><name>TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs</name>
+  </compound>
+  <compound refid="_repositories_2obj_2_debug_2_temporary_generated_file__5937a670-0e60-4077-877b-f7221da3dda1_8cs" kind="file"><name>TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs</name>
+  </compound>
+  <compound refid="_services_2obj_2_debug_2_temporary_generated_file__5937a670-0e60-4077-877b-f7221da3dda1_8cs" kind="file"><name>TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs</name>
+  </compound>
+  <compound refid="_student_internship_management_2obj_2_debug_2_temporary_generated_file__5937a670-0e60-4077-877b-f7221da3dda1_8cs" kind="file"><name>TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs</name>
+  </compound>
+  <compound refid="_utilities_2obj_2_debug_2_temporary_generated_file__5937a670-0e60-4077-877b-f7221da3dda1_8cs" kind="file"><name>TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs</name>
+  </compound>
+  <compound refid="_models_2obj_2_debug_2_temporary_generated_file___e7_a71_f73-0_f8_d-4_b9_b-_b56_e-8_e70_b10_b_c5_d3_8cs" kind="file"><name>TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs</name>
+  </compound>
+  <compound refid="_repositories_2obj_2_debug_2_temporary_generated_file___e7_a71_f73-0_f8_d-4_b9_b-_b56_e-8_e70_b10_b_c5_d3_8cs" kind="file"><name>TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs</name>
+  </compound>
+  <compound refid="_services_2obj_2_debug_2_temporary_generated_file___e7_a71_f73-0_f8_d-4_b9_b-_b56_e-8_e70_b10_b_c5_d3_8cs" kind="file"><name>TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs</name>
+  </compound>
+  <compound refid="_student_internship_management_2obj_2_debug_2_temporary_generated_file___e7_a71_f73-0_f8_d-4_b9_b-_b56_e-8_e70_b10_b_c5_d3_8cs" kind="file"><name>TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs</name>
+  </compound>
+  <compound refid="_utilities_2obj_2_debug_2_temporary_generated_file___e7_a71_f73-0_f8_d-4_b9_b-_b56_e-8_e70_b10_b_c5_d3_8cs" kind="file"><name>TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs</name>
+  </compound>
+  <compound refid="_models_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_repositories_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_services_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_student_internship_management_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_utilities_2_properties_2_assembly_info_8cs" kind="file"><name>AssemblyInfo.cs</name>
+  </compound>
+  <compound refid="_semester_8cs" kind="file"><name>Semester.cs</name>
+  </compound>
+  <compound refid="_statistic_8cs" kind="file"><name>Statistic.cs</name>
+  </compound>
+  <compound refid="_student_8cs" kind="file"><name>Student.cs</name>
+  </compound>
+  <compound refid="_student_class_8cs" kind="file"><name>StudentClass.cs</name>
+  </compound>
+  <compound refid="_subject_8cs" kind="file"><name>Subject.cs</name>
+  </compound>
+  <compound refid="_teacher_8cs" kind="file"><name>Teacher.cs</name>
+  </compound>
+  <compound refid="_training_major_8cs" kind="file"><name>TrainingMajor.cs</name>
+  </compound>
+  <compound refid="_web_context_8cs" kind="file"><name>WebContext.cs</name>
+  </compound>
+  <compound refid="_l_i_c_e_n_s_e_8md" kind="file"><name>LICENSE.md</name>
+  </compound>
+  <compound refid="_admin_repository_8cs" kind="file"><name>AdminRepository.cs</name>
+  </compound>
+  <compound refid="_company_repository_8cs" kind="file"><name>CompanyRepository.cs</name>
+  </compound>
+  <compound refid="_company_training_major_repository_8cs" kind="file"><name>CompanyTrainingMajorRepository.cs</name>
+  </compound>
+  <compound refid="_department_repository_8cs" kind="file"><name>DepartmentRepository.cs</name>
+  </compound>
+  <compound refid="_group_repository_8cs" kind="file"><name>GroupRepository.cs</name>
+  </compound>
+  <compound refid="_internship_repository_8cs" kind="file"><name>InternshipRepository.cs</name>
+  </compound>
+  <compound refid="_learning_class_repository_8cs" kind="file"><name>LearningClassRepository.cs</name>
+  </compound>
+  <compound refid="_learning_class_student_repository_8cs" kind="file"><name>LearningClassStudentRepository.cs</name>
+  </compound>
+  <compound refid="_message_repository_8cs" kind="file"><name>MessageRepository.cs</name>
+  </compound>
+  <compound refid="_news_repository_8cs" kind="file"><name>NewsRepository.cs</name>
+  </compound>
+  <compound refid="_notification_repository_8cs" kind="file"><name>NotificationRepository.cs</name>
+  </compound>
+  <compound refid="_semester_repository_8cs" kind="file"><name>SemesterRepository.cs</name>
+  </compound>
+  <compound refid="_statistic_repository_8cs" kind="file"><name>StatisticRepository.cs</name>
+  </compound>
+  <compound refid="_student_class_repository_8cs" kind="file"><name>StudentClassRepository.cs</name>
+  </compound>
+  <compound refid="_student_repository_8cs" kind="file"><name>StudentRepository.cs</name>
+  </compound>
+  <compound refid="_subject_repository_8cs" kind="file"><name>SubjectRepository.cs</name>
+  </compound>
+  <compound refid="_teacher_repository_8cs" kind="file"><name>TeacherRepository.cs</name>
+  </compound>
+  <compound refid="_training_major_repository_8cs" kind="file"><name>TrainingMajorRepository.cs</name>
+  </compound>
+  <compound refid="_admin_service_8cs" kind="file"><name>AdminService.cs</name>
+  </compound>
+  <compound refid="_company_service_8cs" kind="file"><name>CompanyService.cs</name>
+  </compound>
+  <compound refid="_company_training_major_service_8cs" kind="file"><name>CompanyTrainingMajorService.cs</name>
+  </compound>
+  <compound refid="_department_service_8cs" kind="file"><name>DepartmentService.cs</name>
+  </compound>
+  <compound refid="_group_service_8cs" kind="file"><name>GroupService.cs</name>
+  </compound>
+  <compound refid="_intership_service_8cs" kind="file"><name>IntershipService.cs</name>
+  </compound>
+  <compound refid="_learning_class_service_8cs" kind="file"><name>LearningClassService.cs</name>
+  </compound>
+  <compound refid="_learning_class_student_service_8cs" kind="file"><name>LearningClassStudentService.cs</name>
+  </compound>
+  <compound refid="_message_service_8cs" kind="file"><name>MessageService.cs</name>
+  </compound>
+  <compound refid="_news_service_8cs" kind="file"><name>NewsService.cs</name>
+  </compound>
+  <compound refid="_notification_service_8cs" kind="file"><name>NotificationService.cs</name>
+  </compound>
+  <compound refid="_semester_service_8cs" kind="file"><name>SemesterService.cs</name>
+  </compound>
+  <compound refid="_statistic_service_8cs" kind="file"><name>StatisticService.cs</name>
+  </compound>
+  <compound refid="_student_class_service_8cs" kind="file"><name>StudentClassService.cs</name>
+  </compound>
+  <compound refid="_student_service_8cs" kind="file"><name>StudentService.cs</name>
+  </compound>
+  <compound refid="_subject_service_8cs" kind="file"><name>SubjectService.cs</name>
+  </compound>
+  <compound refid="_teacher_service_8cs" kind="file"><name>TeacherService.cs</name>
+  </compound>
+  <compound refid="_training_major_service_8cs" kind="file"><name>TrainingMajorService.cs</name>
+  </compound>
+  <compound refid="_bundle_config_8cs" kind="file"><name>BundleConfig.cs</name>
+  </compound>
+  <compound refid="_filter_config_8cs" kind="file"><name>FilterConfig.cs</name>
+  </compound>
+  <compound refid="_identity_config_8cs" kind="file"><name>IdentityConfig.cs</name>
+  </compound>
+  <compound refid="_route_config_8cs" kind="file"><name>RouteConfig.cs</name>
+  </compound>
+  <compound refid="_startup_8_auth_8cs" kind="file"><name>Startup.Auth.cs</name>
+  </compound>
+  <compound refid="_admin_area_registration_8cs" kind="file"><name>AdminAreaRegistration.cs</name>
+  </compound>
+  <compound refid="_admin_controller_8cs" kind="file"><name>AdminController.cs</name>
+    <member refid="_admin_controller_8cs_1a81a223a02c34d82b47199f08308847f2" kind="variable"><name>System</name></member>
+  </compound>
+  <compound refid="_company_controller_8cs" kind="file"><name>CompanyController.cs</name>
+    <member refid="_company_controller_8cs_1a81a223a02c34d82b47199f08308847f2" kind="variable"><name>System</name></member>
+  </compound>
+  <compound refid="_company_training_major_controller_8cs" kind="file"><name>CompanyTrainingMajorController.cs</name>
+    <member refid="_company_training_major_controller_8cs_1a81a223a02c34d82b47199f08308847f2" kind="variable"><name>System</name></member>
+  </compound>
+  <compound refid="_department_controller_8cs" kind="file"><name>DepartmentController.cs</name>
+    <member refid="_department_controller_8cs_1a81a223a02c34d82b47199f08308847f2" kind="variable"><name>System</name></member>
+  </compound>
+  <compound refid="_internship_controller_8cs" kind="file"><name>InternshipController.cs</name>
+    <member refid="_internship_controller_8cs_1a81a223a02c34d82b47199f08308847f2" kind="variable"><name>System</name></member>
+  </compound>
+  <compound refid="_learning_class_controller_8cs" kind="file"><name>LearningClassController.cs</name>
+    <member refid="_learning_class_controller_8cs_1a81a223a02c34d82b47199f08308847f2" kind="variable"><name>System</name></member>
+  </compound>
+  <compound refid="_admin_2_controllers_2_profile_controller_8cs" kind="file"><name>ProfileController.cs</name>
+  </compound>
+  <compound refid="_student_2_controllers_2_profile_controller_8cs" kind="file"><name>ProfileController.cs</name>
+  </compound>
+  <compound refid="_teacher_2_controllers_2_profile_controller_8cs" kind="file"><name>ProfileController.cs</name>
+  </compound>
+  <compound refid="_semester_controller_8cs" kind="file"><name>SemesterController.cs</name>
+    <member refid="_semester_controller_8cs_1a81a223a02c34d82b47199f08308847f2" kind="variable"><name>System</name></member>
+  </compound>
+  <compound refid="_student_class_controller_8cs" kind="file"><name>StudentClassController.cs</name>
+    <member refid="_student_class_controller_8cs_1a81a223a02c34d82b47199f08308847f2" kind="variable"><name>System</name></member>
+  </compound>
+  <compound refid="_student_controller_8cs" kind="file"><name>StudentController.cs</name>
+    <member refid="_student_controller_8cs_1a81a223a02c34d82b47199f08308847f2" kind="variable"><name>System</name></member>
+  </compound>
+  <compound refid="_subject_controller_8cs" kind="file"><name>SubjectController.cs</name>
+    <member refid="_subject_controller_8cs_1a81a223a02c34d82b47199f08308847f2" kind="variable"><name>System</name></member>
+  </compound>
+  <compound refid="_teacher_controller_8cs" kind="file"><name>TeacherController.cs</name>
+    <member refid="_teacher_controller_8cs_1a81a223a02c34d82b47199f08308847f2" kind="variable"><name>System</name></member>
+  </compound>
+  <compound refid="_training_major_controller_8cs" kind="file"><name>TrainingMajorController.cs</name>
+    <member refid="_training_major_controller_8cs_1a81a223a02c34d82b47199f08308847f2" kind="variable"><name>System</name></member>
+  </compound>
+  <compound refid="_student_area_registration_8cs" kind="file"><name>StudentAreaRegistration.cs</name>
+  </compound>
+  <compound refid="_teacher_area_registration_8cs" kind="file"><name>TeacherAreaRegistration.cs</name>
+  </compound>
+  <compound refid="_account_controller_8cs" kind="file"><name>AccountController.cs</name>
+  </compound>
+  <compound refid="_home_controller_8cs" kind="file"><name>HomeController.cs</name>
+  </compound>
+  <compound refid="_global_8asax_8cs" kind="file"><name>Global.asax.cs</name>
+  </compound>
+  <compound refid="_account_view_models_8cs" kind="file"><name>AccountViewModels.cs</name>
+  </compound>
+  <compound refid="_startup_8cs" kind="file"><name>Startup.cs</name>
+  </compound>
+  <compound refid="_logger_8cs" kind="file"><name>Logger.cs</name>
+  </compound>
+  <compound refid="md__c_1__users__duc_source_repos__student_internship_management_packages__newtonsoft_8_json_811_80_82__l_i_c_e_n_s_e" kind="page"><name>md_C:_Users_Duc_source_repos_StudentInternshipManagement_packages_Newtonsoft.Json.11.0.2_LICENSE</name>
+  </compound>
+  <compound refid="dir_0908461ee584df0aab92481a9d897f7f" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin</name>
+  </compound>
+  <compound refid="dir_443aa20e6474a3f3f3367fd4f2815233" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start</name>
+  </compound>
+  <compound refid="dir_43f0f8bf2332b75560483ee6e817ff9d" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas</name>
+  </compound>
+  <compound refid="dir_3916165d52b054e376288155d0545846" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers</name>
+  </compound>
+  <compound refid="dir_6ea0a78d50ac56bd0161056ca01c0093" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers</name>
+  </compound>
+  <compound refid="dir_9ca45cdb288414babae02a57a083fae4" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Student/Controllers</name>
+  </compound>
+  <compound refid="dir_1e0ed068568e7edc74f4479eb029a341" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/Controllers</name>
+  </compound>
+  <compound refid="dir_0dc1ace31f27417705b94b72021cadf4" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/obj/Debug</name>
+  </compound>
+  <compound refid="dir_b27856de31383908fc8df8c98bfbf49d" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/Utilities/obj/Debug</name>
+  </compound>
+  <compound refid="dir_e72e80851a931892d0f4961fbfb5fff6" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/Services/obj/Debug</name>
+  </compound>
+  <compound refid="dir_7112a504fa418b012520a688625eb081" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/Models/obj/Debug</name>
+  </compound>
+  <compound refid="dir_12c2579d8ba0b8b285beeb2fb2e392ce" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/obj/Debug</name>
+  </compound>
+  <compound refid="dir_2eb6396c7ae37eec39545ebe41b68fb7" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models</name>
+  </compound>
+  <compound refid="dir_b6505a542a863c1c59320a03a8ee114e" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/Models</name>
+  </compound>
+  <compound refid="dir_53e85f5f4329ff80a09bb5b5fb1be8db" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/obj</name>
+  </compound>
+  <compound refid="dir_e1c66de561baadae27d809473b532f8e" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/Models/obj</name>
+  </compound>
+  <compound refid="dir_6efe063f0b0656fd0258697127a56828" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/obj</name>
+  </compound>
+  <compound refid="dir_55602bf4396232dc18aff3891b774df3" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/Services/obj</name>
+  </compound>
+  <compound refid="dir_c0ed35bf307bbeca198b8abe5453ec79" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/Utilities/obj</name>
+  </compound>
+  <compound refid="dir_6073b49e270b908803a415c02f98215c" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Properties</name>
+  </compound>
+  <compound refid="dir_2aae534de6543d2d27c7df986344d826" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/Properties</name>
+  </compound>
+  <compound refid="dir_ee647971a32e74cef2fa442815086e26" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Properties</name>
+  </compound>
+  <compound refid="dir_40b2875a30347cb92cedaba47e846d24" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/Services/Properties</name>
+  </compound>
+  <compound refid="dir_200d47d83b56532d88ef98134be538e8" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/Utilities/Properties</name>
+  </compound>
+  <compound refid="dir_da92606663f4ecb03aa66c183f15dac3" kind="dir"><name>C:/Users/Duc/source/repos</name>
+  </compound>
+  <compound refid="dir_8153579474e3295de1c0c4d9e9076b8b" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories</name>
+  </compound>
+  <compound refid="dir_f4ccb79f94e3610b3d0238552b6ecb5d" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/Services</name>
+  </compound>
+  <compound refid="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b" kind="dir"><name>C:/Users/Duc/source</name>
+  </compound>
+  <compound refid="dir_27c7838ec8ca995cdaad7e570497d223" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Student</name>
+  </compound>
+  <compound refid="dir_f0d58b08711bc7b758db9299572765ed" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement</name>
+  </compound>
+  <compound refid="dir_63ffc08df173f97bfead56e0786d57c8" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement</name>
+  </compound>
+  <compound refid="dir_815150046ed382c03cfde33784997f60" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher</name>
+  </compound>
+  <compound refid="dir_f3680f45e4f192081a73d69d8e9711db" kind="dir"><name>C:/Users/Duc/source/repos/StudentInternshipManagement/Utilities</name>
+  </compound>
+</doxygenindex>

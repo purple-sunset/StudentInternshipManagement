@@ -26,6 +26,33 @@ namespace Repositories
                 return null;
             }
         }
+
+        public IQueryable<Internship> GetBySemester(int semesterId)
+        {
+            try
+            {
+                return _context.Internships.Where(i=>i.Class.SemesterId == semesterId);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
+        }
+
+        public IQueryable<Internship> GetByStudent(string studentId)
+        {
+            try
+            {
+                return _context.Internships.Where(i => i.Student.StudentId.Equals(studentId));
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
+        }
+
         public Internship GetById(int id)
         {
             try

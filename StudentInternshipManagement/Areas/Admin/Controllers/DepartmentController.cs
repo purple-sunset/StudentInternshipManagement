@@ -82,5 +82,11 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             return Json(new[] { department }.ToDataSourceResult(request, ModelState));
         }
 
+        protected override void Dispose(bool disposing)
+        {
+            _service.Dispose();
+            base.Dispose(disposing);
+        }
+
     }
 }

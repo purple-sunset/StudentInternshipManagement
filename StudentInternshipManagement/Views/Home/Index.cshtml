@@ -1,4 +1,5 @@
 ﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Homepage - Trang quản lý thực tập";
     string message = ViewBag.Message ?? string.Empty;
 }
@@ -31,28 +32,28 @@
                 <div id="news-list">
                     <ul class="nav nav-tabs padding-12 tab-color-blue background-blue" id="myTab4">
                         <li class="active">
-                            <a data-toggle="tab" href="#home4" aria-expanded="true">Home</a>
+                            <a data-toggle="tab" href="#home" aria-expanded="true">Home</a>
                         </li>
 
                         <li class="">
-                            <a data-toggle="tab" href="#profile4" aria-expanded="false">Profile</a>
+                            <a data-toggle="tab" href="#profile" aria-expanded="false">Sinh viên</a>
                         </li>
 
                         <li class="">
-                            <a data-toggle="tab" href="#dropdown14" aria-expanded="false">More</a>
+                            <a data-toggle="tab" href="#dropdown" aria-expanded="false">More</a>
                         </li>
                     </ul>
 
                     <div class="tab-content">
-                        <div id="home4" class="tab-pane active">
-
+                        <div id="home" class="tab-pane active">
+                            @{ Html.RenderAction("Index", "News", new{areas=""}); }
                         </div>
 
-                        <div id="profile4" class="tab-pane">
+                        <div id="profile" class="tab-pane">
                             <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
                         </div>
 
-                        <div id="dropdown14" class="tab-pane">
+                        <div id="dropdown" class="tab-pane">
                             <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
                         </div>
                     </div>

@@ -32,7 +32,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
 
         public ActionResult Internships_Read([DataSourceRequest]DataSourceRequest request)
         {
-            DataSourceResult result = _service.GetAll().ToDataSourceResult(request, internship => new {
+            DataSourceResult result = _service.GetByLatestSemester().ToDataSourceResult(request, internship => new {
                 InternshipId = internship.InternshipId,
                 RegistrationDate = internship.RegistrationDate,
                 Status = internship.Status,
@@ -45,71 +45,6 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             return Json(result);
         }
 
-        [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Internships_Create([DataSourceRequest]DataSourceRequest request, Internship internship)
-        {
-            if (ModelState.IsValid)
-            {
-                var entity = new Internship
-                {
-                    RegistrationDate = internship.RegistrationDate,
-                    Status = internship.Status,
-                    StudentId = internship.StudentId,
-                    ClassId = internship.ClassId,
-                    CompanyId = internship.CompanyId,
-                    TrainingMajorId = internship.TrainingMajorId
-                };
-
-                _service.Add(entity);
-            }
-
-            return Json(new[] { internship }.ToDataSourceResult(request, ModelState));
-        }
-
-        [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Internships_Update([DataSourceRequest]DataSourceRequest request, Internship internship)
-        {
-            if (ModelState.IsValid)
-            {
-                var entity = new Internship
-                {
-                    InternshipId = internship.InternshipId,
-                    RegistrationDate = internship.RegistrationDate,
-                    Status = internship.Status,
-                    StudentId = internship.StudentId,
-                    ClassId = internship.ClassId,
-                    CompanyId = internship.CompanyId,
-                    TrainingMajorId = internship.TrainingMajorId
-                };
-
-                _service.Update(entity);
-            }
-
-            return Json(new[] { internship }.ToDataSourceResult(request, ModelState));
-        }
-
-        [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Internships_Destroy([DataSourceRequest]DataSourceRequest request, Internship internship)
-        {
-            if (ModelState.IsValid)
-            {
-                var entity = new Internship
-                {
-                    InternshipId = internship.InternshipId,
-                    RegistrationDate = internship.RegistrationDate,
-                    Status = internship.Status,
-                    StudentId = internship.StudentId,
-                    ClassId = internship.ClassId,
-                    CompanyId = internship.CompanyId,
-                    TrainingMajorId = internship.TrainingMajorId
-                };
-
-                _service.Delete(entity);
-            }
-
-            return Json(new[] { internship }.ToDataSourceResult(request, ModelState));
-        }
-    
         [HttpPost]
         public ActionResult Pdf_Export_Save(string contentType, string base64, string fileName)
         {

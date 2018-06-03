@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_models_1_1_send_code_view_model" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::Models::SendCodeViewModel</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_student_internship_management_1_1_models_1_1_send_code_view_model_1ac45fa355cf0189558ee1cfce2067cd81" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string StudentInternshipManagement.Models.SendCodeViewModel.SelectedProvider</definition>
+        <argsstring></argsstring>
+        <name>SelectedProvider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="20" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class_student_internship_management_1_1_models_1_1_send_code_view_model_1a77aa737b804ec4736018a2381d2a3e92" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ICollection&lt; System.Web.Mvc.SelectListItem &gt;</type>
+        <definition>ICollection&lt;System.Web.Mvc.SelectListItem&gt; StudentInternshipManagement.Models.SendCodeViewModel.Providers</definition>
+        <argsstring></argsstring>
+        <name>Providers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="21" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="property" id="class_student_internship_management_1_1_models_1_1_send_code_view_model_1a72fee1834f9941734cc7df292718c212" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string StudentInternshipManagement.Models.SendCodeViewModel.ReturnUrl</definition>
+        <argsstring></argsstring>
+        <name>ReturnUrl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="22" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="property" id="class_student_internship_management_1_1_models_1_1_send_code_view_model_1a15cc784a7c151868c10e66e09c534531" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool StudentInternshipManagement.Models.SendCodeViewModel.RememberMe</definition>
+        <argsstring></argsstring>
+        <name>RememberMe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="23" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="18" bodyend="24"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_models_1_1_send_code_view_model_1a77aa737b804ec4736018a2381d2a3e92" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Models::SendCodeViewModel</scope><name>Providers</name></member>
+      <member refid="class_student_internship_management_1_1_models_1_1_send_code_view_model_1a15cc784a7c151868c10e66e09c534531" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Models::SendCodeViewModel</scope><name>RememberMe</name></member>
+      <member refid="class_student_internship_management_1_1_models_1_1_send_code_view_model_1a72fee1834f9941734cc7df292718c212" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Models::SendCodeViewModel</scope><name>ReturnUrl</name></member>
+      <member refid="class_student_internship_management_1_1_models_1_1_send_code_view_model_1ac45fa355cf0189558ee1cfce2067cd81" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Models::SendCodeViewModel</scope><name>SelectedProvider</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

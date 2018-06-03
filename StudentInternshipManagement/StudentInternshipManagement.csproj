@@ -210,6 +210,7 @@
     <Compile Include="Areas\Admin\Controllers\DepartmentController.cs" />
     <Compile Include="Areas\Admin\Controllers\InternshipController.cs" />
     <Compile Include="Areas\Admin\Controllers\LearningClassController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NewsController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Admin\Controllers\SemesterController.cs" />
     <Compile Include="Areas\Admin\Controllers\StudentClassController.cs" />
@@ -217,12 +218,19 @@
     <Compile Include="Areas\Admin\Controllers\SubjectController.cs" />
     <Compile Include="Areas\Admin\Controllers\TeacherController.cs" />
     <Compile Include="Areas\Admin\Controllers\TrainingMajorController.cs" />
+    <Compile Include="Areas\Student\Controllers\CompanyController.cs" />
+    <Compile Include="Areas\Student\Controllers\InboxController.cs" />
+    <Compile Include="Areas\Student\Controllers\InternshipController.cs" />
+    <Compile Include="Areas\Student\Controllers\LearningClassController.cs" />
     <Compile Include="Areas\Student\Controllers\ProfileController.cs" />
+    <Compile Include="Areas\Student\Controllers\TrainingMajorController.cs" />
     <Compile Include="Areas\Student\StudentAreaRegistration.cs" />
+    <Compile Include="Areas\Teacher\Controllers\InternshipController.cs" />
     <Compile Include="Areas\Teacher\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Teacher\TeacherAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -793,6 +801,11 @@
     <Content Include="Areas\Admin\Views\LearningClass\Index.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\CompanyCascadeTemplate.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\TrainingMajorCascadeTemplate.cshtml" />
+    <Content Include="Areas\Student\Views\Internship\Index.cshtml" />
+    <Content Include="Areas\Student\Views\Internship\Register.cshtml" />
+    <Content Include="Areas\Admin\Views\News\Index.cshtml" />
+    <Content Include="Areas\Student\Views\Inbox\Index.cshtml" />
+    <Content Include="Areas\Teacher\Views\Internship\Index.cshtml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\buttons.colVis.min.js" />
     <Content Include="Scripts\buttons.flash.min.js" />
@@ -2958,6 +2971,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\SemesterTemplate.cshtml" />
+    <Content Include="Views\Shared\EditorTemplates\InternshipRegistration.cshtml" />
+    <Content Include="Views\News\View.cshtml" />
+    <Content Include="Views\News\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2965,7 +2981,6 @@
     <Folder Include="Areas\Student\Models\" />
     <Folder Include="Areas\Teacher\Models\" />
     <Folder Include="Views\Internship\" />
-    <Folder Include="Views\LearningClass\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

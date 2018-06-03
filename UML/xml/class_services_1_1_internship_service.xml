@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_services_1_1_internship_service" kind="class" language="C#" prot="public">
+    <compoundname>Services::InternshipService</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_services_1_1_internship_service_1af70ff64f857f8b5c88fd50b15b3d43d6" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_repositories_1_1_internship_repository" kindref="compound">InternshipRepository</ref></type>
+        <definition>readonly InternshipRepository Services.InternshipService._repository</definition>
+        <argsstring></argsstring>
+        <name>_repository</name>
+        <initializer>=new <ref refid="class_repositories_1_1_internship_repository" kindref="compound">InternshipRepository</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/IntershipService.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/IntershipService.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_services_1_1_internship_service_1a5806e5c3683b3ee46a4c040febbe3510" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_internship" kindref="compound">Internship</ref> &gt;</type>
+        <definition>IQueryable&lt;Internship&gt; Services.InternshipService.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/IntershipService.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/IntershipService.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_internship_service_1ae78ccfd0926f888c5944539719ca8150" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_internship" kindref="compound">Internship</ref></type>
+        <definition>Internship Services.InternshipService.GetById</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/IntershipService.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/IntershipService.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_internship_service_1a4632ef311c19167f29e14b1b6f3b176e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.InternshipService.Add</definition>
+        <argsstring>(Internship internship)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_internship" kindref="compound">Internship</ref></type>
+          <declname>internship</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/IntershipService.cs" line="24" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/IntershipService.cs" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_internship_service_1adfcc14bf1343ed25432e524cda10d97e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.InternshipService.Update</definition>
+        <argsstring>(Internship internship)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_internship" kindref="compound">Internship</ref></type>
+          <declname>internship</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/IntershipService.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/IntershipService.cs" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_internship_service_1a6af01d7101f355f4164193a8e8c59fd3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.InternshipService.Delete</definition>
+        <argsstring>(Internship internship)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_internship" kindref="compound">Internship</ref></type>
+          <declname>internship</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/IntershipService.cs" line="34" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/IntershipService.cs" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_internship_service_1a608b89963931fc025408e6ea14ba4c29" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Services.InternshipService.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/IntershipService.cs" line="39" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/IntershipService.cs" bodystart="39" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="132">
+        <label>IDisposable</label>
+      </node>
+      <node id="131">
+        <label>Services.InternshipService</label>
+        <link refid="class_services_1_1_internship_service"/>
+        <childnode refid="132" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="134">
+        <label>IDisposable</label>
+      </node>
+      <node id="133">
+        <label>Services.InternshipService</label>
+        <link refid="class_services_1_1_internship_service"/>
+        <childnode refid="134" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/IntershipService.cs" line="12" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/IntershipService.cs" bodystart="11" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_services_1_1_internship_service_1af70ff64f857f8b5c88fd50b15b3d43d6" prot="private" virt="non-virtual"><scope>Services::InternshipService</scope><name>_repository</name></member>
+      <member refid="class_services_1_1_internship_service_1a4632ef311c19167f29e14b1b6f3b176e" prot="public" virt="non-virtual"><scope>Services::InternshipService</scope><name>Add</name></member>
+      <member refid="class_services_1_1_internship_service_1a6af01d7101f355f4164193a8e8c59fd3" prot="public" virt="non-virtual"><scope>Services::InternshipService</scope><name>Delete</name></member>
+      <member refid="class_services_1_1_internship_service_1a608b89963931fc025408e6ea14ba4c29" prot="public" virt="non-virtual"><scope>Services::InternshipService</scope><name>Dispose</name></member>
+      <member refid="class_services_1_1_internship_service_1a5806e5c3683b3ee46a4c040febbe3510" prot="public" virt="non-virtual"><scope>Services::InternshipService</scope><name>GetAll</name></member>
+      <member refid="class_services_1_1_internship_service_1ae78ccfd0926f888c5944539719ca8150" prot="public" virt="non-virtual"><scope>Services::InternshipService</scope><name>GetById</name></member>
+      <member refid="class_services_1_1_internship_service_1adfcc14bf1343ed25432e524cda10d97e" prot="public" virt="non-virtual"><scope>Services::InternshipService</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

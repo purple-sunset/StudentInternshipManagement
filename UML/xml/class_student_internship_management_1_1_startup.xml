@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_startup" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::Startup</compoundname>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_startup_1a560dbe31d6b0b87bba83a7d1bf1456df" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void StudentInternshipManagement.Startup.ConfigureAuth</definition>
+        <argsstring>(IAppBuilder app)</argsstring>
+        <name>ConfigureAuth</name>
+        <param>
+          <type>IAppBuilder</type>
+          <declname>app</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/Startup.Auth.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/Startup.Auth.cs" bodystart="14" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_startup_1a3a09908bc7795e17f3859643bf0b3ebf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void StudentInternshipManagement.Startup.Configuration</definition>
+        <argsstring>(IAppBuilder app)</argsstring>
+        <name>Configuration</name>
+        <param>
+          <type>IAppBuilder</type>
+          <declname>app</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Startup.cs" line="9" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Startup.cs" bodystart="9" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/Startup.Auth.cs" line="12" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/Startup.Auth.cs" bodystart="11" bodyend="66"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_startup_1a3a09908bc7795e17f3859643bf0b3ebf" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Startup</scope><name>Configuration</name></member>
+      <member refid="class_student_internship_management_1_1_startup_1a560dbe31d6b0b87bba83a7d1bf1456df" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Startup</scope><name>ConfigureAuth</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

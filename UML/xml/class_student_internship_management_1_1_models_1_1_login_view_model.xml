@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_models_1_1_login_view_model" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::Models::LoginViewModel</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_student_internship_management_1_1_models_1_1_login_view_model_1ad26dc0eb0378d962f21d0fcb142fc080" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string StudentInternshipManagement.Models.LoginViewModel.Email</definition>
+        <argsstring></argsstring>
+        <name>Email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="54" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="54" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="property" id="class_student_internship_management_1_1_models_1_1_login_view_model_1a62e2dfc1de868968df957749acb8046f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string StudentInternshipManagement.Models.LoginViewModel.Password</definition>
+        <argsstring></argsstring>
+        <name>Password</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="59" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="property" id="class_student_internship_management_1_1_models_1_1_login_view_model_1a3a1a01d676224a89f0f52b7628143745" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool StudentInternshipManagement.Models.LoginViewModel.RememberMe</definition>
+        <argsstring></argsstring>
+        <name>RememberMe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="62" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="62" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="50" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="49" bodyend="63"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_models_1_1_login_view_model_1ad26dc0eb0378d962f21d0fcb142fc080" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Models::LoginViewModel</scope><name>Email</name></member>
+      <member refid="class_student_internship_management_1_1_models_1_1_login_view_model_1a62e2dfc1de868968df957749acb8046f" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Models::LoginViewModel</scope><name>Password</name></member>
+      <member refid="class_student_internship_management_1_1_models_1_1_login_view_model_1a3a1a01d676224a89f0f52b7628143745" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Models::LoginViewModel</scope><name>RememberMe</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

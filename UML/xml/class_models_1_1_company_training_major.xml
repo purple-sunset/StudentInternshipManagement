@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_models_1_1_company_training_major" kind="class" language="C#" prot="public">
+    <compoundname>Models::CompanyTrainingMajor</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_models_1_1_company_training_major_1aac297b700543ac22a25a45343bf154de" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.CompanyTrainingMajor.CompanyId</definition>
+        <argsstring></argsstring>
+        <name>CompanyId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/CompanyTrainingMajor.cs" line="20" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/CompanyTrainingMajor.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_company_training_major_1a0eb41aed82ffeb1607f9ff6c9eb38cfb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.CompanyTrainingMajor.TrainingMajorId</definition>
+        <argsstring></argsstring>
+        <name>TrainingMajorId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/CompanyTrainingMajor.cs" line="27" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/CompanyTrainingMajor.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_company_training_major_1a9ad6b540e4193df29c55040d6bb706f1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_models_1_1_company" kindref="compound">Company</ref></type>
+        <definition>virtual Company Models.CompanyTrainingMajor.Company</definition>
+        <argsstring></argsstring>
+        <name>Company</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/CompanyTrainingMajor.cs" line="31" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/CompanyTrainingMajor.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_company_training_major_1a97c11d38de78e730d5c6fba1de36237c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_models_1_1_training_major" kindref="compound">TrainingMajor</ref></type>
+        <definition>virtual TrainingMajor Models.CompanyTrainingMajor.TrainingMajor</definition>
+        <argsstring></argsstring>
+        <name>TrainingMajor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/CompanyTrainingMajor.cs" line="35" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/CompanyTrainingMajor.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_company_training_major_1a63187264004c0381901ec53bda5ee5fe" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.CompanyTrainingMajor.TotalTraineeCount</definition>
+        <argsstring></argsstring>
+        <name>TotalTraineeCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/CompanyTrainingMajor.cs" line="40" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/CompanyTrainingMajor.cs" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_company_training_major_1ae5e61824a170c3c91e5a3db8e5aa4d74" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.CompanyTrainingMajor.AvailableTraineeCount</definition>
+        <argsstring></argsstring>
+        <name>AvailableTraineeCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/CompanyTrainingMajor.cs" line="44" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/CompanyTrainingMajor.cs" bodystart="44" bodyend="44"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/CompanyTrainingMajor.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/CompanyTrainingMajor.cs" bodystart="13" bodyend="45"/>
+    <listofallmembers>
+      <member refid="class_models_1_1_company_training_major_1ae5e61824a170c3c91e5a3db8e5aa4d74" prot="public" virt="non-virtual"><scope>Models::CompanyTrainingMajor</scope><name>AvailableTraineeCount</name></member>
+      <member refid="class_models_1_1_company_training_major_1a9ad6b540e4193df29c55040d6bb706f1" prot="public" virt="non-virtual"><scope>Models::CompanyTrainingMajor</scope><name>Company</name></member>
+      <member refid="class_models_1_1_company_training_major_1aac297b700543ac22a25a45343bf154de" prot="public" virt="non-virtual"><scope>Models::CompanyTrainingMajor</scope><name>CompanyId</name></member>
+      <member refid="class_models_1_1_company_training_major_1a63187264004c0381901ec53bda5ee5fe" prot="public" virt="non-virtual"><scope>Models::CompanyTrainingMajor</scope><name>TotalTraineeCount</name></member>
+      <member refid="class_models_1_1_company_training_major_1a97c11d38de78e730d5c6fba1de36237c" prot="public" virt="non-virtual"><scope>Models::CompanyTrainingMajor</scope><name>TrainingMajor</name></member>
+      <member refid="class_models_1_1_company_training_major_1a0eb41aed82ffeb1607f9ff6c9eb38cfb" prot="public" virt="non-virtual"><scope>Models::CompanyTrainingMajor</scope><name>TrainingMajorId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

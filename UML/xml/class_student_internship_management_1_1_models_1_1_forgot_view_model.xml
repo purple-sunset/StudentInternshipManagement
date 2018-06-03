@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_models_1_1_forgot_view_model" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::Models::ForgotViewModel</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_student_internship_management_1_1_models_1_1_forgot_view_model_1a55f878fc52f0052825ccc06ff3fd600d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string StudentInternshipManagement.Models.ForgotViewModel.Email</definition>
+        <argsstring></argsstring>
+        <name>Email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="46" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="46" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="43" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="42" bodyend="47"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_models_1_1_forgot_view_model_1a55f878fc52f0052825ccc06ff3fd600d" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Models::ForgotViewModel</scope><name>Email</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

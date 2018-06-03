@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_models_1_1_learning_class" kind="class" language="C#" prot="public">
+    <compoundname>Models::LearningClass</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_models_1_1_learning_class_1a753f23fbde48ae7038fd396305e6bcd8" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.LearningClass.ClassId</definition>
+        <argsstring></argsstring>
+        <name>ClassId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClass.cs" line="16" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClass.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_learning_class_1a8461395cd76086f96f3dcb8340ddf35c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.LearningClass.ClassName</definition>
+        <argsstring></argsstring>
+        <name>ClassName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClass.cs" line="21" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClass.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_learning_class_1a8c7179e817315a24ca72b1dcfd13a16f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.LearningClass.SubjectId</definition>
+        <argsstring></argsstring>
+        <name>SubjectId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClass.cs" line="25" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClass.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_learning_class_1ac0a650a2e18bfb426711cdf4914ad914" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_models_1_1_subject" kindref="compound">Subject</ref></type>
+        <definition>virtual Subject Models.LearningClass.Subject</definition>
+        <argsstring></argsstring>
+        <name>Subject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClass.cs" line="28" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClass.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_learning_class_1abdb63c27d29a4feef2e55a2040aa0543" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.LearningClass.SemesterId</definition>
+        <argsstring></argsstring>
+        <name>SemesterId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClass.cs" line="32" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClass.cs" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_learning_class_1afff62a1653ce67c52f94c3846108304b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_models_1_1_semester" kindref="compound">Semester</ref></type>
+        <definition>virtual Semester Models.LearningClass.Semester</definition>
+        <argsstring></argsstring>
+        <name>Semester</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClass.cs" line="35" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClass.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_learning_class_1a1bfdb059e6cd4af90d8dbc51bdd339cb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ICollection&lt; <ref refid="class_models_1_1_learning_class_student" kindref="compound">LearningClassStudent</ref> &gt;</type>
+        <definition>virtual ICollection&lt;LearningClassStudent&gt; Models.LearningClass.LearningClassStudents</definition>
+        <argsstring></argsstring>
+        <name>LearningClassStudents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClass.cs" line="39" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClass.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClass.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/LearningClass.cs" bodystart="12" bodyend="40"/>
+    <listofallmembers>
+      <member refid="class_models_1_1_learning_class_1a753f23fbde48ae7038fd396305e6bcd8" prot="public" virt="non-virtual"><scope>Models::LearningClass</scope><name>ClassId</name></member>
+      <member refid="class_models_1_1_learning_class_1a8461395cd76086f96f3dcb8340ddf35c" prot="public" virt="non-virtual"><scope>Models::LearningClass</scope><name>ClassName</name></member>
+      <member refid="class_models_1_1_learning_class_1a1bfdb059e6cd4af90d8dbc51bdd339cb" prot="public" virt="non-virtual"><scope>Models::LearningClass</scope><name>LearningClassStudents</name></member>
+      <member refid="class_models_1_1_learning_class_1afff62a1653ce67c52f94c3846108304b" prot="public" virt="non-virtual"><scope>Models::LearningClass</scope><name>Semester</name></member>
+      <member refid="class_models_1_1_learning_class_1abdb63c27d29a4feef2e55a2040aa0543" prot="public" virt="non-virtual"><scope>Models::LearningClass</scope><name>SemesterId</name></member>
+      <member refid="class_models_1_1_learning_class_1ac0a650a2e18bfb426711cdf4914ad914" prot="public" virt="non-virtual"><scope>Models::LearningClass</scope><name>Subject</name></member>
+      <member refid="class_models_1_1_learning_class_1a8c7179e817315a24ca72b1dcfd13a16f" prot="public" virt="non-virtual"><scope>Models::LearningClass</scope><name>SubjectId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

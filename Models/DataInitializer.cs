@@ -181,6 +181,20 @@ namespace Models
                 context.LearningClasses.Add(item);
             }
 
+            var learningClassStudents=new List<LearningClassStudent>
+            {
+                new LearningClassStudent
+                {
+                    Class = learningClasses[0],
+                    Student = students[0]
+                }
+            };
+
+            foreach (var item in learningClassStudents)
+            {
+                context.LearningClassStudents.Add(item);
+            }
+
             var majors = new List<TrainingMajor>
             {
                 new TrainingMajor()
@@ -270,6 +284,59 @@ namespace Models
             foreach (var item in internships)
             {
                 context.Internships.Add(item);
+            }
+
+
+            var news = new List<News>
+            {
+                new News()
+                {
+                    Title = "Thông báo về việc đăng ký đồ án tốt nghiệp kỳ hè 20173",
+                    Content = "Viện CNTT&TT thông báo về việc đăng ký đồ án tốt nghiệp (ĐATN) kỳ hè 20173 như sau: Sinh viên tất cả các hệ đào tạo (bao gồm cả CNCN) chỉ có thể đăng ký làm ĐATN trong kỳ hè với …",
+                    Time = new DateTime(2018,5,18)
+                },
+                new News()
+                {
+                    Title = "Chương trình thực tập tại Trung tâm SVMC – Samsung Electronic Việt Nam",
+                    Content = "I. SVMC Internship Program là gì? Trong khuôn khổ hợp tác giữa Samsung Electronics Việt Nam và các trường Đại học/ Học viện lớn tại miền Bắc, SVMC Internship Program là chương trình thiết thực và ý nghĩa nhằm chuẩn …",
+                    Time = new DateTime(2018,5,9)
+                },
+                new News()
+                {
+                    Title = "Thông báo hoàn thiện giấy tờ TTDN 20172",
+                    Content = "Để kết thúc thực tập 20172, các bạn sinh viên lưu ý liên lạc sớm với giao viên phụ trách để phối hợp hoàn thiện giấy tờ. 1 – Bảng đánh giá sinh viên thực tập do công ty thực …",
+                    Time = new DateTime(2018,5,7)
+                },
+                new News()
+                {
+                    Title = "Kế hoạch bảo vệ Đồ án tốt nghiệp học kỳ 20172",
+                    Content = "Viện CNTT&TT xin thông báo về kế hoạch bảo vệ Đồ án tốt nghiệp (ĐATN) của học kỳ 20172 như sau: 1. Về cách thức tổ chức: – Bộ môn chuyên môn: Tổ chức thu quyển, phản biện, và chấm …",
+                    Time = new DateTime(2018,5,2)
+                }
+                ,
+                new News()
+                {
+                    Title = "Thông báo số 1 – thực tập doanh nghiệp học kỳ hè 20173",
+                    Content = "Các bạn sinh viên tham khảo qui trình Thực tập doanh nghiệp để nắm rõ các thủ tục cần thực hiện. Sinh viên đăng ký nơi thực tập theo mẫu tại đây. Thời hạn hoàn thành đăng ký: 20/05/2018 Thông tin các công …",
+                    Time = new DateTime(2018,4,27)
+                },
+                new News()
+                {
+                    Title = "Kế hoạch bảo vệ luận văn cao học đợt 21/4/2018",
+                    Content = "B.1 Các công việc đăng ký bảo vệ: STT Công việc cần thực hiện Thời hạn hoàn thành 1.1 Học viên thống nhất với GVHD nội dung chi tiết của luận văn, tên đề tài và nộp đăng ký bảo …",
+                    Time = new DateTime(2018,4,6)
+                },
+                new News()
+                {
+                    Title = "Khóa học lập trình robot hợp tác với Viện Công nghệ Shibaura",
+                    Content = "Trong khuôn khổ các hoạt động hợp tác giữa ĐHBK Hà Nội và Viện Công nghệ Shibaura, Nhật Bản, Viện CNTT&TT sẽ tổ chức khóa học lập trình robot từ 1/3/2018-13/3/2018. Tham gia lớp học sẽ có 27 sinh viên …",
+                    Time = new DateTime(2018,4,2)
+                }
+            };
+
+            foreach (var item in news)
+            {
+                context.Newses.Add(item);
             }
 
             base.Seed(context);

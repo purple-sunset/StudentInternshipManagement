@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_models_1_1_company" kind="class" language="C#" prot="public">
+    <compoundname>Models::Company</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_models_1_1_company_1a5e00273ca508676fe64bb1ba64c3b55b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.Company.CompanyId</definition>
+        <argsstring></argsstring>
+        <name>CompanyId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Company.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Company.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_company_1a71461a3acada980472feb1d5d866dcdb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Company.CompanyName</definition>
+        <argsstring></argsstring>
+        <name>CompanyName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Company.cs" line="20" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Company.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_company_1a2e207c8567f741e9958fa8f23fc4bdee" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Company.CompanyDescription</definition>
+        <argsstring></argsstring>
+        <name>CompanyDescription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Company.cs" line="25" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Company.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_company_1a3a4088e28819c678120b1f19ad0c1458" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Company.Address</definition>
+        <argsstring></argsstring>
+        <name>Address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Company.cs" line="30" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Company.cs" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_company_1aa733d689179f530daf1b94df5e96a581" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Company.Email</definition>
+        <argsstring></argsstring>
+        <name>Email</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Company.cs" line="36" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Company.cs" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_company_1a23eac967c98a8da565e063e2333ff2fd" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Company.Phone</definition>
+        <argsstring></argsstring>
+        <name>Phone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Company.cs" line="42" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Company.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_company_1a41391e84bbb36cdd21c72f1c02447d88" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ICollection&lt; <ref refid="class_models_1_1_company_training_major" kindref="compound">CompanyTrainingMajor</ref> &gt;</type>
+        <definition>virtual ICollection&lt;CompanyTrainingMajor&gt; Models.Company.CompanyTrainingMajors</definition>
+        <argsstring></argsstring>
+        <name>CompanyTrainingMajors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Company.cs" line="46" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Company.cs" bodystart="46" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Company.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Company.cs" bodystart="12" bodyend="47"/>
+    <listofallmembers>
+      <member refid="class_models_1_1_company_1a3a4088e28819c678120b1f19ad0c1458" prot="public" virt="non-virtual"><scope>Models::Company</scope><name>Address</name></member>
+      <member refid="class_models_1_1_company_1a2e207c8567f741e9958fa8f23fc4bdee" prot="public" virt="non-virtual"><scope>Models::Company</scope><name>CompanyDescription</name></member>
+      <member refid="class_models_1_1_company_1a5e00273ca508676fe64bb1ba64c3b55b" prot="public" virt="non-virtual"><scope>Models::Company</scope><name>CompanyId</name></member>
+      <member refid="class_models_1_1_company_1a71461a3acada980472feb1d5d866dcdb" prot="public" virt="non-virtual"><scope>Models::Company</scope><name>CompanyName</name></member>
+      <member refid="class_models_1_1_company_1a41391e84bbb36cdd21c72f1c02447d88" prot="public" virt="non-virtual"><scope>Models::Company</scope><name>CompanyTrainingMajors</name></member>
+      <member refid="class_models_1_1_company_1aa733d689179f530daf1b94df5e96a581" prot="public" virt="non-virtual"><scope>Models::Company</scope><name>Email</name></member>
+      <member refid="class_models_1_1_company_1a23eac967c98a8da565e063e2333ff2fd" prot="public" virt="non-virtual"><scope>Models::Company</scope><name>Phone</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,140 @@
+﻿@using Kendo.Mvc.UI
+@using Microsoft.AspNet.Identity
+@model Models.Internship
+@{
+    ViewBag.Title = "Đăng ký nguyện vọng thực tập";
+    ViewBag.Category = "Nguyện vọng thực tập";
+    ViewBag.Section = "Đăng ký";
+    Layout = "~/Areas/Student/Views/Shared/_Layout.cshtml";
+    var studentId = User.Identity.GetUserName();
+    var date = DateTime.Now;
+    var status = "Registered";
+}
+
+@section Kendo
+{
+    @Styles.Render("~/Content/kendo")
+    @Scripts.Render("~/Script/kendo")
+}
+
+@using (Html.BeginForm("Internships_Create", "Internship", FormMethod.Post, new {@class = "form-horizontal"}))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary("", new {@class = "text-danger"})
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Sinh viên </label>
+
+        <div class="col-sm-9">
+            <input type="text" class="col-xs-10 col-sm-5" id="StudentId" name="StudentId" value="@studentId" readonly="readonly"/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Ngày đăng ký </label>
+
+        <div class="col-sm-9">
+            <input type="date" class="col-xs-10 col-sm-5" id="RegistrationDate" name="RegistrationDate" value="@date.ToString("yyyy-MM-dd")" readonly="readonly"/>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Trạng thái </label>
+
+        <div class="col-sm-9">
+            <input type="text" class="col-xs-10 col-sm-5" id="Status" name="Status" value="@status" readonly="readonly"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Lớp học </label>
+
+        <div class="col-sm-9">
+            @(Html.Kendo().DropDownListFor(m => m.ClassId)
+                  .HtmlAttributes(new {style = "width: 41.66666667%"})
+                  .AutoBind(false)
+                  .OptionLabel("Chọn lớp học...")
+                  .DataTextField("ClassName")
+                  .DataValueField("ClassId")
+                  .DataSource(dataSource =>
+                  {
+                      dataSource.Read(read => read.Action("GetAll", "LearningClass"))
+                          .ServerFiltering(true);
+                  })
+                  )
+        </div>
+        @Html.ValidationMessageFor(m => m.ClassId, "", new {@class = "text-danger"})
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Định hướng </label>
+
+        <div class="col-sm-9">
+            @(Html.Kendo().DropDownListFor(m => m.TrainingMajorId)
+                  .HtmlAttributes(new {style = "width: 41.66666667%"})
+                  .AutoBind(false)
+                  .OptionLabel("Chọn định hướng...")
+                  .DataTextField("TrainingMajorName")
+                  .DataValueField("TrainingMajorId")
+                  .DataSource(dataSource =>
+                  {
+                      dataSource.Read(read => read.Action("GetTrainingMajorList", "LearningClass").Data("filterMajors"))
+                          .ServerFiltering(true);
+                  })
+                  .CascadeFrom("ClassId")
+                  )
+        </div>
+        @Html.ValidationMessageFor(m => m.TrainingMajorId, "", new {@class = "text-danger"})
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Công ty </label>
+
+        <div class="col-sm-9">
+            @(Html.Kendo().DropDownListFor(m => m.CompanyId)
+                  .HtmlAttributes(new {style = "width: 41.66666667%"})
+                  .AutoBind(false)
+                  .OptionLabel("Chọn công ty...")
+                  .DataTextField("CompanyName")
+                  .DataValueField("CompanyId")
+                  .DataSource(dataSource =>
+                  {
+                      dataSource.Read(read => read.Action("GetCompanyList", "TrainingMajor").Data("filterCompanies"))
+                          .ServerFiltering(true);
+                  })
+                  .CascadeFrom("TrainingMajorId")
+                  )
+        </div>
+        @Html.ValidationMessageFor(m => m.CompanyId, "", new {@class = "text-danger"})
+    </div>
+
+    <div class="clearfix form-actions">
+        <div class="col-md-offset-3 col-md-9">
+            <button class="btn btn-info" type="submit">
+                <i class="ace-icon fa fa-check bigger-110"></i>
+                Submit
+            </button>
+
+            &nbsp; &nbsp; &nbsp;
+            <button class="btn" type="reset">
+                <i class="ace-icon fa fa-undo bigger-110"></i>
+                Reset
+            </button>
+        </div>
+    </div>
+
+    <div class="hr hr-24"></div>
+}
+
+
+<script type="text/javascript">
+    function filterMajors() {
+        return {
+            classId: $("#ClassId").data("kendoDropDownList").value()
+        };
+    }
+
+    function filterCompanies() {
+        return {
+            majorId: $("#TrainingMajorId").data("kendoDropDownList").value()
+        };
+    }
+</script>

@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_repositories_1_1_training_major_repository" kind="class" language="C#" prot="public">
+    <compoundname>Repositories::TrainingMajorRepository</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_repositories_1_1_training_major_repository_1a3deb80624d5327af085cdf20a5075603" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref></type>
+        <definition>readonly WebContext Repositories.TrainingMajorRepository._context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <initializer>=new <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_repositories_1_1_training_major_repository_1ab4b8c98f469fc7fa68d2909c7cc84604" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_training_major" kindref="compound">TrainingMajor</ref> &gt;</type>
+        <definition>IQueryable&lt;TrainingMajor&gt; Repositories.TrainingMajorRepository.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" line="16" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" bodystart="16" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_training_major_repository_1a5fd644e51c024469545ef9cc8169f3bd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_training_major" kindref="compound">TrainingMajor</ref></type>
+        <definition>TrainingMajor Repositories.TrainingMajorRepository.GetById</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" line="28" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" bodystart="28" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_training_major_repository_1a6ac2f44b25a52525d457b27cfb096cb3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_company" kindref="compound">Company</ref> &gt;</type>
+        <definition>IQueryable&lt;Company&gt; Repositories.TrainingMajorRepository.GetCompanyList</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetCompanyList</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" line="41" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" bodystart="41" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_training_major_repository_1a4a9ad4b067f68330c3dc786ebb609684" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.TrainingMajorRepository.Add</definition>
+        <argsstring>(TrainingMajor trainingMajor)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_training_major" kindref="compound">TrainingMajor</ref></type>
+          <declname>trainingMajor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" line="56" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" bodystart="56" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_training_major_repository_1ac217831083a1ed4e9e2433cad88cc77f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.TrainingMajorRepository.Update</definition>
+        <argsstring>(TrainingMajor trainingMajor)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_training_major" kindref="compound">TrainingMajor</ref></type>
+          <declname>trainingMajor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" line="70" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" bodystart="70" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_training_major_repository_1aabbc00b61841e22de957e5edfd612966" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.TrainingMajorRepository.Delete</definition>
+        <argsstring>(TrainingMajor trainingMajor)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_training_major" kindref="compound">TrainingMajor</ref></type>
+          <declname>trainingMajor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" line="84" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" bodystart="84" bodyend="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_training_major_repository_1ad89dca62455091610d12db3acd4d2570" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Repositories.TrainingMajorRepository.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" line="102" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" bodystart="102" bodyend="105"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="314">
+        <label>IDisposable</label>
+      </node>
+      <node id="313">
+        <label>Repositories.TrainingMajorRepository</label>
+        <link refid="class_repositories_1_1_training_major_repository"/>
+        <childnode refid="314" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="316">
+        <label>IDisposable</label>
+      </node>
+      <node id="315">
+        <label>Repositories.TrainingMajorRepository</label>
+        <link refid="class_repositories_1_1_training_major_repository"/>
+        <childnode refid="316" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/TrainingMajorRepository.cs" bodystart="12" bodyend="106"/>
+    <listofallmembers>
+      <member refid="class_repositories_1_1_training_major_repository_1a3deb80624d5327af085cdf20a5075603" prot="private" virt="non-virtual"><scope>Repositories::TrainingMajorRepository</scope><name>_context</name></member>
+      <member refid="class_repositories_1_1_training_major_repository_1a4a9ad4b067f68330c3dc786ebb609684" prot="public" virt="non-virtual"><scope>Repositories::TrainingMajorRepository</scope><name>Add</name></member>
+      <member refid="class_repositories_1_1_training_major_repository_1aabbc00b61841e22de957e5edfd612966" prot="public" virt="non-virtual"><scope>Repositories::TrainingMajorRepository</scope><name>Delete</name></member>
+      <member refid="class_repositories_1_1_training_major_repository_1ad89dca62455091610d12db3acd4d2570" prot="public" virt="non-virtual"><scope>Repositories::TrainingMajorRepository</scope><name>Dispose</name></member>
+      <member refid="class_repositories_1_1_training_major_repository_1ab4b8c98f469fc7fa68d2909c7cc84604" prot="public" virt="non-virtual"><scope>Repositories::TrainingMajorRepository</scope><name>GetAll</name></member>
+      <member refid="class_repositories_1_1_training_major_repository_1a5fd644e51c024469545ef9cc8169f3bd" prot="public" virt="non-virtual"><scope>Repositories::TrainingMajorRepository</scope><name>GetById</name></member>
+      <member refid="class_repositories_1_1_training_major_repository_1a6ac2f44b25a52525d457b27cfb096cb3" prot="public" virt="non-virtual"><scope>Repositories::TrainingMajorRepository</scope><name>GetCompanyList</name></member>
+      <member refid="class_repositories_1_1_training_major_repository_1ac217831083a1ed4e9e2433cad88cc77f" prot="public" virt="non-virtual"><scope>Repositories::TrainingMajorRepository</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

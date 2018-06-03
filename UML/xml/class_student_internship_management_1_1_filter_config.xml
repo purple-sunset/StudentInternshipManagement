@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_filter_config" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::FilterConfig</compoundname>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_filter_config_1a8d917325b1836053d3ec1cddba74d514" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void StudentInternshipManagement.FilterConfig.RegisterGlobalFilters</definition>
+        <argsstring>(GlobalFilterCollection filters)</argsstring>
+        <name>RegisterGlobalFilters</name>
+        <param>
+          <type>GlobalFilterCollection</type>
+          <declname>filters</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/FilterConfig.cs" line="8" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/FilterConfig.cs" bodystart="8" bodyend="11"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/FilterConfig.cs" line="7" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/FilterConfig.cs" bodystart="6" bodyend="12"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_filter_config_1a8d917325b1836053d3ec1cddba74d514" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::FilterConfig</scope><name>RegisterGlobalFilters</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

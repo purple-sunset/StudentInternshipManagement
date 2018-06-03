@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_models_1_1_admin" kind="class" language="C#" prot="public">
+    <compoundname>Models::Admin</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_models_1_1_admin_1a7f356df3a70b1df254f743a10a9206c4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Admin.AdminId</definition>
+        <argsstring></argsstring>
+        <name>AdminId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" line="18" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_admin_1a50bad8abf8da0eedaf74412ce0ad4d30" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Admin.AdminName</definition>
+        <argsstring></argsstring>
+        <name>AdminName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" line="23" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_admin_1a2f5171823360a955ba8fed2a3b66b797" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime Models.Admin.BirthDate</definition>
+        <argsstring></argsstring>
+        <name>BirthDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" line="28" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_admin_1a6df15c6a2b97ce04ac359d2ff0b67a36" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Admin.Address</definition>
+        <argsstring></argsstring>
+        <name>Address</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" line="33" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_admin_1aada4e8886744500d60e96400aa3f5245" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Admin.Phone</definition>
+        <argsstring></argsstring>
+        <name>Phone</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" line="39" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_admin_1a620598c0f0f7d1ce2e0b7f5360556eab" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Admin.Avatar</definition>
+        <argsstring></argsstring>
+        <name>Avatar</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" line="46" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_admin_1afcccad65f5ca975eb07f68f71ff5e557" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.Admin.DepartmentId</definition>
+        <argsstring></argsstring>
+        <name>DepartmentId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" line="50" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_admin_1a58f6147870f7ea198c3eefd6a380454a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_models_1_1_department" kindref="compound">Department</ref></type>
+        <definition>virtual Department Models.Admin.Department</definition>
+        <argsstring></argsstring>
+        <name>Department</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" line="53" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" bodystart="53" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" bodystart="13" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_models_1_1_admin_1a6df15c6a2b97ce04ac359d2ff0b67a36" prot="public" virt="non-virtual"><scope>Models::Admin</scope><name>Address</name></member>
+      <member refid="class_models_1_1_admin_1a7f356df3a70b1df254f743a10a9206c4" prot="public" virt="non-virtual"><scope>Models::Admin</scope><name>AdminId</name></member>
+      <member refid="class_models_1_1_admin_1a50bad8abf8da0eedaf74412ce0ad4d30" prot="public" virt="non-virtual"><scope>Models::Admin</scope><name>AdminName</name></member>
+      <member refid="class_models_1_1_admin_1a620598c0f0f7d1ce2e0b7f5360556eab" prot="public" virt="non-virtual"><scope>Models::Admin</scope><name>Avatar</name></member>
+      <member refid="class_models_1_1_admin_1a2f5171823360a955ba8fed2a3b66b797" prot="public" virt="non-virtual"><scope>Models::Admin</scope><name>BirthDate</name></member>
+      <member refid="class_models_1_1_admin_1a58f6147870f7ea198c3eefd6a380454a" prot="public" virt="non-virtual"><scope>Models::Admin</scope><name>Department</name></member>
+      <member refid="class_models_1_1_admin_1afcccad65f5ca975eb07f68f71ff5e557" prot="public" virt="non-virtual"><scope>Models::Admin</scope><name>DepartmentId</name></member>
+      <member refid="class_models_1_1_admin_1aada4e8886744500d60e96400aa3f5245" prot="public" virt="non-virtual"><scope>Models::Admin</scope><name>Phone</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

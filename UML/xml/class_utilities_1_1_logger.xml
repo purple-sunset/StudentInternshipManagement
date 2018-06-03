@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_utilities_1_1_logger" kind="class" language="C#" prot="public">
+    <compoundname>Utilities::Logger</compoundname>
+      <sectiondef kind="private-static-attrib">
+      <memberdef kind="variable" id="class_utilities_1_1_logger_1abd7af00e52a75d18662ddd1023c3dc1e" prot="private" static="yes" mutable="no">
+        <type>ILog</type>
+        <definition>ILog Utilities.Logger.log</definition>
+        <argsstring></argsstring>
+        <name>log</name>
+        <initializer>= LogManager.GetLogger(&quot;StudentInternshipManagement&quot;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Utilities/Logger.cs" line="12" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Utilities/Logger.cs" bodystart="12" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_utilities_1_1_logger_1acdb8f9eb5c281f881b22d8ecb41e554b" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Utilities.Logger.LogError</definition>
+        <argsstring>(Exception ex)</argsstring>
+        <name>LogError</name>
+        <param>
+          <type>Exception</type>
+          <declname>ex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Utilities/Logger.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Utilities/Logger.cs" bodystart="14" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="function" id="class_utilities_1_1_logger_1a60d962007bcce90e804b17e5deddef17" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Utilities.Logger.LogWarning</definition>
+        <argsstring>(Exception ex)</argsstring>
+        <name>LogWarning</name>
+        <param>
+          <type>Exception</type>
+          <declname>ex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Utilities/Logger.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Utilities/Logger.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_utilities_1_1_logger_1a9dbf48cdc774c1274b93f67b63c604b7" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Utilities.Logger.LogInfo</definition>
+        <argsstring>(Exception ex)</argsstring>
+        <name>LogInfo</name>
+        <param>
+          <type>Exception</type>
+          <declname>ex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Utilities/Logger.cs" line="24" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Utilities/Logger.cs" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_utilities_1_1_logger_1a78e0ea6cc1c7223668c0763222263186" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Utilities.Logger.LogFatal</definition>
+        <argsstring>(Exception ex)</argsstring>
+        <name>LogFatal</name>
+        <param>
+          <type>Exception</type>
+          <declname>ex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Utilities/Logger.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Utilities/Logger.cs" bodystart="29" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Utilities/Logger.cs" line="11" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Utilities/Logger.cs" bodystart="10" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_utilities_1_1_logger_1abd7af00e52a75d18662ddd1023c3dc1e" prot="private" virt="non-virtual"><scope>Utilities::Logger</scope><name>log</name></member>
+      <member refid="class_utilities_1_1_logger_1acdb8f9eb5c281f881b22d8ecb41e554b" prot="public" virt="non-virtual"><scope>Utilities::Logger</scope><name>LogError</name></member>
+      <member refid="class_utilities_1_1_logger_1a78e0ea6cc1c7223668c0763222263186" prot="public" virt="non-virtual"><scope>Utilities::Logger</scope><name>LogFatal</name></member>
+      <member refid="class_utilities_1_1_logger_1a9dbf48cdc774c1274b93f67b63c604b7" prot="public" virt="non-virtual"><scope>Utilities::Logger</scope><name>LogInfo</name></member>
+      <member refid="class_utilities_1_1_logger_1a60d962007bcce90e804b17e5deddef17" prot="public" virt="non-virtual"><scope>Utilities::Logger</scope><name>LogWarning</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

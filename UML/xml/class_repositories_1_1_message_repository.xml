@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_repositories_1_1_message_repository" kind="class" language="C#" prot="public">
+    <compoundname>Repositories::MessageRepository</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_repositories_1_1_message_repository_1abd85b6feef4d1203ccbeea30e3a7a041" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref></type>
+        <definition>readonly WebContext Repositories.MessageRepository._context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <initializer>= new <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/MessageRepository.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/MessageRepository.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_repositories_1_1_message_repository_1aa8274b793458a718ebedf7ae07a508cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_message" kindref="compound">Message</ref> &gt;</type>
+        <definition>IQueryable&lt;Message&gt; Repositories.MessageRepository.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/MessageRepository.cs" line="17" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/MessageRepository.cs" bodystart="17" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_message_repository_1ad3a55c722b85caa3a207432e1e8bb7e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_message" kindref="compound">Message</ref></type>
+        <definition>Message Repositories.MessageRepository.GetById</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/MessageRepository.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/MessageRepository.cs" bodystart="29" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_message_repository_1afb36aa94b1cd9ed88fcc7d0c9a64fa2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.MessageRepository.Add</definition>
+        <argsstring>(Message message)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_message" kindref="compound">Message</ref></type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/MessageRepository.cs" line="42" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/MessageRepository.cs" bodystart="42" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_message_repository_1a09c111b60c489c585bce27e1169128fa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.MessageRepository.Update</definition>
+        <argsstring>(Message message)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_message" kindref="compound">Message</ref></type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/MessageRepository.cs" line="56" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/MessageRepository.cs" bodystart="56" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_message_repository_1aafe56a88fd3d909020a0e9121748895a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.MessageRepository.Delete</definition>
+        <argsstring>(Message message)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_message" kindref="compound">Message</ref></type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/MessageRepository.cs" line="70" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/MessageRepository.cs" bodystart="70" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_message_repository_1a502505d7c2b1ed9f3fab56d09b94644d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Repositories.MessageRepository.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/MessageRepository.cs" line="88" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/MessageRepository.cs" bodystart="88" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="166">
+        <label>IDisposable</label>
+      </node>
+      <node id="165">
+        <label>Repositories.MessageRepository</label>
+        <link refid="class_repositories_1_1_message_repository"/>
+        <childnode refid="166" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="168">
+        <label>IDisposable</label>
+      </node>
+      <node id="167">
+        <label>Repositories.MessageRepository</label>
+        <link refid="class_repositories_1_1_message_repository"/>
+        <childnode refid="168" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/MessageRepository.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/MessageRepository.cs" bodystart="13" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_repositories_1_1_message_repository_1abd85b6feef4d1203ccbeea30e3a7a041" prot="private" virt="non-virtual"><scope>Repositories::MessageRepository</scope><name>_context</name></member>
+      <member refid="class_repositories_1_1_message_repository_1afb36aa94b1cd9ed88fcc7d0c9a64fa2c" prot="public" virt="non-virtual"><scope>Repositories::MessageRepository</scope><name>Add</name></member>
+      <member refid="class_repositories_1_1_message_repository_1aafe56a88fd3d909020a0e9121748895a" prot="public" virt="non-virtual"><scope>Repositories::MessageRepository</scope><name>Delete</name></member>
+      <member refid="class_repositories_1_1_message_repository_1a502505d7c2b1ed9f3fab56d09b94644d" prot="public" virt="non-virtual"><scope>Repositories::MessageRepository</scope><name>Dispose</name></member>
+      <member refid="class_repositories_1_1_message_repository_1aa8274b793458a718ebedf7ae07a508cd" prot="public" virt="non-virtual"><scope>Repositories::MessageRepository</scope><name>GetAll</name></member>
+      <member refid="class_repositories_1_1_message_repository_1ad3a55c722b85caa3a207432e1e8bb7e9" prot="public" virt="non-virtual"><scope>Repositories::MessageRepository</scope><name>GetById</name></member>
+      <member refid="class_repositories_1_1_message_repository_1a09c111b60c489c585bce27e1169128fa" prot="public" virt="non-virtual"><scope>Repositories::MessageRepository</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_repositories_1_1_learning_class_repository" kind="class" language="C#" prot="public">
+    <compoundname>Repositories::LearningClassRepository</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_repositories_1_1_learning_class_repository_1a6ec7f326be0e4418c6426e2c31e13869" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref></type>
+        <definition>readonly WebContext Repositories.LearningClassRepository._context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <initializer>=new <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_repositories_1_1_learning_class_repository_1a94b626290e6d5ccc3d5245c82e97c817" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_learning_class" kindref="compound">LearningClass</ref> &gt;</type>
+        <definition>IQueryable&lt;LearningClass&gt; Repositories.LearningClassRepository.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" line="16" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" bodystart="16" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_learning_class_repository_1a9ab91c17a47172722ef364c7e1fb00a9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_learning_class" kindref="compound">LearningClass</ref></type>
+        <definition>LearningClass Repositories.LearningClassRepository.GetById</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" bodystart="29" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_learning_class_repository_1ae58359cd280e106ac860a96aeca2c8c4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_student" kindref="compound">Student</ref> &gt;</type>
+        <definition>IQueryable&lt;Student&gt; Repositories.LearningClassRepository.GetStudentList</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetStudentList</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" line="42" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" bodystart="42" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_learning_class_repository_1a7c918b756486a4c03ee30e64f98e229c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.LearningClassRepository.Add</definition>
+        <argsstring>(LearningClass learningClass)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_learning_class" kindref="compound">LearningClass</ref></type>
+          <declname>learningClass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" line="55" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" bodystart="55" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_learning_class_repository_1ace3cd209c563317e8af00ba809f43616" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.LearningClassRepository.Update</definition>
+        <argsstring>(LearningClass learningClass)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_learning_class" kindref="compound">LearningClass</ref></type>
+          <declname>learningClass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" line="69" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" bodystart="69" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_learning_class_repository_1afe8d8969a419d3559dded679f8ab0dde" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.LearningClassRepository.Delete</definition>
+        <argsstring>(LearningClass learningClass)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_learning_class" kindref="compound">LearningClass</ref></type>
+          <declname>learningClass</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" line="83" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" bodystart="83" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_learning_class_repository_1a56ccb77e95ee2e2802ee530dc47ba3a0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Repositories.LearningClassRepository.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" line="101" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" bodystart="101" bodyend="104"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="142">
+        <label>IDisposable</label>
+      </node>
+      <node id="141">
+        <label>Repositories.LearningClassRepository</label>
+        <link refid="class_repositories_1_1_learning_class_repository"/>
+        <childnode refid="142" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="144">
+        <label>IDisposable</label>
+      </node>
+      <node id="143">
+        <label>Repositories.LearningClassRepository</label>
+        <link refid="class_repositories_1_1_learning_class_repository"/>
+        <childnode refid="144" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/LearningClassRepository.cs" bodystart="12" bodyend="105"/>
+    <listofallmembers>
+      <member refid="class_repositories_1_1_learning_class_repository_1a6ec7f326be0e4418c6426e2c31e13869" prot="private" virt="non-virtual"><scope>Repositories::LearningClassRepository</scope><name>_context</name></member>
+      <member refid="class_repositories_1_1_learning_class_repository_1a7c918b756486a4c03ee30e64f98e229c" prot="public" virt="non-virtual"><scope>Repositories::LearningClassRepository</scope><name>Add</name></member>
+      <member refid="class_repositories_1_1_learning_class_repository_1afe8d8969a419d3559dded679f8ab0dde" prot="public" virt="non-virtual"><scope>Repositories::LearningClassRepository</scope><name>Delete</name></member>
+      <member refid="class_repositories_1_1_learning_class_repository_1a56ccb77e95ee2e2802ee530dc47ba3a0" prot="public" virt="non-virtual"><scope>Repositories::LearningClassRepository</scope><name>Dispose</name></member>
+      <member refid="class_repositories_1_1_learning_class_repository_1a94b626290e6d5ccc3d5245c82e97c817" prot="public" virt="non-virtual"><scope>Repositories::LearningClassRepository</scope><name>GetAll</name></member>
+      <member refid="class_repositories_1_1_learning_class_repository_1a9ab91c17a47172722ef364c7e1fb00a9" prot="public" virt="non-virtual"><scope>Repositories::LearningClassRepository</scope><name>GetById</name></member>
+      <member refid="class_repositories_1_1_learning_class_repository_1ae58359cd280e106ac860a96aeca2c8c4" prot="public" virt="non-virtual"><scope>Repositories::LearningClassRepository</scope><name>GetStudentList</name></member>
+      <member refid="class_repositories_1_1_learning_class_repository_1ace3cd209c563317e8af00ba809f43616" prot="public" virt="non-virtual"><scope>Repositories::LearningClassRepository</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

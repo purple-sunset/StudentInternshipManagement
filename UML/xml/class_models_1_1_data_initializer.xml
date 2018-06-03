@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_models_1_1_data_initializer" kind="class" language="C#" prot="public">
+    <compoundname>Models::DataInitializer</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">DropCreateDatabaseIfModelChanges&lt; WebContext &gt;</basecompoundref>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_models_1_1_data_initializer_1a5b46af35f708e919016f6f5309fbba0e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void Models.DataInitializer.Seed</definition>
+        <argsstring>(WebContext context)</argsstring>
+        <name>Seed</name>
+        <param>
+          <type><ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref></type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/DataInitializer.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/DataInitializer.cs" bodystart="14" bodyend="276"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="76">
+        <label>DropCreateDatabaseIfModelChanges&lt; WebContext &gt;</label>
+      </node>
+      <node id="75">
+        <label>Models.DataInitializer</label>
+        <link refid="class_models_1_1_data_initializer"/>
+        <childnode refid="76" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="78">
+        <label>DropCreateDatabaseIfModelChanges&lt; WebContext &gt;</label>
+      </node>
+      <node id="77">
+        <label>Models.DataInitializer</label>
+        <link refid="class_models_1_1_data_initializer"/>
+        <childnode refid="78" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/DataInitializer.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/DataInitializer.cs" bodystart="12" bodyend="277"/>
+    <listofallmembers>
+      <member refid="class_models_1_1_data_initializer_1a5b46af35f708e919016f6f5309fbba0e" prot="protected" virt="non-virtual"><scope>Models::DataInitializer</scope><name>Seed</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

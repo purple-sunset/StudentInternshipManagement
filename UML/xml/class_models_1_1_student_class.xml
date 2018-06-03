@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_models_1_1_student_class" kind="class" language="C#" prot="public">
+    <compoundname>Models::StudentClass</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_models_1_1_student_class_1a05949aeca013703da2263dac3fc8f34a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.StudentClass.ClassId</definition>
+        <argsstring></argsstring>
+        <name>ClassId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/StudentClass.cs" line="16" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/StudentClass.cs" bodystart="16" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_student_class_1a8be8147da045aa3db78f19467e43698a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.StudentClass.ClassName</definition>
+        <argsstring></argsstring>
+        <name>ClassName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/StudentClass.cs" line="21" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/StudentClass.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_student_class_1a03e897832bda95820f0b97fbc6eedb97" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.StudentClass.DepartmentId</definition>
+        <argsstring></argsstring>
+        <name>DepartmentId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/StudentClass.cs" line="25" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/StudentClass.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_student_class_1a34e97388b7de34973df6ee060ed3c504" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_models_1_1_department" kindref="compound">Department</ref></type>
+        <definition>virtual Department Models.StudentClass.Department</definition>
+        <argsstring></argsstring>
+        <name>Department</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/StudentClass.cs" line="28" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/StudentClass.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_student_class_1a13ab80ee75c1f6957dc4e205ad913d41" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ICollection&lt; <ref refid="class_models_1_1_student" kindref="compound">Student</ref> &gt;</type>
+        <definition>virtual ICollection&lt;Student&gt; Models.StudentClass.Students</definition>
+        <argsstring></argsstring>
+        <name>Students</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/StudentClass.cs" line="32" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/StudentClass.cs" bodystart="32" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/StudentClass.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/StudentClass.cs" bodystart="12" bodyend="33"/>
+    <listofallmembers>
+      <member refid="class_models_1_1_student_class_1a05949aeca013703da2263dac3fc8f34a" prot="public" virt="non-virtual"><scope>Models::StudentClass</scope><name>ClassId</name></member>
+      <member refid="class_models_1_1_student_class_1a8be8147da045aa3db78f19467e43698a" prot="public" virt="non-virtual"><scope>Models::StudentClass</scope><name>ClassName</name></member>
+      <member refid="class_models_1_1_student_class_1a34e97388b7de34973df6ee060ed3c504" prot="public" virt="non-virtual"><scope>Models::StudentClass</scope><name>Department</name></member>
+      <member refid="class_models_1_1_student_class_1a03e897832bda95820f0b97fbc6eedb97" prot="public" virt="non-virtual"><scope>Models::StudentClass</scope><name>DepartmentId</name></member>
+      <member refid="class_models_1_1_student_class_1a13ab80ee75c1f6957dc4e205ad913d41" prot="public" virt="non-virtual"><scope>Models::StudentClass</scope><name>Students</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_b6505a542a863c1c59320a03a8ee114e" kind="dir">
+    <compoundname>C:/Users/Duc/source/repos/StudentInternshipManagement/Models</compoundname>
+    <innerdir refid="dir_e1c66de561baadae27d809473b532f8e">C:/Users/Duc/source/repos/StudentInternshipManagement/Models/obj</innerdir>
+    <innerdir refid="dir_6073b49e270b908803a415c02f98215c">C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Properties</innerdir>
+    <innerfile refid="_admin_8cs">Admin.cs</innerfile>
+    <innerfile refid="_company_8cs">Company.cs</innerfile>
+    <innerfile refid="_company_training_major_8cs">CompanyTrainingMajor.cs</innerfile>
+    <innerfile refid="_data_initializer_8cs">DataInitializer.cs</innerfile>
+    <innerfile refid="_department_8cs">Department.cs</innerfile>
+    <innerfile refid="_enums_8cs">Enums.cs</innerfile>
+    <innerfile refid="_group_8cs">Group.cs</innerfile>
+    <innerfile refid="_identity_models_8cs">IdentityModels.cs</innerfile>
+    <innerfile refid="_internship_8cs">Internship.cs</innerfile>
+    <innerfile refid="_learning_class_8cs">LearningClass.cs</innerfile>
+    <innerfile refid="_learning_class_student_8cs">LearningClassStudent.cs</innerfile>
+    <innerfile refid="_message_8cs">Message.cs</innerfile>
+    <innerfile refid="_news_8cs">News.cs</innerfile>
+    <innerfile refid="_notification_8cs">Notification.cs</innerfile>
+    <innerfile refid="_semester_8cs">Semester.cs</innerfile>
+    <innerfile refid="_statistic_8cs">Statistic.cs</innerfile>
+    <innerfile refid="_student_8cs">Student.cs</innerfile>
+    <innerfile refid="_student_class_8cs">StudentClass.cs</innerfile>
+    <innerfile refid="_subject_8cs">Subject.cs</innerfile>
+    <innerfile refid="_teacher_8cs">Teacher.cs</innerfile>
+    <innerfile refid="_training_major_8cs">TrainingMajor.cs</innerfile>
+    <innerfile refid="_web_context_8cs">WebContext.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/"/>
+  </compounddef>
+</doxygen>

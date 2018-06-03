@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_repositories_1_1_semester_repository" kind="class" language="C#" prot="public">
+    <compoundname>Repositories::SemesterRepository</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_repositories_1_1_semester_repository_1ad0d5b6030e344d37cc29ba57e85724a5" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref></type>
+        <definition>readonly WebContext Repositories.SemesterRepository._context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <initializer>=new <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/SemesterRepository.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/SemesterRepository.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_repositories_1_1_semester_repository_1a06f143c699cadd502760debb638831f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_semester" kindref="compound">Semester</ref> &gt;</type>
+        <definition>IQueryable&lt;Semester&gt; Repositories.SemesterRepository.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/SemesterRepository.cs" line="17" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/SemesterRepository.cs" bodystart="17" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_semester_repository_1ac4b6cc8126c799c4100cb42fd9853a69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_semester" kindref="compound">Semester</ref></type>
+        <definition>Semester Repositories.SemesterRepository.GetById</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/SemesterRepository.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/SemesterRepository.cs" bodystart="29" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_semester_repository_1a26718f9e57b90f0969a72fe6b63e5a45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.SemesterRepository.Add</definition>
+        <argsstring>(Semester semester)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_semester" kindref="compound">Semester</ref></type>
+          <declname>semester</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/SemesterRepository.cs" line="42" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/SemesterRepository.cs" bodystart="42" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_semester_repository_1a077a998640c31e90002a9f81f7de221b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.SemesterRepository.Update</definition>
+        <argsstring>(Semester semester)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_semester" kindref="compound">Semester</ref></type>
+          <declname>semester</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/SemesterRepository.cs" line="56" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/SemesterRepository.cs" bodystart="56" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_semester_repository_1a113f842756a96b21a126730bfb8b8d76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.SemesterRepository.Delete</definition>
+        <argsstring>(Semester semester)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_semester" kindref="compound">Semester</ref></type>
+          <declname>semester</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/SemesterRepository.cs" line="70" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/SemesterRepository.cs" bodystart="70" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_semester_repository_1afadbfbba21e32e6718d1662919f9cec7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Repositories.SemesterRepository.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/SemesterRepository.cs" line="88" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/SemesterRepository.cs" bodystart="88" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="222">
+        <label>IDisposable</label>
+      </node>
+      <node id="221">
+        <label>Repositories.SemesterRepository</label>
+        <link refid="class_repositories_1_1_semester_repository"/>
+        <childnode refid="222" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="224">
+        <label>IDisposable</label>
+      </node>
+      <node id="223">
+        <label>Repositories.SemesterRepository</label>
+        <link refid="class_repositories_1_1_semester_repository"/>
+        <childnode refid="224" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/SemesterRepository.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/SemesterRepository.cs" bodystart="13" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_repositories_1_1_semester_repository_1ad0d5b6030e344d37cc29ba57e85724a5" prot="private" virt="non-virtual"><scope>Repositories::SemesterRepository</scope><name>_context</name></member>
+      <member refid="class_repositories_1_1_semester_repository_1a26718f9e57b90f0969a72fe6b63e5a45" prot="public" virt="non-virtual"><scope>Repositories::SemesterRepository</scope><name>Add</name></member>
+      <member refid="class_repositories_1_1_semester_repository_1a113f842756a96b21a126730bfb8b8d76" prot="public" virt="non-virtual"><scope>Repositories::SemesterRepository</scope><name>Delete</name></member>
+      <member refid="class_repositories_1_1_semester_repository_1afadbfbba21e32e6718d1662919f9cec7" prot="public" virt="non-virtual"><scope>Repositories::SemesterRepository</scope><name>Dispose</name></member>
+      <member refid="class_repositories_1_1_semester_repository_1a06f143c699cadd502760debb638831f0" prot="public" virt="non-virtual"><scope>Repositories::SemesterRepository</scope><name>GetAll</name></member>
+      <member refid="class_repositories_1_1_semester_repository_1ac4b6cc8126c799c4100cb42fd9853a69" prot="public" virt="non-virtual"><scope>Repositories::SemesterRepository</scope><name>GetById</name></member>
+      <member refid="class_repositories_1_1_semester_repository_1a077a998640c31e90002a9f81f7de221b" prot="public" virt="non-virtual"><scope>Repositories::SemesterRepository</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

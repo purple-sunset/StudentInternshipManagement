@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_models_1_1_internship" kind="class" language="C#" prot="public">
+    <compoundname>Models::Internship</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_models_1_1_internship_1ab5293d9ad4fb5323da7d99b75434802a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.Internship.InternshipId</definition>
+        <argsstring></argsstring>
+        <name>InternshipId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_internship_1a52554e95b34af0a7ad5a56ae1edd482b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DateTime</type>
+        <definition>DateTime Models.Internship.RegistrationDate</definition>
+        <argsstring></argsstring>
+        <name>RegistrationDate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" line="20" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_internship_1a401655fb6972301c0504e7137fc5be35" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="namespace_models_1a037297d6cb70ea046f77888f84e10399" kindref="member">InternshipStatus</ref></type>
+        <definition>InternshipStatus Models.Internship.Status</definition>
+        <argsstring></argsstring>
+        <name>Status</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" line="24" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_internship_1a3dbba49f4e5f714f0b41ce6886c25fd7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Internship.StudentId</definition>
+        <argsstring></argsstring>
+        <name>StudentId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" line="28" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" bodystart="28" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_internship_1a9d962d48d0edf20c0787cce69c003a8b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_models_1_1_student" kindref="compound">Student</ref></type>
+        <definition>virtual Student Models.Internship.Student</definition>
+        <argsstring></argsstring>
+        <name>Student</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" line="31" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_internship_1af8fa96321d7c460ef1fd3da293e9961f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.Internship.ClassId</definition>
+        <argsstring></argsstring>
+        <name>ClassId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" line="35" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_internship_1aaef4c2c34a4bed1138428609a74806a3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_models_1_1_learning_class" kindref="compound">LearningClass</ref></type>
+        <definition>virtual LearningClass Models.Internship.Class</definition>
+        <argsstring></argsstring>
+        <name>Class</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" line="38" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_internship_1a6bdbda854cd1e328b382a27b40da2a88" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.Internship.CompanyId</definition>
+        <argsstring></argsstring>
+        <name>CompanyId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" line="42" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_internship_1a80c0cf97eb69ad4126ae1e768d06064e" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.Internship.TrainingMajorId</definition>
+        <argsstring></argsstring>
+        <name>TrainingMajorId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" line="46" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_internship_1afbbc16c3d565b125b9ce88999a37410b" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_models_1_1_company_training_major" kindref="compound">CompanyTrainingMajor</ref></type>
+        <definition>virtual CompanyTrainingMajor Models.Internship.Major</definition>
+        <argsstring></argsstring>
+        <name>Major</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" line="49" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" bodystart="49" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Internship.cs" bodystart="12" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_models_1_1_internship_1aaef4c2c34a4bed1138428609a74806a3" prot="public" virt="non-virtual"><scope>Models::Internship</scope><name>Class</name></member>
+      <member refid="class_models_1_1_internship_1af8fa96321d7c460ef1fd3da293e9961f" prot="public" virt="non-virtual"><scope>Models::Internship</scope><name>ClassId</name></member>
+      <member refid="class_models_1_1_internship_1a6bdbda854cd1e328b382a27b40da2a88" prot="public" virt="non-virtual"><scope>Models::Internship</scope><name>CompanyId</name></member>
+      <member refid="class_models_1_1_internship_1ab5293d9ad4fb5323da7d99b75434802a" prot="public" virt="non-virtual"><scope>Models::Internship</scope><name>InternshipId</name></member>
+      <member refid="class_models_1_1_internship_1afbbc16c3d565b125b9ce88999a37410b" prot="public" virt="non-virtual"><scope>Models::Internship</scope><name>Major</name></member>
+      <member refid="class_models_1_1_internship_1a52554e95b34af0a7ad5a56ae1edd482b" prot="public" virt="non-virtual"><scope>Models::Internship</scope><name>RegistrationDate</name></member>
+      <member refid="class_models_1_1_internship_1a401655fb6972301c0504e7137fc5be35" prot="public" virt="non-virtual"><scope>Models::Internship</scope><name>Status</name></member>
+      <member refid="class_models_1_1_internship_1a9d962d48d0edf20c0787cce69c003a8b" prot="public" virt="non-virtual"><scope>Models::Internship</scope><name>Student</name></member>
+      <member refid="class_models_1_1_internship_1a3dbba49f4e5f714f0b41ce6886c25fd7" prot="public" virt="non-virtual"><scope>Models::Internship</scope><name>StudentId</name></member>
+      <member refid="class_models_1_1_internship_1a80c0cf97eb69ad4126ae1e768d06064e" prot="public" virt="non-virtual"><scope>Models::Internship</scope><name>TrainingMajorId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

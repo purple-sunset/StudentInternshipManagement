@@ -53,6 +53,7 @@
           .Columns(columns =>
           {
               columns.ForeignKey(p => p.StudentId, (IQueryable<Student>) ViewBag.Students, "StudentId", "StudentName").EditorTemplateName("StudentTemplate");
+              columns.ForeignKey(p => p.ClassId, (IQueryable<LearningClass>)ViewBag.LearningClasses, "ClassId", "ClassName").EditorTemplateName("LearningClassTemplate");
               columns.Bound(o => o.MidTermPoint);
               columns.Bound(o => o.EndTermPoint);
               columns.Bound(o => o.TotalPoint).Hidden();

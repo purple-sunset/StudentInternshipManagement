@@ -5,6 +5,7 @@
     ViewBag.Category = "Quản lý";
     ViewBag.Section = "Thực tập";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var isProcessing = (bool) (ViewBag.IsProcessing??false);
 }
 
 @section Kendo
@@ -12,30 +13,49 @@
     @Styles.Render("~/Content/kendo")
     @Scripts.Render("~/Script/kendo")
 }
+<div class="alert alert-block alert-info" style='display: @(isProcessing?"inline-block":"none")'>
+    <button type="button" class="close" data-dismiss="alert">
+        <i class="ace-icon fa fa-times"></i>
+    </button>
+    <i class="ace-icon fa fa-check green"></i>
+    Đang xử lý nguyện vọng thực tập kỳ
+    <strong class="green">
+        20181
+    </strong>
+    <br/>
+    Xin vui lòng đợi trong giây lát!
+</div>
+
+<div class="alert alert-block alert-success" style='display: @(isProcessing?"none":"inline-block")'>
+    <button type="button" class="close" data-dismiss="alert">
+        <i class="ace-icon fa fa-times"></i>
+    </button>
+    <i class="ace-icon fa fa-check green"></i>
+    Xử lý nguyện vọng thực tập kỳ
+    <strong class="green">
+        20181
+    </strong>
+    thành công
+    <br />
+    Xem kết quả ở bảng dưới
+</div>
 
 @(Html.Kendo().Grid<Models.Internship>()
       .Name("grid")
       .Columns(columns =>
       {
           columns.Bound(c => c.InternshipId);
-          columns.ForeignKey(p => p.StudentId, (IQueryable<Student>) ViewBag.Students, "StudentId", "StudentName").EditorTemplateName("StudentTemplate");
-          columns.Bound(p => p.ClassId).EditorTemplateName("LearningClassTemplate");
-          columns.Bound(p => p.TrainingMajorId).EditorTemplateName("TrainingMajorCascadeTemplate");
-          columns.Bound(p => p.CompanyId).EditorTemplateName("CompanyCascadeTemplate");
+          columns.ForeignKey(p => p.StudentId, (IQueryable<Student>) ViewBag.Students, "StudentId", "StudentName");
+          columns.ForeignKey(p => p.ClassId, (IQueryable<LearningClass>)ViewBag.LearningClasses, "ClassId", "ClassName");
+          columns.ForeignKey(p => p.TrainingMajorId, (IQueryable<TrainingMajor>)ViewBag.TrainingMajors, "TrainingMajorId", "TrainingMajorName");
+          columns.ForeignKey(p => p.CompanyId, (IQueryable<Company>)ViewBag.Companies, "CompanyId", "CompanyName");
           columns.Bound(c => c.RegistrationDate);
           columns.Bound(c => c.Status);
-          columns.Command(command =>
-          {
-              command.Edit();
-              command.Destroy();
-          }).Width(180);
       })
       .ToolBar(toolbar =>
       {
-          toolbar.Create();
           toolbar.Pdf();
       })
-      .Editable(editable => editable.Mode(GridEditMode.PopUp))
       .Pageable()
       .Sortable(sortable => { sortable.SortMode(GridSortMode.SingleColumn); })
       .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
@@ -44,33 +64,6 @@
           .Ajax()
           .Model(model => model.Id(p => p.InternshipId))
           .Read(read => read.Action("Internships_Read", "Internship"))
-          .Create(create => create.Action("Internships_Create", "Internship"))
-          .Update(update => update.Action("Internships_Update", "Internship"))
-          .Destroy(destroy => destroy.Action("Internships_Destroy", "Internship"))
-      )
-      .Events(events => events
-          .Edit("onEdit")
       )
       )
-<script type="text/javascript">
 
-    function onEdit(e) {
-        $('[name="InternshipId"]').attr("readonly", true);
-    }
-</script>
-
-<script>
-    function filterClass() {
-        return {
-            classId: $("#ClassId").val()
-        };
-    }
-</script>
-
-<script>
-    function filterCompany() {
-        return {
-            companyId: $("#CompanyId").val()
-        };
-    }
-</script>

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_models_1_1_verify_code_view_model" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::Models::VerifyCodeViewModel</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_student_internship_management_1_1_models_1_1_verify_code_view_model_1a5d5020e2c2a64de00375d5728ce4a532" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string StudentInternshipManagement.Models.VerifyCodeViewModel.Provider</definition>
+        <argsstring></argsstring>
+        <name>Provider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="property" id="class_student_internship_management_1_1_models_1_1_verify_code_view_model_1a6c0ded5a97eaf2ecf2b53f2535af2f35" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string StudentInternshipManagement.Models.VerifyCodeViewModel.Code</definition>
+        <argsstring></argsstring>
+        <name>Code</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="33" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="property" id="class_student_internship_management_1_1_models_1_1_verify_code_view_model_1a0c4dee1b052943868653e5075cd2bc02" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string StudentInternshipManagement.Models.VerifyCodeViewModel.ReturnUrl</definition>
+        <argsstring></argsstring>
+        <name>ReturnUrl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="34" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="property" id="class_student_internship_management_1_1_models_1_1_verify_code_view_model_1a66032038bcf04c5d7bb39e830191ecc1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool StudentInternshipManagement.Models.VerifyCodeViewModel.RememberBrowser</definition>
+        <argsstring></argsstring>
+        <name>RememberBrowser</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="37" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="property" id="class_student_internship_management_1_1_models_1_1_verify_code_view_model_1a760c9e64fa5aeff2e22e3c8ce49923f4" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool StudentInternshipManagement.Models.VerifyCodeViewModel.RememberMe</definition>
+        <argsstring></argsstring>
+        <name>RememberMe</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="39" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="27" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" bodystart="26" bodyend="40"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_models_1_1_verify_code_view_model_1a6c0ded5a97eaf2ecf2b53f2535af2f35" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Models::VerifyCodeViewModel</scope><name>Code</name></member>
+      <member refid="class_student_internship_management_1_1_models_1_1_verify_code_view_model_1a5d5020e2c2a64de00375d5728ce4a532" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Models::VerifyCodeViewModel</scope><name>Provider</name></member>
+      <member refid="class_student_internship_management_1_1_models_1_1_verify_code_view_model_1a66032038bcf04c5d7bb39e830191ecc1" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Models::VerifyCodeViewModel</scope><name>RememberBrowser</name></member>
+      <member refid="class_student_internship_management_1_1_models_1_1_verify_code_view_model_1a760c9e64fa5aeff2e22e3c8ce49923f4" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Models::VerifyCodeViewModel</scope><name>RememberMe</name></member>
+      <member refid="class_student_internship_management_1_1_models_1_1_verify_code_view_model_1a0c4dee1b052943868653e5075cd2bc02" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Models::VerifyCodeViewModel</scope><name>ReturnUrl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result" kind="class" language="C#" prot="package">
+    <compoundname>StudentInternshipManagement::Controllers::AccountController::ChallengeResult</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">HttpUnauthorizedResult</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1ad0fd5c2733a9b817a3c410c7ffd6ad2d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string StudentInternshipManagement.Controllers.AccountController.ChallengeResult.LoginProvider</definition>
+        <argsstring></argsstring>
+        <name>LoginProvider</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="294" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="294" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="property" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1ab4de2de590155f601825452afcb5ceca" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string StudentInternshipManagement.Controllers.AccountController.ChallengeResult.RedirectUri</definition>
+        <argsstring></argsstring>
+        <name>RedirectUri</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="295" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="295" bodyend="295"/>
+      </memberdef>
+      <memberdef kind="property" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1a9222203103ace8282c7e76a642db87fc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string StudentInternshipManagement.Controllers.AccountController.ChallengeResult.UserId</definition>
+        <argsstring></argsstring>
+        <name>UserId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="296" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="296" bodyend="296"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1a41fd8b25b9500fafab9ef649fb69fc6f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>StudentInternshipManagement.Controllers.AccountController.ChallengeResult.ChallengeResult</definition>
+        <argsstring>(string provider, string redirectUri)</argsstring>
+        <name>ChallengeResult</name>
+        <param>
+          <type>string</type>
+          <declname>provider</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>redirectUri</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="282" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="282" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1a17494ad9eafd7c155e06038fa6bdd9c3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>StudentInternshipManagement.Controllers.AccountController.ChallengeResult.ChallengeResult</definition>
+        <argsstring>(string provider, string redirectUri, string userId)</argsstring>
+        <name>ChallengeResult</name>
+        <param>
+          <type>string</type>
+          <declname>provider</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>redirectUri</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>userId</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="287" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="287" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1ade5ed022bd33c94e6e61dd9012b2d2e8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void StudentInternshipManagement.Controllers.AccountController.ChallengeResult.ExecuteResult</definition>
+        <argsstring>(ControllerContext context)</argsstring>
+        <name>ExecuteResult</name>
+        <param>
+          <type>ControllerContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="298" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="298" bodyend="306"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="42">
+        <label>HttpUnauthorizedResult</label>
+      </node>
+      <node id="41">
+        <label>StudentInternshipManagement.Controllers.AccountController.ChallengeResult</label>
+        <childnode refid="42" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="44">
+        <label>HttpUnauthorizedResult</label>
+      </node>
+      <node id="43">
+        <label>StudentInternshipManagement.Controllers.AccountController.ChallengeResult</label>
+        <childnode refid="44" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" line="281" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/AccountController.cs" bodystart="280" bodyend="307"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1a41fd8b25b9500fafab9ef649fb69fc6f" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController::ChallengeResult</scope><name>ChallengeResult</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1a17494ad9eafd7c155e06038fa6bdd9c3" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController::ChallengeResult</scope><name>ChallengeResult</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1ade5ed022bd33c94e6e61dd9012b2d2e8" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController::ChallengeResult</scope><name>ExecuteResult</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1ad0fd5c2733a9b817a3c410c7ffd6ad2d" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController::ChallengeResult</scope><name>LoginProvider</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1ab4de2de590155f601825452afcb5ceca" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController::ChallengeResult</scope><name>RedirectUri</name></member>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_account_controller_1_1_challenge_result_1a9222203103ace8282c7e76a642db87fc" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::AccountController::ChallengeResult</scope><name>UserId</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_student_internship_management_1_1_areas_1_1_admin" kind="namespace" language="C#">
+    <compoundname>StudentInternshipManagement::Areas::Admin</compoundname>
+    <innerclass refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_admin_area_registration" prot="public">StudentInternshipManagement::Areas::Admin::AdminAreaRegistration</innerclass>
+    <innernamespace refid="namespace_student_internship_management_1_1_areas_1_1_admin_1_1_controllers">StudentInternshipManagement::Areas::Admin::Controllers</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/AdminAreaRegistration.cs" line="4" column="1"/>
+  </compounddef>
+</doxygen>

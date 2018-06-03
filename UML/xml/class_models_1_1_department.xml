@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_models_1_1_department" kind="class" language="C#" prot="public">
+    <compoundname>Models::Department</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_models_1_1_department_1a886869844fcb4ae54b0d21d3c93a68fc" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.Department.DepartmentId</definition>
+        <argsstring></argsstring>
+        <name>DepartmentId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Department.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Department.cs" bodystart="14" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_department_1a6972516b0880da7d18cc6e2bb211f853" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.Department.DepartmentName</definition>
+        <argsstring></argsstring>
+        <name>DepartmentName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Department.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Department.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Department.cs" line="12" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Department.cs" bodystart="11" bodyend="20"/>
+    <listofallmembers>
+      <member refid="class_models_1_1_department_1a886869844fcb4ae54b0d21d3c93a68fc" prot="public" virt="non-virtual"><scope>Models::Department</scope><name>DepartmentId</name></member>
+      <member refid="class_models_1_1_department_1a6972516b0880da7d18cc6e2bb211f853" prot="public" virt="non-virtual"><scope>Models::Department</scope><name>DepartmentName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

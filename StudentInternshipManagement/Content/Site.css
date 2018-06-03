@@ -13841,7 +13841,7 @@ li.item-default {
 
 .message-item .time {
     float: right;
-    width: 60px;
+    width: 90px;
     height: 18px;
     text-overflow: ellipsis;
     overflow: hidden;

@@ -1,0 +1,80 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_application_user_manager" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::ApplicationUserManager</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">UserManager&lt; ApplicationUser &gt;</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_application_user_manager_1aa4aed3044c40e887a5700be2b8edab20" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>StudentInternshipManagement.ApplicationUserManager.ApplicationUserManager</definition>
+        <argsstring>(IUserStore&lt; ApplicationUser &gt; store)</argsstring>
+        <name>ApplicationUserManager</name>
+        <param>
+          <type>IUserStore&lt; <ref refid="class_models_1_1_application_user" kindref="compound">ApplicationUser</ref> &gt;</type>
+          <declname>store</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/IdentityConfig.cs" line="52" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/IdentityConfig.cs" bodystart="52" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_application_user_manager_1aea21ec2e9e9331e106b78aaa9dbe5436" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_student_internship_management_1_1_application_user_manager" kindref="compound">ApplicationUserManager</ref></type>
+        <definition>static ApplicationUserManager StudentInternshipManagement.ApplicationUserManager.Create</definition>
+        <argsstring>(IdentityFactoryOptions&lt; ApplicationUserManager &gt; options, IOwinContext context)</argsstring>
+        <name>Create</name>
+        <param>
+          <type>IdentityFactoryOptions&lt; <ref refid="class_student_internship_management_1_1_application_user_manager" kindref="compound">ApplicationUserManager</ref> &gt;</type>
+          <declname>options</declname>
+        </param>
+        <param>
+          <type>IOwinContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/IdentityConfig.cs" line="57" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/IdentityConfig.cs" bodystart="57" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="36">
+        <label>UserManager&lt; ApplicationUser &gt;</label>
+      </node>
+      <node id="35">
+        <label>StudentInternshipManagement.ApplicationUserManager</label>
+        <link refid="class_student_internship_management_1_1_application_user_manager"/>
+        <childnode refid="36" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="38">
+        <label>UserManager&lt; ApplicationUser &gt;</label>
+      </node>
+      <node id="37">
+        <label>StudentInternshipManagement.ApplicationUserManager</label>
+        <link refid="class_student_internship_management_1_1_application_user_manager"/>
+        <childnode refid="38" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/IdentityConfig.cs" line="51" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/App_Start/IdentityConfig.cs" bodystart="50" bodyend="91"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_application_user_manager_1aa4aed3044c40e887a5700be2b8edab20" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::ApplicationUserManager</scope><name>ApplicationUserManager</name></member>
+      <member refid="class_student_internship_management_1_1_application_user_manager_1aea21ec2e9e9331e106b78aaa9dbe5436" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::ApplicationUserManager</scope><name>Create</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_repositories_1_1_admin_repository" kind="class" language="C#" prot="public">
+    <compoundname>Repositories::AdminRepository</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_repositories_1_1_admin_repository_1a0bd82e688f19487b8ceec420e139fe37" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref></type>
+        <definition>readonly WebContext Repositories.AdminRepository._context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <initializer>= new <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/AdminRepository.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/AdminRepository.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_repositories_1_1_admin_repository_1a8e43f25d2faa8a6eead059caf2f3956d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_admin" kindref="compound">Admin</ref> &gt;</type>
+        <definition>IQueryable&lt;Admin&gt; Repositories.AdminRepository.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/AdminRepository.cs" line="17" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/AdminRepository.cs" bodystart="17" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_admin_repository_1a9e67e6291897fb2e240e0c1d644a0a4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_admin" kindref="compound">Admin</ref></type>
+        <definition>Admin Repositories.AdminRepository.GetById</definition>
+        <argsstring>(string id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/AdminRepository.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/AdminRepository.cs" bodystart="29" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_admin_repository_1a82d67322f5c7efe3bc9e87dea689aca5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.AdminRepository.Add</definition>
+        <argsstring>(Admin admin)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_admin" kindref="compound">Admin</ref></type>
+          <declname>admin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/AdminRepository.cs" line="42" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/AdminRepository.cs" bodystart="42" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_admin_repository_1a80957b8a24cc76440d1fe1ab7ffee01d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.AdminRepository.Update</definition>
+        <argsstring>(Admin admin)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_admin" kindref="compound">Admin</ref></type>
+          <declname>admin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/AdminRepository.cs" line="56" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/AdminRepository.cs" bodystart="56" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_admin_repository_1a64c9f1e02aeaa7650223ca17c310cb39" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.AdminRepository.Delete</definition>
+        <argsstring>(Admin admin)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_admin" kindref="compound">Admin</ref></type>
+          <declname>admin</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/AdminRepository.cs" line="70" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/AdminRepository.cs" bodystart="70" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_admin_repository_1a65cc12c19da5233e262b915af42a56a8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Repositories.AdminRepository.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/AdminRepository.cs" line="88" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/AdminRepository.cs" bodystart="88" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="15">
+        <label>IDisposable</label>
+      </node>
+      <node id="14">
+        <label>Repositories.AdminRepository</label>
+        <link refid="class_repositories_1_1_admin_repository"/>
+        <childnode refid="15" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="17">
+        <label>IDisposable</label>
+      </node>
+      <node id="16">
+        <label>Repositories.AdminRepository</label>
+        <link refid="class_repositories_1_1_admin_repository"/>
+        <childnode refid="17" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/AdminRepository.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/AdminRepository.cs" bodystart="13" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_repositories_1_1_admin_repository_1a0bd82e688f19487b8ceec420e139fe37" prot="private" virt="non-virtual"><scope>Repositories::AdminRepository</scope><name>_context</name></member>
+      <member refid="class_repositories_1_1_admin_repository_1a82d67322f5c7efe3bc9e87dea689aca5" prot="public" virt="non-virtual"><scope>Repositories::AdminRepository</scope><name>Add</name></member>
+      <member refid="class_repositories_1_1_admin_repository_1a64c9f1e02aeaa7650223ca17c310cb39" prot="public" virt="non-virtual"><scope>Repositories::AdminRepository</scope><name>Delete</name></member>
+      <member refid="class_repositories_1_1_admin_repository_1a65cc12c19da5233e262b915af42a56a8" prot="public" virt="non-virtual"><scope>Repositories::AdminRepository</scope><name>Dispose</name></member>
+      <member refid="class_repositories_1_1_admin_repository_1a8e43f25d2faa8a6eead059caf2f3956d" prot="public" virt="non-virtual"><scope>Repositories::AdminRepository</scope><name>GetAll</name></member>
+      <member refid="class_repositories_1_1_admin_repository_1a9e67e6291897fb2e240e0c1d644a0a4b" prot="public" virt="non-virtual"><scope>Repositories::AdminRepository</scope><name>GetById</name></member>
+      <member refid="class_repositories_1_1_admin_repository_1a80957b8a24cc76440d1fe1ab7ffee01d" prot="public" virt="non-virtual"><scope>Repositories::AdminRepository</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

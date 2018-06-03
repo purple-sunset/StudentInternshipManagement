@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_services_1_1_semester_service" kind="class" language="C#" prot="public">
+    <compoundname>Services::SemesterService</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_services_1_1_semester_service_1a115f3acd46316acd2df7e4d6259aa6a6" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_repositories_1_1_semester_repository" kindref="compound">SemesterRepository</ref></type>
+        <definition>readonly SemesterRepository Services.SemesterService._repository</definition>
+        <argsstring></argsstring>
+        <name>_repository</name>
+        <initializer>=new <ref refid="class_repositories_1_1_semester_repository" kindref="compound">SemesterRepository</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SemesterService.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SemesterService.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_services_1_1_semester_service_1a95a06d405fda0e0a3ccf6213c32ee395" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_semester" kindref="compound">Semester</ref> &gt;</type>
+        <definition>IQueryable&lt;Semester&gt; Services.SemesterService.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SemesterService.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SemesterService.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_semester_service_1ad935ecc72d06283e177388aac03f1944" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_semester" kindref="compound">Semester</ref></type>
+        <definition>Semester Services.SemesterService.GetById</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SemesterService.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SemesterService.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_semester_service_1a86ab303d5840def77cc12aaf99f0b445" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.SemesterService.Add</definition>
+        <argsstring>(Semester semester)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_semester" kindref="compound">Semester</ref></type>
+          <declname>semester</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SemesterService.cs" line="24" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SemesterService.cs" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_semester_service_1a10e403f0f7921d3fa163cc6db791df49" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.SemesterService.Update</definition>
+        <argsstring>(Semester semester)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_semester" kindref="compound">Semester</ref></type>
+          <declname>semester</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SemesterService.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SemesterService.cs" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_semester_service_1a803beba8237150f247f0ed6c14dca566" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.SemesterService.Delete</definition>
+        <argsstring>(Semester semester)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_semester" kindref="compound">Semester</ref></type>
+          <declname>semester</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SemesterService.cs" line="34" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SemesterService.cs" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_semester_service_1ae89f9dec9f214afdb67ba91fd4dd52d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Services.SemesterService.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SemesterService.cs" line="39" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SemesterService.cs" bodystart="39" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="226">
+        <label>IDisposable</label>
+      </node>
+      <node id="225">
+        <label>Services.SemesterService</label>
+        <link refid="class_services_1_1_semester_service"/>
+        <childnode refid="226" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="228">
+        <label>IDisposable</label>
+      </node>
+      <node id="227">
+        <label>Services.SemesterService</label>
+        <link refid="class_services_1_1_semester_service"/>
+        <childnode refid="228" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SemesterService.cs" line="12" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/SemesterService.cs" bodystart="11" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_services_1_1_semester_service_1a115f3acd46316acd2df7e4d6259aa6a6" prot="private" virt="non-virtual"><scope>Services::SemesterService</scope><name>_repository</name></member>
+      <member refid="class_services_1_1_semester_service_1a86ab303d5840def77cc12aaf99f0b445" prot="public" virt="non-virtual"><scope>Services::SemesterService</scope><name>Add</name></member>
+      <member refid="class_services_1_1_semester_service_1a803beba8237150f247f0ed6c14dca566" prot="public" virt="non-virtual"><scope>Services::SemesterService</scope><name>Delete</name></member>
+      <member refid="class_services_1_1_semester_service_1ae89f9dec9f214afdb67ba91fd4dd52d0" prot="public" virt="non-virtual"><scope>Services::SemesterService</scope><name>Dispose</name></member>
+      <member refid="class_services_1_1_semester_service_1a95a06d405fda0e0a3ccf6213c32ee395" prot="public" virt="non-virtual"><scope>Services::SemesterService</scope><name>GetAll</name></member>
+      <member refid="class_services_1_1_semester_service_1ad935ecc72d06283e177388aac03f1944" prot="public" virt="non-virtual"><scope>Services::SemesterService</scope><name>GetById</name></member>
+      <member refid="class_services_1_1_semester_service_1a10e403f0f7921d3fa163cc6db791df49" prot="public" virt="non-virtual"><scope>Services::SemesterService</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

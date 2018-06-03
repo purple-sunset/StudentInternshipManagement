@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_repositories" kind="namespace" language="C#">
+    <compoundname>Repositories</compoundname>
+    <innerclass refid="class_repositories_1_1_admin_repository" prot="public">Repositories::AdminRepository</innerclass>
+    <innerclass refid="class_repositories_1_1_company_repository" prot="public">Repositories::CompanyRepository</innerclass>
+    <innerclass refid="class_repositories_1_1_company_training_major_repository" prot="public">Repositories::CompanyTrainingMajorRepository</innerclass>
+    <innerclass refid="class_repositories_1_1_department_repository" prot="public">Repositories::DepartmentRepository</innerclass>
+    <innerclass refid="class_repositories_1_1_group_repository" prot="public">Repositories::GroupRepository</innerclass>
+    <innerclass refid="class_repositories_1_1_internship_repository" prot="public">Repositories::InternshipRepository</innerclass>
+    <innerclass refid="class_repositories_1_1_learning_class_repository" prot="public">Repositories::LearningClassRepository</innerclass>
+    <innerclass refid="class_repositories_1_1_learning_class_student_repository" prot="public">Repositories::LearningClassStudentRepository</innerclass>
+    <innerclass refid="class_repositories_1_1_message_repository" prot="public">Repositories::MessageRepository</innerclass>
+    <innerclass refid="class_repositories_1_1_news_repository" prot="public">Repositories::NewsRepository</innerclass>
+    <innerclass refid="class_repositories_1_1_notification_repository" prot="public">Repositories::NotificationRepository</innerclass>
+    <innerclass refid="class_repositories_1_1_semester_repository" prot="public">Repositories::SemesterRepository</innerclass>
+    <innerclass refid="class_repositories_1_1_statistic_repository" prot="public">Repositories::StatisticRepository</innerclass>
+    <innerclass refid="class_repositories_1_1_student_class_repository" prot="public">Repositories::StudentClassRepository</innerclass>
+    <innerclass refid="class_repositories_1_1_student_repository" prot="public">Repositories::StudentRepository</innerclass>
+    <innerclass refid="class_repositories_1_1_subject_repository" prot="public">Repositories::SubjectRepository</innerclass>
+    <innerclass refid="class_repositories_1_1_teacher_repository" prot="public">Repositories::TeacherRepository</innerclass>
+    <innerclass refid="class_repositories_1_1_training_major_repository" prot="public">Repositories::TrainingMajorRepository</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/AdminRepository.cs" line="12" column="1"/>
+  </compounddef>
+</doxygen>

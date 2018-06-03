@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_repositories_1_1_statistic_repository" kind="class" language="C#" prot="public">
+    <compoundname>Repositories::StatisticRepository</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_repositories_1_1_statistic_repository_1aff5c51ee99462eb0f4b575e5aeeb55cd" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref></type>
+        <definition>readonly WebContext Repositories.StatisticRepository._context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <initializer>= new <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StatisticRepository.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StatisticRepository.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_repositories_1_1_statistic_repository_1a132c952803b4b205520abc6645b7298b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_statistic" kindref="compound">Statistic</ref> &gt;</type>
+        <definition>IQueryable&lt;Statistic&gt; Repositories.StatisticRepository.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StatisticRepository.cs" line="17" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StatisticRepository.cs" bodystart="17" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_statistic_repository_1a846e36b58289d153d76c855febff7b75" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_statistic" kindref="compound">Statistic</ref></type>
+        <definition>Statistic Repositories.StatisticRepository.GetById</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StatisticRepository.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StatisticRepository.cs" bodystart="29" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_statistic_repository_1ad5f3d545c6a5a1c6d404fca29b189a34" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.StatisticRepository.Add</definition>
+        <argsstring>(Statistic statistic)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_statistic" kindref="compound">Statistic</ref></type>
+          <declname>statistic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StatisticRepository.cs" line="42" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StatisticRepository.cs" bodystart="42" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_statistic_repository_1a631ede70e8a610d0a2ee3b0bcb1effc8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.StatisticRepository.Update</definition>
+        <argsstring>(Statistic statistic)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_statistic" kindref="compound">Statistic</ref></type>
+          <declname>statistic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StatisticRepository.cs" line="56" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StatisticRepository.cs" bodystart="56" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_statistic_repository_1a0af75f005a0f20b18497007ebdfcfa7b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.StatisticRepository.Delete</definition>
+        <argsstring>(Statistic statistic)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_statistic" kindref="compound">Statistic</ref></type>
+          <declname>statistic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StatisticRepository.cs" line="70" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StatisticRepository.cs" bodystart="70" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_statistic_repository_1a774085db07c5b26316af7d1f6c15c25f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Repositories.StatisticRepository.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StatisticRepository.cs" line="88" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StatisticRepository.cs" bodystart="88" bodyend="91"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="235">
+        <label>Repositories.StatisticRepository</label>
+        <link refid="class_repositories_1_1_statistic_repository"/>
+        <childnode refid="236" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="236">
+        <label>IDisposable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="237">
+        <label>Repositories.StatisticRepository</label>
+        <link refid="class_repositories_1_1_statistic_repository"/>
+        <childnode refid="238" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="238">
+        <label>IDisposable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StatisticRepository.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/StatisticRepository.cs" bodystart="13" bodyend="92"/>
+    <listofallmembers>
+      <member refid="class_repositories_1_1_statistic_repository_1aff5c51ee99462eb0f4b575e5aeeb55cd" prot="private" virt="non-virtual"><scope>Repositories::StatisticRepository</scope><name>_context</name></member>
+      <member refid="class_repositories_1_1_statistic_repository_1ad5f3d545c6a5a1c6d404fca29b189a34" prot="public" virt="non-virtual"><scope>Repositories::StatisticRepository</scope><name>Add</name></member>
+      <member refid="class_repositories_1_1_statistic_repository_1a0af75f005a0f20b18497007ebdfcfa7b" prot="public" virt="non-virtual"><scope>Repositories::StatisticRepository</scope><name>Delete</name></member>
+      <member refid="class_repositories_1_1_statistic_repository_1a774085db07c5b26316af7d1f6c15c25f" prot="public" virt="non-virtual"><scope>Repositories::StatisticRepository</scope><name>Dispose</name></member>
+      <member refid="class_repositories_1_1_statistic_repository_1a132c952803b4b205520abc6645b7298b" prot="public" virt="non-virtual"><scope>Repositories::StatisticRepository</scope><name>GetAll</name></member>
+      <member refid="class_repositories_1_1_statistic_repository_1a846e36b58289d153d76c855febff7b75" prot="public" virt="non-virtual"><scope>Repositories::StatisticRepository</scope><name>GetById</name></member>
+      <member refid="class_repositories_1_1_statistic_repository_1a631ede70e8a610d0a2ee3b0bcb1effc8" prot="public" virt="non-virtual"><scope>Repositories::StatisticRepository</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

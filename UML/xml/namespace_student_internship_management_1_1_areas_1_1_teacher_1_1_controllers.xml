@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers" kind="namespace" language="C#">
+    <compoundname>StudentInternshipManagement::Areas::Teacher::Controllers</compoundname>
+    <innerclass refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_controllers_1_1_profile_controller" prot="public">StudentInternshipManagement::Areas::Teacher::Controllers::ProfileController</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/Controllers/ProfileController.cs" line="12" column="1"/>
+  </compounddef>
+</doxygen>

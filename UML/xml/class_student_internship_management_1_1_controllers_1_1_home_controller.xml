@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_controllers_1_1_home_controller" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::Controllers::HomeController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Controller</basecompoundref>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_controllers_1_1_home_controller_1a39fd8acf93c094a7d25180afec892b0b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Controllers.HomeController.Index</definition>
+        <argsstring>()</argsstring>
+        <name>Index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/HomeController.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/HomeController.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="117">
+        <label>StudentInternshipManagement.Controllers.HomeController</label>
+        <link refid="class_student_internship_management_1_1_controllers_1_1_home_controller"/>
+        <childnode refid="118" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="118">
+        <label>Controller</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="119">
+        <label>StudentInternshipManagement.Controllers.HomeController</label>
+        <link refid="class_student_internship_management_1_1_controllers_1_1_home_controller"/>
+        <childnode refid="120" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="120">
+        <label>Controller</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/HomeController.cs" line="18" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Controllers/HomeController.cs" bodystart="17" bodyend="23"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_controllers_1_1_home_controller_1a39fd8acf93c094a7d25180afec892b0b" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Controllers::HomeController</scope><name>Index</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

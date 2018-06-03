@@ -12,15 +12,15 @@ namespace Models
         public int NewsId { get; set; }
 
         [Required]
-        [MaxLength(50)]
+        [MaxLength(100)]
         public string Title { get; set; }
 
         [Required]
-        [MaxLength(500)]
+        [MaxLength(1000)]
         public string Content { get; set; }
 
         [Required]
-        [DataType(DataType.DateTime)]
+        [DataType(DataType.Date)]
         public DateTime Time { get; set; }
     }
 }

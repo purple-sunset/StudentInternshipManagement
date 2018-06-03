@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_areas_1_1_teacher_1_1_teacher_area_registration" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::Areas::Teacher::TeacherAreaRegistration</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">AreaRegistration</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_student_internship_management_1_1_areas_1_1_teacher_1_1_teacher_area_registration_1a4da4a8e06e161a040773f02d1f52a359" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>override string</type>
+        <definition>override string StudentInternshipManagement.Areas.Teacher.TeacherAreaRegistration.AreaName</definition>
+        <argsstring></argsstring>
+        <name>AreaName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/TeacherAreaRegistration.cs" line="7" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/TeacherAreaRegistration.cs" bodystart="8" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_teacher_1_1_teacher_area_registration_1a0cdc1479f3e2355be98ca874b61df0e6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void StudentInternshipManagement.Areas.Teacher.TeacherAreaRegistration.RegisterArea</definition>
+        <argsstring>(AreaRegistrationContext context)</argsstring>
+        <name>RegisterArea</name>
+        <param>
+          <type>AreaRegistrationContext</type>
+          <declname>context</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/TeacherAreaRegistration.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/TeacherAreaRegistration.cs" bodystart="15" bodyend="22"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="291">
+        <label>StudentInternshipManagement.Areas.Teacher.TeacherAreaRegistration</label>
+        <link refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_teacher_area_registration"/>
+        <childnode refid="292" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="292">
+        <label>AreaRegistration</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="293">
+        <label>StudentInternshipManagement.Areas.Teacher.TeacherAreaRegistration</label>
+        <link refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_teacher_area_registration"/>
+        <childnode refid="294" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="294">
+        <label>AreaRegistration</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/TeacherAreaRegistration.cs" line="6" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Teacher/TeacherAreaRegistration.cs" bodystart="5" bodyend="23"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_teacher_area_registration_1a4da4a8e06e161a040773f02d1f52a359" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Teacher::TeacherAreaRegistration</scope><name>AreaName</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_teacher_1_1_teacher_area_registration_1a0cdc1479f3e2355be98ca874b61df0e6" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Teacher::TeacherAreaRegistration</scope><name>RegisterArea</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="dir_8153579474e3295de1c0c4d9e9076b8b" kind="dir">
+    <compoundname>C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories</compoundname>
+    <innerdir refid="dir_6efe063f0b0656fd0258697127a56828">C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/obj</innerdir>
+    <innerdir refid="dir_2aae534de6543d2d27c7df986344d826">C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/Properties</innerdir>
+    <innerfile refid="_admin_repository_8cs">AdminRepository.cs</innerfile>
+    <innerfile refid="_company_repository_8cs">CompanyRepository.cs</innerfile>
+    <innerfile refid="_company_training_major_repository_8cs">CompanyTrainingMajorRepository.cs</innerfile>
+    <innerfile refid="_department_repository_8cs">DepartmentRepository.cs</innerfile>
+    <innerfile refid="_group_repository_8cs">GroupRepository.cs</innerfile>
+    <innerfile refid="_internship_repository_8cs">InternshipRepository.cs</innerfile>
+    <innerfile refid="_learning_class_repository_8cs">LearningClassRepository.cs</innerfile>
+    <innerfile refid="_learning_class_student_repository_8cs">LearningClassStudentRepository.cs</innerfile>
+    <innerfile refid="_message_repository_8cs">MessageRepository.cs</innerfile>
+    <innerfile refid="_news_repository_8cs">NewsRepository.cs</innerfile>
+    <innerfile refid="_notification_repository_8cs">NotificationRepository.cs</innerfile>
+    <innerfile refid="_semester_repository_8cs">SemesterRepository.cs</innerfile>
+    <innerfile refid="_statistic_repository_8cs">StatisticRepository.cs</innerfile>
+    <innerfile refid="_student_class_repository_8cs">StudentClassRepository.cs</innerfile>
+    <innerfile refid="_student_repository_8cs">StudentRepository.cs</innerfile>
+    <innerfile refid="_subject_repository_8cs">SubjectRepository.cs</innerfile>
+    <innerfile refid="_teacher_repository_8cs">TeacherRepository.cs</innerfile>
+    <innerfile refid="_training_major_repository_8cs">TrainingMajorRepository.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/"/>
+  </compounddef>
+</doxygen>

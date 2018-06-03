@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_services_1_1_statistic_service" kind="class" language="C#" prot="public">
+    <compoundname>Services::StatisticService</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_services_1_1_statistic_service_1ac1d5cb2c8388fb6aa7dc250fb83982f4" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_repositories_1_1_statistic_repository" kindref="compound">StatisticRepository</ref></type>
+        <definition>readonly StatisticRepository Services.StatisticService._repository</definition>
+        <argsstring></argsstring>
+        <name>_repository</name>
+        <initializer>=new <ref refid="class_repositories_1_1_statistic_repository" kindref="compound">StatisticRepository</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StatisticService.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StatisticService.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_services_1_1_statistic_service_1acab088c0e4b42a924c0c82116d197903" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_statistic" kindref="compound">Statistic</ref> &gt;</type>
+        <definition>IQueryable&lt;Statistic&gt; Services.StatisticService.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StatisticService.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StatisticService.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_statistic_service_1a66fa6cdf0e27fe1e868757194b0d2a19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_statistic" kindref="compound">Statistic</ref></type>
+        <definition>Statistic Services.StatisticService.GetById</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StatisticService.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StatisticService.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_statistic_service_1a1ed47089f86ab8611c9ccfcb2091b3d6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.StatisticService.Add</definition>
+        <argsstring>(Statistic statistic)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_statistic" kindref="compound">Statistic</ref></type>
+          <declname>statistic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StatisticService.cs" line="24" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StatisticService.cs" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_statistic_service_1abbbe292c911f25bc7d40c5675275a70b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.StatisticService.Update</definition>
+        <argsstring>(Statistic statistic)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_statistic" kindref="compound">Statistic</ref></type>
+          <declname>statistic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StatisticService.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StatisticService.cs" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_statistic_service_1ab429cb911abd360535697b4829b0ce76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.StatisticService.Delete</definition>
+        <argsstring>(Statistic statistic)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_statistic" kindref="compound">Statistic</ref></type>
+          <declname>statistic</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StatisticService.cs" line="34" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StatisticService.cs" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_statistic_service_1aeea1650f8c42e53680731a8634640dfe" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Services.StatisticService.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StatisticService.cs" line="39" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StatisticService.cs" bodystart="39" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="239">
+        <label>Services.StatisticService</label>
+        <link refid="class_services_1_1_statistic_service"/>
+        <childnode refid="240" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="240">
+        <label>IDisposable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="241">
+        <label>Services.StatisticService</label>
+        <link refid="class_services_1_1_statistic_service"/>
+        <childnode refid="242" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="242">
+        <label>IDisposable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StatisticService.cs" line="12" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/StatisticService.cs" bodystart="11" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_services_1_1_statistic_service_1ac1d5cb2c8388fb6aa7dc250fb83982f4" prot="private" virt="non-virtual"><scope>Services::StatisticService</scope><name>_repository</name></member>
+      <member refid="class_services_1_1_statistic_service_1a1ed47089f86ab8611c9ccfcb2091b3d6" prot="public" virt="non-virtual"><scope>Services::StatisticService</scope><name>Add</name></member>
+      <member refid="class_services_1_1_statistic_service_1ab429cb911abd360535697b4829b0ce76" prot="public" virt="non-virtual"><scope>Services::StatisticService</scope><name>Delete</name></member>
+      <member refid="class_services_1_1_statistic_service_1aeea1650f8c42e53680731a8634640dfe" prot="public" virt="non-virtual"><scope>Services::StatisticService</scope><name>Dispose</name></member>
+      <member refid="class_services_1_1_statistic_service_1acab088c0e4b42a924c0c82116d197903" prot="public" virt="non-virtual"><scope>Services::StatisticService</scope><name>GetAll</name></member>
+      <member refid="class_services_1_1_statistic_service_1a66fa6cdf0e27fe1e868757194b0d2a19" prot="public" virt="non-virtual"><scope>Services::StatisticService</scope><name>GetById</name></member>
+      <member refid="class_services_1_1_statistic_service_1abbbe292c911f25bc7d40c5675275a70b" prot="public" virt="non-virtual"><scope>Services::StatisticService</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

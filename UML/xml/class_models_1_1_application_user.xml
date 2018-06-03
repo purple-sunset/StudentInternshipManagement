@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_models_1_1_application_user" kind="class" language="C#" prot="public">
+    <compoundname>Models::ApplicationUser</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IdentityUser</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_models_1_1_application_user_1afa09a65456a406e799cdb2850decb3b1" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ICollection&lt; <ref refid="class_models_1_1_notification" kindref="compound">Notification</ref> &gt;</type>
+        <definition>virtual ICollection&lt;Notification&gt; Models.ApplicationUser.Notifications</definition>
+        <argsstring></argsstring>
+        <name>Notifications</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/IdentityModels.cs" line="20" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/IdentityModels.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_models_1_1_application_user_1a94f08fe175a533e7aa234a07ada08bda" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>async Task&lt; ClaimsIdentity &gt;</type>
+        <definition>async Task&lt;ClaimsIdentity&gt; Models.ApplicationUser.GenerateUserIdentityAsync</definition>
+        <argsstring>(UserManager&lt; ApplicationUser &gt; manager)</argsstring>
+        <name>GenerateUserIdentityAsync</name>
+        <param>
+          <type>UserManager&lt; <ref refid="class_models_1_1_application_user" kindref="compound">ApplicationUser</ref> &gt;</type>
+          <declname>manager</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/IdentityModels.cs" line="12" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/IdentityModels.cs" bodystart="12" bodyend="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="32">
+        <label>IdentityUser</label>
+      </node>
+      <node id="31">
+        <label>Models.ApplicationUser</label>
+        <link refid="class_models_1_1_application_user"/>
+        <childnode refid="32" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="34">
+        <label>IdentityUser</label>
+      </node>
+      <node id="33">
+        <label>Models.ApplicationUser</label>
+        <link refid="class_models_1_1_application_user"/>
+        <childnode refid="34" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/IdentityModels.cs" line="11" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/IdentityModels.cs" bodystart="10" bodyend="21"/>
+    <listofallmembers>
+      <member refid="class_models_1_1_application_user_1a94f08fe175a533e7aa234a07ada08bda" prot="public" virt="non-virtual"><scope>Models::ApplicationUser</scope><name>GenerateUserIdentityAsync</name></member>
+      <member refid="class_models_1_1_application_user_1afa09a65456a406e799cdb2850decb3b1" prot="public" virt="non-virtual"><scope>Models::ApplicationUser</scope><name>Notifications</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

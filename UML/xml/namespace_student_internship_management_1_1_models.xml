@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_student_internship_management_1_1_models" kind="namespace" language="C#">
+    <compoundname>StudentInternshipManagement::Models</compoundname>
+    <innerclass refid="class_student_internship_management_1_1_models_1_1_change_password_view_model" prot="public">StudentInternshipManagement::Models::ChangePasswordViewModel</innerclass>
+    <innerclass refid="class_student_internship_management_1_1_models_1_1_external_login_confirmation_view_model" prot="public">StudentInternshipManagement::Models::ExternalLoginConfirmationViewModel</innerclass>
+    <innerclass refid="class_student_internship_management_1_1_models_1_1_external_login_list_view_model" prot="public">StudentInternshipManagement::Models::ExternalLoginListViewModel</innerclass>
+    <innerclass refid="class_student_internship_management_1_1_models_1_1_forgot_password_view_model" prot="public">StudentInternshipManagement::Models::ForgotPasswordViewModel</innerclass>
+    <innerclass refid="class_student_internship_management_1_1_models_1_1_forgot_view_model" prot="public">StudentInternshipManagement::Models::ForgotViewModel</innerclass>
+    <innerclass refid="class_student_internship_management_1_1_models_1_1_login_view_model" prot="public">StudentInternshipManagement::Models::LoginViewModel</innerclass>
+    <innerclass refid="class_student_internship_management_1_1_models_1_1_register_view_model" prot="public">StudentInternshipManagement::Models::RegisterViewModel</innerclass>
+    <innerclass refid="class_student_internship_management_1_1_models_1_1_reset_password_view_model" prot="public">StudentInternshipManagement::Models::ResetPasswordViewModel</innerclass>
+    <innerclass refid="class_student_internship_management_1_1_models_1_1_send_code_view_model" prot="public">StudentInternshipManagement::Models::SendCodeViewModel</innerclass>
+    <innerclass refid="class_student_internship_management_1_1_models_1_1_verify_code_view_model" prot="public">StudentInternshipManagement::Models::VerifyCodeViewModel</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Models/AccountViewModels.cs" line="5" column="1"/>
+  </compounddef>
+</doxygen>

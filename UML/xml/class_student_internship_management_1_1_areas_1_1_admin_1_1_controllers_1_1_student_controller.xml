@@ -1,0 +1,230 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::Areas::Admin::Controllers::StudentController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Controller</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1a94e5bda7897cf7a37bb825f8a3419990" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_services_1_1_student_service" kindref="compound">StudentService</ref></type>
+        <definition>readonly StudentService StudentInternshipManagement.Areas.Admin.Controllers.StudentController._service</definition>
+        <argsstring></argsstring>
+        <name>_service</name>
+        <initializer>=new <ref refid="class_services_1_1_student_service" kindref="compound">StudentService</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" line="18" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1a4b525932a56b08d7510abc5f9a4bddde" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_services_1_1_student_class_service" kindref="compound">StudentClassService</ref></type>
+        <definition>readonly StudentClassService StudentInternshipManagement.Areas.Admin.Controllers.StudentController._classServiceservice</definition>
+        <argsstring></argsstring>
+        <name>_classServiceservice</name>
+        <initializer>= new <ref refid="class_services_1_1_student_class_service" kindref="compound">StudentClassService</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1ad1ba74e40783b789b456b0b50da41abc" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_services_1_1_learning_class_service" kindref="compound">LearningClassService</ref></type>
+        <definition>readonly LearningClassService StudentInternshipManagement.Areas.Admin.Controllers.StudentController._learningClassService</definition>
+        <argsstring></argsstring>
+        <name>_learningClassService</name>
+        <initializer>=new <ref refid="class_services_1_1_learning_class_service" kindref="compound">LearningClassService</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" line="20" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1a47a044f7a9f57d29f1dd1e44c12891c7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.StudentController.Index</definition>
+        <argsstring>()</argsstring>
+        <name>Index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" line="22" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" bodystart="22" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1a8b8f616507769f803f2dbddeee87881b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.StudentController.Students_Read</definition>
+        <argsstring>([DataSourceRequest]DataSourceRequest request)</argsstring>
+        <name>Students_Read</name>
+        <param>
+          <attributes>[DataSourceRequest]</attributes>
+          <type>DataSourceRequest</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" bodystart="29" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1ac752630d1d6d807eb9fcbf56ec617460" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.StudentController.Students_Create</definition>
+        <argsstring>([DataSourceRequest]DataSourceRequest request, global::Models.Student student)</argsstring>
+        <name>Students_Create</name>
+        <param>
+          <attributes>[DataSourceRequest]</attributes>
+          <type>DataSourceRequest</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>global::Models.Student</type>
+          <declname>student</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" line="45" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" bodystart="45" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1acf7a195a7ce4f9169e6231aea8f6cab9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.StudentController.Students_Update</definition>
+        <argsstring>([DataSourceRequest]DataSourceRequest request, global::Models.Student student)</argsstring>
+        <name>Students_Update</name>
+        <param>
+          <attributes>[DataSourceRequest]</attributes>
+          <type>DataSourceRequest</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>global::Models.Student</type>
+          <declname>student</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" line="67" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" bodystart="67" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1a72926540353a0df5db22267e97b5a097" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.StudentController.Students_Destroy</definition>
+        <argsstring>([DataSourceRequest]DataSourceRequest request, global::Models.Student student)</argsstring>
+        <name>Students_Destroy</name>
+        <param>
+          <attributes>[DataSourceRequest]</attributes>
+          <type>DataSourceRequest</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type>global::Models.Student</type>
+          <declname>student</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" line="89" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" bodystart="89" bodyend="108"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1ab0c6755d28513a5f881171a1a057faca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.StudentController.GetLearningClassList</definition>
+        <argsstring>(string studentId, [DataSourceRequest]DataSourceRequest request)</argsstring>
+        <name>GetLearningClassList</name>
+        <param>
+          <type>string</type>
+          <declname>studentId</declname>
+        </param>
+        <param>
+          <attributes>[DataSourceRequest]</attributes>
+          <type>DataSourceRequest</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" line="110" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" bodystart="110" bodyend="121"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1ae490ec892de231ce59718813e92b8a64" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void StudentInternshipManagement.Areas.Admin.Controllers.StudentController.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" line="123" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" bodystart="123" bodyend="128"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="263">
+        <label>StudentInternshipManagement.Areas.Admin.Controllers.StudentController</label>
+        <link refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller"/>
+        <childnode refid="264" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="264">
+        <label>Controller</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="265">
+        <label>StudentInternshipManagement.Areas.Admin.Controllers.StudentController</label>
+        <link refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller"/>
+        <childnode refid="266" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="266">
+        <label>Controller</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" line="17" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/StudentController.cs" bodystart="16" bodyend="129"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1a4b525932a56b08d7510abc5f9a4bddde" prot="private" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::StudentController</scope><name>_classServiceservice</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1ad1ba74e40783b789b456b0b50da41abc" prot="private" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::StudentController</scope><name>_learningClassService</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1a94e5bda7897cf7a37bb825f8a3419990" prot="private" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::StudentController</scope><name>_service</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1ae490ec892de231ce59718813e92b8a64" prot="protected" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::StudentController</scope><name>Dispose</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1ab0c6755d28513a5f881171a1a057faca" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::StudentController</scope><name>GetLearningClassList</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1a47a044f7a9f57d29f1dd1e44c12891c7" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::StudentController</scope><name>Index</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1ac752630d1d6d807eb9fcbf56ec617460" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::StudentController</scope><name>Students_Create</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1a72926540353a0df5db22267e97b5a097" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::StudentController</scope><name>Students_Destroy</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1a8b8f616507769f803f2dbddeee87881b" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::StudentController</scope><name>Students_Read</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_student_controller_1acf7a195a7ce4f9169e6231aea8f6cab9" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::StudentController</scope><name>Students_Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

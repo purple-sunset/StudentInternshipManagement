@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_models_1_1_web_context" kind="class" language="C#" prot="public">
+    <compoundname>Models::WebContext</compoundname>
+    <basecompoundref refid="class_models_1_1_application_db_context" prot="public" virt="non-virtual">Models.ApplicationDbContext</basecompoundref>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_models_1_1_web_context_1a08462f65bffc182aae7dd258fd3abd78" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_student" kindref="compound">Student</ref> &gt;</type>
+        <definition>DbSet&lt;Student&gt; Models.WebContext.Students</definition>
+        <argsstring></argsstring>
+        <name>Students</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="19" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_web_context_1a24d2c98b7edf3b3f6f7b7d447f1c6db5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_teacher" kindref="compound">Teacher</ref> &gt;</type>
+        <definition>DbSet&lt;Teacher&gt; Models.WebContext.Teachers</definition>
+        <argsstring></argsstring>
+        <name>Teachers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="21" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_web_context_1a41504c1b2dece6fd830733214dc87db7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_admin" kindref="compound">Admin</ref> &gt;</type>
+        <definition>DbSet&lt;Admin&gt; Models.WebContext.Admins</definition>
+        <argsstring></argsstring>
+        <name>Admins</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="23" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_web_context_1adc7870190c9044d1e449986d7eed1dc3" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_department" kindref="compound">Department</ref> &gt;</type>
+        <definition>DbSet&lt;Department&gt; Models.WebContext.Departments</definition>
+        <argsstring></argsstring>
+        <name>Departments</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="25" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="25" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_web_context_1ad70124a84db95b4af13adfe0334c5036" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_company" kindref="compound">Company</ref> &gt;</type>
+        <definition>DbSet&lt;Company&gt; Models.WebContext.Companies</definition>
+        <argsstring></argsstring>
+        <name>Companies</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="27" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_web_context_1a092cc7618dc5dcf7b0c7d236a11045f7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_semester" kindref="compound">Semester</ref> &gt;</type>
+        <definition>DbSet&lt;Semester&gt; Models.WebContext.Semesters</definition>
+        <argsstring></argsstring>
+        <name>Semesters</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="29" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_web_context_1ac77e2666c9a2d68c1ac096d85f34a823" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_subject" kindref="compound">Subject</ref> &gt;</type>
+        <definition>DbSet&lt;Subject&gt; Models.WebContext.Subjects</definition>
+        <argsstring></argsstring>
+        <name>Subjects</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="31" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_web_context_1a2714557416362754d22887519b348fbb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_student_class" kindref="compound">StudentClass</ref> &gt;</type>
+        <definition>DbSet&lt;StudentClass&gt; Models.WebContext.StudentClasses</definition>
+        <argsstring></argsstring>
+        <name>StudentClasses</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="33" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_web_context_1ac0e455964156a4f6d521c17696a2ccff" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_learning_class" kindref="compound">LearningClass</ref> &gt;</type>
+        <definition>DbSet&lt;LearningClass&gt; Models.WebContext.LearningClasses</definition>
+        <argsstring></argsstring>
+        <name>LearningClasses</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="35" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_web_context_1ac3c2ad7fa7ccdeb3b8ab8bd51b0319a0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_learning_class_student" kindref="compound">LearningClassStudent</ref> &gt;</type>
+        <definition>DbSet&lt;LearningClassStudent&gt; Models.WebContext.LearningClassStudents</definition>
+        <argsstring></argsstring>
+        <name>LearningClassStudents</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="37" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_web_context_1a4db768f3e2cd9ff91e14a28034d3f5d0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_training_major" kindref="compound">TrainingMajor</ref> &gt;</type>
+        <definition>DbSet&lt;TrainingMajor&gt; Models.WebContext.TrainingMajors</definition>
+        <argsstring></argsstring>
+        <name>TrainingMajors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="39" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_web_context_1aa1e44084500cce120a909a8c7fd3c120" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_company_training_major" kindref="compound">CompanyTrainingMajor</ref> &gt;</type>
+        <definition>DbSet&lt;CompanyTrainingMajor&gt; Models.WebContext.CompanyTrainingMajors</definition>
+        <argsstring></argsstring>
+        <name>CompanyTrainingMajors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="41" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_web_context_1a466804518086db5c5cb2d9dd801d1486" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_internship" kindref="compound">Internship</ref> &gt;</type>
+        <definition>DbSet&lt;Internship&gt; Models.WebContext.Internships</definition>
+        <argsstring></argsstring>
+        <name>Internships</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="43" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="43" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_web_context_1af6eb3a5d9dc196cb2778fe142782194a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_group" kindref="compound">Group</ref> &gt;</type>
+        <definition>DbSet&lt;Group&gt; Models.WebContext.Groups</definition>
+        <argsstring></argsstring>
+        <name>Groups</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="45" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_web_context_1aec42675dca04fa853c2c4a0241bc8a1c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_news" kindref="compound">News</ref> &gt;</type>
+        <definition>DbSet&lt;News&gt; Models.WebContext.Newses</definition>
+        <argsstring></argsstring>
+        <name>Newses</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="47" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_web_context_1a86677c4e2b4d100add6f54363f947196" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_notification" kindref="compound">Notification</ref> &gt;</type>
+        <definition>DbSet&lt;Notification&gt; Models.WebContext.Notifications</definition>
+        <argsstring></argsstring>
+        <name>Notifications</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="49" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_web_context_1a3bc3e85d3afb665634bcebbd1c04cce5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_message" kindref="compound">Message</ref> &gt;</type>
+        <definition>DbSet&lt;Message&gt; Models.WebContext.Messages</definition>
+        <argsstring></argsstring>
+        <name>Messages</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="51" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_web_context_1a9798e542441035579a5d594c20e9ec89" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>DbSet&lt; <ref refid="class_models_1_1_statistic" kindref="compound">Statistic</ref> &gt;</type>
+        <definition>DbSet&lt;Statistic&gt; Models.WebContext.Statistics</definition>
+        <argsstring></argsstring>
+        <name>Statistics</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="53" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="53" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_models_1_1_web_context_1a9e4a78cd01929a8a0349e0895f739321" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Models.WebContext.WebContext</definition>
+        <argsstring>()</argsstring>
+        <name>WebContext</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="7" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="7" bodyend="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="324">
+        <label>ApplicationDbContext</label>
+        <link refid="class_models_1_1_application_db_context"/>
+        <childnode refid="325" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="323">
+        <label>Models.WebContext</label>
+        <link refid="class_models_1_1_web_context"/>
+        <childnode refid="324" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="325">
+        <label>IdentityDbContext&lt; ApplicationUser &gt;</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="327">
+        <label>ApplicationDbContext</label>
+        <link refid="class_models_1_1_application_db_context"/>
+        <childnode refid="328" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="326">
+        <label>Models.WebContext</label>
+        <link refid="class_models_1_1_web_context"/>
+        <childnode refid="327" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="328">
+        <label>IdentityDbContext&lt; ApplicationUser &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" line="6" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/WebContext.cs" bodystart="5" bodyend="54"/>
+    <listofallmembers>
+      <member refid="class_models_1_1_web_context_1a41504c1b2dece6fd830733214dc87db7" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>Admins</name></member>
+      <member refid="class_models_1_1_application_db_context_1a9087b15263dda7332b605805e3a80314" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>ApplicationDbContext</name></member>
+      <member refid="class_models_1_1_web_context_1ad70124a84db95b4af13adfe0334c5036" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>Companies</name></member>
+      <member refid="class_models_1_1_web_context_1aa1e44084500cce120a909a8c7fd3c120" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>CompanyTrainingMajors</name></member>
+      <member refid="class_models_1_1_application_db_context_1aedb3506e014ef32a40c39e8e05fa1409" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>Create</name></member>
+      <member refid="class_models_1_1_web_context_1adc7870190c9044d1e449986d7eed1dc3" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>Departments</name></member>
+      <member refid="class_models_1_1_web_context_1af6eb3a5d9dc196cb2778fe142782194a" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>Groups</name></member>
+      <member refid="class_models_1_1_web_context_1a466804518086db5c5cb2d9dd801d1486" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>Internships</name></member>
+      <member refid="class_models_1_1_web_context_1ac0e455964156a4f6d521c17696a2ccff" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>LearningClasses</name></member>
+      <member refid="class_models_1_1_web_context_1ac3c2ad7fa7ccdeb3b8ab8bd51b0319a0" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>LearningClassStudents</name></member>
+      <member refid="class_models_1_1_web_context_1a3bc3e85d3afb665634bcebbd1c04cce5" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>Messages</name></member>
+      <member refid="class_models_1_1_web_context_1aec42675dca04fa853c2c4a0241bc8a1c" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>Newses</name></member>
+      <member refid="class_models_1_1_web_context_1a86677c4e2b4d100add6f54363f947196" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>Notifications</name></member>
+      <member refid="class_models_1_1_web_context_1a092cc7618dc5dcf7b0c7d236a11045f7" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>Semesters</name></member>
+      <member refid="class_models_1_1_web_context_1a9798e542441035579a5d594c20e9ec89" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>Statistics</name></member>
+      <member refid="class_models_1_1_web_context_1a2714557416362754d22887519b348fbb" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>StudentClasses</name></member>
+      <member refid="class_models_1_1_web_context_1a08462f65bffc182aae7dd258fd3abd78" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>Students</name></member>
+      <member refid="class_models_1_1_web_context_1ac77e2666c9a2d68c1ac096d85f34a823" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>Subjects</name></member>
+      <member refid="class_models_1_1_web_context_1a24d2c98b7edf3b3f6f7b7d447f1c6db5" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>Teachers</name></member>
+      <member refid="class_models_1_1_web_context_1a4db768f3e2cd9ff91e14a28034d3f5d0" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>TrainingMajors</name></member>
+      <member refid="class_models_1_1_web_context_1a9e4a78cd01929a8a0349e0895f739321" prot="public" virt="non-virtual"><scope>Models::WebContext</scope><name>WebContext</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

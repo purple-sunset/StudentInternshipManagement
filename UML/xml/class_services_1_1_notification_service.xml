@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_services_1_1_notification_service" kind="class" language="C#" prot="public">
+    <compoundname>Services::NotificationService</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_services_1_1_notification_service_1adc91b8c5e08812a3fd9383a9f09618ad" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_repositories_1_1_notification_repository" kindref="compound">NotificationRepository</ref></type>
+        <definition>readonly NotificationRepository Services.NotificationService._repository</definition>
+        <argsstring></argsstring>
+        <name>_repository</name>
+        <initializer>=new <ref refid="class_repositories_1_1_notification_repository" kindref="compound">NotificationRepository</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/NotificationService.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/NotificationService.cs" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_services_1_1_notification_service_1a31243a22d64792eb86d61b9ffb01c413" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_notification" kindref="compound">Notification</ref> &gt;</type>
+        <definition>IQueryable&lt;Notification&gt; Services.NotificationService.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/NotificationService.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/NotificationService.cs" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_notification_service_1a8e4a52d8885579f6cdc46244e3a11d2f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_notification" kindref="compound">Notification</ref></type>
+        <definition>Notification Services.NotificationService.GetById</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/NotificationService.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/NotificationService.cs" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_notification_service_1ad65c323016ad27b730d61384168cc6dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.NotificationService.Add</definition>
+        <argsstring>(Notification notification)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_notification" kindref="compound">Notification</ref></type>
+          <declname>notification</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/NotificationService.cs" line="24" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/NotificationService.cs" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_notification_service_1a15a78eb09a208a5d6b10f24e6e57b44c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.NotificationService.Update</definition>
+        <argsstring>(Notification notification)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_notification" kindref="compound">Notification</ref></type>
+          <declname>notification</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/NotificationService.cs" line="29" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/NotificationService.cs" bodystart="29" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_notification_service_1aed0efb43784935f9594525f51243ec4c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Services.NotificationService.Delete</definition>
+        <argsstring>(Notification notification)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_notification" kindref="compound">Notification</ref></type>
+          <declname>notification</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/NotificationService.cs" line="34" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/NotificationService.cs" bodystart="34" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_services_1_1_notification_service_1a4cfeac09db8369e06c81276ac48049f2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Services.NotificationService.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/NotificationService.cs" line="39" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/NotificationService.cs" bodystart="39" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="193">
+        <label>Services.NotificationService</label>
+        <link refid="class_services_1_1_notification_service"/>
+        <childnode refid="194" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="194">
+        <label>IDisposable</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="195">
+        <label>Services.NotificationService</label>
+        <link refid="class_services_1_1_notification_service"/>
+        <childnode refid="196" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="196">
+        <label>IDisposable</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/NotificationService.cs" line="12" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Services/NotificationService.cs" bodystart="11" bodyend="43"/>
+    <listofallmembers>
+      <member refid="class_services_1_1_notification_service_1adc91b8c5e08812a3fd9383a9f09618ad" prot="private" virt="non-virtual"><scope>Services::NotificationService</scope><name>_repository</name></member>
+      <member refid="class_services_1_1_notification_service_1ad65c323016ad27b730d61384168cc6dd" prot="public" virt="non-virtual"><scope>Services::NotificationService</scope><name>Add</name></member>
+      <member refid="class_services_1_1_notification_service_1aed0efb43784935f9594525f51243ec4c" prot="public" virt="non-virtual"><scope>Services::NotificationService</scope><name>Delete</name></member>
+      <member refid="class_services_1_1_notification_service_1a4cfeac09db8369e06c81276ac48049f2" prot="public" virt="non-virtual"><scope>Services::NotificationService</scope><name>Dispose</name></member>
+      <member refid="class_services_1_1_notification_service_1a31243a22d64792eb86d61b9ffb01c413" prot="public" virt="non-virtual"><scope>Services::NotificationService</scope><name>GetAll</name></member>
+      <member refid="class_services_1_1_notification_service_1a8e4a52d8885579f6cdc46244e3a11d2f" prot="public" virt="non-virtual"><scope>Services::NotificationService</scope><name>GetById</name></member>
+      <member refid="class_services_1_1_notification_service_1a15a78eb09a208a5d6b10f24e6e57b44c" prot="public" virt="non-virtual"><scope>Services::NotificationService</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

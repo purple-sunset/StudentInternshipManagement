@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="namespace_models" kind="namespace" language="C#">
+    <compoundname>Models</compoundname>
+    <innerclass refid="class_models_1_1_admin" prot="public">Models::Admin</innerclass>
+    <innerclass refid="class_models_1_1_application_db_context" prot="public">Models::ApplicationDbContext</innerclass>
+    <innerclass refid="class_models_1_1_application_user" prot="public">Models::ApplicationUser</innerclass>
+    <innerclass refid="class_models_1_1_company" prot="public">Models::Company</innerclass>
+    <innerclass refid="class_models_1_1_company_training_major" prot="public">Models::CompanyTrainingMajor</innerclass>
+    <innerclass refid="class_models_1_1_data_initializer" prot="public">Models::DataInitializer</innerclass>
+    <innerclass refid="class_models_1_1_department" prot="public">Models::Department</innerclass>
+    <innerclass refid="class_models_1_1_group" prot="public">Models::Group</innerclass>
+    <innerclass refid="class_models_1_1_internship" prot="public">Models::Internship</innerclass>
+    <innerclass refid="class_models_1_1_learning_class" prot="public">Models::LearningClass</innerclass>
+    <innerclass refid="class_models_1_1_learning_class_student" prot="public">Models::LearningClassStudent</innerclass>
+    <innerclass refid="class_models_1_1_message" prot="public">Models::Message</innerclass>
+    <innerclass refid="class_models_1_1_news" prot="public">Models::News</innerclass>
+    <innerclass refid="class_models_1_1_notification" prot="public">Models::Notification</innerclass>
+    <innerclass refid="class_models_1_1_semester" prot="public">Models::Semester</innerclass>
+    <innerclass refid="class_models_1_1_statistic" prot="public">Models::Statistic</innerclass>
+    <innerclass refid="class_models_1_1_student" prot="public">Models::Student</innerclass>
+    <innerclass refid="class_models_1_1_student_class" prot="public">Models::StudentClass</innerclass>
+    <innerclass refid="class_models_1_1_subject" prot="public">Models::Subject</innerclass>
+    <innerclass refid="class_models_1_1_teacher" prot="public">Models::Teacher</innerclass>
+    <innerclass refid="class_models_1_1_training_major" prot="public">Models::TrainingMajor</innerclass>
+    <innerclass refid="class_models_1_1_web_context" prot="public">Models::WebContext</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespace_models_1a037297d6cb70ea046f77888f84e10399" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>InternshipStatus</name>
+        <enumvalue id="namespace_models_1a037297d6cb70ea046f77888f84e10399a6205cf9436aee7ccb42779ac5e69bd3f" prot="public">
+          <name>Registered</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_models_1a037297d6cb70ea046f77888f84e10399a382ab522931673c11e398ead1b7b1678" prot="public">
+          <name>Accepted</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_models_1a037297d6cb70ea046f77888f84e10399a642a740fc514dd91723cec8569544cee" prot="public">
+          <name>OnTraining</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespace_models_1a037297d6cb70ea046f77888f84e10399af92965e2c8a7afb3c1b9a5c09a263636" prot="public">
+          <name>Done</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Enums.cs" line="10" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Enums.cs" bodystart="9" bodyend="15"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/Admin.cs" line="12" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_repositories_1_1_department_repository" kind="class" language="C#" prot="public">
+    <compoundname>Repositories::DepartmentRepository</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">IDisposable</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_repositories_1_1_department_repository_1a080c2ece271a2b76cd2bae633d276de5" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref></type>
+        <definition>readonly WebContext Repositories.DepartmentRepository._context</definition>
+        <argsstring></argsstring>
+        <name>_context</name>
+        <initializer>=new <ref refid="class_models_1_1_web_context" kindref="compound">WebContext</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/DepartmentRepository.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/DepartmentRepository.cs" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_repositories_1_1_department_repository_1a7b4453984ad4a631181ab1df165b18cd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>IQueryable&lt; <ref refid="class_models_1_1_department" kindref="compound">Department</ref> &gt;</type>
+        <definition>IQueryable&lt;Department&gt; Repositories.DepartmentRepository.GetAll</definition>
+        <argsstring>()</argsstring>
+        <name>GetAll</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/DepartmentRepository.cs" line="16" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/DepartmentRepository.cs" bodystart="16" bodyend="19"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_department_repository_1a45d9ed9c233d3b52a8dfb97e68f633f6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_models_1_1_department" kindref="compound">Department</ref></type>
+        <definition>Department Repositories.DepartmentRepository.GetById</definition>
+        <argsstring>(int id)</argsstring>
+        <name>GetById</name>
+        <param>
+          <type>int</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/DepartmentRepository.cs" line="20" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/DepartmentRepository.cs" bodystart="20" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_department_repository_1a341bb8aedff8e2827d63f623b64b9146" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.DepartmentRepository.Add</definition>
+        <argsstring>(Department department)</argsstring>
+        <name>Add</name>
+        <param>
+          <type><ref refid="class_models_1_1_department" kindref="compound">Department</ref></type>
+          <declname>department</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/DepartmentRepository.cs" line="33" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/DepartmentRepository.cs" bodystart="33" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_department_repository_1af9175315f64b479b55cfbcc7d2bd0194" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.DepartmentRepository.Update</definition>
+        <argsstring>(Department department)</argsstring>
+        <name>Update</name>
+        <param>
+          <type><ref refid="class_models_1_1_department" kindref="compound">Department</ref></type>
+          <declname>department</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/DepartmentRepository.cs" line="47" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/DepartmentRepository.cs" bodystart="47" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_department_repository_1a2c71f7ec83e4e91457b5688ce07dcf71" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Repositories.DepartmentRepository.Delete</definition>
+        <argsstring>(Department department)</argsstring>
+        <name>Delete</name>
+        <param>
+          <type><ref refid="class_models_1_1_department" kindref="compound">Department</ref></type>
+          <declname>department</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/DepartmentRepository.cs" line="61" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/DepartmentRepository.cs" bodystart="61" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="class_repositories_1_1_department_repository_1a8791a64c589b5ba840967bda0e9f1b45" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void Repositories.DepartmentRepository.Dispose</definition>
+        <argsstring>()</argsstring>
+        <name>Dispose</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/DepartmentRepository.cs" line="79" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/DepartmentRepository.cs" bodystart="79" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="86">
+        <label>IDisposable</label>
+      </node>
+      <node id="85">
+        <label>Repositories.DepartmentRepository</label>
+        <link refid="class_repositories_1_1_department_repository"/>
+        <childnode refid="86" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="88">
+        <label>IDisposable</label>
+      </node>
+      <node id="87">
+        <label>Repositories.DepartmentRepository</label>
+        <link refid="class_repositories_1_1_department_repository"/>
+        <childnode refid="88" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/DepartmentRepository.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Repositories/DepartmentRepository.cs" bodystart="12" bodyend="83"/>
+    <listofallmembers>
+      <member refid="class_repositories_1_1_department_repository_1a080c2ece271a2b76cd2bae633d276de5" prot="private" virt="non-virtual"><scope>Repositories::DepartmentRepository</scope><name>_context</name></member>
+      <member refid="class_repositories_1_1_department_repository_1a341bb8aedff8e2827d63f623b64b9146" prot="public" virt="non-virtual"><scope>Repositories::DepartmentRepository</scope><name>Add</name></member>
+      <member refid="class_repositories_1_1_department_repository_1a2c71f7ec83e4e91457b5688ce07dcf71" prot="public" virt="non-virtual"><scope>Repositories::DepartmentRepository</scope><name>Delete</name></member>
+      <member refid="class_repositories_1_1_department_repository_1a8791a64c589b5ba840967bda0e9f1b45" prot="public" virt="non-virtual"><scope>Repositories::DepartmentRepository</scope><name>Dispose</name></member>
+      <member refid="class_repositories_1_1_department_repository_1a7b4453984ad4a631181ab1df165b18cd" prot="public" virt="non-virtual"><scope>Repositories::DepartmentRepository</scope><name>GetAll</name></member>
+      <member refid="class_repositories_1_1_department_repository_1a45d9ed9c233d3b52a8dfb97e68f633f6" prot="public" virt="non-virtual"><scope>Repositories::DepartmentRepository</scope><name>GetById</name></member>
+      <member refid="class_repositories_1_1_department_repository_1af9175315f64b479b55cfbcc7d2bd0194" prot="public" virt="non-virtual"><scope>Repositories::DepartmentRepository</scope><name>Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

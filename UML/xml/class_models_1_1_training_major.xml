@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_models_1_1_training_major" kind="class" language="C#" prot="public">
+    <compoundname>Models::TrainingMajor</compoundname>
+      <sectiondef kind="property">
+      <memberdef kind="property" id="class_models_1_1_training_major_1a0b66e86ea610c701aa5d0f6fddaa35fa" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>int</type>
+        <definition>int Models.TrainingMajor.TrainingMajorId</definition>
+        <argsstring></argsstring>
+        <name>TrainingMajorId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/TrainingMajor.cs" line="15" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/TrainingMajor.cs" bodystart="15" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_training_major_1a24f3b6a1a33017fe6c3bf72310250bc6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.TrainingMajor.TrainingMajorName</definition>
+        <argsstring></argsstring>
+        <name>TrainingMajorName</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/TrainingMajor.cs" line="20" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/TrainingMajor.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_training_major_1a9dee8ff18d60b61f5ce5943d9cc6b911" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>string</type>
+        <definition>string Models.TrainingMajor.SubjectId</definition>
+        <argsstring></argsstring>
+        <name>SubjectId</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/TrainingMajor.cs" line="24" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/TrainingMajor.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_training_major_1aecdd312f656c18817f74785c6938a866" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type><ref refid="class_models_1_1_subject" kindref="compound">Subject</ref></type>
+        <definition>virtual Subject Models.TrainingMajor.Subject</definition>
+        <argsstring></argsstring>
+        <name>Subject</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/TrainingMajor.cs" line="27" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/TrainingMajor.cs" bodystart="27" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="property" id="class_models_1_1_training_major_1aba54a26dc5b47545453d4b80f23494ef" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>ICollection&lt; <ref refid="class_models_1_1_company_training_major" kindref="compound">CompanyTrainingMajor</ref> &gt;</type>
+        <definition>virtual ICollection&lt;CompanyTrainingMajor&gt; Models.TrainingMajor.CompanyTrainingMajors</definition>
+        <argsstring></argsstring>
+        <name>CompanyTrainingMajors</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/TrainingMajor.cs" line="31" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/TrainingMajor.cs" bodystart="31" bodyend="31"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/TrainingMajor.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/Models/TrainingMajor.cs" bodystart="12" bodyend="32"/>
+    <listofallmembers>
+      <member refid="class_models_1_1_training_major_1aba54a26dc5b47545453d4b80f23494ef" prot="public" virt="non-virtual"><scope>Models::TrainingMajor</scope><name>CompanyTrainingMajors</name></member>
+      <member refid="class_models_1_1_training_major_1aecdd312f656c18817f74785c6938a866" prot="public" virt="non-virtual"><scope>Models::TrainingMajor</scope><name>Subject</name></member>
+      <member refid="class_models_1_1_training_major_1a9dee8ff18d60b61f5ce5943d9cc6b911" prot="public" virt="non-virtual"><scope>Models::TrainingMajor</scope><name>SubjectId</name></member>
+      <member refid="class_models_1_1_training_major_1a0b66e86ea610c701aa5d0f6fddaa35fa" prot="public" virt="non-virtual"><scope>Models::TrainingMajor</scope><name>TrainingMajorId</name></member>
+      <member refid="class_models_1_1_training_major_1a24f3b6a1a33017fe6c3bf72310250bc6" prot="public" virt="non-virtual"><scope>Models::TrainingMajor</scope><name>TrainingMajorName</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

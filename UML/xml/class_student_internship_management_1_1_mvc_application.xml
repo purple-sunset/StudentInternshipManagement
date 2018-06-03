@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_mvc_application" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::MvcApplication</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">HttpApplication</basecompoundref>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_mvc_application_1a5a279866dfe048ec1cb606a337231d2a" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void StudentInternshipManagement.MvcApplication.Application_Start</definition>
+        <argsstring>()</argsstring>
+        <name>Application_Start</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Global.asax.cs" line="14" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Global.asax.cs" bodystart="14" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="174">
+        <label>System::Web::HttpApplication</label>
+      </node>
+      <node id="173">
+        <label>StudentInternshipManagement.MvcApplication</label>
+        <link refid="class_student_internship_management_1_1_mvc_application"/>
+        <childnode refid="174" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="176">
+        <label>System::Web::HttpApplication</label>
+      </node>
+      <node id="175">
+        <label>StudentInternshipManagement.MvcApplication</label>
+        <link refid="class_student_internship_management_1_1_mvc_application"/>
+        <childnode refid="176" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Global.asax.cs" line="13" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Global.asax.cs" bodystart="12" bodyend="24"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_mvc_application_1a5a279866dfe048ec1cb606a337231d2a" prot="protected" virt="non-virtual"><scope>StudentInternshipManagement::MvcApplication</scope><name>Application_Start</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

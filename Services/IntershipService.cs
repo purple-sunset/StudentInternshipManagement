@@ -16,9 +16,27 @@ namespace Services
         {
             return _repository.GetAll();
         }
+        public IQueryable<Internship> GetBySemester(int semesterId)
+        {
+            return _repository.GetBySemester(semesterId);
+        }
+
+        public IQueryable<Internship> GetByLatestSemester()
+        {
+            using (var semesterRepository = new SemesterRepository())
+            {
+                var semesterId = semesterRepository.GetLatest().SemesterId;
+                return _repository.GetBySemester(semesterId);
+            }
+        }
         public Internship GetById(int id)
         {
             return _repository.GetById(id);
+        }
+
+        public IQueryable<Internship> GetByStudent(string studentId)
+        {
+            return _repository.GetByStudent(studentId);
         }
 
         public bool Add(Internship internship)

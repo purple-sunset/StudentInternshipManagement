@@ -1,0 +1,192 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.14">
+  <compounddef id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller" kind="class" language="C#" prot="public">
+    <compoundname>StudentInternshipManagement::Areas::Admin::Controllers::SubjectController</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">Controller</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1ac1922b0193d364326491166db2e81be4" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_services_1_1_subject_service" kindref="compound">SubjectService</ref></type>
+        <definition>readonly SubjectService StudentInternshipManagement.Areas.Admin.Controllers.SubjectController._service</definition>
+        <argsstring></argsstring>
+        <name>_service</name>
+        <initializer>= new <ref refid="class_services_1_1_subject_service" kindref="compound">SubjectService</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" line="18" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1a4c8fba02815c248f13aeab4bf9a4f076" prot="private" static="no" mutable="no">
+        <type>readonly <ref refid="class_services_1_1_department_service" kindref="compound">DepartmentService</ref></type>
+        <definition>readonly DepartmentService StudentInternshipManagement.Areas.Admin.Controllers.SubjectController._departmentService</definition>
+        <argsstring></argsstring>
+        <name>_departmentService</name>
+        <initializer>= new <ref refid="class_services_1_1_department_service" kindref="compound">DepartmentService</ref>()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" line="19" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1a5f896fd81dedfe4401fbe93250ba1150" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.SubjectController.Index</definition>
+        <argsstring>()</argsstring>
+        <name>Index</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" line="21" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" bodystart="21" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1a737d266dc118672650e12e2a8b2e6556" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.SubjectController.Subjects_Read</definition>
+        <argsstring>([DataSourceRequest]DataSourceRequest request)</argsstring>
+        <name>Subjects_Read</name>
+        <param>
+          <attributes>[DataSourceRequest]</attributes>
+          <type>DataSourceRequest</type>
+          <declname>request</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" line="27" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" bodystart="27" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1abbf384fef247b529fcf944b073d657d2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.SubjectController.Subjects_Create</definition>
+        <argsstring>([DataSourceRequest]DataSourceRequest request, Subject subject)</argsstring>
+        <name>Subjects_Create</name>
+        <param>
+          <attributes>[DataSourceRequest]</attributes>
+          <type>DataSourceRequest</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type><ref refid="class_models_1_1_subject" kindref="compound">Subject</ref></type>
+          <declname>subject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" line="39" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" bodystart="39" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1a516e2ccb47ff824a09c23964b608eced" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.SubjectController.Subjects_Update</definition>
+        <argsstring>([DataSourceRequest]DataSourceRequest request, Subject subject)</argsstring>
+        <name>Subjects_Update</name>
+        <param>
+          <attributes>[DataSourceRequest]</attributes>
+          <type>DataSourceRequest</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type><ref refid="class_models_1_1_subject" kindref="compound">Subject</ref></type>
+          <declname>subject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" line="57" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" bodystart="57" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1aa5d1247fef3406c3c71013e665273096" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>ActionResult</type>
+        <definition>ActionResult StudentInternshipManagement.Areas.Admin.Controllers.SubjectController.Subjects_Destroy</definition>
+        <argsstring>([DataSourceRequest]DataSourceRequest request, Subject subject)</argsstring>
+        <name>Subjects_Destroy</name>
+        <param>
+          <attributes>[DataSourceRequest]</attributes>
+          <type>DataSourceRequest</type>
+          <declname>request</declname>
+        </param>
+        <param>
+          <type><ref refid="class_models_1_1_subject" kindref="compound">Subject</ref></type>
+          <declname>subject</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" line="75" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" bodystart="75" bodyend="90"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1a2f060f5262e79d5d8930ed1fa3208b5d" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override void</type>
+        <definition>override void StudentInternshipManagement.Areas.Admin.Controllers.SubjectController.Dispose</definition>
+        <argsstring>(bool disposing)</argsstring>
+        <name>Dispose</name>
+        <param>
+          <type>bool</type>
+          <declname>disposing</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" line="92" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" bodystart="92" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="277">
+        <label>StudentInternshipManagement.Areas.Admin.Controllers.SubjectController</label>
+        <link refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller"/>
+        <childnode refid="278" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="278">
+        <label>Controller</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="279">
+        <label>StudentInternshipManagement.Areas.Admin.Controllers.SubjectController</label>
+        <link refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller"/>
+        <childnode refid="280" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="280">
+        <label>Controller</label>
+      </node>
+    </collaborationgraph>
+    <location file="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" line="17" column="1" bodyfile="C:/Users/Duc/source/repos/StudentInternshipManagement/StudentInternshipManagement/Areas/Admin/Controllers/SubjectController.cs" bodystart="16" bodyend="98"/>
+    <listofallmembers>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1a4c8fba02815c248f13aeab4bf9a4f076" prot="private" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::SubjectController</scope><name>_departmentService</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1ac1922b0193d364326491166db2e81be4" prot="private" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::SubjectController</scope><name>_service</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1a2f060f5262e79d5d8930ed1fa3208b5d" prot="protected" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::SubjectController</scope><name>Dispose</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1a5f896fd81dedfe4401fbe93250ba1150" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::SubjectController</scope><name>Index</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1abbf384fef247b529fcf944b073d657d2" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::SubjectController</scope><name>Subjects_Create</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1aa5d1247fef3406c3c71013e665273096" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::SubjectController</scope><name>Subjects_Destroy</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1a737d266dc118672650e12e2a8b2e6556" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::SubjectController</scope><name>Subjects_Read</name></member>
+      <member refid="class_student_internship_management_1_1_areas_1_1_admin_1_1_controllers_1_1_subject_controller_1a516e2ccb47ff824a09c23964b608eced" prot="public" virt="non-virtual"><scope>StudentInternshipManagement::Areas::Admin::Controllers::SubjectController</scope><name>Subjects_Update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -29,9 +29,9 @@ namespace StudentInternshipManagement
         private async Task ConfigSmtpasync(IdentityMessage message)
         {
             MailMessage mail = new MailMessage(ConfigurationManager.AppSettings["mailAccount"], message.Destination);
-            SmtpClient client = new SmtpClient("smtp.gmail.com")
+            SmtpClient client = new SmtpClient(ConfigurationManager.AppSettings["mailServer"])
             {
-                Port = 587,
+                Port = int.Parse(ConfigurationManager.AppSettings["mailPort"]),
                 EnableSsl = true,
                 Credentials = new System.Net.NetworkCredential(
                     ConfigurationManager.AppSettings["mailAccount"],

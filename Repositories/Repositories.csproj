@@ -63,6 +63,7 @@
     <Compile Include="CompanyRepository.cs" />
     <Compile Include="CompanyTrainingMajorRepository.cs" />
     <Compile Include="LearningClassRepository.cs" />
+    <Compile Include="UserRepository.cs" />
     <Compile Include="TrainingMajorRepository.cs" />
     <Compile Include="SubjectRepository.cs" />
     <Compile Include="SemesterRepository.cs" />

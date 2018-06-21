@@ -14,6 +14,7 @@ using Kendo.Mvc.UI;
 
 namespace StudentInternshipManagement.Areas.Student.Controllers
 {
+    [Authorize(Roles = "Student")]
     public class LearningClassController : Controller
     {
         private readonly LearningClassService _service = new LearningClassService();

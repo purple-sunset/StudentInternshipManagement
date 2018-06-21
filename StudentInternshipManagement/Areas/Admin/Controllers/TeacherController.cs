@@ -13,6 +13,7 @@ using Models;
 
 namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class TeacherController : Controller
     {
         private readonly TeacherService  _service=new TeacherService();

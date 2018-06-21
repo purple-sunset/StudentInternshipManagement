@@ -50,6 +50,11 @@ namespace Models
         [DisplayName("Điểm CPA")]
         public float Cpa { get; set; }
 
+        [Required]
+        [MaxLength(50)]
+        [DisplayName("Chương trình đào tạo")]
+        public string Program { get; set; }
+
         [DisplayName("Lớp học")]
         [UIHint("StudentClassTemplate")]
         public int ClassId { get; set; }

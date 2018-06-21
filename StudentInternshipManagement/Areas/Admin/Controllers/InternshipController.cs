@@ -1,4 +1,4 @@
-﻿﻿using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
@@ -6,40 +6,88 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using Hangfire;
+using Hangfire.Storage;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
 using Models;
- using Services;
+using Services;
 
 namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
     public class InternshipController : Controller
     {
-        private readonly InternshipService _service=new InternshipService();
-        private readonly StudentService _studentService=new StudentService();
-        private readonly LearningClassService _learningClassService=new LearningClassService();
-        private readonly CompanyService _companyService=new CompanyService();
-        private readonly TrainingMajorService _trainingMajorService=new TrainingMajorService();
+        private static int semester = -1;
+        private static string jobId = string.Empty;
+
+        private readonly InternshipService _service = new InternshipService();
+        private readonly GroupService _groupService=new GroupService();
+        private readonly SemesterService _semesterService = new SemesterService();
 
         public ActionResult Index()
         {
-            ViewBag.Students = _studentService.GetAll();
-            ViewBag.LearningClasses = _learningClassService.GetAll();
-            ViewBag.Companies = _companyService.GetAll();
-            ViewBag.TrainingMajors = _trainingMajorService.GetAll();
+            CheckJob();
             return View();
+        }
+
+        public ActionResult Process()
+        {
+            jobId = BackgroundJob.Enqueue(() => _service.ProcessRegistration());
+            semester = _semesterService.GetLatest().SemesterId;
+            return RedirectToAction("Index");
+        }
+
+        public void CheckJob()
+        {
+            var semesterId = _semesterService.GetLatest().SemesterId;
+            ViewBag.Semester = semester;
+            if (semester != semesterId)
+            {
+                ViewBag.IsProcessing = null;
+            }
+            else
+            {
+                IStorageConnection connection = JobStorage.Current.GetConnection();
+                JobData jobData = connection.GetJobData(jobId);
+                string stateName = jobData.State;
+                switch (stateName)
+                {
+                    case "Scheduled":
+                    case "Awaiting":
+                    case "Enqueued":
+                        ViewBag.IsProcessing = true;
+                        break;
+
+                    case "Succeeded":
+                        ViewBag.IsProcessing = false;
+                        break;
+
+                    case "Failed":
+                    default:
+                        ViewBag.IsProcessing = null;
+                        break;
+
+                }
+            }
         }
 
         public ActionResult Internships_Read([DataSourceRequest]DataSourceRequest request)
         {
-            DataSourceResult result = _service.GetByLatestSemester().ToDataSourceResult(request, internship => new {
+            var internships = _service.GetByLatestSemester();
+            DataSourceResult result = internships.ToDataSourceResult(request, internship => new
+            {
                 InternshipId = internship.InternshipId,
                 RegistrationDate = internship.RegistrationDate,
                 Status = internship.Status,
-                StudentId=internship.StudentId,
-                ClassId = internship.ClassId,
-                CompanyId = internship.CompanyId,
-                TrainingMajorId = internship.TrainingMajorId
+                Student = internship.Student.StudentName,
+                Class = internship.Class.ClassName,
+                Company = internship.Major.Company.CompanyName,
+                TrainingMajor = internship.Major.TrainingMajor.TrainingMajorName,
+                MidTermPoint = internship.Student.LearningClassStudents.FirstOrDefault(l=>l.ClassId==internship.ClassId)?.MidTermPoint,
+                EndTermPoint = internship.Student.LearningClassStudents.FirstOrDefault(l => l.ClassId == internship.ClassId)?.EndTermPoint,
+                TotalPoint = internship.Student.LearningClassStudents.FirstOrDefault(l => l.ClassId == internship.ClassId)?.TotalPoint,
+                Group = _groupService.GetByInternship(internship)?.GroupName,
+                Teacher = _groupService.GetByInternship(internship)?.Teacher.TeacherName,
             });
 
             return Json(result);
@@ -56,9 +104,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         protected override void Dispose(bool disposing)
         {
             _service.Dispose();
-            _trainingMajorService.Dispose();
-            _learningClassService.Dispose();
-            _studentService.Dispose();
+            _semesterService.Dispose();
             base.Dispose(disposing);
         }
     }

@@ -39,10 +39,31 @@ namespace Repositories
             }
         }
 
+        public IQueryable<Group> GetBySemester(int semesterId)
+        {
+            try
+            {
+                return _context.Groups.Where(i => i.Class.SemesterId == semesterId);
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
+        }
+
         public bool Add(Group group)
         {
             try
             {
+                var old = group.Members.ToList();
+                group.Members.Clear();
+                foreach (var mb in old)
+                {
+                    group.Members.Add(_context.Students.FirstOrDefault(s=>s.StudentId.Equals(mb.StudentId)));
+                }
+                   
+                //_context.Entry(group).State = EntityState.Added;
                 _context.Groups.Add(group);
                 return _context.SaveChanges() > 0;
             }

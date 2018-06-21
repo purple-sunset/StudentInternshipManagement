@@ -8,11 +8,13 @@ using System.Web;
 using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
-using Models;
+ using Microsoft.AspNet.Identity;
+ using Models;
  using Services;
 
 namespace StudentInternshipManagement.Areas.Teacher.Controllers
 {
+    [Authorize(Roles = "Teacher")]
     public class InternshipController : Controller
     {
         private readonly LearningClassStudentService _service = new LearningClassStudentService();
@@ -28,7 +30,8 @@ namespace StudentInternshipManagement.Areas.Teacher.Controllers
 
         public ActionResult LearningClassStudents_Read([DataSourceRequest]DataSourceRequest request)
         {
-            DataSourceResult result = _service.GetAll().ToDataSourceResult(request, learningClassStudent => new {
+            var id = User.Identity.GetUserName();
+            DataSourceResult result = _service.GetByTeacher(id).ToDataSourceResult(request, learningClassStudent => new {
                 ClassId = learningClassStudent.ClassId,
                 StudentId = learningClassStudent.StudentId,
                 MidTermPoint = learningClassStudent.MidTermPoint,
@@ -52,6 +55,9 @@ namespace StudentInternshipManagement.Areas.Teacher.Controllers
                     EndTermPoint = learningClassStudent.EndTermPoint,
                     TotalPoint = learningClassStudent.TotalPoint
                 };
+                entity.TotalPoint = 0.3f * entity.MidTermPoint + 0.7f * entity.EndTermPoint;
+                if (entity.TotalPoint != null)
+                    entity.TotalPoint = (float) Math.Round(entity.TotalPoint.Value, 1);
 
                 _service.Update(entity);
             }

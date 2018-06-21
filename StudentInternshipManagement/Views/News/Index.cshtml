@@ -5,8 +5,8 @@
     ViewBag.Category = "Tin tức";
     ViewBag.Section = "Tin tức";
 }
-@Styles.Render("~/Content/kendo")
-@Scripts.Render("~/Script/kendo")
+@Styles.Render("~/Content/kendo/2018.2.516/styles")
+@Scripts.Render("~/Scripts/kendo/2018.2.516/scripts")
 
 @(Html.Kendo().ListView<News>()
       .Name("listView")
@@ -31,7 +31,7 @@
         <div class="media-body">
             <div>
                 <h3 class="media-heading">
-                    <a href="" class="blue">#:Title#</a>
+                    <a href="/News/View/#:NewsId#" class="blue">#:Title#</a>
                 </h3>
             </div>
             <p>#:Content#</p>

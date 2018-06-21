@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="..\packages\Microsoft.Net.Compilers.2.8.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.8.0\build\Microsoft.Net.Compilers.props')" />
-  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.8.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.8.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -46,6 +46,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Hangfire.Core, Version=1.6.19.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.Core.1.6.19\lib\net45\Hangfire.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Hangfire.SqlServer, Version=1.6.19.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Hangfire.SqlServer.1.6.19\lib\net45\Hangfire.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Kendo.Mvc">
       <HintPath>..\lib\KENDOUIMVC\2018.2.516.545\Kendo.Mvc.dll</HintPath>
       <Private>True</Private>
@@ -53,11 +59,20 @@
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\KENDOUIMVC\2018.2.516.545\spreadsheet\binaries\net40\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
+    </Reference>
+    <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc, Version=4.5.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -193,13 +208,11 @@
     <Reference Include="Microsoft.Owin.Security.OAuth">
       <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.0\lib\net451\Microsoft.Owin.Security.OAuth.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\HangfireAuthorizationFilter.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
@@ -218,13 +231,17 @@
     <Compile Include="Areas\Admin\Controllers\SubjectController.cs" />
     <Compile Include="Areas\Admin\Controllers\TeacherController.cs" />
     <Compile Include="Areas\Admin\Controllers\TrainingMajorController.cs" />
+    <Compile Include="Areas\Admin\Models\InternshipViewModel.cs" />
     <Compile Include="Areas\Student\Controllers\CompanyController.cs" />
+    <Compile Include="Areas\Student\Controllers\GroupController.cs" />
     <Compile Include="Areas\Student\Controllers\InboxController.cs" />
     <Compile Include="Areas\Student\Controllers\InternshipController.cs" />
     <Compile Include="Areas\Student\Controllers\LearningClassController.cs" />
     <Compile Include="Areas\Student\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Student\Controllers\TrainingMajorController.cs" />
+    <Compile Include="Areas\Student\Models\InternshipViewModel.cs" />
     <Compile Include="Areas\Student\StudentAreaRegistration.cs" />
+    <Compile Include="Areas\Teacher\Controllers\InboxController.cs" />
     <Compile Include="Areas\Teacher\Controllers\InternshipController.cs" />
     <Compile Include="Areas\Teacher\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Teacher\TeacherAreaRegistration.cs" />
@@ -601,6 +618,7 @@
     <Content Include="Content\kendo\2018.2.516\Uniform\sprite_2x.png" />
     <Content Include="Content\kendo\2018.2.516\Uniform\sprite_kpi.png" />
     <Content Include="Content\kendo\2018.2.516\Uniform\sprite_kpi_2x.png" />
+    <Content Include="Content\PagedList.css" />
     <Content Include="Content\prettify.min.css" />
     <Content Include="Content\select2.min.css" />
     <Content Include="Content\site.css" />
@@ -780,6 +798,10 @@
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Navigation.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_SideBar.cshtml" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\site\kendo_culture.js" />
+    <Content Include="Scripts\site\message.js" />
     <Content Include="Views\Shared\EditorTemplates\CompanyTemplate.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\DepartmentTemplate.cshtml" />
     <Content Include="Views\Shared\EditorTemplates\StudentClassTemplate.cshtml" />
@@ -806,6 +828,17 @@
     <Content Include="Areas\Admin\Views\News\Index.cshtml" />
     <Content Include="Areas\Student\Views\Inbox\Index.cshtml" />
     <Content Include="Areas\Teacher\Views\Internship\Index.cshtml" />
+    <Content Include="Areas\Student\Views\Inbox\_MessagePage.cshtml" />
+    <Content Include="Areas\Student\Views\Inbox\Write.cshtml" />
+    <Content Include="Areas\Student\Views\Inbox\View.cshtml" />
+    <Content Include="Areas\Teacher\Views\Inbox\_MessagePage.cshtml" />
+    <Content Include="Areas\Teacher\Views\Inbox\Index.cshtml" />
+    <Content Include="Areas\Teacher\Views\Inbox\View.cshtml" />
+    <Content Include="Areas\Teacher\Views\Inbox\Write.cshtml" />
+    <Content Include="Areas\Student\Views\Group\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\CustomProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\CustomProfile1.pubxml" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\buttons.colVis.min.js" />
     <Content Include="Scripts\buttons.flash.min.js" />
@@ -851,8 +884,6 @@
     <Content Include="Scripts\jquery.ui.touch-punch.min.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\kendo.modernizr.custom.js" />
     <Content Include="Scripts\kendo\2018.2.516\angular.min.js" />
     <Content Include="Scripts\kendo\2018.2.516\cultures\kendo.culture.aa-DJ.min.js" />
@@ -2742,7 +2773,9 @@
     <Content Include="Scripts\spinbox.min.js" />
     <Content Include="Scripts\tree.min.js" />
     <Content Include="Scripts\wizard.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -2977,9 +3010,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Student\Models\" />
     <Folder Include="Areas\Teacher\Models\" />
+    <Folder Include="Views\Group\" />
     <Folder Include="Views\Internship\" />
   </ItemGroup>
   <ItemGroup>
@@ -3042,8 +3074,8 @@
     <PropertyGroup>
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
-    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.8.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.8.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.8.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.8.2\build\Microsoft.Net.Compilers.props'))" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.

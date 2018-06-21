@@ -26,7 +26,7 @@ namespace Models
             var user = new ApplicationUser
             {
                 UserName = "20131070",
-                Email = "20131070@student.hust.edu.vn"
+                Email = "20131070@yopmail.com"
             };
             userManager.Create(user, "Ab=123456789");
 
@@ -34,28 +34,100 @@ namespace Models
 
             var user2 = new ApplicationUser
             {
-                UserName = "Trung",
-                Email = "Trung@student.hust.edu.vn"
+                UserName = "20130325",
+                Email = "20130325@yopmail.com"
             };
-
             userManager.Create(user2, "Ab=123456789");
 
-            userManager.AddToRole(user2.Id, "Teacher");
+            userManager.AddToRole(user2.Id, "Student");
 
             var user3 = new ApplicationUser
             {
-                UserName = "Admin",
-                Email = "Admin@student.hust.edu.vn"
+                UserName = "20134713",
+                Email = "20134713@yopmail.com"
+            };
+            userManager.Create(user3, "Ab=123456789");
+
+            userManager.AddToRole(user3.Id, "Student");
+
+            var user4 = new ApplicationUser
+            {
+                UserName = "20133847",
+                Email = "20133847@yopmail.com"
+            };
+            userManager.Create(user4, "Ab=123456789");
+
+            userManager.AddToRole(user4.Id, "Student");
+
+            var user5 = new ApplicationUser
+            {
+                UserName = "20132820",
+                Email = "20132820@yopmail.com"
+            };
+            userManager.Create(user5, "Ab=123456789");
+
+            userManager.AddToRole(user5.Id, "Student");
+
+            var user6 = new ApplicationUser
+            {
+                UserName = "20132231",
+                Email = "20132231@yopmail.com"
+            };
+            userManager.Create(user6, "Ab=123456789");
+
+            userManager.AddToRole(user6.Id, "Student");
+
+            var user7 = new ApplicationUser
+            {
+                UserName = "20130707",
+                Email = "20130707@yopmail.com"
+            };
+            userManager.Create(user7, "Ab=123456789");
+
+            userManager.AddToRole(user7.Id, "Student");
+
+            var user8 = new ApplicationUser
+            {
+                UserName = "20132558",
+                Email = "20132558@yopmail.com"
+            };
+            userManager.Create(user8, "Ab=123456789");
+
+            userManager.AddToRole(user8.Id, "Student");
+
+            var user9 = new ApplicationUser
+            {
+                UserName = "20134579",
+                Email = "20134579@yopmail.com"
+            };
+            userManager.Create(user9, "Ab=123456789");
+
+            userManager.AddToRole(user9.Id, "Student");
+
+            var user10 = new ApplicationUser
+            {
+                UserName = "TrungLD",
+                Email = "TrungLD@yopmail.com"
             };
 
-            userManager.Create(user3, "Ab=123456789");
-            userManager.AddToRole(user3.Id, "Admin");
+            userManager.Create(user10, "Ab=123456789");
+
+            userManager.AddToRole(user10.Id, "Teacher");
+
+            var user12 = new ApplicationUser
+            {
+                UserName = "Admin",
+                Email = "Admin@yopmail.com"
+            };
+
+            userManager.Create(user12, "Ab=123456789");
+            userManager.AddToRole(user12.Id, "Admin");
 
             var semesters = new List<Semester>
             {
                 new Semester()
                 {
-                    SemesterId = 20171,
+                    SemesterId = 20182,
                     StartDate = DateTime.Now,
                     EndDate = DateTime.Now
                 }
@@ -83,6 +155,21 @@ namespace Models
             {
                 new StudentClass()
                 {
+                    ClassName = "CNTT 2.01",
+                    Department = departments[0]
+                },
+                new StudentClass()
+                {
+                    ClassName = "CNTT 2.02",
+                    Department = departments[0]
+                },
+                new StudentClass()
+                {
+                    ClassName = "CNTT 2.03",
+                    Department = departments[0]
+                },
+                new StudentClass()
+                {
                     ClassName = "CNTT 2.04",
                     Department = departments[0]
                 }
@@ -98,13 +185,110 @@ namespace Models
                 new Student()
                 {
                     StudentId = "20131070",
-                    StudentName = "Tran Van Duc",
+                    StudentName = "Trần Văn Đức",
                     Avatar = "20131070.png",
                     Address = "MK",
                     BirthDate = new DateTime(1995, 5, 14),
                     Phone = "0123456789",
                     Cpa = 3.0f,
+                    Program = "Kỹ sư",
+                    Class = studenClasses[3]
+                },
+                new Student()
+                {
+                    StudentId = "20130325",
+                    StudentName = "Cao Thị Ngân",
+                    Avatar = "20131070.png",
+                    Address = "MK",
+                    BirthDate = new DateTime(1995, 5, 14),
+                    Phone = "0123456789",
+                    Cpa = 3.0f,
+                    Program = "Kỹ sư",
                     Class = studenClasses[0]
+                },
+                new Student()
+                {
+                    StudentId = "20134713",
+                    StudentName = "Trần Danh Hoàn",
+                    Avatar = "20131070.png",
+                    Address = "MK",
+                    BirthDate = new DateTime(1995, 5, 14),
+                    Phone = "0123456789",
+                    Cpa = 3.0f,
+                    Program = "Kỹ sư",
+                    Class = studenClasses[1]
+                },
+                new Student()
+                {
+                    StudentId = "20133847",
+                    StudentName = "Trần Đức Mạnh",
+                    Avatar = "20131070.png",
+                    Address = "MK",
+                    BirthDate = new DateTime(1995, 5, 14),
+                    Phone = "0123456789",
+                    Cpa = 3.0f,
+                    Program = "Kỹ sư",
+                    Class = studenClasses[1]
+                },
+                new Student()
+                {
+                    StudentId = "20132820",
+                    StudentName = "Hà Văn Hoàn",
+                    Avatar = "20131070.png",
+                    Address = "MK",
+                    BirthDate = new DateTime(1995, 5, 14),
+                    Phone = "0123456789",
+                    Cpa = 3.0f,
+                    Program = "Kỹ sư",
+                    Class = studenClasses[1]
+                },
+                new Student()
+                {
+                    StudentId = "20132231",
+                    StudentName = "Phạm Anh Tân",
+                    Avatar = "20131070.png",
+                    Address = "MK",
+                    BirthDate = new DateTime(1995, 5, 14),
+                    Phone = "0123456789",
+                    Cpa = 3.0f,
+                    Program = "Kỹ sư",
+                    Class = studenClasses[2]
+                },
+                new Student()
+                {
+                    StudentId = "20130707",
+                    StudentName = "Triệu Văn Dũng",
+                    Avatar = "20131070.png",
+                    Address = "MK",
+                    BirthDate = new DateTime(1995, 5, 14),
+                    Phone = "0123456789",
+                    Cpa = 3.0f,
+                    Program = "Kỹ sư",
+                    Class = studenClasses[2]
+                },
+                new Student()
+                {
+                    StudentId = "20132558",
+                    StudentName = "Mai Thị Giang",
+                    Avatar = "20131070.png",
+                    Address = "MK",
+                    BirthDate = new DateTime(1995, 5, 14),
+                    Phone = "0123456789",
+                    Cpa = 3.0f,
+                    Program = "Kỹ sư",
+                    Class = studenClasses[3]
+                },
+                new Student()
+                {
+                    StudentId = "20134579",
+                    StudentName = "Nguyễn Thúc Huynh",
+                    Avatar = "20131070.png",
+                    Address = "MK",
+                    BirthDate = new DateTime(1995, 5, 14),
+                    Phone = "0123456789",
+                    Cpa = 3.0f,
+                    Program = "Kỹ sư",
+                    Class = studenClasses[3]
                 }
             };
 
@@ -136,8 +320,8 @@ namespace Models
             {
                 new Teacher()
                 {
-                    TeacherId = "Trung",
-                    TeacherName = "Nguyen Van Trung",
+                    TeacherId = "TrungLD",
+                    TeacherName = "Lê Đức Trung",
                     Avatar = "avatar.png",
                     Address = "MK",
                     BirthDate = new DateTime(1995, 5, 14),
@@ -156,7 +340,13 @@ namespace Models
                 new Subject()
                 {
                     SubjectId = "IT1110",
-                    SubjectName = "Nhap mon CNTT",
+                    SubjectName = "Thực tập kỹ thuật",
+                    Department = departments[0]
+                },
+                new Subject()
+                {
+                    SubjectId = "IT3220",
+                    SubjectName = "Thực tập tốt nghiệp",
                     Department = departments[0]
                 }
             };
@@ -173,6 +363,12 @@ namespace Models
                     ClassName="IT1110 - 1",
                     Subject = subjects[0],
                     Semester = semesters[0]
+                },
+                new LearningClass()
+                {
+                    ClassName="IT3220 - 1",
+                    Subject = subjects[1],
+                    Semester = semesters[0]
                 }
             };
 
@@ -187,6 +383,46 @@ namespace Models
                 {
                     Class = learningClasses[0],
                     Student = students[0]
+                },
+                new LearningClassStudent
+                {
+                    Class = learningClasses[1],
+                    Student = students[1]
+                },
+                new LearningClassStudent
+                {
+                    Class = learningClasses[1],
+                    Student = students[2]
+                },
+                new LearningClassStudent
+                {
+                    Class = learningClasses[0],
+                    Student = students[3]
+                },
+                new LearningClassStudent
+                {
+                    Class = learningClasses[0],
+                    Student = students[4]
+                },
+                new LearningClassStudent
+                {
+                    Class = learningClasses[0],
+                    Student = students[5]
+                },
+                new LearningClassStudent
+                {
+                    Class = learningClasses[1],
+                    Student = students[6]
+                },
+                new LearningClassStudent
+                {
+                    Class = learningClasses[1],
+                    Student = students[7]
+                },
+                new LearningClassStudent
+                {
+                    Class = learningClasses[1],
+                    Student = students[8]
                 }
             };
 
@@ -199,13 +435,23 @@ namespace Models
             {
                 new TrainingMajor()
                 {
-                    TrainingMajorName = "C#",
+                    TrainingMajorName = "C",
                     Subject = subjects[0]
                 },
                 new TrainingMajor()
                 {
                     TrainingMajorName = "Java",
                     Subject = subjects[0]
+                },
+                new TrainingMajor()
+                {
+                    TrainingMajorName = "Dev",
+                    Subject = subjects[1]
+                },
+                new TrainingMajor()
+                {
+                    TrainingMajorName = "Tester",
+                    Subject = subjects[1]
                 }
             };
 
@@ -221,7 +467,7 @@ namespace Models
                     CompanyName = "FPT",
                     CompanyDescription = "FPT",
                     Address = "17 Duy tan",
-                    Email = "fpt@fpt.com.vn",
+                    Email = "fpt@yopmail.com",
                     Phone = "0123456789"
                 },
                 new Company()
@@ -229,7 +475,15 @@ namespace Models
                     CompanyName = "MISA",
                     CompanyDescription = "MISA",
                     Address = "Pham Hung",
-                    Email = "misa@gmail.com",
+                    Email = "misa@yopmail.com",
+                    Phone = "0123456789"
+                },
+                new Company()
+                {
+                    CompanyName = "BKAV",
+                    CompanyDescription = "BKAV",
+                    Address = "Bach Khoa",
+                    Email = "bkav@yopmail.com",
                     Phone = "0123456789"
                 }
             };
@@ -245,22 +499,36 @@ namespace Models
                 {
                     Company = companies[0],
                     TrainingMajor = majors[0],
-                    AvailableTraineeCount = 1000,
-                    TotalTraineeCount = 1000
+                    AvailableTraineeCount = 10,
+                    TotalTraineeCount = 10
                 },
                 new CompanyTrainingMajor()
                 {
                     Company = companies[0],
                     TrainingMajor = majors[1],
-                    AvailableTraineeCount = 500,
-                    TotalTraineeCount = 500
+                    AvailableTraineeCount = 10,
+                    TotalTraineeCount = 10
                 },
                 new CompanyTrainingMajor()
                 {
                     Company = companies[1],
                     TrainingMajor = majors[0],
-                    AvailableTraineeCount = 700,
-                    TotalTraineeCount = 700
+                    AvailableTraineeCount = 5,
+                    TotalTraineeCount = 5
+                },
+                new CompanyTrainingMajor()
+                {
+                    Company = companies[2],
+                    TrainingMajor = majors[2],
+                    AvailableTraineeCount = 5,
+                    TotalTraineeCount = 5
+                },
+                new CompanyTrainingMajor()
+                {
+                    Company = companies[2],
+                    TrainingMajor = majors[3],
+                    AvailableTraineeCount = 5,
+                    TotalTraineeCount = 5
                 }
             };
 
@@ -278,6 +546,70 @@ namespace Models
                     Student=students[0],
                     Class=learningClasses[0],
                     Major=companyMajors[0]
+                },
+                new Internship()
+                {
+                    RegistrationDate=DateTime.Now,
+                    Status=InternshipStatus.Registered,
+                    Student=students[1],
+                    Class=learningClasses[1],
+                    Major=companyMajors[3]
+                },
+                new Internship()
+                {
+                    RegistrationDate=DateTime.Now,
+                    Status=InternshipStatus.Registered,
+                    Student=students[2],
+                    Class=learningClasses[1],
+                    Major=companyMajors[3]
+                },
+                new Internship()
+                {
+                    RegistrationDate=DateTime.Now,
+                    Status=InternshipStatus.Registered,
+                    Student=students[3],
+                    Class=learningClasses[0],
+                    Major=companyMajors[0]
+                },
+                new Internship()
+                {
+                    RegistrationDate=DateTime.Now,
+                    Status=InternshipStatus.Registered,
+                    Student=students[4],
+                    Class=learningClasses[0],
+                    Major=companyMajors[0]
+                },
+                new Internship()
+                {
+                    RegistrationDate=DateTime.Now,
+                    Status=InternshipStatus.Registered,
+                    Student=students[5],
+                    Class=learningClasses[0],
+                    Major=companyMajors[0]
+                },
+                new Internship()
+                {
+                    RegistrationDate=DateTime.Now,
+                    Status=InternshipStatus.Registered,
+                    Student=students[6],
+                    Class=learningClasses[1],
+                    Major=companyMajors[3]
+                },
+                new Internship()
+                {
+                    RegistrationDate=DateTime.Now,
+                    Status=InternshipStatus.Registered,
+                    Student=students[7],
+                    Class=learningClasses[1],
+                    Major=companyMajors[3]
+                },
+                new Internship()
+                {
+                    RegistrationDate=DateTime.Now,
+                    Status=InternshipStatus.Registered,
+                    Student=students[8],
+                    Class=learningClasses[1],
+                    Major=companyMajors[3]
                 }
             };
 

@@ -13,6 +13,7 @@ using Models;
 
 namespace StudentInternshipManagement.Areas.Student.Controllers
 {
+    [Authorize(Roles = "Student")]
     public class TrainingMajorController : Controller
     {
         private readonly TrainingMajorService _service=new TrainingMajorService();

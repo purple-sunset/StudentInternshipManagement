@@ -6,13 +6,15 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Kendo.Mvc.Extensions;
+ using System.Web.Security;
+ using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
 using Models;
  using Services;
 
 namespace StudentInternshipManagement.Areas.Student.Controllers
 {
+    [Authorize (Roles="Student")]
     public class CompanyController : Controller
     {
         private readonly CompanyService _service=new CompanyService();

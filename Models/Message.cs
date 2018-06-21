@@ -13,14 +13,21 @@ namespace Models
         public int MessageId { get; set; }
 
         [Required]
-        [MaxLength(500)]
-        public string Content { get; set; }
+        [MaxLength(100)]
+        public string Title { get; set; }
 
         [Required]
+        [MaxLength(1000)]
+        public string Content { get; set; }
+
         [MaxLength(50)]
         public string File { get; set; }
 
-        [Required]
+        [Range(0,3)]
+        public int Type { get; set; }
+
+        public bool IsRead { get; set; }
+
         [DataType(DataType.DateTime)]
         public DateTime Time { get; set; }
 

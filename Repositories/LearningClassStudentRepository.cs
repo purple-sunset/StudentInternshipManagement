@@ -63,7 +63,20 @@ namespace Repositories
                 return null;
             }
         }
-
+        public IQueryable<LearningClassStudent> GetByTeacher(string teacherId)
+        {
+            try
+            {
+                var groups = _context.Groups.Where(g => g.TeacherId.Equals(teacherId));
+                var students = groups.SelectMany(g => g.Members).Select(s => s.StudentId);
+                return GetAll().Where(l => students.Contains(l.StudentId));
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return null;
+            }
+        }
         public bool Add(LearningClassStudent learningClassStudent)
         {
             try

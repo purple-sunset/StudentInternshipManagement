@@ -1,12 +1,23 @@
-﻿@{
+﻿@using System.Security.Claims
+@using Microsoft.AspNet.Identity
+@using Services
+@{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Homepage - Trang quản lý thực tập";
     string message = ViewBag.Message ?? string.Empty;
 }
+@{
+    var role = string.Empty;
+    if (Request.IsAuthenticated)
+    {
+        var username = User.Identity.GetUserName();
+        role = ((ClaimsIdentity) User.Identity).Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).FirstOrDefault();
+    }
+}
 
 @section Kendo {
-    @Styles.Render("~/Content/kendo")
-    @Scripts.Render("~/Script/kendo")
+    @Styles.Render("~/Content/kendo/2018.2.516/styles")
+    @Scripts.Render("~/Scripts/kendo/2018.2.516/scripts")
 }
 
 <div class="main-content-inner">
@@ -35,27 +46,24 @@
                             <a data-toggle="tab" href="#home" aria-expanded="true">Home</a>
                         </li>
 
-                        <li class="">
-                            <a data-toggle="tab" href="#profile" aria-expanded="false">Sinh viên</a>
+                        <li class="" style='display: @(role.Equals("Student") ? "inline-block" : "none")'>
+                            <a href="/Student/Profile" aria-expanded="false">Sinh viên</a>
                         </li>
 
-                        <li class="">
-                            <a data-toggle="tab" href="#dropdown" aria-expanded="false">More</a>
+                        <li class="" style='display: @(role.Equals("Teacher") ? "inline-block" : "none")'>
+                            <a href="/Teacher/Profile" aria-expanded="false">Giảng viên</a>
+                        </li>
+
+                        <li class="" style='display: @(role.Equals("Admin") ? "inline-block" : "none")'>
+                            <a href="/Admin/Profile" aria-expanded="false">Giáo vụ</a>
                         </li>
                     </ul>
 
                     <div class="tab-content">
                         <div id="home" class="tab-pane active">
-                            @{ Html.RenderAction("Index", "News", new{areas=""}); }
+                            @{ Html.RenderAction("Index", "News", new {areas = ""}); }
                         </div>
 
-                        <div id="profile" class="tab-pane">
-                            <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
-                        </div>
-
-                        <div id="dropdown" class="tab-pane">
-                            <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -63,29 +71,12 @@
     </div><!-- /.page-content -->
 
     @(Html.Kendo().Dialog()
-                          .Name("messageDialog")
-                          .Title("Notification")
-                          .Content(message)
-                          .Width(400)
-                          .Modal(true)
-                          .Actions(actions =>
-                          {
-                              actions.Add().Text("OK");
-                          })
-    )
+          .Name("messageDialog")
+          .Title("Notification")
+          .Content(message)
+          .Width(400)
+          .Modal(true)
+          .Visible(!string.IsNullOrEmpty(message))
+          .Actions(actions => { actions.Add().Text("OK"); })
+          )
 </div>
-
-@section Scripts {
-    <script>
-        $(document).ready(
-            function showDialog() {
-                $('#messageDialog').data("kendoDialog").open();
-            }
-
-        @if (!string.IsNullOrEmpty(message))
-        {
-            @:showDialog();
-        }
-        );
-    </script>
-}

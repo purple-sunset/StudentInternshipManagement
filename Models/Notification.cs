@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Notification
+    public class Notification:BaseEntity
     {
-        public int NotificationId { get; set; }
+        public override int Id { get; set; }
 
         [Required]
         [MaxLength(100)]

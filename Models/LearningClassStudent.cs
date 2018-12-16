@@ -9,21 +9,23 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class LearningClassStudent
+    public class LearningClassStudent:BaseEntity
     {
-        [Key]
-        [Column(Order = 1)]
+        //[Key]
+        //[Column(Order = 1)]
+        [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [DisplayName("Lớp")]
         [UIHint("LearningClassTemplate")]
         public int ClassId { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
+        //[Key]
+        //[Column(Order = 2)]
+        [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [DisplayName("Sinh viên")]
         [UIHint("StudentTemplate")]
-        public string StudentId { get; set; }
+        public int StudentId { get; set; }
 
         [Range(0,10)]
         [DisplayName("Điểm giữa kỳ")]

@@ -9,10 +9,10 @@ using System.Web.Script.Serialization;
 
 namespace Models
 {
-    public class Group
+    public class Group:BaseEntity
     {
         [DisplayName("Mã nhóm")]
-        public int GroupId { get; set; }
+        public override int Id { get; set; }
 
         [DisplayName("Tên nhóm")]
         public string GroupName { get; set; }
@@ -37,13 +37,13 @@ namespace Models
 
         [DisplayName("Nhóm trưởng")]
         [ForeignKey("Leader")]
-        public string LeaderId { get; set; }
+        public int LeaderId { get; set; }
 
         [ScriptIgnore(ApplyToOverrides = true)]
         public virtual Student Leader { get; set; }
 
         [DisplayName("Giảng viên hướng dẫn")]
-        public string TeacherId { get; set; }
+        public int TeacherId { get; set; }
 
         [ScriptIgnore(ApplyToOverrides = true)]
         public virtual Teacher Teacher { get; set; }

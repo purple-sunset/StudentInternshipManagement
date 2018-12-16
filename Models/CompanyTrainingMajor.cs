@@ -10,17 +10,19 @@ using System.Web.Script.Serialization;
 
 namespace Models
 {
-    public class CompanyTrainingMajor
+    public class CompanyTrainingMajor:BaseEntity
     {
-        [Key]
-        [Column(Order = 1)]
+        //[Key]
+        //[Column(Order = 1)]
+        [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [UIHint("CompanyTemplate")]
         [DisplayName("Mã công ty")]
         public int CompanyId { get; set; }
 
-        [Key]
-        [Column(Order = 2)]
+        //[Key]
+        //[Column(Order = 2)]
+        [Required]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [UIHint("TrainingMajorTemplate")]
         [DisplayName("Mã định hướng")]

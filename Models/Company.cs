@@ -9,10 +9,10 @@ using System.Web.Script.Serialization;
 
 namespace Models
 {
-    public class Company
+    public class Company:BaseEntity
     {
         [DisplayName("Mã công ty")]
-        public int CompanyId { get; set; }
+        public override int Id { get; set; }
 
         [Required]
         [MaxLength(50)]

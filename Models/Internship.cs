@@ -9,10 +9,10 @@ using System.Web.Script.Serialization;
 
 namespace Models
 {
-    public class Internship
+    public class Internship:BaseEntity
     {
         [DisplayName("Mã thực tập")]
-        public int InternshipId { get; set; }
+        public override int Id { get; set; }
 
         [Required]
         [DataType(DataType.Date)]
@@ -25,7 +25,7 @@ namespace Models
 
         [DisplayName("Sinh viên")]
         [UIHint("StudentTemplate")]
-        public string StudentId { get; set; }
+        public int StudentId { get; set; }
 
         [ScriptIgnore(ApplyToOverrides = true)]
         public virtual Student Student { get; set; }

@@ -9,11 +9,11 @@ using System.Web.Script.Serialization;
 
 namespace Models
 {
-    public class StudentClass
+    public class StudentClass:BaseEntity
     {
         [Key]
         [DisplayName("Mã lớp")]
-        public int ClassId { get; set; }
+        public override int Id { get; set; }
 
         [Required]
         [MaxLength(50)]

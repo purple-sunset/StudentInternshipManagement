@@ -9,12 +9,11 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Semester
+    public class Semester:BaseEntity
     {
-        [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [DisplayName("Mã học kỳ")]
-        public int SemesterId { get; set; }
+        public override int Id { get; set; }
 
         [Required]
         [DataType(DataType.Date)]

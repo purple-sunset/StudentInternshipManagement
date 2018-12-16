@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Department
+    public class Department:BaseEntity
     {
         [DisplayName("Mã Khoa/Viện")]
-        public int DepartmentId { get; set; }
+        public override int Id { get; set; }
 
         [Required]
         [MaxLength(50)]

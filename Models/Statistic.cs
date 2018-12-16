@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Statistic
+    public class Statistic:BaseEntity
     {
-        public int StatisticId { get; set; }
+        public override int Id { get; set; }
     }
 }

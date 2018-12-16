@@ -8,9 +8,9 @@ using System.Web.Script.Serialization;
 
 namespace Models
 {
-    public class Message
+    public class Message:BaseEntity
     {
-        public int MessageId { get; set; }
+        public override int Id { get; set; }
 
         [Required]
         [MaxLength(100)]
@@ -31,12 +31,12 @@ namespace Models
         [DataType(DataType.DateTime)]
         public DateTime Time { get; set; }
 
-        public string StudentId { get; set; }
+        public int StudentId { get; set; }
 
         [ScriptIgnore(ApplyToOverrides = true)]
         public virtual Student Student { get; set; }
 
-        public string TeacherId { get; set; }
+        public int TeacherId { get; set; }
 
         [ScriptIgnore(ApplyToOverrides = true)]
         public virtual Teacher Teacher { get; set; }

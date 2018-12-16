@@ -9,10 +9,10 @@ using System.Web.Script.Serialization;
 
 namespace Models
 {
-    public class TrainingMajor
+    public class TrainingMajor:BaseEntity
     {
         [DisplayName("Mã định hướng")]
-        public int TrainingMajorId { get; set; }
+        public override int Id { get; set; }
 
         [Required]
         [MaxLength(50)]
@@ -21,7 +21,7 @@ namespace Models
 
         [DisplayName("Môn học")]
         [UIHint("SubjectTemplate")]
-        public string SubjectId { get; set; }
+        public int SubjectId { get; set; }
 
         [ScriptIgnore(ApplyToOverrides = true)]
         public virtual Subject Subject { get; set; }

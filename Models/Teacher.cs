@@ -10,12 +10,13 @@ using System.Web.Script.Serialization;
 
 namespace Models
 {
-    public class Teacher
+    public class Teacher:BaseEntity
     {
-        [Key]
+        //[Key]
+        [Required]
         [DisplayName("Mã giảng viên")]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public string TeacherId { get; set; }
+        public string TeacherCode { get; set; }
 
         [Required]
         [MaxLength(50)]

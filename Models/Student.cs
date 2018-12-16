@@ -10,12 +10,14 @@ using System.Web.Script.Serialization;
 
 namespace Models
 {
-    public class Student
+    public class Student:BaseEntity
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //[Key]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Required]
+        [Index(IsUnique = true)]
         [DisplayName("Mã sinh viên")]
-        public string StudentId { get; set; }
+        public string StudentCode { get; set; }
 
         [Required]
         [MaxLength(50)]

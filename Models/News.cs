@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class News
+    public class News:BaseEntity
     {
-        public int NewsId { get; set; }
+        public override int Id { get; set; }
 
         [Required]
         [MaxLength(100)]

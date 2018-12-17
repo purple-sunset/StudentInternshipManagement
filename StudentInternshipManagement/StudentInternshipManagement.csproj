@@ -273,6 +273,7 @@
     <Compile Include="Areas\Teacher\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Teacher\TeacherAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NewsController.cs" />
     <Compile Include="Global.asax.cs">
@@ -3062,6 +3063,10 @@
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{00c097be-838b-4c1d-9c62-03232ff77a40}</Project>
       <Name>Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Repositories\Repositories.csproj">
+      <Project>{5EF0F288-7112-4185-A261-DB37061C8FC2}</Project>
+      <Name>Repositories</Name>
     </ProjectReference>
     <ProjectReference Include="..\Services\Services.csproj">
       <Project>{8f3749cf-abbf-486b-8ccc-7e273d7f5fb1}</Project>

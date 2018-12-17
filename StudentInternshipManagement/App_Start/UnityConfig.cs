@@ -1,6 +1,10 @@
+using Repositories.Implements;
+using Repositories.Interfaces;
 using System;
-
+using Services.Implements;
+using Services.Interfaces;
 using Unity;
+using Unity.Lifetime;
 
 namespace StudentInternshipManagement
 {
@@ -17,6 +21,8 @@ namespace StudentInternshipManagement
               RegisterTypes(container);
               return container;
           });
+
+        private static readonly ContainerControlledLifetimeManager manager = new ContainerControlledLifetimeManager(); 
 
         /// <summary>
         /// Configured Unity Container.
@@ -42,6 +48,11 @@ namespace StudentInternshipManagement
 
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
+
+            container.RegisterType(typeof(IGenericRepository<>), typeof(GenericRepository<>), manager);
+            container.RegisterType<IUnitOfWork, UnitOfWork>(manager);
+            container.RegisterType(typeof(IGenericService<>), typeof(GenericService<>), manager);
+            container.RegisterType<IAdminService, AdminService>(manager);
         }
     }
 }

@@ -10,12 +10,14 @@ using System.Web.Script.Serialization;
 
 namespace Models
 {
-    public class Admin
+    public class Admin:BaseEntity
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        //[Key]
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Required]
+        [Index(IsUnique = true)]
         [DisplayName("Mã quản lý")]
-        public string AdminId { get; set; }
+        public string AdminCode { get; set; }
 
         [Required]
         [MaxLength(50)]
@@ -37,13 +39,6 @@ namespace Models
         [DataType(DataType.PhoneNumber)]
         [DisplayName("Số điện thoại")]
         public string Phone { get; set; }
-
-        [Required]
-        [MaxLength(50)]
-        [ScaffoldColumn(false)]
-        [DisplayName("Ảnh")]
-        [DefaultValue("avatar.png")]
-        public string Avatar { get; set; }
 
         [DisplayName("Khoa/Viện")]
         [UIHint("DepartmentTemplate")]

@@ -10,14 +10,23 @@ using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
 using Models;
  using Services;
+ using Services.Implements;
+ using Services.Interfaces;
+ using StudentInternshipManagement.Controllers;
 
 namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
-    public class AdminController : Controller
+    public class AdminController : BaseController
     {
-        private readonly AdminService _service=new AdminService();
-        private readonly DepartmentService _departmentService = new DepartmentService();
+        private readonly IAdminService _adminService;
+        private readonly DepartmentService _departmentService;
+
+        public AdminController(IAdminService adminService, DepartmentService departmentService)
+        {
+            _adminService = adminService;
+            _departmentService = departmentService;
+        }
 
         public ActionResult Index()
         {
@@ -27,8 +36,8 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
 
         public ActionResult Admins_Read([DataSourceRequest]DataSourceRequest request)
         {
-            DataSourceResult result = _service.GetAll().ToDataSourceResult(request, admin => new {
-                AdminId = admin.AdminId,
+            DataSourceResult result = _adminService.GetAll().ToDataSourceResult(request, admin => new {
+                AdminCode = admin.AdminCode,
                 AdminName = admin.AdminName,
                 BirthDate = admin.BirthDate,
                 Address = admin.Address,
@@ -53,7 +62,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
                     DepartmentId = admin.DepartmentId
                 };
 
-                _service.Add(admin);
+                _adminService.Add(admin);
             }
 
             return Json(new[] { admin }.ToDataSourceResult(request, ModelState));
@@ -66,7 +75,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             {
                 var entity = new global::Models.Admin
                 {
-                    AdminId = admin.AdminId,
+                    AdminCode = admin.AdminCode,
                     AdminName = admin.AdminName,
                     BirthDate = admin.BirthDate,
                     Address = admin.Address,
@@ -74,7 +83,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
                     DepartmentId = admin.DepartmentId
                 };
 
-                _service.Update(admin);
+                _adminService.Update(admin);
             }
 
             return Json(new[] { admin }.ToDataSourceResult(request, ModelState));
@@ -87,7 +96,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             {
                 var entity = new global::Models.Admin
                 {
-                    AdminId = admin.AdminId,
+                    AdminCode = admin.AdminCode,
                     AdminName = admin.AdminName,
                     BirthDate = admin.BirthDate,
                     Address = admin.Address,
@@ -95,7 +104,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
                     DepartmentId = admin.DepartmentId
                 };
 
-                _service.Delete(admin);
+                _adminService.Delete(admin);
             }
 
             return Json(new[] { admin }.ToDataSourceResult(request, ModelState));
@@ -103,7 +112,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
 
         protected override void Dispose(bool disposing)
         {
-            _service.Dispose();
+            _adminService.Dispose();
             _departmentService.Dispose();
             base.Dispose(disposing);
         }

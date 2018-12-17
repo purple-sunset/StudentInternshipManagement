@@ -41,13 +41,6 @@ namespace Models
         public string Phone { get; set; }
 
         [Required]
-        [MaxLength(50)]
-        [ScaffoldColumn(false)]
-        [DisplayName("Ảnh")]
-        [DefaultValue("avatar.png")]
-        public string Avatar { get; set; }
-
-        [Required]
         [Range(0,4)]
         [DisplayName("Điểm CPA")]
         public float Cpa { get; set; }

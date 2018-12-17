@@ -1,26 +1,13 @@
 ﻿@using System.Security.Claims
 @using Microsoft.AspNet.Identity
 @using Services
+@using StudentInternshipManagement.Controllers
 @if (Request.IsAuthenticated)
-            {
-                var username = User.Identity.GetUserName();
-                var role = ((ClaimsIdentity)User.Identity).Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).FirstOrDefault();
-                var avatar = string.Empty;
-                switch (role)
-                {
-                    case "Student":
-                        avatar = new StudentService().GetById(username)?.Avatar;
-                        break;
-                    case "Teacher":
-                        avatar = new TeacherService().GetById(username)?.Avatar;
-                        break;
-                    case "Admin":
-                        avatar = new AdminService().GetById(username)?.Avatar;
-                        break;
-                    default:
-                        avatar = "avatar.png";
-                        break;
-                }
+{
+    var controller = new BaseController();
+    var username = controller.CurrentUser.UserName;
+    var role = controller.CurrentRole;
+    var avatar = controller.CurrentUser.Avatar;
 
 
     <ul class="nav ace-nav">

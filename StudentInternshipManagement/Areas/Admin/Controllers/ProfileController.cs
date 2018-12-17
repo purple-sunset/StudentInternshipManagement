@@ -7,28 +7,32 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Services;
+using Services.Interfaces;
+using StudentInternshipManagement.Controllers;
 
 namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
-    public class ProfileController : Controller
+    public class ProfileController : BaseController
     {
-        private readonly AdminService _service = new AdminService();
+        private readonly IAdminService _adminService;
+
+        public ProfileController(IAdminService adminService)
+        {
+            _adminService = adminService;
+        }
 
         // GET: Student/Profile
         public ActionResult Index()
         {
-            var id = User.Identity.GetUserName();
-            var admin = _service.GetById(id);
-            var userManager = HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            ViewBag.Email = userManager.FindByName(id).Email;
+            var admin = _adminService.GetByTeacherCode(CurrentUser.Id);
+            ViewBag.Email = CurrentUser.Email;
             return View(admin);
         }
 
         public ActionResult Edit()
         {
-            var id = User.Identity.GetUserName();
-            var admin = _service.GetById(id);
+            var admin = _adminService.GetByTeacherCode(CurrentUser.Id);
             return View(admin);
         }
 
@@ -42,12 +46,12 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
                 {
                     var extension = Path.GetExtension(file.FileName);
                     var physicalPath = Path.Combine(Server.MapPath("~/Images/avatars/"),
-                        $"{model.AdminId}{extension}");
+                        $"{model.AdminCode}{extension}");
                     file.SaveAs(physicalPath);
-                    model.Avatar = $"{model.AdminId}{extension}";
+                    CurrentUser.Avatar = $"{model.AdminCode}{extension}";
                 }
 
-                ViewBag.Message = _service.Update(model) ? "Thành công" : "Thất bại";
+                ViewBag.Message = _adminService.Update(model) ? "Thành công" : "Thất bại";
             }
 
             return RedirectToAction("Index");

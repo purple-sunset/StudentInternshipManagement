@@ -14,8 +14,8 @@ namespace Models
     {
         //[Key]
         [Required]
+        [Index(IsUnique = true)]
         [DisplayName("Mã giảng viên")]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public string TeacherCode { get; set; }
 
         [Required]
@@ -38,13 +38,6 @@ namespace Models
         [DataType(DataType.PhoneNumber)]
         [DisplayName("Số điện thoại")]
         public string Phone { get; set; }
-
-        [Required]
-        [MaxLength(50)]
-        [ScaffoldColumn(false)]
-        [DisplayName("Ảnh")]
-        [DefaultValue("avatar.png")]
-        public string Avatar { get; set; }
 
         [DisplayName("Khoa/Viện")]
         [UIHint("DepartmentTemplate")]

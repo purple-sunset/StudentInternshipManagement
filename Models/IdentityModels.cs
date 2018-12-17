@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
@@ -16,7 +18,13 @@ namespace Models
             // Add custom user claims here
             return userIdentity;
         }
-        
+
+        [Required]
+        [MaxLength(50)]
+        [ScaffoldColumn(false)]
+        [DisplayName("Ảnh")]
+        [DefaultValue("avatar.png")]
+        public string Avatar { get; set; }
         public virtual ICollection<Notification> Notifications { get; set; }
     }
 

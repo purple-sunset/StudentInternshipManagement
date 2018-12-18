@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using Models;
+using Models.Constants;
 
 namespace StudentInternshipManagement.Areas.Student.Models
 {

@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Models;
+using Models.Entities;
 
 namespace Repositories.Interfaces
 {
-    public interface IUnitOfWork: IDisposable
+    public interface IUnitOfWork
     {
         /// <summary>
         /// Gets generic repository
@@ -16,6 +17,12 @@ namespace Repositories.Interfaces
         /// <returns>The generic repository</returns>
         IGenericRepository<TEntity> Repository<TEntity>()
             where TEntity : BaseEntity;
+
+        /// <summary>
+        /// Get user repository
+        /// </summary>
+        /// <returns></returns>
+        IUserRepository UserRepository();
 
         /// <summary>
         /// Commits the synchronous.
@@ -28,10 +35,5 @@ namespace Repositories.Interfaces
         /// </summary>
         /// <returns>The commit result</returns>
         Task<int> CommitAsync();
-
-        /// <summary>
-        /// Releases unmanaged and - optionally - managed resources.
-        /// </summary>
-        new void Dispose();
     }
 }

@@ -1,5 +1,6 @@
 ﻿@using Kendo.Mvc.UI
 @using Models
+@using Models.Entities
 @{
     ViewBag.Title = "Đánh giá thực tập";
     ViewBag.Category = "Thực tập";
@@ -12,7 +13,7 @@
     @Styles.Render("~/Content/kendo/2018.2.516/styles")
     @Scripts.Render("~/Scripts/kendo/2018.2.516/scripts")
 }
-@(Html.Kendo().Grid<Models.LearningClassStudent>()
+@(Html.Kendo().Grid<LearningClassStudent>()
           .Name("grid")
           .Columns(columns =>
           {

@@ -31,7 +31,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.2\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.2\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,27 +56,48 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implements\AdminService.cs" />
+    <Compile Include="Implements\EmailService.cs" />
+    <Compile Include="Interfaces\IStudentClassService.cs" />
+    <Compile Include="Interfaces\ISubjectService.cs" />
+    <Compile Include="Interfaces\IStatisticService.cs" />
+    <Compile Include="Interfaces\INotificationService.cs" />
+    <Compile Include="Interfaces\INewsService.cs" />
+    <Compile Include="Interfaces\IMessageService.cs" />
+    <Compile Include="Interfaces\ITeacherService.cs" />
+    <Compile Include="Interfaces\IInternshipService.cs" />
+    <Compile Include="Interfaces\IEmailService.cs" />
+    <Compile Include="Interfaces\IUserService.cs" />
+    <Compile Include="Implements\UserService.cs" />
     <Compile Include="Implements\GenericService.cs" />
+    <Compile Include="Interfaces\IStudentService.cs" />
+    <Compile Include="Interfaces\ILearningClassStudentService.cs" />
+    <Compile Include="Interfaces\ILearningClassService.cs" />
+    <Compile Include="Interfaces\ITrainingMajorService.cs" />
+    <Compile Include="Interfaces\ISemesterService.cs" />
+    <Compile Include="Interfaces\IGroupService.cs" />
+    <Compile Include="Interfaces\IDepartmentService.cs" />
+    <Compile Include="Interfaces\ICompanyTrainingMajorService.cs" />
+    <Compile Include="Interfaces\ICompanyService.cs" />
     <Compile Include="Interfaces\IAdminService.cs" />
     <Compile Include="Interfaces\IGenericService.cs" />
-    <Compile Include="LearningClassStudentService.cs" />
-    <Compile Include="StatisticService.cs" />
-    <Compile Include="NotificationService.cs" />
-    <Compile Include="NewsService.cs" />
-    <Compile Include="MessageService.cs" />
-    <Compile Include="IntershipService.cs" />
-    <Compile Include="GroupService.cs" />
-    <Compile Include="CompanyService.cs" />
-    <Compile Include="CompanyTrainingMajorService.cs" />
-    <Compile Include="LearningClassService.cs" />
-    <Compile Include="TrainingMajorService.cs" />
-    <Compile Include="SubjectService.cs" />
-    <Compile Include="SemesterService.cs" />
-    <Compile Include="TeacherService.cs" />
+    <Compile Include="Implements\LearningClassStudentService.cs" />
+    <Compile Include="Implements\StatisticService.cs" />
+    <Compile Include="Implements\NotificationService.cs" />
+    <Compile Include="Implements\NewsService.cs" />
+    <Compile Include="Implements\MessageService.cs" />
+    <Compile Include="Implements\IntershipService.cs" />
+    <Compile Include="Implements\GroupService.cs" />
+    <Compile Include="Implements\CompanyService.cs" />
+    <Compile Include="Implements\CompanyTrainingMajorService.cs" />
+    <Compile Include="Implements\LearningClassService.cs" />
+    <Compile Include="Implements\TrainingMajorService.cs" />
+    <Compile Include="Implements\SubjectService.cs" />
+    <Compile Include="Implements\SemesterService.cs" />
+    <Compile Include="Implements\TeacherService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StudentClassService.cs" />
-    <Compile Include="DepartmentService.cs" />
-    <Compile Include="StudentService.cs" />
+    <Compile Include="Implements\StudentClassService.cs" />
+    <Compile Include="Implements\DepartmentService.cs" />
+    <Compile Include="Implements\StudentService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">
@@ -79,6 +113,9 @@
       <Name>Utilities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

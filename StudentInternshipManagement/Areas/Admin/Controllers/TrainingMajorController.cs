@@ -1,24 +1,28 @@
-﻿﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
 using Models;
- using Services;
+using Models.Entities;
+using Services;
+using Services.Implements;
+using StudentInternshipManagement.Controllers;
 
 namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
-    public class TrainingMajorController : Controller
+    public class TrainingMajorController : BaseController
     {
-        private readonly TrainingMajorService _service=new TrainingMajorService();
-        private readonly SubjectService _subjectService=new SubjectService();
-        private readonly CompanyService _companyService = new CompanyService();
+        private readonly CompanyService _companyService;
+        private readonly SubjectService _subjectService;
+        private readonly TrainingMajorService _trainingMajorService;
+
+        public TrainingMajorController(TrainingMajorService trainingMajorService, SubjectService subjectService,
+            CompanyService companyService)
+        {
+            _trainingMajorService = trainingMajorService;
+            _subjectService = subjectService;
+            _companyService = companyService;
+        }
 
         public ActionResult Index()
         {
@@ -27,19 +31,21 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             return View();
         }
 
-        public ActionResult TrainingMajors_Read([DataSourceRequest]DataSourceRequest request)
+        public ActionResult TrainingMajors_Read([DataSourceRequest] DataSourceRequest request)
         {
-            DataSourceResult result = _service.GetAll().ToDataSourceResult(request, trainingMajor => new {
-                TrainingMajorId = trainingMajor.TrainingMajorId,
-                TrainingMajorName = trainingMajor.TrainingMajorName,
-                SubjectId = trainingMajor.SubjectId
+            var result = _trainingMajorService.GetAll().ToDataSourceResult(request, trainingMajor => new
+            {
+                TrainingMajorId = trainingMajor.Id,
+                trainingMajor.TrainingMajorName,
+                trainingMajor.SubjectId
             });
 
             return Json(result);
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult TrainingMajors_Create([DataSourceRequest]DataSourceRequest request, TrainingMajor trainingMajor)
+        public ActionResult TrainingMajors_Create([DataSourceRequest] DataSourceRequest request,
+            TrainingMajor trainingMajor)
         {
             if (ModelState.IsValid)
             {
@@ -49,79 +55,77 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
                     SubjectId = trainingMajor.SubjectId
                 };
 
-                _service.Add(entity);
+                _trainingMajorService.Add(entity);
             }
 
-            return Json(new[] { trainingMajor }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {trainingMajor}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult TrainingMajors_Update([DataSourceRequest]DataSourceRequest request, TrainingMajor trainingMajor)
+        public ActionResult TrainingMajors_Update([DataSourceRequest] DataSourceRequest request,
+            TrainingMajor trainingMajor)
         {
             if (ModelState.IsValid)
             {
                 var entity = new TrainingMajor
                 {
-                    TrainingMajorId = trainingMajor.TrainingMajorId,
+                    Id = trainingMajor.Id,
                     TrainingMajorName = trainingMajor.TrainingMajorName,
                     SubjectId = trainingMajor.SubjectId
                 };
 
-                _service.Add(entity);
+                _trainingMajorService.Add(entity);
             }
 
-            return Json(new[] { trainingMajor }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {trainingMajor}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult TrainingMajors_Destroy([DataSourceRequest]DataSourceRequest request, TrainingMajor trainingMajor)
+        public ActionResult TrainingMajors_Destroy([DataSourceRequest] DataSourceRequest request,
+            TrainingMajor trainingMajor)
         {
             if (ModelState.IsValid)
             {
                 var entity = new TrainingMajor
                 {
-                    TrainingMajorId = trainingMajor.TrainingMajorId,
+                    Id = trainingMajor.Id,
                     TrainingMajorName = trainingMajor.TrainingMajorName,
                     SubjectId = trainingMajor.SubjectId
                 };
 
-                _service.Delete(entity);
+                _trainingMajorService.Delete(entity);
             }
 
-            return Json(new[] { trainingMajor }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {trainingMajor}.ToDataSourceResult(request, ModelState));
         }
 
-        public ActionResult CompanyTrainingMajors_Read(int trainingMajorId, [DataSourceRequest]DataSourceRequest request)
+        public ActionResult CompanyTrainingMajors_Read(int trainingMajorId,
+            [DataSourceRequest] DataSourceRequest request)
         {
-            DataSourceResult result = _service.GetAll().ToDataSourceResult(request, trainingMajor => new {
-                TrainingMajorId = trainingMajor.TrainingMajorId,
-                TrainingMajorName = trainingMajor.TrainingMajorName,
-                SubjectId = trainingMajor.SubjectId
+            var result = _trainingMajorService.GetAll().ToDataSourceResult(request, trainingMajor => new
+            {
+                TrainingMajorId = trainingMajor.Id,
+                trainingMajor.TrainingMajorName,
+                trainingMajor.SubjectId
             });
 
             return Json(result);
         }
 
 
-        public ActionResult GetCompanyList(int majorId, [DataSourceRequest]DataSourceRequest request)
+        public ActionResult GetCompanyList(int majorId, [DataSourceRequest] DataSourceRequest request)
         {
-            DataSourceResult result = _service.GetCompanyList(majorId).ToDataSourceResult(request, company => new {
-                CompanyId = company.CompanyId,
-                CompanyName = company.CompanyName,
-                CompanyDescription = company.CompanyDescription,
-                Address = company.Address,
-                Email = company.Email,
-                Phone = company.Phone
+            var result = _trainingMajorService.GetCompanyList(majorId).ToDataSourceResult(request, company => new
+            {
+                CompanyId = company.Id,
+                company.CompanyName,
+                company.CompanyDescription,
+                company.Address,
+                company.Email,
+                company.Phone
             });
 
             return Json(result);
-        }
-        protected override void Dispose(bool disposing)
-        {
-            _service.Dispose();
-            _subjectService.Dispose();
-            _companyService.Dispose();
-            base.Dispose(disposing);
         }
     }
 }

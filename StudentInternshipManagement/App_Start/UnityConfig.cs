@@ -1,6 +1,8 @@
 using Repositories.Implements;
 using Repositories.Interfaces;
 using System;
+using Models;
+using Models.Contexts;
 using Services.Implements;
 using Services.Interfaces;
 using Unity;
@@ -49,10 +51,13 @@ namespace StudentInternshipManagement
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
 
+            container.RegisterType<WebContext, WebContext>(manager);
+            container.RegisterType<IUserRepository, UserRepository>(manager);
             container.RegisterType(typeof(IGenericRepository<>), typeof(GenericRepository<>), manager);
             container.RegisterType<IUnitOfWork, UnitOfWork>(manager);
             container.RegisterType(typeof(IGenericService<>), typeof(GenericService<>), manager);
             container.RegisterType<IAdminService, AdminService>(manager);
+            container.RegisterType<ICompanyService, CompanyService>(manager);
         }
     }
 }

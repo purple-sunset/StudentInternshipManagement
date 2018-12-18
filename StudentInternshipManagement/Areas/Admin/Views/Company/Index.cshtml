@@ -1,5 +1,6 @@
 ﻿@using Kendo.Mvc.UI
 @using Models
+@using Models.Entities
 @using Services
 @{
     ViewBag.Title = "Quản lý công ty";
@@ -15,7 +16,7 @@
 }
 
 
-@(Html.Kendo().Grid<Models.Company>()
+@(Html.Kendo().Grid<Company>()
       .Name("grid")
       .Columns(columns =>
       {

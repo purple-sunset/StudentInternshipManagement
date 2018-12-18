@@ -38,7 +38,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(HttpPostedFileBase file, global::Models.Admin model)
+        public ActionResult Edit(HttpPostedFileBase file, global::Models.Entities.Admin model)
         {
             if (ModelState.IsValid)
             {

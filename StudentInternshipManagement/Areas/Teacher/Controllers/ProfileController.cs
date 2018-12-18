@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Services;
+using Services.Implements;
 
 namespace StudentInternshipManagement.Areas.Teacher.Controllers
 {
@@ -34,7 +35,7 @@ namespace StudentInternshipManagement.Areas.Teacher.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(HttpPostedFileBase file, global::Models.Teacher model)
+        public ActionResult Edit(HttpPostedFileBase file, global::Models.Entities.Teacher model)
         {
             if (ModelState.IsValid)
             {

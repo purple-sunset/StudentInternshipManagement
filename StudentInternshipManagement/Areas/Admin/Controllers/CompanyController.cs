@@ -1,23 +1,26 @@
-﻿﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
 using Models;
- using Services;
+using Models.Entities;
+using Services;
+using Services.Implements;
+using Services.Interfaces;
+using StudentInternshipManagement.Controllers;
 
 namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
-    public class CompanyController : Controller
+    public class CompanyController : BaseController
     {
-        private readonly CompanyService _service=new CompanyService();
-        private readonly TrainingMajorService _trainingMajorService = new TrainingMajorService();
+        private readonly ICompanyService _companyService;
+        private readonly TrainingMajorService _trainingMajorService;
+
+        public CompanyController(ICompanyService service, TrainingMajorService trainingMajorService)
+        {
+            _companyService = service;
+            _trainingMajorService = trainingMajorService;
+        }
 
         public ActionResult Index()
         {
@@ -25,22 +28,23 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             return View();
         }
 
-        public ActionResult Companies_Read([DataSourceRequest]DataSourceRequest request)
+        public ActionResult Companies_Read([DataSourceRequest] DataSourceRequest request)
         {
-            DataSourceResult result = _service.GetAll().ToDataSourceResult(request, company => new {
-                CompanyId = company.CompanyId,
-                CompanyName = company.CompanyName,
-                CompanyDescription = company.CompanyDescription,
-                Address = company.Address,
-                Email = company.Email,
-                Phone = company.Phone
+            var result = _companyService.GetAll().ToDataSourceResult(request, company => new
+            {
+                CompanyId = company.Id,
+                company.CompanyName,
+                company.CompanyDescription,
+                company.Address,
+                company.Email,
+                company.Phone
             });
 
             return Json(result);
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Companies_Create([DataSourceRequest]DataSourceRequest request, Company company)
+        public ActionResult Companies_Create([DataSourceRequest] DataSourceRequest request, Company company)
         {
             if (ModelState.IsValid)
             {
@@ -53,20 +57,20 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
                     Phone = company.Phone
                 };
 
-                _service.Add(entity);
+                _companyService.Add(entity);
             }
 
-            return Json(new[] { company }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {company}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Companies_Update([DataSourceRequest]DataSourceRequest request, Company company)
+        public ActionResult Companies_Update([DataSourceRequest] DataSourceRequest request, Company company)
         {
             if (ModelState.IsValid)
             {
                 var entity = new Company
                 {
-                    CompanyId = company.CompanyId,
+                    Id = company.Id,
                     CompanyName = company.CompanyName,
                     CompanyDescription = company.CompanyDescription,
                     Address = company.Address,
@@ -74,20 +78,20 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
                     Phone = company.Phone
                 };
 
-                _service.Update(entity);
+                _companyService.Update(entity);
             }
 
-            return Json(new[] { company }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {company}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Companies_Destroy([DataSourceRequest]DataSourceRequest request, Company company)
+        public ActionResult Companies_Destroy([DataSourceRequest] DataSourceRequest request, Company company)
         {
             if (ModelState.IsValid)
             {
                 var entity = new Company
                 {
-                    CompanyId = company.CompanyId,
+                    Id = company.Id,
                     CompanyName = company.CompanyName,
                     CompanyDescription = company.CompanyDescription,
                     Address = company.Address,
@@ -95,17 +99,10 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
                     Phone = company.Phone
                 };
 
-                _service.Delete(entity);
+                _companyService.Delete(entity);
             }
 
-            return Json(new[] { company }.ToDataSourceResult(request, ModelState));
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            _service.Dispose();
-            _trainingMajorService.Dispose();
-            base.Dispose(disposing);
+            return Json(new[] {company}.ToDataSourceResult(request, ModelState));
         }
     }
 }

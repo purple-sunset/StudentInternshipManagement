@@ -1,24 +1,29 @@
-﻿﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
 using Models;
- using Services;
+using Models.Entities;
+using Services;
+using Services.Implements;
+using Services.Interfaces;
 
 namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
-    public class CompanyTrainingMajorController : Controller
+    public class CompanyTrainingMajorController : BaseController
     {
-        private readonly CompanyTrainingMajorService _service=new CompanyTrainingMajorService();
-        private readonly TrainingMajorService _trainingMajorService = new TrainingMajorService();
-        private readonly CompanyService _companyService = new CompanyService();
+        private readonly ICompanyService _companyService;
+        private readonly CompanyTrainingMajorService _companyTrainingMajorService;
+        private readonly TrainingMajorService _trainingMajorService;
+
+        public CompanyTrainingMajorController(CompanyTrainingMajorService companyTrainingMajorService,
+            TrainingMajorService trainingMajorService, ICompanyService companyService)
+        {
+            _companyTrainingMajorService = companyTrainingMajorService;
+            _trainingMajorService = trainingMajorService;
+            _companyService = companyService;
+        }
 
         public ActionResult Index()
         {
@@ -27,37 +32,32 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             return View();
         }
 
-        public ActionResult CompanyTrainingMajors_Read([DataSourceRequest]DataSourceRequest request, int? companyId, int? majorId)
+        public ActionResult CompanyTrainingMajors_Read([DataSourceRequest] DataSourceRequest request, int? companyId,
+            int? majorId)
         {
-            IQueryable<CompanyTrainingMajor> datasource = null;
+            IQueryable<CompanyTrainingMajor> datasource;
 
             if (companyId != null)
-            {
-                
-                datasource = _service.GetByCompany(companyId.Value);
-            }
+                datasource = _companyTrainingMajorService.GetByCompany(companyId.Value);
             else if (majorId != null)
-            {
-                
-                datasource = _service.GetByTrainingMajor(majorId.Value);
-            }
+                datasource = _companyTrainingMajorService.GetByTrainingMajor(majorId.Value);
             else
-            {
-                datasource = _service.GetAll();
-            }
+                datasource = _companyTrainingMajorService.GetAll();
 
-            DataSourceResult result = datasource.ToDataSourceResult(request, companyTrainingMajor => new {
-                CompanyId = companyTrainingMajor.CompanyId,
-                TrainingMajorId = companyTrainingMajor.TrainingMajorId,
-                TotalTraineeCount = companyTrainingMajor.TotalTraineeCount,
-                AvailableTraineeCount = companyTrainingMajor.AvailableTraineeCount,
+            var result = datasource.ToDataSourceResult(request, companyTrainingMajor => new
+            {
+                companyTrainingMajor.CompanyId,
+                companyTrainingMajor.TrainingMajorId,
+                companyTrainingMajor.TotalTraineeCount,
+                companyTrainingMajor.AvailableTraineeCount
             });
 
             return Json(result);
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult CompanyTrainingMajors_Create([DataSourceRequest]DataSourceRequest request, CompanyTrainingMajor companyTrainingMajor)
+        public ActionResult CompanyTrainingMajors_Create([DataSourceRequest] DataSourceRequest request,
+            CompanyTrainingMajor companyTrainingMajor)
         {
             if (ModelState.IsValid)
             {
@@ -69,14 +69,15 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
                     AvailableTraineeCount = companyTrainingMajor.AvailableTraineeCount
                 };
 
-                _service.Add(entity);
+                _companyTrainingMajorService.Add(entity);
             }
 
-            return Json(new[] { companyTrainingMajor }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {companyTrainingMajor}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult CompanyTrainingMajors_Update([DataSourceRequest]DataSourceRequest request, CompanyTrainingMajor companyTrainingMajor)
+        public ActionResult CompanyTrainingMajors_Update([DataSourceRequest] DataSourceRequest request,
+            CompanyTrainingMajor companyTrainingMajor)
         {
             if (ModelState.IsValid)
             {
@@ -88,14 +89,15 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
                     AvailableTraineeCount = companyTrainingMajor.AvailableTraineeCount
                 };
 
-                _service.Update(entity);
+                _companyTrainingMajorService.Update(entity);
             }
 
-            return Json(new[] { companyTrainingMajor }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {companyTrainingMajor}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult CompanyTrainingMajors_Destroy([DataSourceRequest]DataSourceRequest request, CompanyTrainingMajor companyTrainingMajor)
+        public ActionResult CompanyTrainingMajors_Destroy([DataSourceRequest] DataSourceRequest request,
+            CompanyTrainingMajor companyTrainingMajor)
         {
             if (ModelState.IsValid)
             {
@@ -107,18 +109,10 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
                     AvailableTraineeCount = companyTrainingMajor.AvailableTraineeCount
                 };
 
-                _service.Delete(entity);
+                _companyTrainingMajorService.Delete(entity);
             }
 
-            return Json(new[] { companyTrainingMajor }.ToDataSourceResult(request, ModelState));
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            _service.Dispose();
-            _companyService.Dispose();
-            _trainingMajorService.Dispose();
-            base.Dispose(disposing);
+            return Json(new[] {companyTrainingMajor}.ToDataSourceResult(request, ModelState));
         }
     }
 }

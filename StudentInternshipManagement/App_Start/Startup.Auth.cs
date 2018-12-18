@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
 using Models;
+using Models.Entities;
 using Owin;
 
 namespace StudentInternshipManagement

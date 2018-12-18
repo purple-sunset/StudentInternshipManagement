@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
 using Services;
+using Services.Implements;
 
 namespace StudentInternshipManagement.Controllers
 {

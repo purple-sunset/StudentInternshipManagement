@@ -10,7 +10,9 @@ using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
  using Microsoft.AspNet.Identity;
  using Models;
+ using Models.Entities;
  using Services;
+ using Services.Implements;
 
 namespace StudentInternshipManagement.Areas.Teacher.Controllers
 {

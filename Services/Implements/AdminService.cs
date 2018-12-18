@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Models;
+using Models.Entities;
 using Repositories.Interfaces;
 using Services.Interfaces;
 
@@ -11,9 +12,9 @@ namespace Services.Implements
         {
         }
 
-        public Admin GetByTeacherCode(string code)
+        public Admin GetByTeacherCode(string teacherCode)
         {
-            return UnitOfWork.Repository<Admin>().TableNoTracking.FirstOrDefault(x => x.AdminCode == code);
+            return UnitOfWork.Repository<Admin>().Table.FirstOrDefault(x => x.AdminCode == teacherCode);
         }
 
     }

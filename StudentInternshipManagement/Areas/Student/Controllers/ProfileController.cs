@@ -8,6 +8,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Models;
 using Services;
+using Services.Implements;
 using StudentInternshipManagement.Models;
 
 namespace StudentInternshipManagement.Areas.Student.Controllers
@@ -35,7 +36,7 @@ namespace StudentInternshipManagement.Areas.Student.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(HttpPostedFileBase file, global::Models.Student model)
+        public ActionResult Edit(HttpPostedFileBase file, global::Models.Entities.Student model)
         {
             if (ModelState.IsValid)
             {

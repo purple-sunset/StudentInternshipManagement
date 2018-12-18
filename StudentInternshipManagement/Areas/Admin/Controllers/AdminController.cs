@@ -49,11 +49,11 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Admins_Create([DataSourceRequest]DataSourceRequest request, global::Models.Admin admin)
+        public ActionResult Admins_Create([DataSourceRequest]DataSourceRequest request, global::Models.Entities.Admin admin)
         {
             if (ModelState.IsValid)
             {
-                var entity = new global::Models.Admin
+                var entity = new global::Models.Entities.Admin
                 {
                     AdminName = admin.AdminName,
                     BirthDate = admin.BirthDate,
@@ -69,11 +69,11 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Admins_Update([DataSourceRequest]DataSourceRequest request, global::Models.Admin admin)
+        public ActionResult Admins_Update([DataSourceRequest]DataSourceRequest request, global::Models.Entities.Admin admin)
         {
             if (ModelState.IsValid)
             {
-                var entity = new global::Models.Admin
+                var entity = new global::Models.Entities.Admin
                 {
                     AdminCode = admin.AdminCode,
                     AdminName = admin.AdminName,
@@ -90,11 +90,11 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Admins_Destroy([DataSourceRequest]DataSourceRequest request, global::Models.Admin admin)
+        public ActionResult Admins_Destroy([DataSourceRequest]DataSourceRequest request, global::Models.Entities.Admin admin)
         {
             if (ModelState.IsValid)
             {
-                var entity = new global::Models.Admin
+                var entity = new global::Models.Entities.Admin
                 {
                     AdminCode = admin.AdminCode,
                     AdminName = admin.AdminName,
@@ -112,8 +112,8 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
 
         protected override void Dispose(bool disposing)
         {
-            _adminService.Dispose();
-            _departmentService.Dispose();
+            //_adminService.Dispose();
+            //_departmentService.Dispose();
             base.Dispose(disposing);
         }
     }

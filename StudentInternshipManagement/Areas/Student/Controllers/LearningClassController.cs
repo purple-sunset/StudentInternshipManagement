@@ -11,6 +11,7 @@ using Kendo.Mvc.UI;
  using Microsoft.AspNet.Identity;
  using Models;
  using Services;
+ using Services.Implements;
 
 namespace StudentInternshipManagement.Areas.Student.Controllers
 {

@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Models;
+using Models.Entities;
 
 namespace StudentInternshipManagement.Controllers
 {

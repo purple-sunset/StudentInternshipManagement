@@ -1,6 +1,7 @@
 ﻿@using Kendo.Mvc.UI
 @using Microsoft.AspNet.Identity
 @using Models
+@using Models.Entities
 @using StudentInternshipManagement.Areas.Student.Models
 @{
     ViewBag.Title = "Nhóm thực tập";
@@ -14,7 +15,7 @@
     @Styles.Render("~/Content/kendo/2018.2.516/styles")
     @Scripts.Render("~/Scripts/kendo/2018.2.516/scripts")
 }
-@(Html.Kendo().Grid<Models.Group>()
+@(Html.Kendo().Grid<Group>()
           .Name("grid")
           .Columns(columns =>
           {

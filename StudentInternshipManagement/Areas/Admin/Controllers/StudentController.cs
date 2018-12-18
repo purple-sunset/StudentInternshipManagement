@@ -10,6 +10,7 @@ using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
 using Models;
  using Services;
+ using Services.Implements;
 
 namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
@@ -43,11 +44,11 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Students_Create([DataSourceRequest]DataSourceRequest request, global::Models.Student student)
+        public ActionResult Students_Create([DataSourceRequest]DataSourceRequest request, global::Models.Entities.Student student)
         {
             if (ModelState.IsValid)
             {
-                var entity = new global::Models.Student
+                var entity = new global::Models.Entities.Student
                 {
                     StudentId = student.StudentId,
                     StudentName = student.StudentName,
@@ -65,11 +66,11 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Students_Update([DataSourceRequest]DataSourceRequest request, global::Models.Student student)
+        public ActionResult Students_Update([DataSourceRequest]DataSourceRequest request, global::Models.Entities.Student student)
         {
             if (ModelState.IsValid)
             {
-                var entity = new global::Models.Student
+                var entity = new global::Models.Entities.Student
                 {
                     StudentId = student.StudentId,
                     StudentName = student.StudentName,
@@ -87,11 +88,11 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Students_Destroy([DataSourceRequest]DataSourceRequest request, global::Models.Student student)
+        public ActionResult Students_Destroy([DataSourceRequest]DataSourceRequest request, global::Models.Entities.Student student)
         {
             if (ModelState.IsValid)
             {
-                var entity = new global::Models.Student
+                var entity = new global::Models.Entities.Student
                 {
                     StudentId = student.StudentId,
                     StudentName = student.StudentName,

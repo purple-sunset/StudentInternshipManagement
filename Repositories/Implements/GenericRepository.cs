@@ -4,7 +4,10 @@ using System.Data.Entity;
 using System.Data.Entity.Validation;
 using System.Linq;
 using Models;
+using Models.Contexts;
+using Models.Entities;
 using Repositories.Interfaces;
+using Utilities;
 
 namespace Repositories.Implements
 {
@@ -14,11 +17,6 @@ namespace Repositories.Implements
 
         private readonly WebContext _context;
         private IDbSet<TEntity> _entities;
-
-        /// <summary>
-        /// The disposed
-        /// </summary>
-        private bool _disposed;
 
         #endregion
 
@@ -82,9 +80,10 @@ namespace Repositories.Implements
                 entity.IsDeleted = false;
                 this.Entities.Add(entity);
             }
-            catch (DbEntityValidationException dbEx)
+            catch (Exception ex)
             {
-                throw new Exception(this.GetFullErrorText(dbEx), dbEx);
+                Logger.LogError(ex);
+                //throw new Exception(this.GetFullErrorText(dbEx), dbEx);
             }
         }
 
@@ -106,9 +105,10 @@ namespace Repositories.Implements
                     this.Entities.Add(entity);
                 }
             }
-            catch (DbEntityValidationException dbEx)
+            catch (Exception ex)
             {
-                throw new Exception(this.GetFullErrorText(dbEx), dbEx);
+                Logger.LogError(ex);
+                //throw new Exception(this.GetFullErrorText(dbEx), dbEx);
             }
         }
 
@@ -127,9 +127,10 @@ namespace Repositories.Implements
                 this._context.Entry(entity).State = EntityState.Modified;
 
             }
-            catch (DbEntityValidationException dbEx)
+            catch (Exception ex)
             {
-                throw new Exception(this.GetFullErrorText(dbEx), dbEx);
+                Logger.LogError(ex);
+                //throw new Exception(this.GetFullErrorText(dbEx), dbEx);
             }
         }
 
@@ -151,9 +152,10 @@ namespace Repositories.Implements
                 }
 
             }
-            catch (DbEntityValidationException dbEx)
+            catch (Exception ex)
             {
-                throw new Exception(this.GetFullErrorText(dbEx), dbEx);
+                Logger.LogError(ex);
+                //throw new Exception(this.GetFullErrorText(dbEx), dbEx);
             }
         }
 
@@ -174,9 +176,10 @@ namespace Repositories.Implements
                 this._context.Entry(entity).State = EntityState.Modified;
 
             }
-            catch (DbEntityValidationException dbEx)
+            catch (Exception ex)
             {
-                throw new Exception(this.GetFullErrorText(dbEx), dbEx);
+                Logger.LogError(ex);
+                //throw new Exception(this.GetFullErrorText(dbEx), dbEx);
             }
         }
 
@@ -197,9 +200,10 @@ namespace Repositories.Implements
                 this._context.Entry(entity).State = EntityState.Modified;
 
             }
-            catch (DbEntityValidationException dbEx)
+            catch (Exception ex)
             {
-                throw new Exception(this.GetFullErrorText(dbEx), dbEx);
+                Logger.LogError(ex);
+                //throw new Exception(this.GetFullErrorText(dbEx), dbEx);
             }
         }
 
@@ -222,9 +226,10 @@ namespace Repositories.Implements
                 }
 
             }
-            catch (DbEntityValidationException dbEx)
+            catch (Exception ex)
             {
-                throw new Exception(this.GetFullErrorText(dbEx), dbEx);
+                Logger.LogError(ex);
+                //throw new Exception(this.GetFullErrorText(dbEx), dbEx);
             }
         }
 
@@ -272,27 +277,5 @@ namespace Repositories.Implements
 
         #endregion
 
-        public void Dispose()
-        {
-            this.Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        /// <summary>
-        /// Releases unmanaged and - optionally - managed resources.
-        /// </summary>
-        /// <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!this._disposed)
-            {
-                if (disposing)
-                {
-                    this._context.Dispose();
-                }
-            }
-
-            this._disposed = true;
-        }
     }
 }

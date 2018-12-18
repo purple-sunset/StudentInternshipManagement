@@ -6,8 +6,10 @@ using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Models;
+using Models.Entities;
 using PagedList;
 using Services;
+using Services.Implements;
 
 namespace StudentInternshipManagement.Areas.Teacher.Controllers
 {

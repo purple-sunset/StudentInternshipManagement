@@ -4,6 +4,8 @@ using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using Models;
+using Models.Contexts;
+using Models.Entities;
 using Repositories.Interfaces;
 
 namespace Repositories.Implements
@@ -21,17 +23,19 @@ namespace Repositories.Implements
         private readonly Dictionary<Type, object> _repositories = new Dictionary<Type, object>();
 
         /// <summary>
-        /// The disposed
+        /// User repository
         /// </summary>
-        private bool disposed;
+        private readonly IUserRepository _userRepository;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="UnitOfWork{TContext}"/> class.
         /// </summary>
         /// <param name="context">The database context.</param>
-        public UnitOfWork(WebContext context)
+        /// <param name="userRepository">The user repository.</param>
+        public UnitOfWork(WebContext context, IUserRepository userRepository)
         {
             this._context = context;
+            this._userRepository = userRepository;
         }
 
         /// <summary>
@@ -50,6 +54,11 @@ namespace Repositories.Implements
             IGenericRepository<TEntity> repo = new GenericRepository<TEntity>(this._context);
             this._repositories.Add(typeof(TEntity), repo);
             return repo;
+        }
+
+        public IUserRepository UserRepository()
+        {
+            return this._userRepository;
         }
 
         /// <summary>
@@ -74,36 +83,5 @@ namespace Repositories.Implements
             return await this._context.SaveChangesAsync();
         }
 
-        /// <summary>
-        /// Releases unmanaged and - optionally - managed resources.
-        /// </summary>
-        public void Dispose()
-        {
-            this.Dispose(true);
-            GC.SuppressFinalize(this);
-        }
-
-        /// <summary>
-        /// Releases unmanaged and - optionally - managed resources.
-        /// </summary>
-        /// <param name="disposing"><c>true</c> to release both managed and unmanaged resources; <c>false</c> to release only unmanaged resources.</param>
-        protected virtual void Dispose(bool disposing)
-        {
-            if (!this.disposed)
-            {
-                if (disposing)
-                {
-                    foreach (var repository in _repositories)
-                    {
-                        (repository.Value as IDisposable).Dispose();
-                    }
-
-                    _repositories.Clear();
-                    this._context.Dispose();
-                }
-            }
-
-            this.disposed = true;
-        }
     }
 }

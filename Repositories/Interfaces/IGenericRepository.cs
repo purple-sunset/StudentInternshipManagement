@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Models;
+using Models.Entities;
 
 namespace Repositories.Interfaces
 {
-    public interface IGenericRepository<TEntity>:IDisposable where TEntity : BaseEntity
+    public interface IGenericRepository<TEntity> where TEntity : BaseEntity
     {
         /// <summary>
         /// Get entity by identifier
@@ -67,10 +68,5 @@ namespace Repositories.Interfaces
         /// Gets a table with "no tracking" enabled (EF feature) Use it only when you load record(s) only for read-only operations
         /// </summary>
         IQueryable<TEntity> TableNoTracking { get; }
-
-        /// <summary>
-        /// Releases unmanaged and - optionally - managed resources.
-        /// </summary>
-        new void Dispose();
     }
 }

@@ -55,34 +55,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin.cs" />
-    <Compile Include="BaseEntity.cs" />
-    <Compile Include="Company.cs" />
-    <Compile Include="CompanyTrainingMajor.cs" />
-    <Compile Include="DataInitializer.cs" />
-    <Compile Include="Department.cs" />
-    <Compile Include="Enums.cs" />
-    <Compile Include="Group.cs" />
-    <Compile Include="IdentityModels.cs" />
-    <Compile Include="Internship.cs" />
-    <Compile Include="LearningClass.cs" />
-    <Compile Include="LearningClassStudent.cs" />
-    <Compile Include="Message.cs" />
-    <Compile Include="News.cs" />
-    <Compile Include="Notification.cs" />
+    <Compile Include="Contexts\ApplicationDbContext.cs" />
+    <Compile Include="Entities\Admin.cs" />
+    <Compile Include="Entities\BaseEntity.cs" />
+    <Compile Include="Entities\Company.cs" />
+    <Compile Include="Entities\CompanyTrainingMajor.cs" />
+    <Compile Include="Contexts\DataInitializer.cs" />
+    <Compile Include="Entities\Department.cs" />
+    <Compile Include="Constants\Enums.cs" />
+    <Compile Include="Entities\Group.cs" />
+    <Compile Include="Entities\IdentityModels.cs" />
+    <Compile Include="Entities\Internship.cs" />
+    <Compile Include="Entities\LearningClass.cs" />
+    <Compile Include="Entities\LearningClassStudent.cs" />
+    <Compile Include="Entities\EmailTemplate.cs" />
+    <Compile Include="Entities\Message.cs" />
+    <Compile Include="Entities\News.cs" />
+    <Compile Include="Entities\Notification.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Semester.cs" />
-    <Compile Include="Statistic.cs" />
-    <Compile Include="Student.cs" />
-    <Compile Include="StudentClass.cs" />
-    <Compile Include="Subject.cs" />
-    <Compile Include="Teacher.cs" />
-    <Compile Include="TrainingMajor.cs" />
-    <Compile Include="WebContext.cs" />
+    <Compile Include="Entities\Semester.cs" />
+    <Compile Include="Entities\Statistic.cs" />
+    <Compile Include="Entities\Student.cs" />
+    <Compile Include="Entities\StudentClass.cs" />
+    <Compile Include="Entities\Subject.cs" />
+    <Compile Include="Entities\Teacher.cs" />
+    <Compile Include="Entities\TrainingMajor.cs" />
+    <Compile Include="Contexts\WebContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

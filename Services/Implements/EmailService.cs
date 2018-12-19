@@ -1,14 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net.Mail;
 using System.Text;
-using Models;
 using Models.Entities;
-using Repositories;
 using Services.Interfaces;
-using Utilities;
 
 namespace Services.Implements
 {
@@ -25,9 +23,9 @@ namespace Services.Implements
         private readonly IGroupService _groupService;
         private readonly ICompanyTrainingMajorService _companyTrainingMajorService;
         private readonly ICompanyService _companyService;
-        private readonly IUserService _userService;
+        private readonly IEmailHistoryService _emailHistoryService;
 
-        public EmailService(IInternshipService internshipService, ITeacherService teacherService, ISemesterService semesterService, IGroupService groupService, ICompanyTrainingMajorService companyTrainingMajorService, ICompanyService companyService, IUserService userService)
+        public EmailService(IInternshipService internshipService, ITeacherService teacherService, ISemesterService semesterService, IGroupService groupService, ICompanyTrainingMajorService companyTrainingMajorService, ICompanyService companyService, IEmailHistoryService emailHistoryService)
         {
             _internshipService = internshipService;
             _teacherService = teacherService;
@@ -35,15 +33,27 @@ namespace Services.Implements
             _groupService = groupService;
             _companyTrainingMajorService = companyTrainingMajorService;
             _companyService = companyService;
-            _userService = userService;
+            _emailHistoryService = emailHistoryService;
         }
 
         public void SendInternshipCreate()
         {
             CreateAttachment();
-            SendEmailToStudent();
-            SendEmailToTeacher();
-            SendEmailToCompany();
+
+            var mailToCompanies = CreateEmailToCompany();
+            foreach (var mail in mailToCompanies)
+            {
+                _emailHistoryService.CreateAndSend(mail);
+            }
+
+            var mailToTeachers = CreateEmailToTeacher();
+            foreach (var mail in mailToTeachers)
+            {
+                _emailHistoryService.CreateAndSend(mail);
+            }
+
+            var mailToStudents = CreateEmailToStudent();
+            _emailHistoryService.CreateAndSend(mailToStudents);
         }
 
 
@@ -66,7 +76,7 @@ namespace Services.Implements
                 }
             }
 
-            var teachers = (new TeacherRepository()).GetAll();
+            var teachers = _teacherService.GetAll();
             foreach (var tc in teachers)
             {
                 var grByTeacher = groups.Where(g => g.TeacherId == tc.Id);
@@ -107,82 +117,83 @@ namespace Services.Implements
             return sb.ToString();
         }
 
-        private void SendEmailToCompany()
+        private List<MailMessage> CreateEmailToCompany()
         {
-            var mail = new MailMessage();
-            mail.Subject = "Danh sách sinh viên thực tập Trường đại học Bách Khoa Hà Nội";
-            mail.From = new MailAddress(ConfigurationManager.AppSettings["mailAccount"]);
-            StringBuilder emailBody = new StringBuilder();
-            emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi danh sách sinh viên thực tập");
-            emailBody.Append("Xem tệp đính kèm để xem thông tin thực tập kỳ này");
-            mail.IsBodyHtml = true;
-            mail.Body = emailBody.ToString();
+            var result = new List<MailMessage>();
 
             var semester = _semesterService.GetLatest().Id;
             var path = $"{FilePath}\\{semester}";
             var fileNames = Directory.GetFiles(path).Select(f => Path.GetFileNameWithoutExtension(f));
             var companies = _companyService.GetAll().Where(t => fileNames.Contains(t.CompanyName));
+
             foreach (var cp in companies)
             {
+                var mail = new MailMessage();
+                mail.Subject = "Danh sách sinh viên thực tập Trường đại học Bách Khoa Hà Nội";
+                mail.From = new MailAddress(ConfigurationManager.AppSettings["mailAccount"]);
+                StringBuilder emailBody = new StringBuilder();
+                emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi danh sách sinh viên thực tập");
+                emailBody.Append("Xem tệp đính kèm để xem thông tin thực tập kỳ này");
+                mail.IsBodyHtml = true;
+                mail.Body = emailBody.ToString();
                 mail.Attachments.Add(new Attachment($"{path}\\{cp.CompanyName}.csv"));
                 mail.To.Add(new MailAddress(cp.Email));
-                EmailSender.Send(mail);
-                mail.Attachments.Clear();
-                mail.To.Clear();
+                result.Add(mail);
             }
 
+            return result;
         }
 
-        private void SendEmailToTeacher()
+        private List<MailMessage> CreateEmailToTeacher()
         {
-            var mail = new MailMessage();
-            mail.From = new MailAddress(ConfigurationManager.AppSettings["mailAccount"]);
-            StringBuilder emailBody = new StringBuilder();
-            emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi danh sách sinh viên thực tập");
-            emailBody.Append(
-                @"<p>Nhấn vào liên kết hoặc xem tệp đính kèm để xem thông tin thực tập kỳ này: <a href = '" +
-                @"http://sim.hust.edu.vn/Teacher/Internship" + "'> thực tập </a></p>");
-            mail.IsBodyHtml = true;
-            mail.Body = emailBody.ToString();
+            var result = new List<MailMessage>();
 
             var semester = _semesterService.GetLatest().Id;
             var path = $"{FilePath}\\{semester}";
             var fileNames = Directory.GetFiles(path).Select(f => Path.GetFileNameWithoutExtension(f));
-            mail.Subject = $"Thông tin phân công hướng dẫn thực tập kỳ {semester}";
             var teachers = _teacherService.GetAll().Where(t => fileNames.Contains(t.Id.ToString()));
+
             foreach (var tc in teachers)
             {
+                var mail = new MailMessage();
+                mail.Subject = $"Thông tin phân công hướng dẫn thực tập kỳ {semester}";
+                mail.From = new MailAddress(ConfigurationManager.AppSettings["mailAccount"]);
+                StringBuilder emailBody = new StringBuilder();
+                emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi danh sách sinh viên thực tập");
+                emailBody.Append(
+                    @"<p>Nhấn vào liên kết hoặc xem tệp đính kèm để xem thông tin thực tập kỳ này: <a href = '" +
+                    @"http://sim.hust.edu.vn/Teacher/Internship" + "'> thực tập </a></p>");
+                mail.IsBodyHtml = true;
+                mail.Body = emailBody.ToString();
                 mail.Attachments.Add(new Attachment($"{path}\\{tc.Id}.csv"));
-                mail.To.Add(new MailAddress(_userService.GetByUserName(tc.TeacherCode).Email));
-                EmailSender.Send(mail);
-                mail.Attachments.Clear();
-                mail.To.Clear();
+                mail.To.Add(new MailAddress(tc.User.Email));
+                result.Add(mail);
             }
 
+            return result;
         }
 
-        private void SendEmailToStudent()
+        private MailMessage CreateEmailToStudent()
         {
-            var mail = new MailMessage();
-            mail.From = new MailAddress(ConfigurationManager.AppSettings["mailAccount"]);
-            StringBuilder emailBody = new StringBuilder();
-            emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi kết quả đăng ký thực tâp");
-            emailBody.Append(@"<p>Nhấn vào liên kết để xem thông tin thực tập kỳ này: <a href = '" +
-                             @"http://sim.hust.edu.vn/Student/Internship" + "'> thực tập </a></p>");
-            mail.IsBodyHtml = true;
-            mail.Body = emailBody.ToString();
             var students = _internshipService.GetByLatestSemester().Select(i => i.Student);
-
-
             var semester = _semesterService.GetLatest().Id;
-            mail.Subject = $"Thông tin phân công hướng dẫn thực tập kỳ {semester}";
+            var mail = new MailMessage();
+
             foreach (var st in students)
             {
-                mail.To.Add(new MailAddress(_userService.GetByUserName(st.StudentCode).Email));
+                
+                mail.Subject = $"Thông tin phân công hướng dẫn thực tập kỳ {semester}";
+                mail.From = new MailAddress(ConfigurationManager.AppSettings["mailAccount"]);
+                StringBuilder emailBody = new StringBuilder();
+                emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi kết quả đăng ký thực tâp");
+                emailBody.Append(@"<p>Nhấn vào liên kết để xem thông tin thực tập kỳ này: <a href = '" +
+                                 @"http://sim.hust.edu.vn/Student/Internship" + "'> thực tập </a></p>");
+                mail.IsBodyHtml = true;
+                mail.Body = emailBody.ToString();
+                mail.To.Add(new MailAddress(st.User.Email));
             }
 
-
-            EmailSender.Send(mail);
+            return mail;
 
         }
     }

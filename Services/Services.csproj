@@ -56,7 +56,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implements\AdminService.cs" />
+    <Compile Include="Implements\EmailHistoryService.cs" />
+    <Compile Include="Implements\EmailTemplateService.cs" />
     <Compile Include="Implements\EmailService.cs" />
+    <Compile Include="Interfaces\IEmailHistoryService.cs" />
+    <Compile Include="Interfaces\IEmailTemplateService.cs" />
     <Compile Include="Interfaces\IStudentClassService.cs" />
     <Compile Include="Interfaces\ISubjectService.cs" />
     <Compile Include="Interfaces\IStatisticService.cs" />

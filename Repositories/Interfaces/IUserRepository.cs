@@ -11,8 +11,10 @@ namespace Repositories.Interfaces
     public interface IUserRepository
     {
         ApplicationUser GetById(string id);
+        Task<ApplicationUser> GetByIdAsync(string id);
 
         ApplicationUser GetByUserName(string userName);
+        Task<ApplicationUser> GetByUserNameAsync(string userName);
 
         void Add(ApplicationUser user, string role);
 
@@ -25,5 +27,6 @@ namespace Repositories.Interfaces
         IQueryable<ApplicationUser> Table { get; }
 
         IQueryable<ApplicationUser> TableNoTracking { get; }
+        
     }
 }

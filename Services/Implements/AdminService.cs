@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System.Data.Entity;
+using System.Linq;
+using System.Threading.Tasks;
 using Models;
 using Models.Entities;
 using Repositories.Interfaces;
@@ -15,6 +17,11 @@ namespace Services.Implements
         public Admin GetByTeacherCode(string teacherCode)
         {
             return UnitOfWork.Repository<Admin>().Table.FirstOrDefault(x => x.AdminCode == teacherCode);
+        }
+
+        public async Task<Admin> GetByTeacherCodeAsync(string teacherCode)
+        {
+            return await UnitOfWork.Repository<Admin>().Table.FirstOrDefaultAsync(x => x.AdminCode == teacherCode);
         }
 
     }

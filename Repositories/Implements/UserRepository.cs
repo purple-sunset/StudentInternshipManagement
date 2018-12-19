@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Validation;
 using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Models;
@@ -51,9 +52,19 @@ namespace Repositories.Implements
             return this.Entities.FirstOrDefault(x => !x.IsDeleted && x.Id == id);
         }
 
-        public ApplicationUser GetByUserName(string userName)
+        public virtual async Task<ApplicationUser> GetByIdAsync(string id)
+        {
+            return await this.Entities.FirstOrDefaultAsync(x => !x.IsDeleted && x.Id == id);
+        }
+
+        public virtual ApplicationUser GetByUserName(string userName)
         {
             return this.Entities.FirstOrDefault(x => !x.IsDeleted && x.UserName == userName);
+        }
+
+        public virtual async Task<ApplicationUser> GetByUserNameAsync(string userName)
+        {
+            return await this.Entities.FirstOrDefaultAsync(x => !x.IsDeleted && x.UserName == userName);
         }
 
         public virtual void Add(ApplicationUser user, string role)

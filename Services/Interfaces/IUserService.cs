@@ -15,7 +15,9 @@ namespace Services.Interfaces
         Task<bool> DeleteAsync(ApplicationUser user);
         IQueryable<ApplicationUser> GetAll();
         ApplicationUser GetById(string id);
+        Task<ApplicationUser> GetByIdAsync(string id);
         ApplicationUser GetByUserName(string userName);
+        Task<ApplicationUser> GetByUserNameAsync(string userName);
         bool Update(ApplicationUser user);
         Task<bool> UpdateAsync(ApplicationUser user);
     }

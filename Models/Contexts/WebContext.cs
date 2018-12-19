@@ -52,5 +52,9 @@ namespace Models.Contexts
         public DbSet<Message> Messages { get; set; }
 
         public DbSet<Statistic> Statistics { get; set; }
+
+        public DbSet<EmailTemplate> EmailTemplates { get; set; }
+
+        public DbSet<EmailHistory> EmailHistories { get; set; }
     }
 }

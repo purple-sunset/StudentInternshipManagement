@@ -18,6 +18,13 @@ namespace Repositories.Interfaces
         TEntity GetById(int id);
 
         /// <summary>
+        /// Get entity by identifier
+        /// </summary>
+        /// <param name="id">Identifier</param>
+        /// <returns>Entity</returns>
+        Task<TEntity> GetByIdAsync(int id);
+
+        /// <summary>
         /// Insert entity
         /// </summary>
         /// <param name="entity">Entity</param>

@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
 using System.Net.Mail;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Utilities
 {
     public static class EmailSender
     {
-        private  static readonly SmtpClient Client = new SmtpClient(ConfigurationManager.AppSettings["mailServer"])
+        private static readonly SmtpClient Client = new SmtpClient(ConfigurationManager.AppSettings["mailServer"])
         {
             Port = int.Parse(ConfigurationManager.AppSettings["mailPort"]),
             EnableSsl = true,
@@ -19,14 +16,32 @@ namespace Utilities
                 ConfigurationManager.AppSettings["mailPassword"])
         };
 
-        public static async Task SendAsync(MailMessage message)
+        public static async Task<bool> SendAsync(MailMessage message)
         {
-            await Client.SendMailAsync(message);
+            try
+            {
+                await Client.SendMailAsync(message);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return false;
+            }
         }
 
-        public static void Send(MailMessage message)
+        public static bool Send(MailMessage message)
         {
-            Client.Send(message);
+            try
+            {
+                Client.Send(message);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex);
+                return false;
+            }
         }
     }
 }

@@ -27,9 +27,19 @@ namespace Services.Implements
             return _unitOfWork.UserRepository().GetById(id);
         }
 
+        public async Task<ApplicationUser> GetByIdAsync(string id)
+        {
+            return await _unitOfWork.UserRepository().GetByIdAsync(id);
+        }
+
         public ApplicationUser GetByUserName(string userName)
         {
             return _unitOfWork.UserRepository().GetByUserName(userName);
+        }
+
+        public async Task<ApplicationUser> GetByUserNameAsync(string userName)
+        {
+            return await _unitOfWork.UserRepository().GetByUserNameAsync(userName);
         }
 
         public bool Add(ApplicationUser user, string role)

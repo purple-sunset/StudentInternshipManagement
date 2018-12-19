@@ -22,9 +22,15 @@ namespace Services.Implements
         {
             return _unitOfWork.Repository<TEntity>().TableNoTracking;
         }
+
         public TEntity GetById(int id)
         {
             return _unitOfWork.Repository<TEntity>().GetById(id);
+        }
+
+        public async Task<TEntity> GetByIdAsync(int id)
+        {
+            return await _unitOfWork.Repository<TEntity>().GetByIdAsync(id);
         }
 
         public bool Add(TEntity entity)

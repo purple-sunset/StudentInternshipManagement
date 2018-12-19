@@ -14,6 +14,7 @@ namespace Services.Interfaces
         //IUnitOfWork UnitOfWork { get; }
         IQueryable<TEntity> GetAll();
         TEntity GetById(int id);
+        Task<TEntity> GetByIdAsync(int id);
         bool Add(TEntity entity);
         Task<bool> AddAsync(TEntity entity);
         bool Update(TEntity entity);

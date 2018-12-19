@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Constants\Constants.cs" />
     <Compile Include="Contexts\ApplicationDbContext.cs" />
     <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="Contexts\DataInitializer.cs" />
     <Compile Include="Entities\Department.cs" />
     <Compile Include="Constants\Enums.cs" />
+    <Compile Include="Entities\EmailHistory.cs" />
     <Compile Include="Entities\Group.cs" />
     <Compile Include="Entities\IdentityModels.cs" />
     <Compile Include="Entities\Internship.cs" />

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using Models;
 using Models.Entities;
 using Repositories;
@@ -23,6 +25,11 @@ namespace Services.Implements
         public LearningClassStudent GetById(int classId, int studentId)
         {
             return UnitOfWork.Repository<LearningClassStudent>().TableNoTracking.FirstOrDefault(s => s.ClassId == classId && s.StudentId == studentId);
+        }
+
+        public async Task<LearningClassStudent> GetByIdAsync(int classId, int studentId)
+        {
+            return await UnitOfWork.Repository<LearningClassStudent>().TableNoTracking.FirstOrDefaultAsync(s => s.ClassId == classId && s.StudentId == studentId);
         }
 
         public IQueryable<LearningClassStudent> GetByClass(int classId)

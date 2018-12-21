@@ -10,22 +10,26 @@ using Services.Interfaces;
 
 namespace Services.Implements
 {
-    public class EmailService:IEmailService
+    public class EmailService : IEmailService
     {
         private static readonly string FilePath = AppDomain.CurrentDomain.BaseDirectory + "\\Assignment";
 
         private static readonly string Header =
             "MSSV;Tên sinh viên;Lớp;Chương trình đào tạo;Khoa;Mã môn học;Công ty;Định hướng;Giáo viên hướng dẫn;Mã nhóm;Nhóm trưởng";
 
-        private readonly IInternshipService _internshipService;
-        private readonly ITeacherService _teacherService;
-        private readonly ISemesterService _semesterService;
-        private readonly IGroupService _groupService;
-        private readonly ICompanyTrainingMajorService _companyTrainingMajorService;
         private readonly ICompanyService _companyService;
+        private readonly ICompanyTrainingMajorService _companyTrainingMajorService;
         private readonly IEmailHistoryService _emailHistoryService;
+        private readonly IGroupService _groupService;
 
-        public EmailService(IInternshipService internshipService, ITeacherService teacherService, ISemesterService semesterService, IGroupService groupService, ICompanyTrainingMajorService companyTrainingMajorService, ICompanyService companyService, IEmailHistoryService emailHistoryService)
+        private readonly IInternshipService _internshipService;
+        private readonly ISemesterService _semesterService;
+        private readonly ITeacherService _teacherService;
+
+        public EmailService(IInternshipService internshipService, ITeacherService teacherService,
+            ISemesterService semesterService, IGroupService groupService,
+            ICompanyTrainingMajorService companyTrainingMajorService, ICompanyService companyService,
+            IEmailHistoryService emailHistoryService)
         {
             _internshipService = internshipService;
             _teacherService = teacherService;
@@ -36,28 +40,27 @@ namespace Services.Implements
             _emailHistoryService = emailHistoryService;
         }
 
-        public void SendInternshipCreate()
+        public void SendCreateEmail()
         {
-            CreateAttachment();
+            throw new NotImplementedException();
+        }
 
-            var mailToCompanies = CreateEmailToCompany();
-            foreach (var mail in mailToCompanies)
-            {
-                _emailHistoryService.CreateAndSend(mail);
-            }
+        public void SendProcessEmail()
+        {
+            CreateProcessAttachment();
 
-            var mailToTeachers = CreateEmailToTeacher();
-            foreach (var mail in mailToTeachers)
-            {
-                _emailHistoryService.CreateAndSend(mail);
-            }
+            var mailToCompanies = CreateProcessEmailToCompany();
+            foreach (var mail in mailToCompanies) _emailHistoryService.CreateAndSend(mail);
 
-            var mailToStudents = CreateEmailToStudent();
+            var mailToTeachers = CreateProcessEmailToTeacher();
+            foreach (var mail in mailToTeachers) _emailHistoryService.CreateAndSend(mail);
+
+            var mailToStudents = CreateProcessEmailToStudent();
             _emailHistoryService.CreateAndSend(mailToStudents);
         }
 
 
-        private void CreateAttachment()
+        private void CreateProcessAttachment()
         {
             var semester = _semesterService.GetLatest().Id;
             var groups = _groupService.GetBySemester(semester);
@@ -70,10 +73,8 @@ namespace Services.Implements
             {
                 var grByComp = groups.Where(g => g.CompanyId == comp.CompanyId);
                 if (grByComp.Any())
-                {
-                    File.WriteAllText($"{path}\\{comp.Company.CompanyName}.csv", CreateCsv(grByComp),
+                    File.WriteAllText($"{path}\\{comp.Company.CompanyName}.csv", CreateProcessCSV(grByComp),
                         new UTF8Encoding(true));
-                }
             }
 
             var teachers = _teacherService.GetAll();
@@ -81,43 +82,30 @@ namespace Services.Implements
             {
                 var grByTeacher = groups.Where(g => g.TeacherId == tc.Id);
                 if (grByTeacher.Any())
-                {
-                    File.WriteAllText($"{path}\\{tc.Id}.csv", CreateCsv(grByTeacher),
+                    File.WriteAllText($"{path}\\{tc.Id}.csv", CreateProcessCSV(grByTeacher),
                         new UTF8Encoding(true));
-                }
             }
         }
 
-        private string CreateCsv(IQueryable<Group> groups)
+        // ReSharper disable once InconsistentNaming
+        private string CreateProcessCSV(IQueryable<Group> groups)
         {
             var sb = new StringBuilder();
             sb.AppendLine(Header);
             foreach (var gr in groups)
+            foreach (var mb in gr.Members)
             {
-                foreach (var mb in gr.Members)
-                {
-                    var line = string.Join(";", new string[]
-                    {
-                            mb.Id.ToString(),
-                            mb.StudentName,
-                            mb.Class.ClassName,
-                            mb.Program,
-                            mb.Class.Department.DepartmentName,
-                            gr.Class.SubjectId.ToString(),
-                            gr.Major.Company.CompanyName,
-                            gr.Major.TrainingMajor.TrainingMajorName,
-                            gr.Teacher.TeacherName,
-                            gr.Id.ToString(),
-                            gr.LeaderId == mb.Id ? "x" : ""
-                    });
-                    sb.AppendLine(line);
-                }
+                var line = string.Join(";", mb.Id.ToString(), mb.StudentName, mb.Class.ClassName, mb.Program,
+                    mb.Class.Department.DepartmentName, gr.Class.SubjectId.ToString(), gr.Major.Company.CompanyName,
+                    gr.Major.TrainingMajor.TrainingMajorName, gr.Teacher.TeacherName, gr.Id.ToString(),
+                    gr.LeaderId == mb.Id ? "x" : "");
+                sb.AppendLine(line);
             }
 
             return sb.ToString();
         }
 
-        private List<MailMessage> CreateEmailToCompany()
+        private List<MailMessage> CreateProcessEmailToCompany()
         {
             var result = new List<MailMessage>();
 
@@ -131,7 +119,7 @@ namespace Services.Implements
                 var mail = new MailMessage();
                 mail.Subject = "Danh sách sinh viên thực tập Trường đại học Bách Khoa Hà Nội";
                 mail.From = new MailAddress(ConfigurationManager.AppSettings["mailAccount"]);
-                StringBuilder emailBody = new StringBuilder();
+                var emailBody = new StringBuilder();
                 emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi danh sách sinh viên thực tập");
                 emailBody.Append("Xem tệp đính kèm để xem thông tin thực tập kỳ này");
                 mail.IsBodyHtml = true;
@@ -144,7 +132,7 @@ namespace Services.Implements
             return result;
         }
 
-        private List<MailMessage> CreateEmailToTeacher()
+        private List<MailMessage> CreateProcessEmailToTeacher()
         {
             var result = new List<MailMessage>();
 
@@ -158,7 +146,7 @@ namespace Services.Implements
                 var mail = new MailMessage();
                 mail.Subject = $"Thông tin phân công hướng dẫn thực tập kỳ {semester}";
                 mail.From = new MailAddress(ConfigurationManager.AppSettings["mailAccount"]);
-                StringBuilder emailBody = new StringBuilder();
+                var emailBody = new StringBuilder();
                 emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi danh sách sinh viên thực tập");
                 emailBody.Append(
                     @"<p>Nhấn vào liên kết hoặc xem tệp đính kèm để xem thông tin thực tập kỳ này: <a href = '" +
@@ -173,7 +161,7 @@ namespace Services.Implements
             return result;
         }
 
-        private MailMessage CreateEmailToStudent()
+        private MailMessage CreateProcessEmailToStudent()
         {
             var students = _internshipService.GetByLatestSemester().Select(i => i.Student);
             var semester = _semesterService.GetLatest().Id;
@@ -181,10 +169,9 @@ namespace Services.Implements
 
             foreach (var st in students)
             {
-                
                 mail.Subject = $"Thông tin phân công hướng dẫn thực tập kỳ {semester}";
                 mail.From = new MailAddress(ConfigurationManager.AppSettings["mailAccount"]);
-                StringBuilder emailBody = new StringBuilder();
+                var emailBody = new StringBuilder();
                 emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi kết quả đăng ký thực tâp");
                 emailBody.Append(@"<p>Nhấn vào liên kết để xem thông tin thực tập kỳ này: <a href = '" +
                                  @"http://sim.hust.edu.vn/Student/Internship" + "'> thực tập </a></p>");
@@ -194,7 +181,6 @@ namespace Services.Implements
             }
 
             return mail;
-
         }
     }
 }

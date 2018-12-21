@@ -1,18 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
-using Services;
 using Services.Implements;
+using Services.Interfaces;
 
 namespace StudentInternshipManagement.Controllers
 {
     public class NewsController : Controller
     {
-        private readonly NewsService _service = new NewsService();
+        private readonly INewsService _service;
+
+        public NewsController(INewsService service)
+        {
+            _service = service;
+        }
+
         public ActionResult Index()
         {
             return View();
@@ -26,7 +28,7 @@ namespace StudentInternshipManagement.Controllers
         // GET: News
         public ActionResult View(int id)
         {
-            var news =_service.GetById(id);
+            var news = _service.GetById(id);
             return View(news);
         }
     }

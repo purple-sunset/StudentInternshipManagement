@@ -1,8 +1,5 @@
-﻿using System;
-using System.Linq;
-using Models;
+﻿using System.Linq;
 using Models.Entities;
-using Repositories;
 using Repositories.Interfaces;
 using Services.Interfaces;
 
@@ -12,11 +9,13 @@ namespace Services.Implements
     {
         private readonly ILearningClassStudentService _learningClassStudentService;
         private readonly ISemesterService _semesterService;
+
         public StudentService(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
         }
 
-        public StudentService(IUnitOfWork unitOfWork, ILearningClassStudentService learningClassStudentService, ISemesterService semesterService) : base(unitOfWork)
+        public StudentService(IUnitOfWork unitOfWork, ILearningClassStudentService learningClassStudentService,
+            ISemesterService semesterService) : base(unitOfWork)
         {
             _learningClassStudentService = learningClassStudentService;
             _semesterService = semesterService;

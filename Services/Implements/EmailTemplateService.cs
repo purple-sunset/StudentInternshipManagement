@@ -1,5 +1,4 @@
-﻿using Models;
-using Models.Entities;
+﻿using Models.Entities;
 using Repositories.Interfaces;
 using Services.Interfaces;
 

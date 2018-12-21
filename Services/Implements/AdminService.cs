@@ -1,7 +1,6 @@
 ﻿using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
-using Models;
 using Models.Entities;
 using Repositories.Interfaces;
 using Services.Interfaces;
@@ -23,6 +22,5 @@ namespace Services.Implements
         {
             return await UnitOfWork.Repository<Admin>().Table.FirstOrDefaultAsync(x => x.AdminCode == teacherCode);
         }
-
     }
 }

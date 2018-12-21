@@ -1,5 +1,6 @@
-﻿using System.Linq;
-using Models;
+﻿using System.Data.Entity;
+using System.Linq;
+using System.Threading.Tasks;
 using Models.Entities;
 using Repositories.Interfaces;
 using Services.Interfaces;
@@ -14,12 +15,19 @@ namespace Services.Implements
 
         public IQueryable<Group> GetByStudent(int studentId)
         {
-            return UnitOfWork.Repository<Group>().TableNoTracking.Where(g => g.Members.Select(s => s.Id).Contains(studentId));
+            return UnitOfWork.Repository<Group>().TableNoTracking
+                .Where(g => g.Members.Select(s => s.Id).Contains(studentId));
         }
 
         public Group GetByInternship(Internship internship)
         {
             return UnitOfWork.Repository<Group>().Table.FirstOrDefault(g =>
+                g.ClassId == internship.ClassId && g.Members.Select(s => s.Id).Contains(internship.StudentId));
+        }
+
+        public async Task<Group> GetByInternshipAsync(Internship internship)
+        {
+            return await UnitOfWork.Repository<Group>().Table.FirstOrDefaultAsync(g =>
                 g.ClassId == internship.ClassId && g.Members.Select(s => s.Id).Contains(internship.StudentId));
         }
 

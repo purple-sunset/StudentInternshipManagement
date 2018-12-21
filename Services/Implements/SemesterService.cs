@@ -1,7 +1,6 @@
 ﻿using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
-using Models;
 using Models.Entities;
 using Repositories.Interfaces;
 using Services.Interfaces;
@@ -21,7 +20,8 @@ namespace Services.Implements
 
         public async Task<Semester> GetLatestAsync()
         {
-            return await UnitOfWork.Repository<Semester>().TableNoTracking.OrderByDescending(s => s.Id).FirstOrDefaultAsync();
+            return await UnitOfWork.Repository<Semester>().TableNoTracking.OrderByDescending(s => s.Id)
+                .FirstOrDefaultAsync();
         }
     }
 }

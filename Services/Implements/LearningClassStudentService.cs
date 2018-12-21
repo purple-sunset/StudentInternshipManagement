@@ -1,10 +1,7 @@
-﻿using System;
-using System.Data.Entity;
+﻿using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
-using Models;
 using Models.Entities;
-using Repositories;
 using Repositories.Interfaces;
 using Services.Interfaces;
 
@@ -13,6 +10,7 @@ namespace Services.Implements
     public class LearningClassStudentService : GenericService<LearningClassStudent>, ILearningClassStudentService
     {
         private readonly IGroupService _groupService;
+
         public LearningClassStudentService(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
         }
@@ -24,12 +22,14 @@ namespace Services.Implements
 
         public LearningClassStudent GetById(int classId, int studentId)
         {
-            return UnitOfWork.Repository<LearningClassStudent>().TableNoTracking.FirstOrDefault(s => s.ClassId == classId && s.StudentId == studentId);
+            return UnitOfWork.Repository<LearningClassStudent>().TableNoTracking
+                .FirstOrDefault(s => s.ClassId == classId && s.StudentId == studentId);
         }
 
         public async Task<LearningClassStudent> GetByIdAsync(int classId, int studentId)
         {
-            return await UnitOfWork.Repository<LearningClassStudent>().TableNoTracking.FirstOrDefaultAsync(s => s.ClassId == classId && s.StudentId == studentId);
+            return await UnitOfWork.Repository<LearningClassStudent>().TableNoTracking
+                .FirstOrDefaultAsync(s => s.ClassId == classId && s.StudentId == studentId);
         }
 
         public IQueryable<LearningClassStudent> GetByClass(int classId)

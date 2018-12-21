@@ -1,15 +1,10 @@
-﻿using System;
-using System.Globalization;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
-using Models;
-using Models.Entities;
+using Services.Implements;
 using StudentInternshipManagement.Models;
 
 namespace StudentInternshipManagement.Controllers
@@ -20,38 +15,10 @@ namespace StudentInternshipManagement.Controllers
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
-        public AccountController()
+        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager)
         {
-        }
-
-        public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
-        {
-            UserManager = userManager;
-            SignInManager = signInManager;
-        }
-
-        public ApplicationSignInManager SignInManager
-        {
-            get
-            {
-                return _signInManager ?? HttpContext.GetOwinContext().Get<ApplicationSignInManager>();
-            }
-            private set 
-            { 
-                _signInManager = value; 
-            }
-        }
-
-        public ApplicationUserManager UserManager
-        {
-            get
-            {
-                return _userManager ?? HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
-            }
-            private set
-            {
-                _userManager = value;
-            }
+            _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         //
@@ -79,8 +46,8 @@ namespace StudentInternshipManagement.Controllers
 
             // This doesn't count login failures towards account lockout
             // To enable password failures to trigger account lockout, change to shouldLockout: true
-            ApplicationUser signedUser = UserManager.FindByEmail(model.Email);
-            var result = SignInManager.PasswordSignIn(signedUser.UserName, model.Password, model.RememberMe, shouldLockout: false);
+            var signedUser = _userManager.FindByEmail(model.Email);
+            var result = _signInManager.PasswordSignIn(signedUser.UserName, model.Password, model.RememberMe, false);
             switch (result)
             {
                 case SignInStatus.Success:
@@ -88,7 +55,7 @@ namespace StudentInternshipManagement.Controllers
                 case SignInStatus.LockedOut:
                     return View("Lockout");
                 case SignInStatus.RequiresVerification:
-                    return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
+                    return RedirectToAction("SendCode", new {ReturnUrl = returnUrl, model.RememberMe});
                 case SignInStatus.Failure:
                 default:
                     ModelState.AddModelError("", "Invalid login attempt.");
@@ -113,8 +80,8 @@ namespace StudentInternshipManagement.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = await UserManager.FindByNameAsync(model.Email);
-                if (user == null )
+                var user = await _userManager.FindByNameAsync(model.Email);
+                if (user == null)
                 {
                     // Don't reveal that the user does not exist or is not confirmed
                     TempData["ForgotPasswordStatus"] = "Thất bại</br>Tài khoản này chưa có trong hệ thống";
@@ -123,9 +90,11 @@ namespace StudentInternshipManagement.Controllers
 
                 // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                 // Send an email with this link
-                string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
-                var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                await UserManager.SendEmailAsync(user.Id, "Reset Mật khẩu trên trang quản lý thực tập", "Nhấn vào <a href=\"" + callbackUrl + "\">link</a> để reset mật khẩu");
+                var code = await _userManager.GeneratePasswordResetTokenAsync(user.Id);
+                var callbackUrl = Url.Action("ResetPassword", "Account", new {userId = user.Id, code},
+                    Request.Url.Scheme);
+                await _userManager.SendEmailAsync(user.Id, "Reset Mật khẩu trên trang quản lý thực tập",
+                    "Nhấn vào <a href=\"" + callbackUrl + "\">link</a> để reset mật khẩu");
                 TempData["ForgotPasswordStatus"] = "Thành công\nXin mời xem email để reset mật khẩu";
                 return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
@@ -157,23 +126,22 @@ namespace StudentInternshipManagement.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> ResetPassword(ResetPasswordViewModel model)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-            var user = await UserManager.FindByNameAsync(model.Email);
+            if (!ModelState.IsValid) return View(model);
+            var user = await _userManager.FindByNameAsync(model.Email);
             if (user == null)
             {
                 // Don't reveal that the user does not exist
                 TempData["ResetPasswordStatus"] = "Thất bại</br>Không thể reset mật khẩu";
                 return RedirectToAction("ResetPasswordConfirmation", "Account");
             }
-            var result = await UserManager.ResetPasswordAsync(user.Id, model.Code, model.Password);
+
+            var result = await _userManager.ResetPasswordAsync(user.Id, model.Code, model.Password);
             if (result.Succeeded)
             {
                 TempData["ResetPasswordStatus"] = "Reset mật khẩu thành công";
                 return RedirectToAction("ResetPasswordConfirmation", "Account");
             }
+
             AddErrors(result);
             return View();
         }
@@ -199,20 +167,16 @@ namespace StudentInternshipManagement.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> ChangePassword(ChangePasswordViewModel model)
         {
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
-            var result = await UserManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword, model.NewPassword);
+            if (!ModelState.IsValid) return View(model);
+            var result =
+                await _userManager.ChangePasswordAsync(User.Identity.GetUserId(), model.OldPassword, model.NewPassword);
             if (result.Succeeded)
             {
-                var user = await UserManager.FindByIdAsync(User.Identity.GetUserId());
-                if (user != null)
-                {
-                    await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
-                }
+                var user = await _userManager.FindByIdAsync(User.Identity.GetUserId());
+                if (user != null) await _signInManager.SignInAsync(user, false, false);
                 return RedirectToAction("/Home/Index");
             }
+
             AddErrors(result);
             return View(model);
         }
@@ -228,7 +192,7 @@ namespace StudentInternshipManagement.Controllers
             return RedirectToAction("Index", "Home");
         }
 
-        
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -250,31 +214,20 @@ namespace StudentInternshipManagement.Controllers
         }
 
         #region Helpers
+
         // Used for XSRF protection when adding external logins
         private const string XsrfKey = "XsrfId";
 
-        private IAuthenticationManager AuthenticationManager
-        {
-            get
-            {
-                return HttpContext.GetOwinContext().Authentication;
-            }
-        }
+        private IAuthenticationManager AuthenticationManager => HttpContext.GetOwinContext().Authentication;
 
         private void AddErrors(IdentityResult result)
         {
-            foreach (var error in result.Errors)
-            {
-                ModelState.AddModelError("", error);
-            }
+            foreach (var error in result.Errors) ModelState.AddModelError("", error);
         }
 
         private ActionResult RedirectToLocal(string returnUrl)
         {
-            if (Url.IsLocalUrl(returnUrl))
-            {
-                return Redirect(returnUrl);
-            }
+            if (Url.IsLocalUrl(returnUrl)) return Redirect(returnUrl);
             return RedirectToAction("Index", "Home");
         }
 
@@ -298,14 +251,12 @@ namespace StudentInternshipManagement.Controllers
 
             public override void ExecuteResult(ControllerContext context)
             {
-                var properties = new AuthenticationProperties { RedirectUri = RedirectUri };
-                if (UserId != null)
-                {
-                    properties.Dictionary[XsrfKey] = UserId;
-                }
+                var properties = new AuthenticationProperties {RedirectUri = RedirectUri};
+                if (UserId != null) properties.Dictionary[XsrfKey] = UserId;
                 context.HttpContext.GetOwinContext().Authentication.Challenge(properties, LoginProvider);
             }
         }
+
         #endregion
     }
 }

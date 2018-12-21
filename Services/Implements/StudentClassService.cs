@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-using Models.Entities;
-using Repositories;
+﻿using Models.Entities;
 using Repositories.Interfaces;
 using Services.Interfaces;
 

@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using Models;
+using Microsoft.Owin.Security;
 using Models.Entities;
 using Repositories.Interfaces;
 using Services.Interfaces;
@@ -10,18 +10,23 @@ namespace Services.Implements
     public class UserService : IUserService
     {
         private readonly IUnitOfWork _unitOfWork;
+        private readonly ApplicationUserManager _userManager;
+        private readonly ApplicationSignInManager _signInManager;
+        private readonly IAuthenticationManager _authenticationManager;
 
-        protected UserService(IUnitOfWork unitOfWork)
+        protected UserService(IUnitOfWork unitOfWork, ApplicationUserManager userManager, ApplicationSignInManager signInManager, IAuthenticationManager authenticationManager)
         {
             _unitOfWork = unitOfWork;
+            _userManager = userManager;
+            _signInManager = signInManager;
+            _authenticationManager = authenticationManager;
         }
-
-        protected IUnitOfWork UnitOfWork => _unitOfWork;
 
         public IQueryable<ApplicationUser> GetAll()
         {
             return _unitOfWork.UserRepository().TableNoTracking;
         }
+
         public ApplicationUser GetById(string id)
         {
             return _unitOfWork.UserRepository().GetById(id);

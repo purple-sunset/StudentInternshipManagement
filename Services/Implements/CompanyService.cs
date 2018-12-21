@@ -1,8 +1,5 @@
-﻿using System;
-using System.Linq;
-using Models;
+﻿using System.Linq;
 using Models.Entities;
-using Repositories;
 using Repositories.Interfaces;
 using Services.Interfaces;
 
@@ -11,11 +8,13 @@ namespace Services.Implements
     public class CompanyService : GenericService<Company>, ICompanyService
     {
         private readonly ICompanyTrainingMajorService _companyTrainingMajorService;
+
         public CompanyService(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
         }
 
-        public CompanyService(IUnitOfWork unitOfWork, ICompanyTrainingMajorService companyTrainingMajorService) : base(unitOfWork)
+        public CompanyService(IUnitOfWork unitOfWork, ICompanyTrainingMajorService companyTrainingMajorService) :
+            base(unitOfWork)
         {
             _companyTrainingMajorService = companyTrainingMajorService;
         }

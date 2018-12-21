@@ -8,6 +8,8 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Models;
 using Models.Entities;
+using Services.Implements;
+using Unity;
 
 namespace StudentInternshipManagement.Controllers
 {
@@ -18,7 +20,7 @@ namespace StudentInternshipManagement.Controllers
             get
             {
                 var id = User.Identity.GetUserName();
-                var userManager = HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
+                var userManager = UnityConfig.Container.Resolve<ApplicationUserManager>();
                 return userManager.FindByName(id);
             }
         }

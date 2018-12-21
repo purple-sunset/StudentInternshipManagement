@@ -40,7 +40,7 @@ namespace Services.Implements
         {
             AssignInternship();
             CreateGroup();
-            _emailService.SendInternshipCreate();
+            _emailService.SendProcessEmail();
         }
 
         public void AssignInternship()
@@ -110,10 +110,8 @@ namespace Services.Implements
             {
                 var members = item.Select(i => i).ToList();
                 var groups = new List<List<Internship>>();
-                for (int i = 0; i < members.Count; i += InternshipConstants.StudentsPerGroups)
-                {
+                for (var i = 0; i < members.Count; i += InternshipConstants.StudentsPerGroups)
                     groups.Add(members.GetRange(i, Math.Min(InternshipConstants.StudentsPerGroups, members.Count - i)));
-                }
                 //while (members.Any())
                 //{
                 //    groups.Add(members.Take(5).ToList());

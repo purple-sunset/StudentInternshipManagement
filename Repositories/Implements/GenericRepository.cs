@@ -11,7 +11,7 @@ using Utilities;
 
 namespace Repositories.Implements
 {
-    public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : BaseEntity
+    public sealed class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : BaseEntity
     {
         #region Ctor
 
@@ -33,12 +33,13 @@ namespace Repositories.Implements
         /// </summary>
         /// <param name="exc">Exception</param>
         /// <returns>Error</returns>
-        protected string GetFullErrorText(DbEntityValidationException exc)
+        // ReSharper disable once UnusedMember.Local
+        private string GetFullErrorText(DbEntityValidationException exc)
         {
-            var msg = string.Empty;
-            foreach (var validationErrors in exc.EntityValidationErrors)
-            foreach (var error in validationErrors.ValidationErrors)
-                msg += string.Format("Property: {0} Error: {1}", error.PropertyName, error.ErrorMessage) +
+            string msg = string.Empty;
+            foreach (DbEntityValidationResult validationErrors in exc.EntityValidationErrors)
+            foreach (DbValidationError error in validationErrors.ValidationErrors)
+                msg += $"Property: {error.PropertyName} Error: {error.ErrorMessage}" +
                        Environment.NewLine;
             return msg;
         }
@@ -59,7 +60,7 @@ namespace Repositories.Implements
         /// </summary>
         /// <param name="id">Identifier</param>
         /// <returns>Entity</returns>
-        public virtual TEntity GetById(int id)
+        public TEntity GetById(int id)
         {
             return Entities.FirstOrDefault(x => !x.IsDeleted && x.Id == id);
         }
@@ -69,7 +70,7 @@ namespace Repositories.Implements
         /// </summary>
         /// <param name="id">Identifier</param>
         /// <returns>Entity</returns>
-        public virtual async Task<TEntity> GetByIdAsync(int id)
+        public async Task<TEntity> GetByIdAsync(int id)
         {
             return await Entities.FirstOrDefaultAsync(x => !x.IsDeleted && x.Id == id);
         }
@@ -78,12 +79,12 @@ namespace Repositories.Implements
         ///     Insert entity
         /// </summary>
         /// <param name="entity">Entity</param>
-        public virtual void Add(TEntity entity)
+        public void Add(TEntity entity)
         {
             try
             {
                 if (entity == null)
-                    throw new ArgumentNullException("entity");
+                    throw new ArgumentNullException(nameof(entity));
 
                 entity.CreatedAt = DateTime.Now;
                 entity.IsDeleted = false;
@@ -100,14 +101,14 @@ namespace Repositories.Implements
         ///     Insert entities
         /// </summary>
         /// <param name="entities">Entities</param>
-        public virtual void Add(IEnumerable<TEntity> entities)
+        public void Add(IEnumerable<TEntity> entities)
         {
             try
             {
                 if (entities == null)
-                    throw new ArgumentNullException("entities");
+                    throw new ArgumentNullException(nameof(entities));
 
-                foreach (var entity in entities)
+                foreach (TEntity entity in entities)
                 {
                     entity.CreatedAt = DateTime.Now;
                     entity.IsDeleted = false;
@@ -125,12 +126,12 @@ namespace Repositories.Implements
         ///     Update entity
         /// </summary>
         /// <param name="entity">Entity</param>
-        public virtual void Update(TEntity entity)
+        public void Update(TEntity entity)
         {
             try
             {
                 if (entity == null)
-                    throw new ArgumentNullException("entity");
+                    throw new ArgumentNullException(nameof(entity));
 
                 entity.UpdatedAt = DateTime.Now;
                 _context.Entry(entity).State = EntityState.Modified;
@@ -146,14 +147,14 @@ namespace Repositories.Implements
         ///     Update entities
         /// </summary>
         /// <param name="entities">Entities</param>
-        public virtual void Update(IEnumerable<TEntity> entities)
+        public void Update(IEnumerable<TEntity> entities)
         {
             try
             {
                 if (entities == null)
-                    throw new ArgumentNullException("entities");
+                    throw new ArgumentNullException(nameof(entities));
 
-                foreach (var entity in entities)
+                foreach (TEntity entity in entities)
                 {
                     entity.UpdatedAt = DateTime.Now;
                     _context.Entry(entity).State = EntityState.Modified;
@@ -170,13 +171,13 @@ namespace Repositories.Implements
         ///     Delete entity
         /// </summary>
         /// <param name="id">Entity</param>
-        public virtual void Delete(int id)
+        public void Delete(int id)
         {
             try
             {
-                var entity = GetById(id);
+                TEntity entity = GetById(id);
                 if (entity == null)
-                    throw new ArgumentNullException("entity");
+                    throw new ArgumentNullException(nameof(id));
 
                 entity.UpdatedAt = DateTime.Now;
                 entity.IsDeleted = true;
@@ -194,12 +195,12 @@ namespace Repositories.Implements
         ///     Delete entity
         /// </summary>
         /// <param name="entity">Entity</param>
-        public virtual void Delete(TEntity entity)
+        public void Delete(TEntity entity)
         {
             try
             {
                 if (entity == null)
-                    throw new ArgumentNullException("entity");
+                    throw new ArgumentNullException(nameof(entity));
 
                 entity.UpdatedAt = DateTime.Now;
                 entity.IsDeleted = true;
@@ -216,14 +217,14 @@ namespace Repositories.Implements
         ///     Delete entities
         /// </summary>
         /// <param name="entities">Entities</param>
-        public virtual void Delete(IEnumerable<TEntity> entities)
+        public void Delete(IEnumerable<TEntity> entities)
         {
             try
             {
                 if (entities == null)
-                    throw new ArgumentNullException("entities");
+                    throw new ArgumentNullException(nameof(entities));
 
-                foreach (var entity in entities)
+                foreach (TEntity entity in entities)
                 {
                     entity.UpdatedAt = DateTime.Now;
                     entity.IsDeleted = true;
@@ -244,7 +245,7 @@ namespace Repositories.Implements
         /// <summary>
         ///     Gets a table
         /// </summary>
-        public virtual IQueryable<TEntity> Table
+        public IQueryable<TEntity> Table
         {
             get { return Entities.Where(x => !x.IsDeleted); }
         }
@@ -253,7 +254,7 @@ namespace Repositories.Implements
         ///     Gets a table with "no tracking" enabled (EF feature) Use it only when you load record(s) only for read-only
         ///     operations
         /// </summary>
-        public virtual IQueryable<TEntity> TableNoTracking
+        public IQueryable<TEntity> TableNoTracking
         {
             get { return Entities.AsNoTracking().Where(x => !x.IsDeleted); }
         }
@@ -261,15 +262,7 @@ namespace Repositories.Implements
         /// <summary>
         ///     Entities
         /// </summary>
-        protected virtual IDbSet<TEntity> Entities
-        {
-            get
-            {
-                if (_entities == null) _entities = _context.Set<TEntity>();
-
-                return _entities;
-            }
-        }
+        private IDbSet<TEntity> Entities => _entities ?? (_entities = _context.Set<TEntity>());
 
         #endregion
     }

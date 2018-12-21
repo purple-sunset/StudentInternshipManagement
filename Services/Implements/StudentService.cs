@@ -34,7 +34,7 @@ namespace Services.Implements
 
         public IQueryable<LearningClass> GetLearningClassBySemesterList(int studentId)
         {
-            var semesterId = _semesterService.GetLatest().Id;
+            int semesterId = _semesterService.GetLatest().Id;
             return GetLearningClassList(studentId).Where(c => c.SemesterId == semesterId);
         }
     }

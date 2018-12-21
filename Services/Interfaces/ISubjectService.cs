@@ -2,7 +2,7 @@
 
 namespace Services.Interfaces
 {
-    public interface ISubjectService:IGenericService<Subject>
+    public interface ISubjectService : IGenericService<Subject>
     {
     }
 }

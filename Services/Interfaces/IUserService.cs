@@ -1,7 +1,8 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
-using Models;
+using Microsoft.AspNet.Identity.Owin;
 using Models.Entities;
+using Services.ViewModel;
 
 namespace Services.Interfaces
 {
@@ -18,7 +19,15 @@ namespace Services.Interfaces
         Task<ApplicationUser> GetByIdAsync(string id);
         ApplicationUser GetByUserName(string userName);
         Task<ApplicationUser> GetByUserNameAsync(string userName);
+        ApplicationUser GetByEmail(string email);
+        Task<ApplicationUser> GetByEmailAsync(string email);
         bool Update(ApplicationUser user);
         Task<bool> UpdateAsync(ApplicationUser user);
+        SignInStatus LogIn(LoginViewModel model);
+        Task<SignInStatus> LogInAsync(LoginViewModel model);
+        void LogOut();
+        Task<string> ForgotPasswordAsync(ForgotPasswordViewModel model);
+        Task<string> ResetPasswordAsync(ResetPasswordViewModel model);
+        Task<string> ChangePasswordAsync(ChangePasswordViewModel model);
     }
 }

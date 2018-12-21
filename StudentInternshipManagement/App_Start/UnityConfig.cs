@@ -64,7 +64,7 @@ namespace StudentInternshipManagement
             container.RegisterType<IAuthenticationManager>(
                 new InjectionFactory(c => HttpContext.Current.GetOwinContext().Authentication));
             container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>(
-                new InjectionConstructor(typeof(ApplicationDbContext)));
+                new InjectionConstructor(typeof(WebContext)));
             container.RegisterType(typeof(IdentityFactoryOptions<>),
                 new InjectionFactory(c => Startup.DataProtectionProvider));
 

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Models.Entities
 {
-    public class Department:BaseEntity
+    public class Department : BaseEntity
     {
         [DisplayName("Mã Khoa/Viện")]
         public override int Id { get; set; }

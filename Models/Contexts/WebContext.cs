@@ -1,9 +1,10 @@
 ﻿using System.Data.Entity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using Models.Entities;
 
 namespace Models.Contexts
 {
-    public class WebContext : ApplicationDbContext
+    public class WebContext : IdentityDbContext<ApplicationUser>
     {
         public WebContext()
         {

@@ -2,7 +2,7 @@
 
 namespace Services.Interfaces
 {
-    public interface IStudentClassService:IGenericService<StudentClass>
+    public interface IStudentClassService : IGenericService<StudentClass>
     {
     }
 }

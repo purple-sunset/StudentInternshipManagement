@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using System.Net.Mail;
 using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
 using Models.Entities;
 using Repositories.Interfaces;
 using Services.Interfaces;
@@ -25,7 +24,7 @@ namespace Services.Implements
                 CC = mailMessage.CC.ToString(),
                 Attachments = mailMessage.Attachments.Select(x => x.Name).Aggregate((a, b) => a + ", " + b)
             };
-            var result = Add(emailHistory);
+            bool result = Add(emailHistory);
             if (result)
             {
                 result = EmailSender.Send(mailMessage);
@@ -46,7 +45,7 @@ namespace Services.Implements
                 CC = mailMessage.CC.ToString(),
                 Attachments = mailMessage.Attachments.Select(x => x.Name).Aggregate((a, b) => a + ", " + b)
             };
-            var result = await AddAsync(emailHistory);
+            bool result = await AddAsync(emailHistory);
             if (result)
             {
                 result = await EmailSender.SendAsync(mailMessage);
@@ -55,31 +54,6 @@ namespace Services.Implements
             }
 
             return result;
-        }
-
-        public async Task SendAsync(IdentityMessage message)
-        {
-            var mailMessage = new MailMessage();
-            mailMessage.To.Add(new MailAddress(message.Destination));
-            mailMessage.Subject = message.Subject;
-            mailMessage.IsBodyHtml = true;
-            mailMessage.Body = message.Body;
-
-            var emailHistory = new EmailHistory
-            {
-                Title = mailMessage.Subject,
-                Body = mailMessage.Body,
-                To = mailMessage.To.ToString(),
-                CC = mailMessage.CC.ToString(),
-                Attachments = mailMessage.Attachments.Select(x => x.Name).Aggregate((a, b) => a + ", " + b)
-            };
-            var result = await AddAsync(emailHistory);
-            if (result)
-            {
-                result = await EmailSender.SendAsync(mailMessage);
-                emailHistory.IsDeleted = result;
-                await UpdateAsync(emailHistory);
-            }
         }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace Services.Interfaces
 {
-    public interface IStatisticService:IGenericService<Statistic>
+    public interface IStatisticService : IGenericService<Statistic>
     {
     }
 }

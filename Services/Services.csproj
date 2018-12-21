@@ -125,6 +125,7 @@
     <Compile Include="Implements\StudentClassService.cs" />
     <Compile Include="Implements\DepartmentService.cs" />
     <Compile Include="Implements\StudentService.cs" />
+    <Compile Include="ViewModel\AccountViewModels.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Models\Models.csproj">

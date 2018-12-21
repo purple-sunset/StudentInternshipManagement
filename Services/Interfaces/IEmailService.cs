@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
+﻿using System.Threading.Tasks;
+using Services.ViewModel;
 
 namespace Services.Interfaces
 {
@@ -11,5 +7,6 @@ namespace Services.Interfaces
     {
         void SendCreateEmail();
         void SendProcessEmail();
+        Task SendResetPasswordMailAsync(ResetPasswordViewModel model);
     }
 }

@@ -277,7 +277,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -3041,6 +3040,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Teacher\Models\" />
+    <Folder Include="Models\" />
     <Folder Include="Views\Group\" />
     <Folder Include="Views\Internship\" />
   </ItemGroup>

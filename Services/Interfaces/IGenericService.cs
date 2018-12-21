@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using Models;
 using Models.Entities;
-using Repositories.Interfaces;
 
 namespace Services.Interfaces
 {
-    public interface IGenericService<TEntity> where TEntity:BaseEntity
+    public interface IGenericService<TEntity> where TEntity : BaseEntity
     {
         //IUnitOfWork UnitOfWork { get; }
         IQueryable<TEntity> GetAll();

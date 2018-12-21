@@ -2,7 +2,7 @@
 
 namespace Services.Interfaces
 {
-    public interface INewsService:IGenericService<News>
+    public interface INewsService : IGenericService<News>
     {
     }
 }

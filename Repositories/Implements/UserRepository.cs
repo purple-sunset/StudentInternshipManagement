@@ -25,12 +25,13 @@ namespace Repositories.Implements
 
         #region Utilities
 
+        // ReSharper disable once UnusedMember.Global
         protected string GetFullErrorText(DbEntityValidationException exc)
         {
-            var msg = string.Empty;
-            foreach (var validationErrors in exc.EntityValidationErrors)
-            foreach (var error in validationErrors.ValidationErrors)
-                msg += string.Format("Property: {0} Error: {1}", error.PropertyName, error.ErrorMessage) +
+            string msg = string.Empty;
+            foreach (DbEntityValidationResult validationErrors in exc.EntityValidationErrors)
+            foreach (DbValidationError error in validationErrors.ValidationErrors)
+                msg += $"Property: {error.PropertyName} Error: {error.ErrorMessage}" +
                        Environment.NewLine;
             return msg;
         }
@@ -67,12 +68,22 @@ namespace Repositories.Implements
             return await Entities.FirstOrDefaultAsync(x => !x.IsDeleted && x.UserName == userName);
         }
 
+        public ApplicationUser GetByEmail(string email)
+        {
+            return Entities.FirstOrDefault(x => !x.IsDeleted && x.Email == email);
+        }
+
+        public async Task<ApplicationUser> GetByEmailAsync(string email)
+        {
+            return await Entities.FirstOrDefaultAsync(x => !x.IsDeleted && x.Email == email);
+        }
+
         public virtual void Add(ApplicationUser user, string role)
         {
             try
             {
                 if (user == null)
-                    throw new ArgumentNullException("user");
+                    throw new ArgumentNullException(nameof(user));
 
                 user.CreatedAt = DateTime.Now;
                 user.IsDeleted = false;
@@ -92,7 +103,7 @@ namespace Repositories.Implements
             try
             {
                 if (user == null)
-                    throw new ArgumentNullException("user");
+                    throw new ArgumentNullException(nameof(user));
 
                 user.UpdatedAt = DateTime.Now;
                 _context.Entry(user).State = EntityState.Modified;
@@ -108,9 +119,9 @@ namespace Repositories.Implements
         {
             try
             {
-                var user = GetById(id);
+                ApplicationUser user = GetById(id);
                 if (user == null)
-                    throw new ArgumentNullException("user");
+                    throw new ArgumentNullException(nameof(id));
 
                 user.UpdatedAt = DateTime.Now;
                 user.IsDeleted = true;
@@ -128,7 +139,7 @@ namespace Repositories.Implements
             try
             {
                 if (user == null)
-                    throw new ArgumentNullException("user");
+                    throw new ArgumentNullException(nameof(user));
 
                 user.UpdatedAt = DateTime.Now;
                 user.IsDeleted = true;
@@ -155,15 +166,7 @@ namespace Repositories.Implements
             get { return Entities.AsNoTracking().Where(x => !x.IsDeleted); }
         }
 
-        protected virtual IDbSet<ApplicationUser> Entities
-        {
-            get
-            {
-                if (_entities == null) _entities = _context.Set<ApplicationUser>();
-
-                return _entities;
-            }
-        }
+        protected virtual IDbSet<ApplicationUser> Entities => _entities ?? (_entities = _context.Set<ApplicationUser>());
 
         #endregion
     }

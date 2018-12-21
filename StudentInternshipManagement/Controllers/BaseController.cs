@@ -1,27 +1,33 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Security.Claims;
-using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using Models;
 using Models.Entities;
-using Services.Implements;
+using Services.Interfaces;
 using Unity;
 
 namespace StudentInternshipManagement.Controllers
 {
-    public class BaseController:Controller
+    public class BaseController : Controller
     {
+        protected readonly IUserService UserService;
+
+        public BaseController()
+        {
+            UserService = UnityConfig.Container.Resolve<IUserService>();
+        }
+
+        public BaseController(IUserService userService)
+        {
+            UserService = userService;
+        }
+
         public ApplicationUser CurrentUser
         {
             get
             {
-                var id = User.Identity.GetUserName();
-                var userManager = UnityConfig.Container.Resolve<ApplicationUserManager>();
-                return userManager.FindByName(id);
+                string id = User.Identity.GetUserId();
+                return UserService.GetById(id);
             }
         }
 
@@ -29,7 +35,8 @@ namespace StudentInternshipManagement.Controllers
         {
             get
             {
-                return ((ClaimsIdentity)User.Identity).Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).FirstOrDefault();
+                return ((ClaimsIdentity) User.Identity).Claims.Where(c => c.Type == ClaimTypes.Role)
+                    .Select(c => c.Value).FirstOrDefault();
             }
         }
     }

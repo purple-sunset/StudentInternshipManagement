@@ -1,9 +1,8 @@
-﻿using Models;
-using Models.Entities;
+﻿using Models.Entities;
 
 namespace Services.Interfaces
 {
-    public interface IDepartmentService:IGenericService<Department>
+    public interface IDepartmentService : IGenericService<Department>
     {
     }
 }

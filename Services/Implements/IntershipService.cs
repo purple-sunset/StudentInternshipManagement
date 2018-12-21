@@ -32,7 +32,7 @@ namespace Services.Implements
 
         public IQueryable<Internship> GetByLatestSemester()
         {
-            var semesterId = _semesterService.GetLatest().Id;
+            int semesterId = _semesterService.GetLatest().Id;
             return GetBySemester(semesterId);
         }
 
@@ -46,9 +46,10 @@ namespace Services.Implements
         public void AssignInternship()
         {
             var lateRegisteredInternships = new List<Internship>();
-            var leftMajors = UnitOfWork.Repository<CompanyTrainingMajor>().TableNoTracking.ToList();
+            List<CompanyTrainingMajor> leftMajors =
+                UnitOfWork.Repository<CompanyTrainingMajor>().TableNoTracking.ToList();
 
-            foreach (var item in GetByLatestSemester().OrderByDescending(i => i.RegistrationDate).ToList())
+            foreach (Internship item in GetByLatestSemester().OrderByDescending(i => i.RegistrationDate).ToList())
                 if (item.Major.AvailableTraineeCount > 0)
                 {
                     item.Status = InternshipStatus.Success;
@@ -61,9 +62,9 @@ namespace Services.Implements
                     leftMajors.Remove(item.Major);
                 }
 
-            foreach (var item in lateRegisteredInternships)
+            foreach (Internship item in lateRegisteredInternships)
             {
-                var major = leftMajors.FirstOrDefault(m => m.TrainingMajorId == item.TrainingMajorId);
+                CompanyTrainingMajor major = leftMajors.FirstOrDefault(m => m.TrainingMajorId == item.TrainingMajorId);
                 if (major != null)
                 {
                     item.TrainingMajorId = major.TrainingMajorId;
@@ -77,7 +78,8 @@ namespace Services.Implements
                 }
                 else
                 {
-                    var randomMajor = leftMajors.FirstOrDefault(m => m.TrainingMajor.SubjectId == item.Class.SubjectId);
+                    CompanyTrainingMajor randomMajor =
+                        leftMajors.FirstOrDefault(m => m.TrainingMajor.SubjectId == item.Class.SubjectId);
                     if (randomMajor != null)
                     {
                         item.TrainingMajorId = randomMajor.TrainingMajorId;
@@ -92,7 +94,7 @@ namespace Services.Implements
                 }
             }
 
-            foreach (var item in lateRegisteredInternships)
+            foreach (Internship item in lateRegisteredInternships)
             {
                 item.Status = InternshipStatus.Failed;
                 UnitOfWork.Repository<Internship>().Update(item);
@@ -102,15 +104,17 @@ namespace Services.Implements
         [SuppressMessage("ReSharper", "PossibleNullReferenceException")]
         public void CreateGroup()
         {
-            var groupByMajors = GetByLatestSemester().Where(i => i.Status == InternshipStatus.Success)
+            List<IGrouping<CompanyTrainingMajor, Internship>> groupByMajors = GetByLatestSemester()
+                .Where(i => i.Status == InternshipStatus.Success)
                 .GroupBy(i => i.Major).ToList();
-            var teachers = UnitOfWork.Repository<Teacher>().TableNoTracking;
-            var teacherAssign = teachers.ToDictionary(t => t, t => InternshipConstants.GroupsPerTeacher);
-            foreach (var item in groupByMajors)
+            IQueryable<Teacher> teachers = UnitOfWork.Repository<Teacher>().TableNoTracking;
+            Dictionary<Teacher, int> teacherAssign =
+                teachers.ToDictionary(t => t, t => InternshipConstants.GroupsPerTeacher);
+            foreach (IGrouping<CompanyTrainingMajor, Internship> item in groupByMajors)
             {
-                var members = item.Select(i => i).ToList();
+                List<Internship> members = item.Select(i => i).ToList();
                 var groups = new List<List<Internship>>();
-                for (var i = 0; i < members.Count; i += InternshipConstants.StudentsPerGroups)
+                for (int i = 0; i < members.Count; i += InternshipConstants.StudentsPerGroups)
                     groups.Add(members.GetRange(i, Math.Min(InternshipConstants.StudentsPerGroups, members.Count - i)));
                 //while (members.Any())
                 //{
@@ -118,8 +122,8 @@ namespace Services.Implements
                 //    members = members.Skip(5);
                 //}
 
-                var groupId = 1;
-                foreach (var groupItem in groups)
+                int groupId = 1;
+                foreach (List<Internship> groupItem in groups)
                 {
                     var group = new Group
                     {
@@ -132,7 +136,7 @@ namespace Services.Implements
                         LeaderId = groupItem.OrderByDescending(g => g.Student.Cpa).FirstOrDefault().Student
                             .Id
                     };
-                    var teacher = teacherAssign.FirstOrDefault(t =>
+                    Teacher teacher = teacherAssign.FirstOrDefault(t =>
                         t.Key.Department.Id ==
                         groupItem.FirstOrDefault().Class.Subject.Department.Id && t.Value > 0).Key;
                     group.TeacherId = teacher.Id;

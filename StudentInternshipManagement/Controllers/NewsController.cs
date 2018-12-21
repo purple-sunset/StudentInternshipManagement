@@ -6,7 +6,7 @@ using Services.Interfaces;
 
 namespace StudentInternshipManagement.Controllers
 {
-    public class NewsController : Controller
+    public class NewsController : BaseController
     {
         private readonly INewsService _service;
 

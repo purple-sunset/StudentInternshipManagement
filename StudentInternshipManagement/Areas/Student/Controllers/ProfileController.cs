@@ -9,7 +9,6 @@ using Microsoft.AspNet.Identity.Owin;
 using Models;
 using Services;
 using Services.Implements;
-using StudentInternshipManagement.Models;
 
 namespace StudentInternshipManagement.Areas.Student.Controllers
 {

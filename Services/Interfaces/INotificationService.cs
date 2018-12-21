@@ -2,7 +2,7 @@
 
 namespace Services.Interfaces
 {
-    public interface INotificationService:IGenericService<Notification>
+    public interface INotificationService : IGenericService<Notification>
     {
     }
 }

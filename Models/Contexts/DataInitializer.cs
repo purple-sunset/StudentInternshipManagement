@@ -143,7 +143,7 @@ namespace Models.Contexts
                 }
             };
 
-            foreach (var item in semesters) context.Semesters.Add(item);
+            foreach (Semester item in semesters) context.Semesters.Add(item);
 
             var departments = new List<Department>
             {
@@ -153,7 +153,7 @@ namespace Models.Contexts
                 }
             };
 
-            foreach (var item in departments) context.Departments.Add(item);
+            foreach (Department item in departments) context.Departments.Add(item);
 
             var studenClasses = new List<StudentClass>
             {
@@ -179,7 +179,7 @@ namespace Models.Contexts
                 }
             };
 
-            foreach (var item in studenClasses) context.StudentClasses.Add(item);
+            foreach (StudentClass item in studenClasses) context.StudentClasses.Add(item);
 
             var students = new List<Student>
             {
@@ -293,7 +293,7 @@ namespace Models.Contexts
                 }
             };
 
-            foreach (var item in students) context.Students.Add(item);
+            foreach (Student item in students) context.Students.Add(item);
 
             var admins = new List<Admin>
             {
@@ -309,7 +309,7 @@ namespace Models.Contexts
                 }
             };
 
-            foreach (var item in admins) context.Admins.Add(item);
+            foreach (Admin item in admins) context.Admins.Add(item);
 
             var teachers = new List<Teacher>
             {
@@ -325,7 +325,7 @@ namespace Models.Contexts
                 }
             };
 
-            foreach (var item in teachers) context.Teachers.Add(item);
+            foreach (Teacher item in teachers) context.Teachers.Add(item);
 
             var subjects = new List<Subject>
             {
@@ -343,7 +343,7 @@ namespace Models.Contexts
                 }
             };
 
-            foreach (var item in subjects) context.Subjects.Add(item);
+            foreach (Subject item in subjects) context.Subjects.Add(item);
 
             var learningClasses = new List<LearningClass>
             {
@@ -361,7 +361,7 @@ namespace Models.Contexts
                 }
             };
 
-            foreach (var item in learningClasses) context.LearningClasses.Add(item);
+            foreach (LearningClass item in learningClasses) context.LearningClasses.Add(item);
 
             var learningClassStudents = new List<LearningClassStudent>
             {
@@ -412,7 +412,7 @@ namespace Models.Contexts
                 }
             };
 
-            foreach (var item in learningClassStudents) context.LearningClassStudents.Add(item);
+            foreach (LearningClassStudent item in learningClassStudents) context.LearningClassStudents.Add(item);
 
             var majors = new List<TrainingMajor>
             {
@@ -438,7 +438,7 @@ namespace Models.Contexts
                 }
             };
 
-            foreach (var item in majors) context.TrainingMajors.Add(item);
+            foreach (TrainingMajor item in majors) context.TrainingMajors.Add(item);
 
             var companies = new List<Company>
             {
@@ -468,7 +468,7 @@ namespace Models.Contexts
                 }
             };
 
-            foreach (var item in companies) context.Companies.Add(item);
+            foreach (Company item in companies) context.Companies.Add(item);
 
             var companyMajors = new List<CompanyTrainingMajor>
             {
@@ -509,7 +509,7 @@ namespace Models.Contexts
                 }
             };
 
-            foreach (var item in companyMajors) context.CompanyTrainingMajors.Add(item);
+            foreach (CompanyTrainingMajor item in companyMajors) context.CompanyTrainingMajors.Add(item);
 
             var internships = new List<Internship>
             {
@@ -587,7 +587,7 @@ namespace Models.Contexts
                 }
             };
 
-            foreach (var item in internships) context.Internships.Add(item);
+            foreach (Internship item in internships) context.Internships.Add(item);
 
 
             var news = new List<News>
@@ -643,7 +643,7 @@ namespace Models.Contexts
                 }
             };
 
-            foreach (var item in news) context.Newses.Add(item);
+            foreach (News item in news) context.Newses.Add(item);
 
             base.Seed(context);
         }

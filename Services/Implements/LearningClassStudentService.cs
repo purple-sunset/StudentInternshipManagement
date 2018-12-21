@@ -44,8 +44,8 @@ namespace Services.Implements
 
         public IQueryable<LearningClassStudent> GetByTeacher(int teacherId)
         {
-            var groups = _groupService.GetByTeacher(teacherId);
-            var students = groups.SelectMany(g => g.Members).Select(s => s.Id);
+            IQueryable<Group> groups = _groupService.GetByTeacher(teacherId);
+            IQueryable<int> students = groups.SelectMany(g => g.Members).Select(s => s.Id);
             return GetAll().Where(l => students.Contains(l.StudentId));
         }
     }

@@ -56,7 +56,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants\Constants.cs" />
-    <Compile Include="Contexts\ApplicationDbContext.cs" />
     <Compile Include="Entities\Admin.cs" />
     <Compile Include="Entities\BaseEntity.cs" />
     <Compile Include="Entities\Company.cs" />

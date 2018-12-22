@@ -1,15 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.Script.Serialization;
-using Models;
 using Models.Constants;
 
-namespace StudentInternshipManagement.Areas.Student.Models
+namespace Services.ViewModel
 {
     public class InternshipViewModel
     {
@@ -28,9 +22,6 @@ namespace StudentInternshipManagement.Areas.Student.Models
 
         [DisplayName("Lớp học")]
         public string Class { get; set; }
-
-        [DisplayName("Học kỳ")]
-        public int Semester { get; set; }
 
         [DisplayName("Công ty")]
         public string Company { get; set; }

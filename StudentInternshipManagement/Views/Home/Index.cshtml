@@ -1,23 +1,22 @@
-﻿@using System.Security.Claims
-@using Microsoft.AspNet.Identity
-@using Services
+﻿@using StudentInternshipManagement.Controllers
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Homepage - Trang quản lý thực tập";
     string message = ViewBag.Message ?? string.Empty;
 }
 @{
-    var role = string.Empty;
+    string role = string.Empty;
     if (Request.IsAuthenticated)
     {
-        var username = User.Identity.GetUserName();
-        role = ((ClaimsIdentity) User.Identity).Claims.Where(c => c.Type == ClaimTypes.Role).Select(c => c.Value).FirstOrDefault();
+        var controller = new BaseController();
+        string username = controller.CurrentUser.UserName;
+        role = controller.CurrentRole;
     }
 }
 
 @section Kendo {
-    @Styles.Render("~/Content/kendo/2018.2.516/styles")
-    @Scripts.Render("~/Scripts/kendo/2018.2.516/scripts")
+    @Styles.Render("~/Content/kendo/styles")
+    @Scripts.Render("~/Scripts/kendo/scripts")
 }
 
 <div class="main-content-inner">

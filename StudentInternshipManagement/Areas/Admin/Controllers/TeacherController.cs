@@ -1,24 +1,22 @@
-﻿﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
-using Models;
- using Services;
- using Services.Implements;
+using Services.Interfaces;
+using StudentInternshipManagement.Controllers;
 
 namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
-    public class TeacherController : Controller
+    public class TeacherController : BaseController
     {
-        private readonly TeacherService  _service=new TeacherService();
-        private readonly DepartmentService _departmentService = new DepartmentService();
+        private readonly IDepartmentService _departmentService;
+        private readonly ITeacherService _teacherService;
+
+        public TeacherController(ITeacherService teacherService, IDepartmentService departmentService)
+        {
+            _teacherService = teacherService;
+            _departmentService = departmentService;
+        }
 
         public ActionResult Index()
         {
@@ -26,81 +24,56 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             return View();
         }
 
-        public ActionResult Teachers_Read([DataSourceRequest]DataSourceRequest request)
+        public ActionResult Teachers_Read([DataSourceRequest] DataSourceRequest request)
         {
-            DataSourceResult result = _service.GetAll().ToDataSourceResult(request, teacher => new {
-                TeacherId = teacher.TeacherId,
-                TeacherName = teacher.TeacherName,
-                BirthDate = teacher.BirthDate,
-                Address = teacher.Address,
-                Phone = teacher.Phone,
-                DepartmentId=teacher.DepartmentId
+            DataSourceResult result = _teacherService.GetAll().ToDataSourceResult(request, teacher => new
+            {
+                teacher.Id,
+                teacher.TeacherCode,
+                teacher.TeacherName,
+                teacher.BirthDate,
+                teacher.Address,
+                teacher.Phone,
+                teacher.DepartmentId
             });
 
             return Json(result);
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Teachers_Create([DataSourceRequest]DataSourceRequest request, global::Models.Entities.Teacher teacher)
+        public ActionResult Teachers_Create([DataSourceRequest] DataSourceRequest request,
+            global::Models.Entities.Teacher teacher)
         {
             if (ModelState.IsValid)
             {
-                var entity = new global::Models.Entities.Teacher
-                {
-                    TeacherName = teacher.TeacherName,
-                    BirthDate = teacher.BirthDate,
-                    Address = teacher.Address,
-                    Phone = teacher.Phone,
-                    DepartmentId = teacher.DepartmentId
-                };
-
-                _service.Add(entity);
+                _teacherService.Add(teacher);
             }
 
-            return Json(new[] { teacher }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {teacher}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Teachers_Update([DataSourceRequest]DataSourceRequest request, global::Models.Entities.Teacher teacher)
+        public ActionResult Teachers_Update([DataSourceRequest] DataSourceRequest request,
+            global::Models.Entities.Teacher teacher)
         {
             if (ModelState.IsValid)
             {
-                var entity = new global::Models.Entities.Teacher
-                {
-                    TeacherId = teacher.TeacherId,
-                    TeacherName = teacher.TeacherName,
-                    BirthDate = teacher.BirthDate,
-                    Address = teacher.Address,
-                    Phone = teacher.Phone,
-                    DepartmentId = teacher.DepartmentId
-                };
-
-                _service.Update(teacher);
+                _teacherService.Update(teacher);
             }
 
-            return Json(new[] { teacher }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {teacher}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Teachers_Destroy([DataSourceRequest]DataSourceRequest request, global::Models.Entities.Teacher teacher)
+        public ActionResult Teachers_Destroy([DataSourceRequest] DataSourceRequest request,
+            global::Models.Entities.Teacher teacher)
         {
             if (ModelState.IsValid)
             {
-                var entity = new global::Models.Entities.Teacher
-                {
-                    TeacherId = teacher.TeacherId,
-                    TeacherName = teacher.TeacherName,
-                    BirthDate = teacher.BirthDate,
-                    Address = teacher.Address,
-                    Phone = teacher.Phone,
-                    DepartmentId = teacher.DepartmentId
-                };
-
-                _service.Delete(teacher);
+                _teacherService.Delete(teacher);
             }
 
-            return Json(new[] { teacher }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {teacher}.ToDataSourceResult(request, ModelState));
         }
-
     }
 }

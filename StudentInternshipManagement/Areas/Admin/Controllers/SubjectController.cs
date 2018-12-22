@@ -1,25 +1,23 @@
-﻿﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
-using Models;
- using Models.Entities;
- using Services;
- using Services.Implements;
+using Models.Entities;
+using Services.Interfaces;
+using StudentInternshipManagement.Controllers;
 
 namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
-    public class SubjectController : Controller
+    public class SubjectController : BaseController
     {
-        private readonly SubjectService _service = new SubjectService();
-        private readonly DepartmentService _departmentService = new DepartmentService();
+        private readonly IDepartmentService _departmentService;
+        private readonly ISubjectService _subjectService;
+
+        public SubjectController(ISubjectService subjectService, IDepartmentService departmentService)
+        {
+            _subjectService = subjectService;
+            _departmentService = departmentService;
+        }
 
         public ActionResult Index()
         {
@@ -27,76 +25,49 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             return View();
         }
 
-        public ActionResult Subjects_Read([DataSourceRequest]DataSourceRequest request)
+        public ActionResult Subjects_Read([DataSourceRequest] DataSourceRequest request)
         {
-            DataSourceResult result = _service.GetAll().ToDataSourceResult(request, subject => new {
-                SubjectId = subject.SubjectId,
-                SubjectName = subject.SubjectName,
-                DepartmentId = subject.DepartmentId
+            DataSourceResult result = _subjectService.GetAll().ToDataSourceResult(request, subject => new
+            {
+                subject.Id,
+                subject.SubjectName,
+                subject.DepartmentId
             });
 
             return Json(result);
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Subjects_Create([DataSourceRequest]DataSourceRequest request, Subject subject)
+        public ActionResult Subjects_Create([DataSourceRequest] DataSourceRequest request, Subject subject)
         {
             if (ModelState.IsValid)
             {
-                var entity = new Subject
-                {
-                    SubjectId = subject.SubjectId,
-                    SubjectName = subject.SubjectName,
-                    DepartmentId = subject.DepartmentId
-                };
-
-                _service.Add(entity);
+                _subjectService.Add(subject);
             }
 
-            return Json(new[] { subject }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {subject}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Subjects_Update([DataSourceRequest]DataSourceRequest request, Subject subject)
+        public ActionResult Subjects_Update([DataSourceRequest] DataSourceRequest request, Subject subject)
         {
             if (ModelState.IsValid)
             {
-                var entity = new Subject
-                {
-                    SubjectId = subject.SubjectId,
-                    SubjectName = subject.SubjectName,
-                    DepartmentId = subject.DepartmentId
-                };
-
-                _service.Update(entity);
+                _subjectService.Update(subject);
             }
 
-            return Json(new[] { subject }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {subject}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Subjects_Destroy([DataSourceRequest]DataSourceRequest request, Subject subject)
+        public ActionResult Subjects_Destroy([DataSourceRequest] DataSourceRequest request, Subject subject)
         {
             if (ModelState.IsValid)
             {
-                var entity = new Subject
-                {
-                    SubjectId = subject.SubjectId,
-                    SubjectName = subject.SubjectName,
-                    DepartmentId = subject.DepartmentId
-                };
-
-                _service.Delete(entity);
+                _subjectService.Delete(subject);
             }
 
-            return Json(new[] { subject }.ToDataSourceResult(request, ModelState));
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            _service.Dispose();
-            _departmentService.Dispose();
-            base.Dispose(disposing);
+            return Json(new[] {subject}.ToDataSourceResult(request, ModelState));
         }
     }
 }

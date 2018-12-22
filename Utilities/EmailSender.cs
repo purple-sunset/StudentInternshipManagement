@@ -16,10 +16,13 @@ namespace Utilities
                 ConfigurationManager.AppSettings["mailPassword"])
         };
 
+        private static readonly MailAddress From = new MailAddress(ConfigurationManager.AppSettings["mailAccount"]);
+
         public static async Task<bool> SendAsync(MailMessage message)
         {
             try
             {
+                message.From = From;
                 await Client.SendMailAsync(message);
                 return true;
             }
@@ -34,6 +37,7 @@ namespace Utilities
         {
             try
             {
+                message.From = From;
                 Client.Send(message);
                 return true;
             }

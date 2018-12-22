@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.IO;
 using System.Linq;
 using System.Net.Mail;
@@ -46,10 +45,8 @@ namespace Services.Implements
         public async Task SendResetPasswordMailAsync(ResetPasswordViewModel model)
         {
             var mail = new MailMessage();
-            mail.Subject = "Reset Mật khẩu trên trang quản lý thực tập";
-            mail.From = new MailAddress(ConfigurationManager.AppSettings["mailAccount"]);
             mail.To.Add(new MailAddress(model.Email));
-
+            mail.Subject = "Reset Mật khẩu trên trang quản lý thực tập";
             var emailBody = new StringBuilder();
             string callbackUrl = $"{ForgotPasswordConstants.CallbackUrl}{model.Code}";
             emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi kết quả đăng ký thực tâp");
@@ -138,7 +135,7 @@ namespace Services.Implements
             {
                 var mail = new MailMessage();
                 mail.Subject = "Danh sách sinh viên thực tập Trường đại học Bách Khoa Hà Nội";
-                mail.From = new MailAddress(ConfigurationManager.AppSettings["mailAccount"]);
+                
                 var emailBody = new StringBuilder();
                 emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi danh sách sinh viên thực tập");
                 emailBody.Append("Xem tệp đính kèm để xem thông tin thực tập kỳ này");
@@ -165,7 +162,7 @@ namespace Services.Implements
             {
                 var mail = new MailMessage();
                 mail.Subject = $"Thông tin phân công hướng dẫn thực tập kỳ {semester}";
-                mail.From = new MailAddress(ConfigurationManager.AppSettings["mailAccount"]);
+                
                 var emailBody = new StringBuilder();
                 emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi danh sách sinh viên thực tập");
                 emailBody.Append(
@@ -190,7 +187,7 @@ namespace Services.Implements
             foreach (Student st in students)
             {
                 mail.Subject = $"Thông tin phân công hướng dẫn thực tập kỳ {semester}";
-                mail.From = new MailAddress(ConfigurationManager.AppSettings["mailAccount"]);
+                
                 var emailBody = new StringBuilder();
                 emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi kết quả đăng ký thực tâp");
                 emailBody.Append(@"<p>Nhấn vào liên kết để xem thông tin thực tập kỳ này: <a href = '" +

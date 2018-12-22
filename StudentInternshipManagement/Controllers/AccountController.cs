@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
@@ -12,7 +11,7 @@ namespace StudentInternshipManagement.Controllers
     [Authorize]
     public class AccountController : BaseController
     {
-        public AccountController(IUserService userService):base(userService)
+        public AccountController(IUserService userService) : base(userService)
         {
         }
 
@@ -33,11 +32,7 @@ namespace StudentInternshipManagement.Controllers
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Login(LoginViewModel model, string returnUrl)
         {
-            if (!ModelState.IsValid)
-            {
-                //ICollection<ModelState> states = ModelState.Values;
-                return View(model);
-            }
+            if (!ModelState.IsValid) return View(model);
 
             SignInStatus result = await UserService.LogInAsync(model);
             switch (result)

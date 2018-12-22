@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace StudentInternshipManagement
 {
@@ -9,7 +8,7 @@ namespace StudentInternshipManagement
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.Add(new StyleBundle("~/Content/bootstrap").Include(
-                      "~/Content/bootstrap.css"));
+                "~/Content/bootstrap.css"));
 
             bundles.Add(new StyleBundle("~/Content/site").Include(
                 "~/Content/font-awesome.min.css",
@@ -18,10 +17,10 @@ namespace StudentInternshipManagement
                 "~/Content/site.css",
                 "~/Content/site2.css"));
 
-            bundles.Add(new StyleBundle("~/Content/kendo/2018.2.516/styles").Include(
-                "~/Content/kendo/2018.2.516/kendo.common.min.css",
-                "~/Content/kendo/2018.2.516/kendo.mobile.all.min.css",
-                "~/Content/kendo/2018.2.516/kendo.default.min.css"));
+            bundles.Add(new StyleBundle("~/Content/kendo/styles").Include(
+                "~/Content/kendo/{version}/kendo.common.min.css",
+                "~/Content/kendo/{version}/kendo.mobile.all.min.css",
+                "~/Content/kendo/{version}/kendo.default.min.css"));
 
             bundles.Add(new ScriptBundle("~/Script/jquery").Include(
                 "~/Scripts/jquery-{version}.js"));
@@ -38,11 +37,11 @@ namespace StudentInternshipManagement
                 "~/Scripts/bootstrap.js",
                 "~/Scripts/respond.js"));
 
-            bundles.Add(new ScriptBundle("~/Scripts/kendo/2018.2.516/scripts").Include(
-                "~/Scripts/kendo/2018.2.516/jszip.min.js",
-                "~/Scripts/kendo/2018.2.516/kendo.all.min.js",
-                "~/Scripts/kendo/2018.2.516/kendo.aspnetmvc.min.js",
-                "~/Scripts/kendo/2018.2.516/cultures/kendo.culture.vi-VN.min.js",
+            bundles.Add(new ScriptBundle("~/Scripts/kendo/scripts").Include(
+                "~/Scripts/kendo/{version}/jszip.min.js",
+                "~/Scripts/kendo/{version}/kendo.all.min.js",
+                "~/Scripts/kendo/{version}/kendo.aspnetmvc.min.js",
+                "~/Scripts/kendo/{version}/cultures/kendo.culture.vi-VN.min.js",
                 "~/Scripts/kendo.modernizr.custom.js",
                 "~/Scripts/site/kendo_culture.js"));
 

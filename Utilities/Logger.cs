@@ -5,26 +5,26 @@ namespace Utilities
 {
     public static class Logger
     {
-        private static ILog log = LogManager.GetLogger("StudentInternshipManagement");
+        private static readonly ILog Log = LogManager.GetLogger("StudentInternshipManagement");
 
         public static void LogError(Exception ex)
         {
-            log.Error(ex);
+            Log.Error(ex);
         }
 
         public static void LogWarning(Exception ex)
         {
-            log.Warn(ex);
+            Log.Warn(ex);
         }
 
         public static void LogInfo(Exception ex)
         {
-            log.Info(ex);
+            Log.Info(ex);
         }
 
         public static void LogFatal(Exception ex)
         {
-            log.Fatal(ex);
+            Log.Fatal(ex);
         }
     }
 }

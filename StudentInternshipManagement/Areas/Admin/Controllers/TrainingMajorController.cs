@@ -1,10 +1,8 @@
 ﻿using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
-using Models;
 using Models.Entities;
-using Services;
-using Services.Implements;
+using Services.Interfaces;
 using StudentInternshipManagement.Controllers;
 
 namespace StudentInternshipManagement.Areas.Admin.Controllers
@@ -12,16 +10,16 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
     [Authorize(Roles = "Admin")]
     public class TrainingMajorController : BaseController
     {
-        private readonly CompanyService _companyService;
-        private readonly SubjectService _subjectService;
-        private readonly TrainingMajorService _trainingMajorService;
+        private readonly ICompanyService _companyService;
+        private readonly ISubjectService _subjectService;
+        private readonly ITrainingMajorService _trainingMajorService;
 
-        public TrainingMajorController(TrainingMajorService trainingMajorService, SubjectService subjectService,
-            CompanyService companyService)
+        public TrainingMajorController(ICompanyService companyService, ISubjectService subjectService,
+            ITrainingMajorService trainingMajorService)
         {
-            _trainingMajorService = trainingMajorService;
-            _subjectService = subjectService;
             _companyService = companyService;
+            _subjectService = subjectService;
+            _trainingMajorService = trainingMajorService;
         }
 
         public ActionResult Index()
@@ -33,9 +31,9 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
 
         public ActionResult TrainingMajors_Read([DataSourceRequest] DataSourceRequest request)
         {
-            var result = _trainingMajorService.GetAll().ToDataSourceResult(request, trainingMajor => new
+            DataSourceResult result = _trainingMajorService.GetAll().ToDataSourceResult(request, trainingMajor => new
             {
-                TrainingMajorId = trainingMajor.Id,
+                trainingMajor.Id,
                 trainingMajor.TrainingMajorName,
                 trainingMajor.SubjectId
             });
@@ -49,13 +47,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var entity = new TrainingMajor
-                {
-                    TrainingMajorName = trainingMajor.TrainingMajorName,
-                    SubjectId = trainingMajor.SubjectId
-                };
-
-                _trainingMajorService.Add(entity);
+                _trainingMajorService.Add(trainingMajor);
             }
 
             return Json(new[] {trainingMajor}.ToDataSourceResult(request, ModelState));
@@ -67,14 +59,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var entity = new TrainingMajor
-                {
-                    Id = trainingMajor.Id,
-                    TrainingMajorName = trainingMajor.TrainingMajorName,
-                    SubjectId = trainingMajor.SubjectId
-                };
-
-                _trainingMajorService.Add(entity);
+                _trainingMajorService.Add(trainingMajor);
             }
 
             return Json(new[] {trainingMajor}.ToDataSourceResult(request, ModelState));
@@ -86,14 +71,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var entity = new TrainingMajor
-                {
-                    Id = trainingMajor.Id,
-                    TrainingMajorName = trainingMajor.TrainingMajorName,
-                    SubjectId = trainingMajor.SubjectId
-                };
-
-                _trainingMajorService.Delete(entity);
+                _trainingMajorService.Delete(trainingMajor);
             }
 
             return Json(new[] {trainingMajor}.ToDataSourceResult(request, ModelState));
@@ -102,7 +80,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         public ActionResult CompanyTrainingMajors_Read(int trainingMajorId,
             [DataSourceRequest] DataSourceRequest request)
         {
-            var result = _trainingMajorService.GetAll().ToDataSourceResult(request, trainingMajor => new
+            DataSourceResult result = _trainingMajorService.GetAll().ToDataSourceResult(request, trainingMajor => new
             {
                 TrainingMajorId = trainingMajor.Id,
                 trainingMajor.TrainingMajorName,
@@ -115,15 +93,16 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
 
         public ActionResult GetCompanyList(int majorId, [DataSourceRequest] DataSourceRequest request)
         {
-            var result = _trainingMajorService.GetCompanyList(majorId).ToDataSourceResult(request, company => new
-            {
-                CompanyId = company.Id,
-                company.CompanyName,
-                company.CompanyDescription,
-                company.Address,
-                company.Email,
-                company.Phone
-            });
+            DataSourceResult result = _trainingMajorService.GetCompanyList(majorId).ToDataSourceResult(request,
+                company => new
+                {
+                    CompanyId = company.Id,
+                    company.CompanyName,
+                    company.CompanyDescription,
+                    company.Address,
+                    company.Email,
+                    company.Phone
+                });
 
             return Json(result);
         }

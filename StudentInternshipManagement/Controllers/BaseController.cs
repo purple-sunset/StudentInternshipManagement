@@ -10,16 +10,16 @@ namespace StudentInternshipManagement.Controllers
 {
     public class BaseController : Controller
     {
-        protected readonly IUserService UserService;
+        private readonly IUserService _userService;
 
         public BaseController()
         {
-            UserService = UnityConfig.Container.Resolve<IUserService>();
+            _userService = UnityConfig.Container.Resolve<IUserService>();
         }
 
         public BaseController(IUserService userService)
         {
-            UserService = userService;
+            _userService = userService;
         }
 
         public ApplicationUser CurrentUser
@@ -27,7 +27,7 @@ namespace StudentInternshipManagement.Controllers
             get
             {
                 string id = User.Identity.GetUserId();
-                return UserService.GetById(id);
+                return _userService.GetById(id);
             }
         }
 
@@ -39,5 +39,7 @@ namespace StudentInternshipManagement.Controllers
                     .Select(c => c.Value).FirstOrDefault();
             }
         }
+
+        protected IUserService UserService => _userService;
     }
 }

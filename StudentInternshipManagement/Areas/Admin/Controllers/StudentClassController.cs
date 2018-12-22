@@ -1,25 +1,23 @@
-﻿﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
-using Models;
- using Models.Entities;
- using Services;
- using Services.Implements;
+using Models.Entities;
+using Services.Interfaces;
+using StudentInternshipManagement.Controllers;
 
 namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
-    public class StudentClassController : Controller
+    public class StudentClassController : BaseController
     {
-        private readonly StudentClassService _service=new StudentClassService();
-        private readonly DepartmentService _departmentService = new DepartmentService();
+        private readonly IDepartmentService _departmentService;
+        private readonly IStudentClassService _studentClassService;
+
+        public StudentClassController(IStudentClassService studentClassService, IDepartmentService departmentService)
+        {
+            _studentClassService = studentClassService;
+            _departmentService = departmentService;
+        }
 
         public ActionResult Index()
         {
@@ -27,91 +25,70 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             return View();
         }
 
-        public ActionResult StudentClasses_Read([DataSourceRequest]DataSourceRequest request)
+        public ActionResult StudentClasses_Read([DataSourceRequest] DataSourceRequest request)
         {
-            DataSourceResult result = _service.GetAll().ToDataSourceResult(request, studentClass => new {
-                ClassId = studentClass.ClassId,
-                ClassName = studentClass.ClassName,
-                DepartmentId = studentClass.DepartmentId
+            DataSourceResult result = _studentClassService.GetAll().ToDataSourceResult(request, studentClass => new
+            {
+                studentClass.Id,
+                studentClass.ClassName,
+                studentClass.DepartmentId
             });
 
             return Json(result);
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult StudentClasses_Create([DataSourceRequest]DataSourceRequest request, StudentClass studentClass)
+        public ActionResult StudentClasses_Create([DataSourceRequest] DataSourceRequest request,
+            StudentClass studentClass)
         {
             if (ModelState.IsValid)
             {
-                var entity = new StudentClass
-                {
-                    ClassName = studentClass.ClassName,
-                    DepartmentId = studentClass.DepartmentId
-                };
-
-                _service.Add(entity);
+                _studentClassService.Add(studentClass);
             }
 
-            return Json(new[] { studentClass }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {studentClass}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult StudentClasses_Update([DataSourceRequest]DataSourceRequest request, StudentClass studentClass)
+        public ActionResult StudentClasses_Update([DataSourceRequest] DataSourceRequest request,
+            StudentClass studentClass)
         {
             if (ModelState.IsValid)
             {
-                var entity = new StudentClass
-                {
-                    ClassId = studentClass.ClassId,
-                    ClassName = studentClass.ClassName,
-                    DepartmentId = studentClass.DepartmentId
-                };
-
-                _service.Update(entity);
+                _studentClassService.Update(studentClass);
             }
 
-            return Json(new[] { studentClass }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {studentClass}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult StudentClasses_Destroy([DataSourceRequest]DataSourceRequest request, StudentClass studentClass)
+        public ActionResult StudentClasses_Destroy([DataSourceRequest] DataSourceRequest request,
+            StudentClass studentClass)
         {
             if (ModelState.IsValid)
             {
-                var entity = new StudentClass
-                {
-                    ClassId = studentClass.ClassId,
-                    ClassName = studentClass.ClassName,
-                    DepartmentId = studentClass.DepartmentId
-                };
-
-                _service.Delete(entity);
+                _studentClassService.Delete(studentClass);
             }
 
-            return Json(new[] { studentClass }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {studentClass}.ToDataSourceResult(request, ModelState));
         }
 
-        public ActionResult GetStudentList(int classId, [DataSourceRequest]DataSourceRequest request)
+        public ActionResult GetStudentList(int classId, [DataSourceRequest] DataSourceRequest request)
         {
-            DataSourceResult result = _service.GetById(classId).Students.ToDataSourceResult(request, student => new {
-                StudentId = student.StudentId,
-                StudentName = student.StudentName,
-                BirthDate = student.BirthDate,
-                Address = student.Address,
-                Phone = student.Phone,
-                Cpa = student.Cpa,
-                ClassId = student.ClassId
-            });
+            DataSourceResult result = _studentClassService.GetById(classId).Students.ToDataSourceResult(request,
+                student => new
+                {
+                    StudentId = student.Id,
+                    student.StudentCode,
+                    student.StudentName,
+                    student.BirthDate,
+                    student.Address,
+                    student.Phone,
+                    student.Cpa,
+                    student.ClassId
+                });
 
             return Json(result);
         }
-
-        protected override void Dispose(bool disposing)
-        {
-            _service.Dispose();
-            _departmentService.Dispose();
-            base.Dispose(disposing);
-        }
-
     }
 }

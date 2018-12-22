@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Web;
 using System.Web.Mvc;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using Services;
 using Services.Interfaces;
 using StudentInternshipManagement.Controllers;
 
@@ -25,14 +19,14 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         // GET: Student/Profile
         public ActionResult Index()
         {
-            var admin = _adminService.GetByTeacherCode(CurrentUser.Id);
+            global::Models.Entities.Admin admin = _adminService.GetByTeacherCode(CurrentUser.Id);
             ViewBag.Email = CurrentUser.Email;
             return View(admin);
         }
 
         public ActionResult Edit()
         {
-            var admin = _adminService.GetByTeacherCode(CurrentUser.Id);
+            global::Models.Entities.Admin admin = _adminService.GetByTeacherCode(CurrentUser.Id);
             return View(admin);
         }
 
@@ -44,8 +38,8 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             {
                 if (file != null)
                 {
-                    var extension = Path.GetExtension(file.FileName);
-                    var physicalPath = Path.Combine(Server.MapPath("~/Images/avatars/"),
+                    string extension = Path.GetExtension(file.FileName);
+                    string physicalPath = Path.Combine(Server.MapPath("~/Images/avatars/"),
                         $"{model.AdminCode}{extension}");
                     file.SaveAs(physicalPath);
                     CurrentUser.Avatar = $"{model.AdminCode}{extension}";

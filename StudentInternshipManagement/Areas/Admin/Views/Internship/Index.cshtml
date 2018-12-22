@@ -1,6 +1,6 @@
 ﻿@using Kendo.Mvc.UI
 @using Models
-@using StudentInternshipManagement.Areas.Admin.Models
+@using Services.ViewModel
 @{
     ViewBag.Title = "Quản lý thực tập";
     ViewBag.Category = "Quản lý";
@@ -12,8 +12,8 @@
 
 @section Kendo
 {
-    @Styles.Render("~/Content/kendo/2018.2.516/styles")
-    @Scripts.Render("~/Scripts/kendo/2018.2.516/scripts")
+    @Styles.Render("~/Content/kendo/styles")
+    @Scripts.Render("~/Scripts/kendo/scripts")
 }
 
 <button class="btn btn-primary" style='display: @(isProcessing==null?"inline-block":"none")' onclick="location.href='@Url.Action("Process", "Internship")'">

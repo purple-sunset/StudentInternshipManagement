@@ -256,7 +256,6 @@
     <Compile Include="Areas\Admin\Controllers\SubjectController.cs" />
     <Compile Include="Areas\Admin\Controllers\TeacherController.cs" />
     <Compile Include="Areas\Admin\Controllers\TrainingMajorController.cs" />
-    <Compile Include="Areas\Admin\Models\InternshipViewModel.cs" />
     <Compile Include="Areas\Student\Controllers\CompanyController.cs" />
     <Compile Include="Areas\Student\Controllers\GroupController.cs" />
     <Compile Include="Areas\Student\Controllers\InboxController.cs" />
@@ -264,7 +263,6 @@
     <Compile Include="Areas\Student\Controllers\LearningClassController.cs" />
     <Compile Include="Areas\Student\Controllers\ProfileController.cs" />
     <Compile Include="Areas\Student\Controllers\TrainingMajorController.cs" />
-    <Compile Include="Areas\Student\Models\InternshipViewModel.cs" />
     <Compile Include="Areas\Student\StudentAreaRegistration.cs" />
     <Compile Include="Areas\Teacher\Controllers\InboxController.cs" />
     <Compile Include="Areas\Teacher\Controllers\InternshipController.cs" />
@@ -3039,10 +3037,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Student\Models\" />
     <Folder Include="Areas\Teacher\Models\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\Group\" />
-    <Folder Include="Views\Internship\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

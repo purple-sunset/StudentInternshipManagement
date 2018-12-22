@@ -1,13 +1,15 @@
-﻿@using Kendo.Mvc.UI
-@using Models
-@using Models.Entities
+﻿@using Models.Entities
 @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
     ViewBag.Title = "Tin tức";
     ViewBag.Category = "Tin tức";
     ViewBag.Section = "Tin tức";
 }
-@Styles.Render("~/Content/kendo/2018.2.516/styles")
-@Scripts.Render("~/Scripts/kendo/2018.2.516/scripts")
+
+@section Kendo {
+    @Styles.Render("~/Content/kendo/styles")
+    @Scripts.Render("~/Scripts/kendo/scripts")
+}
 
 @(Html.Kendo().ListView<News>()
       .Name("listView")
@@ -15,7 +17,7 @@
       .ClientTemplateId("template")
       .DataSource(dataSource =>
       {
-          dataSource.Read(read => read.Action("News_Read", "News", new{areas=""}));
+          dataSource.Read(read => read.Action("News_Read", "News", new {areas = ""}));
           dataSource.PageSize(5);
       })
       .Pageable()

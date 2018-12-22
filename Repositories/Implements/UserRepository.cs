@@ -4,6 +4,7 @@ using System.Data.Entity.Validation;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
+using Models.Constants;
 using Models.Contexts;
 using Models.Entities;
 using Repositories.Interfaces;
@@ -87,7 +88,7 @@ namespace Repositories.Implements
 
                 user.CreatedAt = DateTime.Now;
                 user.IsDeleted = false;
-                _userManager.Create(user, "Ab=123456789");
+                _userManager.Create(user, AccountConstants.DefaultPassword);
 
                 _userManager.AddToRole(user.Id, role);
             }

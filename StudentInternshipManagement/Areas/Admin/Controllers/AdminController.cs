@@ -1,18 +1,8 @@
-﻿﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
-using Models;
- using Services;
- using Services.Implements;
- using Services.Interfaces;
- using StudentInternshipManagement.Controllers;
+using Services.Interfaces;
+using StudentInternshipManagement.Controllers;
 
 namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
@@ -20,9 +10,9 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
     public class AdminController : BaseController
     {
         private readonly IAdminService _adminService;
-        private readonly DepartmentService _departmentService;
+        private readonly IDepartmentService _departmentService;
 
-        public AdminController(IAdminService adminService, DepartmentService departmentService)
+        public AdminController(IAdminService adminService, IDepartmentService departmentService)
         {
             _adminService = adminService;
             _departmentService = departmentService;
@@ -34,87 +24,56 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             return View();
         }
 
-        public ActionResult Admins_Read([DataSourceRequest]DataSourceRequest request)
+        public ActionResult Admins_Read([DataSourceRequest] DataSourceRequest request)
         {
-            DataSourceResult result = _adminService.GetAll().ToDataSourceResult(request, admin => new {
-                AdminCode = admin.AdminCode,
-                AdminName = admin.AdminName,
-                BirthDate = admin.BirthDate,
-                Address = admin.Address,
-                Phone = admin.Phone,
-                DepartmentId = admin.DepartmentId
+            DataSourceResult result = _adminService.GetAll().ToDataSourceResult(request, admin => new
+            {
+                admin.Id,
+                admin.AdminCode,
+                admin.AdminName,
+                admin.BirthDate,
+                admin.Address,
+                admin.Phone,
+                admin.DepartmentId
             });
 
             return Json(result);
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Admins_Create([DataSourceRequest]DataSourceRequest request, global::Models.Entities.Admin admin)
+        public ActionResult Admins_Create([DataSourceRequest] DataSourceRequest request,
+            global::Models.Entities.Admin admin)
         {
             if (ModelState.IsValid)
             {
-                var entity = new global::Models.Entities.Admin
-                {
-                    AdminName = admin.AdminName,
-                    BirthDate = admin.BirthDate,
-                    Address = admin.Address,
-                    Phone = admin.Phone,
-                    DepartmentId = admin.DepartmentId
-                };
-
                 _adminService.Add(admin);
             }
 
-            return Json(new[] { admin }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {admin}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Admins_Update([DataSourceRequest]DataSourceRequest request, global::Models.Entities.Admin admin)
+        public ActionResult Admins_Update([DataSourceRequest] DataSourceRequest request,
+            global::Models.Entities.Admin admin)
         {
             if (ModelState.IsValid)
             {
-                var entity = new global::Models.Entities.Admin
-                {
-                    AdminCode = admin.AdminCode,
-                    AdminName = admin.AdminName,
-                    BirthDate = admin.BirthDate,
-                    Address = admin.Address,
-                    Phone = admin.Phone,
-                    DepartmentId = admin.DepartmentId
-                };
-
                 _adminService.Update(admin);
             }
 
-            return Json(new[] { admin }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {admin}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Admins_Destroy([DataSourceRequest]DataSourceRequest request, global::Models.Entities.Admin admin)
+        public ActionResult Admins_Destroy([DataSourceRequest] DataSourceRequest request,
+            global::Models.Entities.Admin admin)
         {
             if (ModelState.IsValid)
             {
-                var entity = new global::Models.Entities.Admin
-                {
-                    AdminCode = admin.AdminCode,
-                    AdminName = admin.AdminName,
-                    BirthDate = admin.BirthDate,
-                    Address = admin.Address,
-                    Phone = admin.Phone,
-                    DepartmentId = admin.DepartmentId
-                };
-
                 _adminService.Delete(admin);
             }
 
-            return Json(new[] { admin }.ToDataSourceResult(request, ModelState));
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            //_adminService.Dispose();
-            //_departmentService.Dispose();
-            base.Dispose(disposing);
+            return Json(new[] {admin}.ToDataSourceResult(request, ModelState));
         }
     }
 }

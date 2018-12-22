@@ -1,99 +1,70 @@
-﻿﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
-using Models;
- using Models.Entities;
- using Services;
- using Services.Implements;
+using Models.Entities;
+using Services.Interfaces;
+using StudentInternshipManagement.Controllers;
 
 namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
-    public class SemesterController : Controller
+    public class SemesterController : BaseController
     {
-        private SemesterService _service=new SemesterService();
+        private readonly ISemesterService _semesterService;
+
+        public SemesterController(ISemesterService semesterService)
+        {
+            _semesterService = semesterService;
+        }
 
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult Semesters_Read([DataSourceRequest]DataSourceRequest request)
+        public ActionResult Semesters_Read([DataSourceRequest] DataSourceRequest request)
         {
-            DataSourceResult result = _service.GetAll().ToDataSourceResult(request, semester => new {
-                SemesterId = semester.SemesterId,
-                StartDate = semester.StartDate,
-                EndDate = semester.EndDate
+            DataSourceResult result = _semesterService.GetAll().ToDataSourceResult(request, semester => new
+            {
+                semester.Id,
+                semester.StartDate,
+                semester.EndDate
             });
 
             return Json(result);
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Semesters_Create([DataSourceRequest]DataSourceRequest request, Semester semester)
+        public ActionResult Semesters_Create([DataSourceRequest] DataSourceRequest request, Semester semester)
         {
             if (ModelState.IsValid)
             {
-                var entity = new Semester
-                {
-                    SemesterId = semester.SemesterId,
-                    StartDate = semester.StartDate,
-                    EndDate = semester.EndDate
-                };
-
-                _service.Add(entity);
+                _semesterService.Add(semester);
             }
 
-            return Json(new[] { semester }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {semester}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Semesters_Update([DataSourceRequest]DataSourceRequest request, Semester semester)
+        public ActionResult Semesters_Update([DataSourceRequest] DataSourceRequest request, Semester semester)
         {
             if (ModelState.IsValid)
             {
-                var entity = new Semester
-                {
-                    SemesterId = semester.SemesterId,
-                    StartDate = semester.StartDate,
-                    EndDate = semester.EndDate
-                };
-
-                _service.Update(entity);
+                _semesterService.Update(semester);
             }
 
-            return Json(new[] { semester }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {semester}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Semesters_Destroy([DataSourceRequest]DataSourceRequest request, Semester semester)
+        public ActionResult Semesters_Destroy([DataSourceRequest] DataSourceRequest request, Semester semester)
         {
             if (ModelState.IsValid)
             {
-                var entity = new Semester
-                {
-                    SemesterId = semester.SemesterId,
-                    StartDate = semester.StartDate,
-                    EndDate = semester.EndDate
-                };
-
-                _service.Delete(entity);
+                _semesterService.Delete(semester);
             }
 
-            return Json(new[] { semester }.ToDataSourceResult(request, ModelState));
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            _service.Dispose();
-            base.Dispose(disposing);
+            return Json(new[] {semester}.ToDataSourceResult(request, ModelState));
         }
     }
 }

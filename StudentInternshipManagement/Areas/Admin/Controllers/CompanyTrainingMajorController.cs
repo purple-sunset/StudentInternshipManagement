@@ -2,11 +2,9 @@
 using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
-using Models;
 using Models.Entities;
-using Services;
-using Services.Implements;
 using Services.Interfaces;
+using StudentInternshipManagement.Controllers;
 
 namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
@@ -14,11 +12,11 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
     public class CompanyTrainingMajorController : BaseController
     {
         private readonly ICompanyService _companyService;
-        private readonly CompanyTrainingMajorService _companyTrainingMajorService;
-        private readonly TrainingMajorService _trainingMajorService;
+        private readonly ICompanyTrainingMajorService _companyTrainingMajorService;
+        private readonly ITrainingMajorService _trainingMajorService;
 
-        public CompanyTrainingMajorController(CompanyTrainingMajorService companyTrainingMajorService,
-            TrainingMajorService trainingMajorService, ICompanyService companyService)
+        public CompanyTrainingMajorController(ICompanyTrainingMajorService companyTrainingMajorService,
+            ITrainingMajorService trainingMajorService, ICompanyService companyService)
         {
             _companyTrainingMajorService = companyTrainingMajorService;
             _trainingMajorService = trainingMajorService;
@@ -44,8 +42,9 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
             else
                 datasource = _companyTrainingMajorService.GetAll();
 
-            var result = datasource.ToDataSourceResult(request, companyTrainingMajor => new
+            DataSourceResult result = datasource.ToDataSourceResult(request, companyTrainingMajor => new
             {
+                companyTrainingMajor.Id,
                 companyTrainingMajor.CompanyId,
                 companyTrainingMajor.TrainingMajorId,
                 companyTrainingMajor.TotalTraineeCount,
@@ -61,15 +60,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var entity = new CompanyTrainingMajor
-                {
-                    CompanyId = companyTrainingMajor.CompanyId,
-                    TrainingMajorId = companyTrainingMajor.TrainingMajorId,
-                    TotalTraineeCount = companyTrainingMajor.TotalTraineeCount,
-                    AvailableTraineeCount = companyTrainingMajor.AvailableTraineeCount
-                };
-
-                _companyTrainingMajorService.Add(entity);
+                _companyTrainingMajorService.Add(companyTrainingMajor);
             }
 
             return Json(new[] {companyTrainingMajor}.ToDataSourceResult(request, ModelState));
@@ -81,15 +72,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var entity = new CompanyTrainingMajor
-                {
-                    CompanyId = companyTrainingMajor.CompanyId,
-                    TrainingMajorId = companyTrainingMajor.TrainingMajorId,
-                    TotalTraineeCount = companyTrainingMajor.TotalTraineeCount,
-                    AvailableTraineeCount = companyTrainingMajor.AvailableTraineeCount
-                };
-
-                _companyTrainingMajorService.Update(entity);
+                _companyTrainingMajorService.Update(companyTrainingMajor);
             }
 
             return Json(new[] {companyTrainingMajor}.ToDataSourceResult(request, ModelState));
@@ -101,15 +84,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var entity = new CompanyTrainingMajor
-                {
-                    CompanyId = companyTrainingMajor.CompanyId,
-                    TrainingMajorId = companyTrainingMajor.TrainingMajorId,
-                    TotalTraineeCount = companyTrainingMajor.TotalTraineeCount,
-                    AvailableTraineeCount = companyTrainingMajor.AvailableTraineeCount
-                };
-
-                _companyTrainingMajorService.Delete(entity);
+                _companyTrainingMajorService.Delete(companyTrainingMajor);
             }
 
             return Json(new[] {companyTrainingMajor}.ToDataSourceResult(request, ModelState));

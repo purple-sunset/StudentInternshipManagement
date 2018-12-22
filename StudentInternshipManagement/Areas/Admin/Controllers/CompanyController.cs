@@ -1,10 +1,7 @@
 ﻿using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
-using Models;
 using Models.Entities;
-using Services;
-using Services.Implements;
 using Services.Interfaces;
 using StudentInternshipManagement.Controllers;
 
@@ -14,9 +11,9 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
     public class CompanyController : BaseController
     {
         private readonly ICompanyService _companyService;
-        private readonly TrainingMajorService _trainingMajorService;
+        private readonly ITrainingMajorService _trainingMajorService;
 
-        public CompanyController(ICompanyService service, TrainingMajorService trainingMajorService)
+        public CompanyController(ICompanyService service, ITrainingMajorService trainingMajorService)
         {
             _companyService = service;
             _trainingMajorService = trainingMajorService;
@@ -30,9 +27,9 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
 
         public ActionResult Companies_Read([DataSourceRequest] DataSourceRequest request)
         {
-            var result = _companyService.GetAll().ToDataSourceResult(request, company => new
+            DataSourceResult result = _companyService.GetAll().ToDataSourceResult(request, company => new
             {
-                CompanyId = company.Id,
+                company.Id,
                 company.CompanyName,
                 company.CompanyDescription,
                 company.Address,
@@ -48,16 +45,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var entity = new Company
-                {
-                    CompanyName = company.CompanyName,
-                    CompanyDescription = company.CompanyDescription,
-                    Address = company.Address,
-                    Email = company.Email,
-                    Phone = company.Phone
-                };
-
-                _companyService.Add(entity);
+                _companyService.Add(company);
             }
 
             return Json(new[] {company}.ToDataSourceResult(request, ModelState));
@@ -68,17 +56,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var entity = new Company
-                {
-                    Id = company.Id,
-                    CompanyName = company.CompanyName,
-                    CompanyDescription = company.CompanyDescription,
-                    Address = company.Address,
-                    Email = company.Email,
-                    Phone = company.Phone
-                };
-
-                _companyService.Update(entity);
+                _companyService.Update(company);
             }
 
             return Json(new[] {company}.ToDataSourceResult(request, ModelState));
@@ -89,17 +67,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                var entity = new Company
-                {
-                    Id = company.Id,
-                    CompanyName = company.CompanyName,
-                    CompanyDescription = company.CompanyDescription,
-                    Address = company.Address,
-                    Email = company.Email,
-                    Phone = company.Phone
-                };
-
-                _companyService.Delete(entity);
+                _companyService.Delete(company);
             }
 
             return Json(new[] {company}.ToDataSourceResult(request, ModelState));

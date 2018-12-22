@@ -1,7 +1,9 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Threading.Tasks;
+using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
-using Services.Implements;
+using Models.Entities;
 using Services.Interfaces;
 
 namespace StudentInternshipManagement.Controllers
@@ -20,15 +22,17 @@ namespace StudentInternshipManagement.Controllers
             return View();
         }
 
-        public ActionResult News_Read([DataSourceRequest] DataSourceRequest request)
+        public async Task<ActionResult> News_Read([DataSourceRequest]DataSourceRequest request)
         {
-            return Json(_service.GetAll().ToDataSourceResult(request));
+            IQueryable<News> products = _service.GetAll();
+            DataSourceResult result = await products.ToDataSourceResultAsync(request);
+            return Json(result);
         }
 
         // GET: News
-        public ActionResult View(int id)
+        public async Task<ActionResult> View(int id)
         {
-            var news = _service.GetById(id);
+            News news = await _service.GetByIdAsync(id);
             return View(news);
         }
     }

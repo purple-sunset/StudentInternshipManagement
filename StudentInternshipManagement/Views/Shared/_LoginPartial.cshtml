@@ -1,19 +1,16 @@
-﻿@using System.Security.Claims
-@using Microsoft.AspNet.Identity
-@using Services
-@using StudentInternshipManagement.Controllers
+﻿@using StudentInternshipManagement.Controllers
 @if (Request.IsAuthenticated)
 {
     var controller = new BaseController();
-    var username = controller.CurrentUser.UserName;
-    var role = controller.CurrentRole;
-    var avatar = controller.CurrentUser.Avatar;
+    string username = controller.CurrentUser.UserName;
+    string role = controller.CurrentRole;
+    string avatar = controller.CurrentUser.Avatar;
 
 
     <ul class="nav ace-nav">
         <li class="light-blue dropdown-modal">
             <a data-toggle="dropdown" href="#" class="dropdown-toggle">
-                <img class="nav-user-photo" src='~/@($"Images/avatars/{avatar}")'  alt='@($"{username}'s photo")' />
+                <img class="nav-user-photo" src='~/@($"Images/avatars/{avatar}")' alt='@($"{username}'s photo")'/>
                 <span class="user-info">
                     <small>Chào mừng,</small>
                     @username
@@ -45,15 +42,14 @@
             </ul>
         </li>
     </ul>
-    using (Html.BeginForm("LogOff", "Account", new { Area = "" }, FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    using (Html.BeginForm("LogOff", "Account", new {Area = ""}, FormMethod.Post, new {id = "logoutForm", @class = "navbar-right"}))
     {
         @Html.AntiForgeryToken()
     }
-
 }
 else
 {
     <ul class="nav navbar-nav navbar-right">
-        <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: null, htmlAttributes: new { area="", id = "loginLink" })</li>
+        <li>@Html.ActionLink("Log in", "Login", "Account", null, new {area = "", id = "loginLink"})</li>
     </ul>
 }

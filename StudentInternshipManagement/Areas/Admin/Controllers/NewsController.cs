@@ -1,102 +1,71 @@
-﻿﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
-using Models;
- using Models.Entities;
- using Services;
- using Services.Implements;
+using Models.Entities;
+using Services.Interfaces;
+using StudentInternshipManagement.Controllers;
 
 namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
     [Authorize(Roles = "Admin")]
-    public class NewsController : Controller
+    public class NewsController : BaseController
     {
-        private readonly NewsService _service = new NewsService();
+        private readonly INewsService _newsService;
+
+        public NewsController(INewsService newsService)
+        {
+            _newsService = newsService;
+        }
 
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult Newses_Read([DataSourceRequest]DataSourceRequest request)
+        public ActionResult Newses_Read([DataSourceRequest] DataSourceRequest request)
         {
-            DataSourceResult result = _service.GetAll().ToDataSourceResult(request, news => new {
-                NewsId = news.NewsId,
-                Title = news.Title,
-                Content = news.Content,
-                Time = news.Time
+            DataSourceResult result = _newsService.GetAll().ToDataSourceResult(request, news => new
+            {
+                news.Id,
+                news.Title,
+                news.Content,
+                news.Time
             });
 
             return Json(result);
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Newses_Create([DataSourceRequest]DataSourceRequest request, News news)
+        public ActionResult Newses_Create([DataSourceRequest] DataSourceRequest request, News news)
         {
             if (ModelState.IsValid)
             {
-                var entity = new News
-                {
-                    Title = news.Title,
-                    Content = news.Content,
-                    Time = news.Time
-                };
-
-                _service.Add(entity);
+                _newsService.Add(news);
             }
 
-            return Json(new[] { news }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {news}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Newses_Update([DataSourceRequest]DataSourceRequest request, News news)
+        public ActionResult Newses_Update([DataSourceRequest] DataSourceRequest request, News news)
         {
             if (ModelState.IsValid)
             {
-                var entity = new News
-                {
-                    NewsId = news.NewsId,
-                    Title = news.Title,
-                    Content = news.Content,
-                    Time = news.Time
-                };
-
-                _service.Update(entity);
+                _newsService.Update(news);
             }
 
-            return Json(new[] { news }.ToDataSourceResult(request, ModelState));
+            return Json(new[] {news}.ToDataSourceResult(request, ModelState));
         }
 
         [AcceptVerbs(HttpVerbs.Post)]
-        public ActionResult Newses_Destroy([DataSourceRequest]DataSourceRequest request, News news)
+        public ActionResult Newses_Destroy([DataSourceRequest] DataSourceRequest request, News news)
         {
             if (ModelState.IsValid)
             {
-                var entity = new News
-                {
-                    NewsId = news.NewsId,
-                    Title = news.Title,
-                    Content = news.Content,
-                    Time = news.Time
-                };
-
-                _service.Delete(entity);
+                _newsService.Delete(news);
             }
 
-            return Json(new[] { news }.ToDataSourceResult(request, ModelState));
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            _service.Dispose();
-            base.Dispose(disposing);
+            return Json(new[] {news}.ToDataSourceResult(request, ModelState));
         }
     }
 }

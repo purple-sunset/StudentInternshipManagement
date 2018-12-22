@@ -1,5 +1,4 @@
 ﻿@using Kendo.Mvc.UI
-@using Models
 @using Models.Entities
 @{
     ViewBag.Title = "Quản lý Admin";
@@ -16,47 +15,46 @@
 
 
 @(Html.Kendo().Grid<Admin>()
-              .Name("grid")
-              .Columns(columns =>
-              {
-                  columns.Bound(c => c.AdminId);
-                  columns.Bound(c => c.AdminName);
-                  columns.Bound(c => c.BirthDate);
-                  columns.Bound(c => c.Address);
-                  columns.Bound(c => c.Phone);
-                  columns.ForeignKey(p => p.DepartmentId, (IQueryable<Department>)ViewBag.Departments, "DepartmentId", "DepartmentName").EditorTemplateName("DepartmentTemplate");
-                  columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
-              })
-              .ToolBar(toolbar =>
-              {
-                  toolbar.Create();
-              })
-              .Editable(editable => editable.Mode(GridEditMode.PopUp))
-              .Pageable()
-              .Sortable(sortable =>
-              {
-                  sortable.SortMode(GridSortMode.SingleColumn);
-              })
-              .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
-              .Scrollable()
-              .DataSource(dataSource => dataSource
-                  .Ajax()
-                  .Model(model => model.Id(p => p.AdminId))
-                  .Read(read => read.Action("Admins_Read", "Admin"))
-                  .Create(create => create.Action("Admins_Create", "Admin"))
-                  .Update(update => update.Action("Admins_Update", "Admin"))
-                  .Destroy(destroy => destroy.Action("Admins_Destroy", "Admin"))
-              )
-              .Events(events => events
-                  .Edit("onEdit")
-              )
-)
+      .Name("grid")
+      .Columns(columns =>
+      {
+          columns.Bound(c => c.Id).Hidden(true);
+          columns.Bound(c => c.AdminCode);
+          columns.Bound(c => c.AdminName);
+          columns.Bound(c => c.BirthDate);
+          columns.Bound(c => c.Address);
+          columns.Bound(c => c.Phone);
+          columns.ForeignKey(p => p.DepartmentId, (IQueryable<Department>) ViewBag.Departments, "DepartmentId", "DepartmentName").EditorTemplateName("DepartmentTemplate");
+          columns.Command(command =>
+          {
+              command.Edit();
+              command.Destroy();
+          }).Width(180);
+      })
+      .ToolBar(toolbar => { toolbar.Create(); })
+      .Editable(editable => editable.Mode(GridEditMode.PopUp))
+      .Pageable()
+      .Sortable(sortable => { sortable.SortMode(GridSortMode.SingleColumn); })
+      .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
+      .Scrollable()
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model => model.Id(p => p.Id))
+          .Read(read => read.Action("Admins_Read", "Admin"))
+          .Create(create => create.Action("Admins_Create", "Admin"))
+          .Update(update => update.Action("Admins_Update", "Admin"))
+          .Destroy(destroy => destroy.Action("Admins_Destroy", "Admin"))
+      )
+      .Events(events => events
+          .Edit("onEdit")
+      )
+      )
 
 <script type="text/javascript">
 
     function onEdit(e) {
         if (!e.model.isNew()) {
-            $('[name="AdminId"]').attr("readonly", true);
+            $('[name="Id"]').attr("readonly", true);
         }
     }
 </script>

@@ -1,4 +1,6 @@
-﻿namespace Models.Constants
+﻿using Models.Entities;
+
+namespace Models.Constants
 {
     public static class BundleConstants
     {

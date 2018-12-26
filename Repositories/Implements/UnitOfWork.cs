@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
-using Models.Contexts;
 using Models.Entities;
 using Repositories.Interfaces;
 
@@ -13,7 +13,7 @@ namespace Repositories.Implements
         /// <summary>
         ///     The database context
         /// </summary>
-        private readonly WebContext _context;
+        private readonly DbContext _context;
 
         /// <summary>
         ///     The repositories
@@ -26,14 +26,15 @@ namespace Repositories.Implements
         private readonly IUserRepository _userRepository;
 
         /// <summary>
-        ///     Initializes a new instance of the <see>
+        ///     Initializes a new instance of the
+        ///     <see>
         ///         <cref>UnitOfWork{TContext}</cref>
         ///     </see>
         ///     class.
         /// </summary>
         /// <param name="context">The database context.</param>
         /// <param name="userRepository">The user repository.</param>
-        public UnitOfWork(WebContext context, IUserRepository userRepository)
+        public UnitOfWork(DbContext context, IUserRepository userRepository)
         {
             _context = context;
             _userRepository = userRepository;

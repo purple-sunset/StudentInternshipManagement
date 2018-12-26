@@ -1,6 +1,7 @@
 using Repositories.Implements;
 using Repositories.Interfaces;
 using System;
+using System.Data.Entity;
 using Models.Contexts;
 using Services.Implements;
 using Services.Interfaces;
@@ -34,7 +35,7 @@ namespace StudentInternshipManagement
               return container;
           });
 
-        private static readonly ContainerControlledLifetimeManager manager = new ContainerControlledLifetimeManager(); 
+        private static readonly LifetimeManager manager = new SingletonLifetimeManager(); 
 
         /// <summary>
         /// Configured Unity Container.
@@ -58,15 +59,15 @@ namespace StudentInternshipManagement
             // Make sure to add a Unity.Configuration to the using statements.
             // container.LoadConfiguration();
 
-            container.RegisterType<WebContext, WebContext>(manager);
-            container.RegisterType<ApplicationSignInManager>(manager);
-            container.RegisterType<ApplicationUserManager>(manager);
+            container.RegisterType<WebContext>(manager);
+            container.RegisterType<DbContext, WebContext>(manager);
+            
             container.RegisterType<IAuthenticationManager>(
                 new InjectionFactory(c => HttpContext.Current.GetOwinContext().Authentication));
             container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>(
-                new InjectionConstructor(typeof(WebContext)));
-            container.RegisterType(typeof(IdentityFactoryOptions<>),
-                new InjectionFactory(c => Startup.DataProtectionProvider));
+                new InjectionConstructor(typeof(DbContext)));
+            container.RegisterType<ApplicationSignInManager>(manager);
+            container.RegisterType<ApplicationUserManager>(manager);
 
             container.RegisterInstance<CookieAuthenticationOptions>(new CookieAuthenticationOptions
             {

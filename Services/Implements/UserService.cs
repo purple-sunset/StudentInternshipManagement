@@ -20,7 +20,7 @@ namespace Services.Implements
         private readonly IUnitOfWork _unitOfWork;
         private readonly ApplicationUserManager _userManager;
 
-        protected UserService(IUnitOfWork unitOfWork, ApplicationUserManager userManager,
+        public UserService(IUnitOfWork unitOfWork, ApplicationUserManager userManager,
             ApplicationSignInManager signInManager, IAuthenticationManager authenticationManager,
             IEmailService emailService)
         {

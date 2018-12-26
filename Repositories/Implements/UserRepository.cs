@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Models.Constants;
-using Models.Contexts;
 using Models.Entities;
 using Repositories.Interfaces;
 using Utilities;
@@ -16,7 +15,7 @@ namespace Repositories.Implements
     {
         #region Ctor
 
-        public UserRepository(WebContext context, UserManager<ApplicationUser> userManager)
+        public UserRepository(DbContext context, UserManager<ApplicationUser> userManager)
         {
             _context = context;
             _userManager = userManager;
@@ -41,7 +40,7 @@ namespace Repositories.Implements
 
         #region Fields
 
-        private readonly WebContext _context;
+        private readonly DbContext _context;
         private IDbSet<ApplicationUser> _entities;
         private readonly UserManager<ApplicationUser> _userManager;
 
@@ -167,7 +166,8 @@ namespace Repositories.Implements
             get { return Entities.AsNoTracking().Where(x => !x.IsDeleted); }
         }
 
-        protected virtual IDbSet<ApplicationUser> Entities => _entities ?? (_entities = _context.Set<ApplicationUser>());
+        protected virtual IDbSet<ApplicationUser> Entities =>
+            _entities ?? (_entities = _context.Set<ApplicationUser>());
 
         #endregion
     }

@@ -4,7 +4,6 @@ using System.Data.Entity;
 using System.Data.Entity.Validation;
 using System.Linq;
 using System.Threading.Tasks;
-using Models.Contexts;
 using Models.Entities;
 using Repositories.Interfaces;
 using Utilities;
@@ -19,7 +18,7 @@ namespace Repositories.Implements
         ///     Ctor
         /// </summary>
         /// <param name="context">Object context</param>
-        public GenericRepository(WebContext context)
+        public GenericRepository(DbContext context)
         {
             _context = context;
         }
@@ -48,7 +47,7 @@ namespace Repositories.Implements
 
         #region Fields
 
-        private readonly WebContext _context;
+        private readonly DbContext _context;
         private IDbSet<TEntity> _entities;
 
         #endregion

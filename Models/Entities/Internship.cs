@@ -6,7 +6,7 @@ using Models.Constants;
 
 namespace Models.Entities
 {
-    public class Internship:BaseEntity
+    public class Internship : BaseEntity
     {
         [DisplayName("Mã thực tập")]
         public override int Id { get; set; }

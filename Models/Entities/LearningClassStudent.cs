@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Models.Entities
 {
-    public class LearningClassStudent:BaseEntity
+    public class LearningClassStudent : BaseEntity
     {
         //[Key]
         //[Column(Order = 1)]
@@ -22,7 +22,7 @@ namespace Models.Entities
         [UIHint("StudentTemplate")]
         public int StudentId { get; set; }
 
-        [Range(0,10)]
+        [Range(0, 10)]
         [DisplayName("Điểm giữa kỳ")]
         public float? MidTermPoint { get; set; }
 

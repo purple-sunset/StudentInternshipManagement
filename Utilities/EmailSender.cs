@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Configuration;
+using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
 
@@ -11,7 +12,7 @@ namespace Utilities
         {
             Port = int.Parse(ConfigurationManager.AppSettings["mailPort"]),
             EnableSsl = true,
-            Credentials = new System.Net.NetworkCredential(
+            Credentials = new NetworkCredential(
                 ConfigurationManager.AppSettings["mailAccount"],
                 ConfigurationManager.AppSettings["mailPassword"])
         };

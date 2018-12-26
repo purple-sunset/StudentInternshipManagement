@@ -6,7 +6,7 @@ using System.Web.Script.Serialization;
 
 namespace Models.Entities
 {
-    public class Subject:BaseEntity
+    public class Subject : BaseEntity
     {
         //[Key]
         [Required]

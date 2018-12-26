@@ -7,7 +7,7 @@ using System.Web.Script.Serialization;
 
 namespace Models.Entities
 {
-    public class Student:BaseEntity
+    public class Student : BaseEntity
     {
         //[Key]
         //[DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -38,7 +38,7 @@ namespace Models.Entities
         public string Phone { get; set; }
 
         [Required]
-        [Range(0,4)]
+        [Range(0, 4)]
         [DisplayName("Điểm CPA")]
         public float Cpa { get; set; }
 
@@ -66,6 +66,7 @@ namespace Models.Entities
 
         [ForeignKey("User")]
         public string UserId { get; set; }
+
         public virtual ApplicationUser User { get; set; }
     }
 }

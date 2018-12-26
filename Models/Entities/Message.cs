@@ -1,12 +1,11 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Web.Script.Serialization;
 using Models.Constants;
 
 namespace Models.Entities
 {
-    public class Message:BaseEntity
+    public class Message : BaseEntity
     {
         public override int Id { get; set; }
 
@@ -21,7 +20,7 @@ namespace Models.Entities
         [MaxLength(50)]
         public string File { get; set; }
 
-        [Range(0,3)]
+        [Range(0, 3)]
         public MessageStatus Status { get; set; }
 
         [ForeignKey("Sender")]
@@ -35,6 +34,5 @@ namespace Models.Entities
 
         [ScriptIgnore(ApplyToOverrides = true)]
         public virtual ApplicationUser Receiver { get; set; }
-
     }
 }

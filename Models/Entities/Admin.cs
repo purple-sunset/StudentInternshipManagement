@@ -6,7 +6,7 @@ using System.Web.Script.Serialization;
 
 namespace Models.Entities
 {
-    public class Admin:BaseEntity
+    public class Admin : BaseEntity
     {
         //[Key]
         //[DatabaseGenerated(DatabaseGeneratedOption.None)]
@@ -45,6 +45,7 @@ namespace Models.Entities
 
         [ForeignKey("User")]
         public string UserId { get; set; }
+
         public virtual ApplicationUser User { get; set; }
     }
 }

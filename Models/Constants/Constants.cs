@@ -1,15 +1,15 @@
-﻿using Models.Entities;
-
-namespace Models.Constants
+﻿namespace Models.Constants
 {
     public static class BundleConstants
     {
         public static readonly string KendoVersion = "2018.2.516";
     }
+
     public static class AccountConstants
     {
         public static readonly string DefaultPassword = "Ab=123456789";
     }
+
     public static class InternshipConstants
     {
         public static readonly int GroupsPerTeacher = 6;

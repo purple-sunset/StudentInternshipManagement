@@ -5,7 +5,7 @@ using System.Web.Script.Serialization;
 
 namespace Models.Entities
 {
-    public class Company:BaseEntity
+    public class Company : BaseEntity
     {
         [DisplayName("Mã công ty")]
         public override int Id { get; set; }

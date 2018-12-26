@@ -5,7 +5,7 @@ using System.Web.Script.Serialization;
 
 namespace Models.Entities
 {
-    public class StudentClass:BaseEntity
+    public class StudentClass : BaseEntity
     {
         [Key]
         [DisplayName("Mã lớp")]

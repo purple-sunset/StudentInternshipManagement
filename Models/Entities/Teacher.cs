@@ -7,7 +7,7 @@ using System.Web.Script.Serialization;
 
 namespace Models.Entities
 {
-    public class Teacher:BaseEntity
+    public class Teacher : BaseEntity
     {
         //[Key]
         [Required]
@@ -51,6 +51,7 @@ namespace Models.Entities
 
         [ForeignKey("User")]
         public string UserId { get; set; }
+
         public virtual ApplicationUser User { get; set; }
     }
 }

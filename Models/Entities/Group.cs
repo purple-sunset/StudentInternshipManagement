@@ -5,7 +5,7 @@ using System.Web.Script.Serialization;
 
 namespace Models.Entities
 {
-    public class Group:BaseEntity
+    public class Group : BaseEntity
     {
         [DisplayName("Mã nhóm")]
         public override int Id { get; set; }

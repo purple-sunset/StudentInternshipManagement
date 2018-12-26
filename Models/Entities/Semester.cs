@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Models.Entities
 {
-    public class Semester:BaseEntity
+    public class Semester : BaseEntity
     {
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [DisplayName("Mã học kỳ")]

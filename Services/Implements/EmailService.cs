@@ -135,7 +135,7 @@ namespace Services.Implements
             {
                 var mail = new MailMessage();
                 mail.Subject = "Danh sách sinh viên thực tập Trường đại học Bách Khoa Hà Nội";
-                
+
                 var emailBody = new StringBuilder();
                 emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi danh sách sinh viên thực tập");
                 emailBody.Append("Xem tệp đính kèm để xem thông tin thực tập kỳ này");
@@ -162,7 +162,7 @@ namespace Services.Implements
             {
                 var mail = new MailMessage();
                 mail.Subject = $"Thông tin phân công hướng dẫn thực tập kỳ {semester}";
-                
+
                 var emailBody = new StringBuilder();
                 emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi danh sách sinh viên thực tập");
                 emailBody.Append(
@@ -187,7 +187,7 @@ namespace Services.Implements
             foreach (Student st in students)
             {
                 mail.Subject = $"Thông tin phân công hướng dẫn thực tập kỳ {semester}";
-                
+
                 var emailBody = new StringBuilder();
                 emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi kết quả đăng ký thực tâp");
                 emailBody.Append(@"<p>Nhấn vào liên kết để xem thông tin thực tập kỳ này: <a href = '" +

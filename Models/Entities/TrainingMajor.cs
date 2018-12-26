@@ -5,7 +5,7 @@ using System.Web.Script.Serialization;
 
 namespace Models.Entities
 {
-    public class TrainingMajor:BaseEntity
+    public class TrainingMajor : BaseEntity
     {
         [DisplayName("Mã định hướng")]
         public override int Id { get; set; }

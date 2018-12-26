@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Models.Entities
 {
-    public class Notification:BaseEntity
+    public class Notification : BaseEntity
     {
         public override int Id { get; set; }
 
@@ -14,7 +14,7 @@ namespace Models.Entities
         [Required]
         [MaxLength(50)]
         public string Url { get; set; }
-        
+
         public DateTime Time { get; set; }
     }
 }

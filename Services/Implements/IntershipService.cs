@@ -114,7 +114,7 @@ namespace Services.Implements
             {
                 List<Internship> members = item.Select(i => i).ToList();
                 var groups = new List<List<Internship>>();
-                for (int i = 0; i < members.Count; i += InternshipConstants.StudentsPerGroups)
+                for (var i = 0; i < members.Count; i += InternshipConstants.StudentsPerGroups)
                     groups.Add(members.GetRange(i, Math.Min(InternshipConstants.StudentsPerGroups, members.Count - i)));
                 //while (members.Any())
                 //{
@@ -122,7 +122,7 @@ namespace Services.Implements
                 //    members = members.Skip(5);
                 //}
 
-                int groupId = 1;
+                var groupId = 1;
                 foreach (List<Internship> groupItem in groups)
                 {
                     var group = new Group

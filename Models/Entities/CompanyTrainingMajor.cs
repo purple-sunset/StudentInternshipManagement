@@ -5,7 +5,7 @@ using System.Web.Script.Serialization;
 
 namespace Models.Entities
 {
-    public class CompanyTrainingMajor:BaseEntity
+    public class CompanyTrainingMajor : BaseEntity
     {
         //[Key]
         //[Column(Order = 1)]
@@ -32,11 +32,11 @@ namespace Models.Entities
         public virtual TrainingMajor TrainingMajor { get; set; }
 
         [Required]
-        [Range(1,1000)]
+        [Range(1, 1000)]
         [DisplayName("Số lượng tối đa")]
         public int TotalTraineeCount { get; set; }
 
-        [Range(0,1000)]
+        [Range(0, 1000)]
         [DisplayName("Số lượng còn lại")]
         public int AvailableTraineeCount { get; set; }
     }

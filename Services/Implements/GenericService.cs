@@ -8,83 +8,81 @@ namespace Services.Implements
 {
     public abstract class GenericService<TEntity> : IGenericService<TEntity> where TEntity : BaseEntity
     {
-        private readonly IUnitOfWork _unitOfWork;
-
         protected GenericService(IUnitOfWork unitOfWork)
         {
-            _unitOfWork = unitOfWork;
+            UnitOfWork = unitOfWork;
         }
 
-        protected IUnitOfWork UnitOfWork => _unitOfWork;
+        protected IUnitOfWork UnitOfWork { get; }
 
         public IQueryable<TEntity> GetAll()
         {
-            return _unitOfWork.Repository<TEntity>().TableNoTracking;
+            return UnitOfWork.Repository<TEntity>().TableNoTracking;
         }
 
         public TEntity GetById(int id)
         {
-            return _unitOfWork.Repository<TEntity>().GetById(id);
+            return UnitOfWork.Repository<TEntity>().GetById(id);
         }
 
         public async Task<TEntity> GetByIdAsync(int id)
         {
-            return await _unitOfWork.Repository<TEntity>().GetByIdAsync(id);
+            return await UnitOfWork.Repository<TEntity>().GetByIdAsync(id);
         }
 
         public bool Add(TEntity entity)
         {
-            _unitOfWork.Repository<TEntity>().Add(entity);
-            int result = _unitOfWork.Commit();
+            UnitOfWork.Repository<TEntity>().Add(entity);
+            int result = UnitOfWork.Commit();
             return result > 0;
         }
 
         public async Task<bool> AddAsync(TEntity entity)
         {
-            _unitOfWork.Repository<TEntity>().Add(entity);
-            int result = await _unitOfWork.CommitAsync();
+            UnitOfWork.Repository<TEntity>().Add(entity);
+            int result = await UnitOfWork.CommitAsync();
             return result > 0;
         }
 
         public bool Update(TEntity entity)
         {
-            _unitOfWork.Repository<TEntity>().Update(entity);
-            int result = _unitOfWork.Commit();
+            UnitOfWork.Repository<TEntity>().Update(entity);
+            int result = UnitOfWork.Commit();
             return result > 0;
         }
 
         public async Task<bool> UpdateAsync(TEntity entity)
         {
-            _unitOfWork.Repository<TEntity>().Update(entity);
-            int result = await _unitOfWork.CommitAsync();
+            UnitOfWork.Repository<TEntity>().Update(entity);
+            int result = await UnitOfWork.CommitAsync();
             return result > 0;
         }
 
         public bool Delete(int id)
         {
-            _unitOfWork.Repository<TEntity>().Delete(id);
-            int result = _unitOfWork.Commit();
+            UnitOfWork.Repository<TEntity>().Delete(id);
+            int result = UnitOfWork.Commit();
             return result > 0;
         }
 
         public async Task<bool> DeleteAsync(int id)
         {
-            _unitOfWork.Repository<TEntity>().Delete(id);
-            int result = await _unitOfWork.CommitAsync();
+            UnitOfWork.Repository<TEntity>().Delete(id);
+            int result = await UnitOfWork.CommitAsync();
             return result > 0;
         }
 
         public bool Delete(TEntity entity)
         {
-            _unitOfWork.Repository<TEntity>().Delete(entity);
-            int result = _unitOfWork.Commit();
+            UnitOfWork.Repository<TEntity>().Delete(entity);
+            int result = UnitOfWork.Commit();
             return result > 0;
         }
 
         public async Task<bool> DeleteAsync(TEntity entity)
         {
-            _unitOfWork.Repository<TEntity>().Delete(entity);
-            int result = await _unitOfWork.CommitAsync();
+            UnitOfWork.Repository<TEntity>().Delete(entity);
+            int result = await UnitOfWork.CommitAsync();
             return result > 0;
         }
     }

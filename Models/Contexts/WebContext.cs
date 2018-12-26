@@ -6,7 +6,7 @@ namespace Models.Contexts
 {
     public class WebContext : IdentityDbContext<ApplicationUser>
     {
-        public WebContext():base("name=StudentInternshipManagement")
+        public WebContext() : base("name=StudentInternshipManagement")
         {
             Database.SetInitializer(new DataInitializer());
         }

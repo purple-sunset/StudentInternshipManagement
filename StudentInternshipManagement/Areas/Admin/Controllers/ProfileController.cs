@@ -19,14 +19,14 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         // GET: Student/Profile
         public ActionResult Index()
         {
-            global::Models.Entities.Admin admin = _adminService.GetByTeacherCode(CurrentUser.Id);
+            global::Models.Entities.Admin admin = _adminService.GetByAdminCode(CurrentUser.Id);
             ViewBag.Email = CurrentUser.Email;
             return View(admin);
         }
 
         public ActionResult Edit()
         {
-            global::Models.Entities.Admin admin = _adminService.GetByTeacherCode(CurrentUser.Id);
+            global::Models.Entities.Admin admin = _adminService.GetByAdminCode(CurrentUser.Id);
             return View(admin);
         }
 

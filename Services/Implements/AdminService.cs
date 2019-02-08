@@ -13,14 +13,14 @@ namespace Services.Implements
         {
         }
 
-        public Admin GetByTeacherCode(string teacherCode)
+        public Admin GetByAdminCode(string adminCode)
         {
-            return UnitOfWork.Repository<Admin>().Table.FirstOrDefault(x => x.AdminCode == teacherCode);
+            return UnitOfWork.Repository<Admin>().Table.FirstOrDefault(x => x.AdminCode == adminCode);
         }
 
-        public async Task<Admin> GetByTeacherCodeAsync(string teacherCode)
+        public async Task<Admin> GetByAdminCodeAsync(string adminCode)
         {
-            return await UnitOfWork.Repository<Admin>().Table.FirstOrDefaultAsync(x => x.AdminCode == teacherCode);
+            return await UnitOfWork.Repository<Admin>().Table.FirstOrDefaultAsync(x => x.AdminCode == adminCode);
         }
     }
 }

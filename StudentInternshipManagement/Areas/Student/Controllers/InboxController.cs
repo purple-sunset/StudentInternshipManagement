@@ -1,38 +1,55 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Microsoft.AspNet.Identity;
-using Models;
+using Models.Constants;
 using Models.Entities;
 using PagedList;
-using Services;
-using Services.Implements;
+using Services.Interfaces;
 
 namespace StudentInternshipManagement.Areas.Student.Controllers
 {
     [Authorize(Roles = "Student")]
     public class InboxController : Controller
     {
-        private readonly MessageService _service = new MessageService();
-        private readonly GroupService _groupService = new GroupService();
+        private readonly IGroupService _groupService;
+        private readonly IMessageService _messageService;
+
+        public InboxController(IMessageService messageService, IGroupService groupService)
+        {
+            _messageService = messageService;
+            _groupService = groupService;
+        }
+
         // GET: Student/Inbox
         public ActionResult Index()
         {
             var id = User.Identity.GetUserName();
-            var messages = _service.GetByStudent(id);
-            ViewBag.UnRead = messages.Count(m => m.Type==1 && m.IsRead == false );
+            var messages = _messageService.GetReceivedEmail(id);
+            ViewBag.UnRead = messages.Count(m => m.Status != MessageStatus.Read);
             return View();
         }
 
         public PartialViewResult GetMessagePage(int? page, int type)
         {
             var id = User.Identity.GetUserName();
-            var messages = _service.GetByStudent(id);
+            IQueryable<Message> messages = null;
             var pageSize = 5;
-            var mails = messages.Where(m => m.Type == type).ToPagedList(page ?? 1, pageSize);
+            switch (type)
+            {
+                case 1:
+                    messages = _messageService.GetReceivedEmail(id);
+                    break;
+                case 2:
+                    messages = _messageService.GetSentEmail(id);
+                    break;
+                case 3:
+                    messages = _messageService.GetDraftEmail(id);
+                    break;
+            }
+
+            var mails = messages.ToPagedList(page ?? 1, pageSize);
             ViewBag.Type = type;
             return PartialView("_MessagePage", mails);
         }
@@ -40,7 +57,7 @@ namespace StudentInternshipManagement.Areas.Student.Controllers
         public ActionResult Write(string teacher)
         {
             var id = User.Identity.GetUserName();
-            ViewBag.TeacherList = _groupService.GetByStudent(id).Select(g=>(g.Teacher.TeacherId));
+            ViewBag.TeacherList = _groupService.GetByStudent(id).Select(g => g.Teacher.Id);
             ViewBag.Teacher = teacher;
             return View();
         }
@@ -53,18 +70,15 @@ namespace StudentInternshipManagement.Areas.Student.Controllers
             {
                 if (file != null)
                 {
-                    var extension = Path.GetExtension(file.FileName);
-                    var filePath = Server.MapPath($"~/Attachment/{model.StudentId}/");
+                    // var extension = Path.GetExtension(file.FileName);
+                    var filePath = Server.MapPath($"~/Attachment/{model.SenderId}/");
                     Directory.CreateDirectory($"{filePath}");
                     var physicalPath = Path.Combine(filePath, $"{file.FileName}");
                     file.SaveAs(physicalPath);
                     model.File = $"{file.FileName}";
                 }
 
-                model.Type = 2;
-                model.Time = DateTime.Now;
-
-                ViewBag.Message = _service.Add(model) ? "Gửi thành công" : "Gửi thất bại";
+                ViewBag.Message = _messageService.Add(model) ? "Gửi thành công" : "Gửi thất bại";
             }
 
             return RedirectToAction("Index");
@@ -72,14 +86,8 @@ namespace StudentInternshipManagement.Areas.Student.Controllers
 
         public ActionResult View(int? id)
         {
-            var message = _service.GetById(id??1);
+            var message = _messageService.GetById(id ?? 1);
             return View(message);
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            _service.Dispose();
-            base.Dispose(disposing);
         }
     }
 }

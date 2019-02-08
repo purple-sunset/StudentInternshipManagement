@@ -1,9 +1,11 @@
-﻿using Models.Entities;
+﻿using System.Threading.Tasks;
+using Models.Entities;
 
 namespace Services.Interfaces
 {
     public interface IAdminService : IGenericService<Admin>
     {
-        Admin GetByTeacherCode(string teacherCode);
+        Admin GetByAdminCode(string adminCode);
+        Task<Admin> GetByAdminCodeAsync(string adminCode);
     }
 }

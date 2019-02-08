@@ -57,7 +57,15 @@
         <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Id </label>
 
         <div class="col-sm-9">
-            <input type="text" class="col-xs-10 col-sm-5" id="StudentId" name="StudentId" value="@Model.StudentId" />
+            <input type="text" class="col-xs-10 col-sm-5" id="Id" name="Id" value="@Model.Id" />
+        </div>
+    </div>
+
+    <div class="form-group hidden">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Code </label>
+
+        <div class="col-sm-9">
+            <input type="text" class="col-xs-10 col-sm-5" id="StudentCode" name="StudentCode" value="@Model.StudentCode" />
         </div>
     </div>
 
@@ -65,7 +73,7 @@
         <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Avatar </label>
 
         <div class="col-sm-9">
-            <input type="text" class="col-xs-10 col-sm-5" id="Avatar" name="Avatar" value="@Model.Avatar" />
+            <input type="text" class="col-xs-10 col-sm-5" id="Avatar" name="Avatar" value="@Model.User.Avatar" />
         </div>
     </div>
 

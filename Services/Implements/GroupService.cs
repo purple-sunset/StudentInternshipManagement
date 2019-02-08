@@ -13,10 +13,10 @@ namespace Services.Implements
         {
         }
 
-        public IQueryable<Group> GetByStudent(int studentId)
+        public IQueryable<Group> GetByStudent(string studentCode)
         {
             return UnitOfWork.Repository<Group>().TableNoTracking
-                .Where(g => g.Members.Select(s => s.Id).Contains(studentId));
+                .Where(g => g.Members.Select(s => s.StudentCode).Contains(studentCode));
         }
 
         public Group GetByInternship(Internship internship)

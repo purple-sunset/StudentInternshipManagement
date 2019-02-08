@@ -12,14 +12,21 @@ using Kendo.Mvc.UI;
 using Models;
  using Services;
  using Services.Implements;
+ using Services.Interfaces;
 
-namespace StudentInternshipManagement.Areas.Student.Controllers
+ namespace StudentInternshipManagement.Areas.Student.Controllers
 {
     [Authorize (Roles="Student")]
     public class CompanyController : Controller
     {
-        private readonly CompanyService _service=new CompanyService();
-        private readonly TrainingMajorService _trainingMajorService = new TrainingMajorService();
+        private readonly ICompanyService _companyService;
+        private readonly ITrainingMajorService _trainingMajorService;
+
+        public CompanyController(ICompanyService companyService, ITrainingMajorService trainingMajorService)
+        {
+            _companyService = companyService;
+            _trainingMajorService = trainingMajorService;
+        }
 
         public ActionResult Index()
         {
@@ -29,25 +36,17 @@ namespace StudentInternshipManagement.Areas.Student.Controllers
 
         public ActionResult Companies_Read([DataSourceRequest]DataSourceRequest request)
         {
-            DataSourceResult result = _service.GetAll().ToDataSourceResult(request, company => new {
-                CompanyId = company.CompanyId,
-                CompanyName = company.CompanyName,
-                CompanyDescription = company.CompanyDescription,
-                Address = company.Address,
-                Email = company.Email,
-                Phone = company.Phone
+            DataSourceResult result = _companyService.GetAll().ToDataSourceResult(request, company => new
+            {
+                company.Id,
+                company.CompanyName,
+                company.CompanyDescription,
+                company.Address,
+                company.Email,
+                company.Phone
             });
 
             return Json(result);
-        }
-
-        
-
-        protected override void Dispose(bool disposing)
-        {
-            _service.Dispose();
-            _trainingMajorService.Dispose();
-            base.Dispose(disposing);
         }
     }
 }

@@ -3,7 +3,7 @@ using Models.Entities;
 
 namespace Services.Interfaces
 {
-    public interface IMessageService
+    public interface IMessageService : IGenericService<Message>
     {
         IQueryable<Message> GetByUserId(string userId);
         IQueryable<Message> GetDraftEmail(string userId);

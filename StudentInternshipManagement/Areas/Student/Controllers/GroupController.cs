@@ -1,28 +1,30 @@
-﻿﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Net;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Kendo.Mvc.Extensions;
 using Kendo.Mvc.UI;
-using Models;
- using Models.Entities;
- using Services;
- using Services.Implements;
+using Services.Interfaces;
 
 namespace StudentInternshipManagement.Areas.Student.Controllers
 {
     public class GroupController : Controller
     {
-        private readonly GroupService _service=new GroupService();
-        private readonly TrainingMajorService _trainingMajorService = new TrainingMajorService();
-        private readonly LearningClassService _learningClassService = new LearningClassService();
-        private readonly CompanyService _companyService = new CompanyService();
-        private readonly StudentService _studentService = new StudentService();
-        private readonly TeacherService _teacherService = new TeacherService();
+        private readonly ICompanyService _companyService;
+        private readonly IGroupService _groupService;
+        private readonly ILearningClassService _learningClassService;
+        private readonly IStudentService _studentService;
+        private readonly ITeacherService _teacherService;
+        private readonly ITrainingMajorService _trainingMajorService;
+
+        public GroupController(IGroupService groupService, ITrainingMajorService trainingMajorService,
+            ILearningClassService learningClassService, ICompanyService companyService, IStudentService studentService,
+            ITeacherService teacherService)
+        {
+            _groupService = groupService;
+            _trainingMajorService = trainingMajorService;
+            _learningClassService = learningClassService;
+            _companyService = companyService;
+            _studentService = studentService;
+            _teacherService = teacherService;
+        }
 
         public ActionResult Index()
         {
@@ -34,46 +36,38 @@ namespace StudentInternshipManagement.Areas.Student.Controllers
             return View();
         }
 
-        public ActionResult Groups_Read([DataSourceRequest]DataSourceRequest request)
+        public ActionResult Groups_Read([DataSourceRequest] DataSourceRequest request)
         {
-            IQueryable<Group> groups = _service.GetAll();
-            DataSourceResult result = groups.ToDataSourceResult(request, group => new {
-                GroupId = group.GroupId,
-                GroupName = group.GroupName,
-                ClassId = group.ClassId,
-                CompanyId = group.CompanyId,
-                TrainingMajorId = group.TrainingMajorId,
-                LeaderId = group.LeaderId,
-                TeacherId = group.TeacherId,
+            var groups = _groupService.GetAll();
+            var result = groups.ToDataSourceResult(request, group => new
+            {
+                group.Id,
+                group.GroupName,
+                group.ClassId,
+                group.CompanyId,
+                group.TrainingMajorId,
+                group.LeaderId,
+                group.TeacherId
             });
 
             return Json(result);
         }
 
-        public ActionResult GetStudentList(int groupId, [DataSourceRequest]DataSourceRequest request)
+        public ActionResult GetStudentList(int groupId, [DataSourceRequest] DataSourceRequest request)
         {
-            DataSourceResult result = _service.GetById(groupId).Members.ToDataSourceResult(request, student => new {
-                StudentId = student.StudentId,
-                StudentName = student.StudentName,
-                BirthDate = student.BirthDate,
-                Address = student.Address,
-                Phone = student.Phone,
-                Cpa = student.Cpa,
-                ClassId = student.ClassId
+            var result = _groupService.GetById(groupId).Members.ToDataSourceResult(request, student => new
+            {
+                student.Id,
+                student.StudentCode,
+                student.StudentName,
+                student.BirthDate,
+                student.Address,
+                student.Phone,
+                student.Cpa,
+                student.ClassId
             });
 
             return Json(result);
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            _service.Dispose();
-            _teacherService.Dispose();
-            _companyService.Dispose();
-            _studentService.Dispose();
-            _trainingMajorService.Dispose();
-            _learningClassService.Dispose();
-            base.Dispose(disposing);
         }
     }
 }

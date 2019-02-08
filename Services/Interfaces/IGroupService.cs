@@ -8,7 +8,7 @@ namespace Services.Interfaces
     {
         Group GetByInternship(Internship internship);
         Task<Group> GetByInternshipAsync(Internship internship);
-        IQueryable<Group> GetByStudent(int studentId);
+        IQueryable<Group> GetByStudent(string studentCode);
         IQueryable<Group> GetByTeacher(int teacherId);
         IQueryable<Group> GetBySemester(int semesterId);
     }

@@ -1,22 +1,16 @@
-﻿@using System.Security.Claims
-@using Microsoft.AspNet.Identity
-@using Models
-@using Services
-@using Services.Implements
-@model Models.Entities.Message
+﻿@model Models.Entities.Message
 @{
     ViewBag.Title = "Báo cáo thực tập";
     ViewBag.Category = "Thực tập";
     ViewBag.Section = "Báo cáo";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
-    var avatar = new TeacherService().GetById(Model.TeacherId)?.Avatar;
 }
 
 <div id="id-message-item-navbar" class="message-navbar clearfix">
     <div class="message-bar">
         <div class="message-toolbar">
             <div class="inline position-relative align-left">
-                <button type="button" class="btn btn-xs btn-white btn-primary"  onclick="location.href = '@Url.Action("Write", "Inbox", new {teacher = Model.TeacherId})'">
+                <button type="button" class="btn btn-xs btn-white btn-primary" onclick="location.href = '@Url.Action("Write", "Inbox", new {teacher = Model.SenderId})'">
                     <i class="ace-icon fa fa-mail-reply blue"></i>
                     <span class="bigger-110">Reply</span>
                 </button>
@@ -34,15 +28,15 @@
 
         <div class="messagebar-item-right">
             <i class="ace-icon fa fa-clock-o bigger-110 orange"></i>
-            <span class="grey">@Model.Time.ToString()</span>
+            <span class="grey">@Model.CreatedAt.ToString("dd/MM/yyyy HH:mm:ss")</span>
         </div>
     </div>
 </div>
 
 <div class="message-content" id="id-message-content">
     <div class="message-header clearfix">
-        <div class="blue bigger-125" >
-            <div style="text-align:center;">@Model.Title</div>
+        <div class="blue bigger-125">
+            <div style="text-align: center;">@Model.Title</div>
         </div>
         <div class="pull-left">
 
@@ -52,13 +46,13 @@
             <i class="ace-icon fa fa-star orange2"></i>
 
             &nbsp;
-            <img class="middle" alt="Avatar" src='~/@($"Images/avatars/{avatar}")' width="32">
+            <img class="middle" alt="Avatar" src='~/@($"Images/avatars/{Model.Receiver.Avatar}")' width="32">
             &nbsp;
-            <a href="#" class="sender">@Model.Teacher.TeacherName</a>
+            <a href="#" class="sender">@Model.Receiver.UserName</a>
 
             &nbsp;
             <i class="ace-icon fa fa-clock-o bigger-110 orange middle"></i>
-            <span class="time grey">@Model.Time.ToString()</span>
+            <span class="time grey">@Model.CreatedAt.ToString("dd/MM/yyyy HH:mm:ss")</span>
         </div>
 
         <div class="pull-right action-buttons">
@@ -79,9 +73,12 @@
     <div class="hr hr-double"></div>
 
     <div class="message-body ace-scroll" style="position: relative;">
-        <div class="scroll-track scroll-visible scroll-active" style="display: block; height: 150px;"><div class="scroll-bar" style="height: 129px; top: 0px;"></div></div><div class="scroll-content" style="max-height: 150px;">
-    @Html.Raw(HttpUtility.HtmlDecode(Model.Content))
-</div>
+        <div class="scroll-track scroll-visible scroll-active" style="display: block; height: 150px;">
+            <div class="scroll-bar" style="height: 129px; top: 0px;"></div>
+        </div>
+        <div class="scroll-content" style="max-height: 150px;">
+            @Html.Raw(HttpUtility.HtmlDecode(Model.Content))
+        </div>
     </div>
 
     <div class="hr hr-double"></div>
@@ -90,7 +87,7 @@
         <div class="attachment-title">
             <span class="blue bolder bigger-110">Attachment</span>
             &nbsp;
-            
+
         </div>
 
         &nbsp;

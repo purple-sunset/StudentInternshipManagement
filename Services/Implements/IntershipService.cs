@@ -25,6 +25,11 @@ namespace Services.Implements
             _emailService = emailService;
         }
 
+        public IQueryable<Internship> GetByStudent(string studentCode)
+        {
+            return UnitOfWork.Repository<Internship>().TableNoTracking.Where(i => i.Student.StudentCode == studentCode);
+        }
+
         public IQueryable<Internship> GetBySemester(int semesterId)
         {
             return UnitOfWork.Repository<Internship>().TableNoTracking.Where(i => i.Class.SemesterId == semesterId);

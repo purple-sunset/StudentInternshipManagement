@@ -1,7 +1,8 @@
 ﻿@using Kendo.Mvc.UI
 @using Microsoft.AspNet.Identity
 @using Models
-@using StudentInternshipManagement.Areas.Student.Models
+@using Models.Entities
+@using Services.ViewModel
 @{
     ViewBag.Title = "Nguyện vọng thực tập";
     ViewBag.Category = "Thực tập";
@@ -39,7 +40,7 @@
           .Scrollable()
           .DataSource(dataSource => dataSource
               .Ajax()
-              .Model(model => model.Id(p => p.InternshipId))
+              .Model(model => model.Id(p => p.Id))
               .Read(read => read.Action("Internships_Read", "Internship"))
           )
 )

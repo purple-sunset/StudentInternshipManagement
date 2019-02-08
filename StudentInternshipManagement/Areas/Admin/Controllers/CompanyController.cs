@@ -13,9 +13,9 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
         private readonly ICompanyService _companyService;
         private readonly ITrainingMajorService _trainingMajorService;
 
-        public CompanyController(ICompanyService service, ITrainingMajorService trainingMajorService)
+        public CompanyController(ICompanyService companyService, ITrainingMajorService trainingMajorService)
         {
-            _companyService = service;
+            _companyService = companyService;
             _trainingMajorService = trainingMajorService;
         }
 

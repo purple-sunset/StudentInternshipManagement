@@ -37,9 +37,9 @@ namespace Services.Implements
             return UnitOfWork.Repository<LearningClassStudent>().TableNoTracking.Where(s => s.ClassId == classId);
         }
 
-        public IQueryable<LearningClassStudent> GetByStudent(int studentId)
+        public IQueryable<LearningClassStudent> GetByStudent(string studentCode)
         {
-            return UnitOfWork.Repository<LearningClassStudent>().TableNoTracking.Where(s => s.StudentId == studentId);
+            return UnitOfWork.Repository<LearningClassStudent>().TableNoTracking.Where(s => s.Student.StudentCode == studentCode);
         }
 
         public IQueryable<LearningClassStudent> GetByTeacher(int teacherId)

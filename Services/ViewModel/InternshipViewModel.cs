@@ -8,7 +8,7 @@ namespace Services.ViewModel
     public class InternshipViewModel
     {
         [DisplayName("Mã thực tập")]
-        public int InternshipId { get; set; }
+        public int Id { get; set; }
 
         [DataType(DataType.Date)]
         [DisplayName("Ngày đăng ký")]
@@ -22,6 +22,9 @@ namespace Services.ViewModel
 
         [DisplayName("Lớp học")]
         public string Class { get; set; }
+
+        [DisplayName("Học kỳ")]
+        public string Semester { get; set; }
 
         [DisplayName("Công ty")]
         public string Company { get; set; }

@@ -21,21 +21,26 @@ namespace Services.Implements
             _semesterService = semesterService;
         }
 
+        public Student GetByStudentCode(string studentCode)
+        {
+            return UnitOfWork.Repository<Student>().Table.FirstOrDefault(x => x.StudentCode == studentCode);
+        }
+
         public IQueryable<Student> GetByStudentClass(int classId)
         {
             return UnitOfWork.Repository<Student>().TableNoTracking.Where(s => s.ClassId == classId);
         }
 
 
-        public IQueryable<LearningClass> GetLearningClassList(int studentId)
+        public IQueryable<LearningClass> GetLearningClassList(string studentCode)
         {
-            return _learningClassStudentService.GetByStudent(studentId).Select(x => x.Class);
+            return _learningClassStudentService.GetByStudent(studentCode).Select(x => x.Class);
         }
 
-        public IQueryable<LearningClass> GetLearningClassBySemesterList(int studentId)
+        public IQueryable<LearningClass> GetLearningClassBySemesterList(string studentCode)
         {
             int semesterId = _semesterService.GetLatest().Id;
-            return GetLearningClassList(studentId).Where(c => c.SemesterId == semesterId);
+            return GetLearningClassList(studentCode).Where(c => c.SemesterId == semesterId);
         }
     }
 }

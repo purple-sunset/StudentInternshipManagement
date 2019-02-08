@@ -35,10 +35,10 @@
       .Scrollable()
       .DataSource(dataSource => dataSource
           .Ajax()
-          .Model(model => model.Id(p => p.NewsId))
+          .Model(model => model.Id(p => p.Id))
           .Read(read => read.Action("Newses_Read", "News"))
           .Create(create => create.Action("Newses_Create", "News"))
           .Update(update => update.Action("Newses_Update", "News"))
           .Destroy(destroy => destroy.Action("Newses_Destroy", "News"))
       )
-      )
+)

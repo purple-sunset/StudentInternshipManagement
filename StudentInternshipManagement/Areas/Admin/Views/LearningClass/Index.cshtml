@@ -18,7 +18,7 @@
       .Name("grid")
       .Columns(columns =>
       {
-          columns.Bound(c => c.ClassId);
+          columns.Bound(c => c.Id).Hidden(true);
           columns.Bound(c => c.ClassName);
           columns.ForeignKey(p => p.SubjectId, (IQueryable<Subject>) ViewBag.Subjects, "SubjectId", "SubjectName").EditorTemplateName("SubjectTemplate");
           columns.Bound(p => p.SemesterId).EditorTemplateName("SemesterTemplate");
@@ -37,7 +37,7 @@
       .ClientDetailTemplateId("template")
       .DataSource(dataSource => dataSource
           .Ajax()
-          .Model(model => model.Id(p => p.ClassId))
+          .Model(model => model.Id(p => p.Id))
           .Read(read => read.Action("LearningClasses_Read", "LearningClass"))
           .Create(create => create.Action("LearningClasses_Create", "LearningClass"))
           .Update(update => update.Action("LearningClasses_Update", "LearningClass"))
@@ -71,6 +71,6 @@
 <script type="text/javascript">
 
     function onEdit(e) {
-        $('[name="ClassId"]').attr("readonly", true);
+        $('[name="Id"]').attr("readonly", true);
     }
 </script>

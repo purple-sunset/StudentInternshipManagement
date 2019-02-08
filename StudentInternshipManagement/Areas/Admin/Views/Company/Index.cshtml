@@ -18,7 +18,7 @@
       .Name("grid")
       .Columns(columns =>
       {
-          columns.Bound(c => c.Id);
+          columns.Bound(c => c.Id).Hidden(true);
           columns.Bound(c => c.CompanyName);
           columns.Bound(c => c.CompanyDescription);
           columns.Bound(c => c.Address);

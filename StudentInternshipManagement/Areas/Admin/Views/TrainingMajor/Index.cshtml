@@ -19,7 +19,7 @@
       .Name("grid")
       .Columns(columns =>
       {
-          columns.Bound(c => c.TrainingMajorId);
+          columns.Bound(c => c.Id).Hidden(true);
           columns.Bound(c => c.TrainingMajorName);
           columns.ForeignKey(p => p.SubjectId, (IQueryable<Subject>) ViewBag.Subjects, "SubjectId", "SubjectName").EditorTemplateName("SubjectTemplate");
           columns.Command(command =>
@@ -38,7 +38,7 @@
       .ClientDetailTemplateId("template")
       .DataSource(dataSource => dataSource
           .Ajax()
-          .Model(model => model.Id(p => p.TrainingMajorId))
+          .Model(model => model.Id(p => p.Id))
           .Read(read => read.Action("TrainingMajors_Read", "TrainingMajor"))
           .Create(create => create.Action("TrainingMajors_Create", "TrainingMajor"))
           .Update(update => update.Action("TrainingMajors_Update", "TrainingMajor"))
@@ -89,7 +89,7 @@
 <script type="text/javascript">
 
     function onEdit(e) {
-        $('[name="TrainingMajorId"]').attr("readonly", true);
+        $('[name="Id"]').attr("readonly", true);
     }
     function onChildEdit(e) {
         if (e.model.isNew()) {

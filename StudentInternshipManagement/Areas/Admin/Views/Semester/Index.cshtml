@@ -18,7 +18,7 @@
                   .Name("grid")
                   .Columns(columns =>
                   {
-                      columns.Bound(c => c.SemesterId);
+                      columns.Bound(c => c.Id).Hidden(true);
                       columns.Bound(c => c.StartDate);
                       columns.Bound(c => c.EndDate);
                       columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
@@ -37,7 +37,7 @@
                   .Scrollable()
                   .DataSource(dataSource => dataSource
                       .Ajax()
-                      .Model(model => model.Id(p => p.SemesterId))
+                      .Model(model => model.Id(p => p.Id))
                       .Read(read => read.Action("Semesters_Read", "Semester"))
                       .Create(create => create.Action("Semesters_Create", "Semester"))
                       .Update(update => update.Action("Semesters_Update", "Semester"))
@@ -52,7 +52,7 @@
 
     function onEdit(e) {
         if (!e.model.isNew()) {
-            $('[name="SemesterId"]').attr("readonly", true);
+            $('[name="Id"]').attr("readonly", true);
         }
     }
 </script>

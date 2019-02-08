@@ -19,7 +19,7 @@
               .Name("grid")
               .Columns(columns =>
               {
-                  columns.Bound(c => c.DepartmentId);
+                  columns.Bound(c => c.Id).Hidden(true);
                   columns.Bound(c => c.DepartmentName);
                   columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
               })
@@ -37,7 +37,7 @@
               .Scrollable()
               .DataSource(dataSource => dataSource
                   .Ajax()
-                  .Model(model => model.Id(p => p.DepartmentId))
+                  .Model(model => model.Id(p => p.Id))
                   .Read(read => read.Action("Departments_Read", "Department"))
                   .Create(create => create.Action("Departments_Create", "Department"))
                   .Update(update => update.Action("Departments_Update", "Department"))
@@ -51,6 +51,6 @@
 <script type="text/javascript">
 
     function onEdit(e) {
-        $('[name="DepartmentId"]').attr("readonly", true);
+        $('[name="Id"]').attr("readonly", true);
     }
 </script>

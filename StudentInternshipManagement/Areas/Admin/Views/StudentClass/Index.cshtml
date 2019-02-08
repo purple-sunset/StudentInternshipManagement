@@ -19,7 +19,7 @@
       .Name("grid")
       .Columns(columns =>
       {
-          columns.Bound(c => c.ClassId);
+          columns.Bound(c => c.Id).Hidden(true);
           columns.Bound(c => c.ClassName);
           columns.ForeignKey(p => p.DepartmentId, (IQueryable<Department>) ViewBag.Departments, "DepartmentId", "DepartmentName").EditorTemplateName("DepartmentTemplate");
           columns.Command(command =>
@@ -37,7 +37,7 @@
       .ClientDetailTemplateId("template")
       .DataSource(dataSource => dataSource
           .Ajax()
-          .Model(model => model.Id(p => p.ClassId))
+          .Model(model => model.Id(p => p.Id))
           .Read(read => read.Action("StudentClasses_Read", "StudentClass"))
           .Create(create => create.Action("StudentClasses_Create", "StudentClass"))
           .Update(update => update.Action("StudentClasses_Update", "StudentClass"))
@@ -53,7 +53,7 @@
           .Name("grid_#=ClassId#") // template expression, to be evaluated in the master context
           .Columns(columns =>
           {
-              columns.Bound(o => o.StudentId);
+              columns.Bound(o => o.StudentCode);
               columns.Bound(o => o.StudentName);
               columns.Bound(o => o.BirthDate);
               columns.Bound(o => o.Address);
@@ -72,6 +72,6 @@
 <script type="text/javascript">
 
     function onEdit(e) {
-        $('[name="ClassId"]').attr("readonly", true);
+        $('[name="Id"]').attr("readonly", true);
     }
 </script>

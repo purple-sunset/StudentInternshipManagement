@@ -13,10 +13,10 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
 {
     public class InternshipController : BaseController
     {
-        private static int semester = -1;
-        private static string jobId = string.Empty;
-        private readonly IGroupService _groupService;
+        private static int _semester = -1;
+        private static string _jobId = string.Empty;
 
+        private readonly IGroupService _groupService;
         private readonly IInternshipService _internshipService;
         private readonly ISemesterService _semesterService;
 
@@ -36,23 +36,23 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
 
         public ActionResult Process()
         {
-            jobId = BackgroundJob.Enqueue(() => _internshipService.ProcessRegistration());
-            semester = _semesterService.GetLatest().Id;
+            _jobId = BackgroundJob.Enqueue(() => _internshipService.ProcessRegistration());
+            _semester = _semesterService.GetLatest().Id;
             return RedirectToAction("Index");
         }
 
         public void CheckJob()
         {
             int semesterId = _semesterService.GetLatest().Id;
-            ViewBag.Semester = semester;
-            if (semester != semesterId)
+            ViewBag.Semester = _semester;
+            if (_semester != semesterId)
             {
                 ViewBag.IsProcessing = null;
             }
             else
             {
                 IStorageConnection connection = JobStorage.Current.GetConnection();
-                JobData jobData = connection.GetJobData(jobId);
+                JobData jobData = connection.GetJobData(_jobId);
                 string stateName = jobData.State;
                 switch (stateName)
                 {
@@ -66,7 +66,7 @@ namespace StudentInternshipManagement.Areas.Admin.Controllers
                         ViewBag.IsProcessing = false;
                         break;
 
-                    case "Failed":
+                    // case "Failed":
                     default:
                         ViewBag.IsProcessing = null;
                         break;

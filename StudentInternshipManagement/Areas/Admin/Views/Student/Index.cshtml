@@ -19,7 +19,8 @@
       .Name("grid")
       .Columns(columns =>
       {
-          columns.Bound(c => c.StudentId);
+          columns.Bound(c => c.Id).Hidden(true);
+          columns.Bound(c => c.StudentCode);
           columns.Bound(c => c.StudentName);
           columns.Bound(c => c.BirthDate);
           columns.Bound(c => c.Address);
@@ -41,7 +42,7 @@
       .ClientDetailTemplateId("template")
       .DataSource(dataSource => dataSource
           .Ajax()
-          .Model(model => model.Id(p => p.StudentId))
+          .Model(model => model.Id(p => p.Id))
           .Read(read => read.Action("Students_Read", "Student"))
           .Create(create => create.Action("Students_Create", "Student"))
           .Update(update => update.Action("Students_Update", "Student"))
@@ -75,7 +76,7 @@
 
     function onEdit(e) {
         if (!e.model.isNew()) {
-            $('[name="StudentId"]').attr("readonly", true);
+            $('[name="Id"]').attr("readonly", true);
         }
     }
 </script>

@@ -1,0 +1,58 @@
+﻿@using Kendo.Mvc.UI
+@using StudentInternshipManagement.Models.Entities
+@{
+    ViewBag.Title = "Nhóm thực tập";
+    ViewBag.Category = "Thực tập";
+    ViewBag.Section = "Nhóm";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section Kendo
+{
+    @Styles.Render("~/Content/kendo/styles")
+    @Scripts.Render("~/Scripts/kendo/scripts")
+}
+
+
+@(Html.Kendo().Grid<Group>()
+      .Name("grid")
+      .Columns(columns =>
+      {
+          columns.Bound(c => c.GroupName);
+          columns.ForeignKey(p => p.ClassId, (IQueryable<LearningClass>) ViewBag.Classes, "ClassId", "ClassName");
+          columns.ForeignKey(p => p.CompanyId, (IQueryable<Company>) ViewBag.Companies, "CompanyId", "CompanyName");
+          columns.ForeignKey(p => p.TrainingMajorId, (IQueryable<TrainingMajor>) ViewBag.TrainingMajors, "TrainingMajorId", "TrainingMajorName");
+          columns.ForeignKey(p => p.LeaderId, (IQueryable<Student>) ViewBag.Students, "StudentId", "StudentName");
+          columns.ForeignKey(p => p.TeacherId, (IQueryable<Teacher>) ViewBag.Teachers, "TeacherId", "TeacherName");
+      })
+      .Pageable()
+      .Sortable(sortable => { sortable.SortMode(GridSortMode.SingleColumn); })
+      .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
+      .Scrollable()
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Read(read => read.Action("Groups_Read", "Group"))
+      )
+      .ClientDetailTemplateId("template"))
+
+<script id="template" type="text/kendo-tmpl">
+    @(Html.Kendo().Grid<Student>()
+          .Name("grid_#=GroupId#") // template expression, to be evaluated in the master context
+          .Columns(columns =>
+          {
+              columns.Bound(o => o.StudentCode);
+              columns.Bound(o => o.StudentName);
+              columns.Bound(o => o.BirthDate);
+              columns.Bound(o => o.Address);
+              columns.Bound(o => o.Phone);
+              columns.Bound(o => o.Cpa);
+          })
+          .DataSource(dataSource => dataSource
+              .Ajax()
+              .PageSize(10)
+              .Read(read => read.Action("GetStudentList", "Group", new {groupId = "#=GroupId#"}))
+          )
+          .Pageable()
+          .Sortable()
+          .ToClientTemplate())
+</script>

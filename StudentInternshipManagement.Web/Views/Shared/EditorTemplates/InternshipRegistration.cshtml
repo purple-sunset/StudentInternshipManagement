@@ -1,0 +1,108 @@
+﻿@model StudentInternshipManagement.Models.Entities.Internship
+
+<script type="text/javascript">
+    function filterMajors() {
+        return {
+            classId: $("#ClassId").data("kendoDropDownList").value()
+        };
+    }
+
+    function filterCompanies() {
+        return {
+            majorId: $("#TrainingMajorId").data("kendoDropDownList").value()
+        };
+    }
+</script>
+
+<form>
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Mã đăng ký </label>
+
+        <div class="col-sm-9">
+            <input type="text" class="col-xs-10 col-sm-5" id="InternshipId" name="InternshipId" value="@Model.InternshipId" readonly="readonly" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Sinh viên </label>
+
+        <div class="col-sm-9">
+            <input type="text" class="col-xs-10 col-sm-5" id="StudentId" name="StudentId" value="@Model.StudentId" readonly="readonly" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Ngày đăng ký </label>
+
+        <div class="col-sm-9">
+            <input type="date" class="col-xs-10 col-sm-5" id="RegistrationDate" name="RegistrationDate" value="@Model.RegistrationDate.ToString("yyyy-MM-dd")" readonly="readonly" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Trạng thái </label>
+
+        <div class="col-sm-9">
+            <input type="text" class="col-xs-10 col-sm-5" id="Status" name="Status" value="@Model.Status" readonly="readonly" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> Lớp học </label>
+
+        <div class="col-sm-9">
+            @(Html.Kendo().DropDownListFor(m => m.ClassId)
+                                                          .AutoBind(false)
+                                                          .OptionLabel("Chọn lớp học...")
+                                                          .DataTextField("ClassName")
+                                                          .DataValueField("ClassId")
+                                                          .DataSource(dataSource =>
+                                                          {
+                                                              dataSource.Read(read => read.Action("LearningClasses_Read", "LearningClass"))
+                                                                  .ServerFiltering(true);
+                                                          })
+            )
+        </div>
+        @Html.ValidationMessageFor(m => m.ClassId, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> dh </label>
+
+        <div class="col-sm-9">
+            @(Html.Kendo().DropDownListFor(m => m.TrainingMajorId)
+                                                          .AutoBind(false)
+                                                          .OptionLabel("Chọn lớp học...")
+                                                          .DataTextField("TrainingMajorName")
+                                                          .DataValueField("TrainingMajorId")
+                                                          .DataSource(dataSource =>
+                                                          {
+                                                              dataSource.Read(read => read.Action("GetTrainingMajorList", "LearningClass").Data("filterMajors"))
+                                                                  .ServerFiltering(true);
+                                                          })
+                                                  .CascadeFrom("ClassId")
+            )
+        </div>
+        @Html.ValidationMessageFor(m => m.TrainingMajorId, "", new { @class = "text-danger" })
+    </div>
+
+    <div class="form-group">
+        <label class="col-sm-3 control-label no-padding-right" for="form-field-1"> ct </label>
+
+        <div class="col-sm-9">
+            @(Html.Kendo().DropDownListFor(m => m.CompanyId)
+                                                  .AutoBind(false)
+                                                  .OptionLabel("Chọn lớp học...")
+                                                  .DataTextField("CompanyName")
+                                                  .DataValueField("CompanyId")
+                                                  .DataSource(dataSource =>
+                                                  {
+                                                      dataSource.Read(read => read.Action("GetCompanyList", "TrainingMajor").Data("filterCompanies"))
+                                                          .ServerFiltering(true);
+                                                  })
+                                                  .CascadeFrom("TrainingMajorId")
+            )
+        </div>
+        @Html.ValidationMessageFor(m => m.CompanyId, "", new { @class = "text-danger" })
+    </div>
+</form>

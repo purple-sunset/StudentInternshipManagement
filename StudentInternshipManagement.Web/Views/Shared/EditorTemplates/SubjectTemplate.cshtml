@@ -1,0 +1,12 @@
+﻿@using Kendo.Mvc.UI
+@using Models
+@using StudentInternshipManagement.Models.Entities
+@model string
+@(Html.Kendo().ComboBoxFor(m => m)  
+      .Filter("contains")
+      .Placeholder("Chọn Môn học")
+      .Suggest(true)
+      .DataValueField("SubjectId")
+      .DataTextField("SubjectName")
+      .BindTo((IQueryable<Subject>)ViewBag.Subjects)
+      )

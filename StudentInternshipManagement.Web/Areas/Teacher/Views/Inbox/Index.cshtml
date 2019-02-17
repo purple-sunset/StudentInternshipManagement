@@ -1,0 +1,275 @@
+﻿@using Kendo.Mvc.UI
+@{
+    ViewBag.Title = "Trao đổi thông tin";
+    ViewBag.Category = "Thực tập";
+    ViewBag.Section = "Sinh viên";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    string message = ViewBag.Message ?? string.Empty;
+    var unread = (int) ViewBag.UnRead;
+}
+
+
+<div class="tabbable">
+    <ul id="inbox-tabs" class="inbox-tabs nav nav-tabs padding-16 tab-size-bigger tab-space-1">
+        <li class="li-new-mail pull-right">
+            <a href="/Teacher/Inbox/Write" class="btn-new-mail">
+                <span class="btn btn-purple no-border">
+                    <i class="ace-icon fa fa-envelope bigger-130"></i>
+                    <span class="bigger-110">Viết tin nhắn</span>
+                </span>
+            </a>
+        </li><!-- /.li-new-mail -->
+
+        <li class="active">
+            <a data-toggle="tab" href="#inbox">
+                <i class="blue ace-icon fa fa-inbox bigger-130"></i>
+                <span class="bigger-110">Hộp thư đến</span>
+            </a>
+        </li>
+
+        <li>
+            <a data-toggle="tab" href="#sent">
+                <i class="orange ace-icon fa fa-location-arrow bigger-130"></i>
+                <span class="bigger-110">Đã gửi</span>
+            </a>
+        </li>
+
+        <li>
+            <a data-toggle="tab" href="#draft">
+                <i class="green ace-icon fa fa-pencil bigger-130"></i>
+                <span class="bigger-110">Nháp</span>
+            </a>
+        </li>
+
+    </ul>
+
+    <div class="tab-content no-border no-padding">
+        <div id="inbox" class="tab-pane in active">
+            <div class="message-container">
+                <div id="id-message-list-navbar" class="message-navbar clearfix">
+                    <div class="message-bar">
+                        <div class="message-infobar" id="id-message-infobar">
+                            <span class="blue bigger-150">Hộp thư đến</span>
+                            <span class="grey bigger-110">(@unread tin nhắn chưa đọc)</span>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div class="messagebar-item-left">
+                            <label class="inline middle">
+                                <input type="checkbox" id="id-toggle-all" class="ace" />
+                                <span class="lbl"></span>
+                            </label>
+
+                            &nbsp;
+                            <div class="inline position-relative">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                                    <i class="ace-icon fa fa-caret-down bigger-125 middle"></i>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-lighter dropdown-100">
+                                    <li>
+                                        <a id="id-select-message-all" href="#">All</a>
+                                    </li>
+
+                                    <li>
+                                        <a id="id-select-message-none" href="#">None</a>
+                                    </li>
+
+                                    <li class="divider"></li>
+
+                                    <li>
+                                        <a id="id-select-message-unread" href="#">Unread</a>
+                                    </li>
+
+                                    <li>
+                                        <a id="id-select-message-read" href="#">Read</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="messagebar-item-right">
+                            <div class="inline position-relative">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                                    Sort &nbsp;
+                                    <i class="ace-icon fa fa-caret-down bigger-125"></i>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-lighter dropdown-menu-right dropdown-100">
+                                    <li>
+                                        <a href="#">
+                                            <i class="ace-icon fa fa-check green"></i>
+                                            Date
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="ace-icon fa fa-check invisible"></i>
+                                            From
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="ace-icon fa fa-check invisible"></i>
+                                            Subject
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="nav-search minimized">
+                            <form class="form-search">
+                                <span class="input-icon">
+                                    <input type="text" autocomplete="off" class="input-small nav-search-input" placeholder="Search inbox ..." />
+                                    <i class="ace-icon fa fa-search nav-search-icon"></i>
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="received-list">
+                    @{ Html.RenderAction("GetMessagePage", "Inbox", new { area = "Teacher", page = 1, type = 2 }); }
+                </div>
+            </div>
+        </div>
+
+        <div id="sent" class="tab-pane">
+            <div class="message-container">
+                <div id="id-message-list-navbar" class="message-navbar clearfix">
+                    <div class="message-bar">
+                        <div class="message-infobar" id="id-message-infobar">
+                            <span class="blue bigger-150">Đã gửi</span>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div class="messagebar-item-right">
+                            <div class="inline position-relative">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                                    Sort &nbsp;
+                                    <i class="ace-icon fa fa-caret-down bigger-125"></i>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-lighter dropdown-menu-right dropdown-100">
+                                    <li>
+                                        <a href="#">
+                                            <i class="ace-icon fa fa-check green"></i>
+                                            Date
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="ace-icon fa fa-check invisible"></i>
+                                            From
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="ace-icon fa fa-check invisible"></i>
+                                            Subject
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="nav-search minimized">
+                            <form class="form-search">
+                                <span class="input-icon">
+                                    <input type="text" autocomplete="off" class="input-small nav-search-input" placeholder="Search sent ..." />
+                                    <i class="ace-icon fa fa-search nav-search-icon"></i>
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="sent-list">
+                    @{ Html.RenderAction("GetMessagePage", "Inbox", new { area = "Teacher", page = 1, type = 1 }); }
+                </div>
+            </div>
+        </div>
+
+        <div id="draft" class="tab-pane">
+            <div class="message-container">
+                <div id="id-message-list-navbar" class="message-navbar clearfix">
+                    <div class="message-bar">
+                        <div class="message-infobar" id="id-message-infobar">
+                            <span class="blue bigger-150">Nháp</span>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <div class="messagebar-item-right">
+                            <div class="inline position-relative">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                                    Sort &nbsp;
+                                    <i class="ace-icon fa fa-caret-down bigger-125"></i>
+                                </a>
+
+                                <ul class="dropdown-menu dropdown-lighter dropdown-menu-right dropdown-100">
+                                    <li>
+                                        <a href="#">
+                                            <i class="ace-icon fa fa-check green"></i>
+                                            Date
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="ace-icon fa fa-check invisible"></i>
+                                            From
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#">
+                                            <i class="ace-icon fa fa-check invisible"></i>
+                                            Subject
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="nav-search minimized">
+                            <form class="form-search">
+                                <span class="input-icon">
+                                    <input type="text" autocomplete="off" class="input-small nav-search-input" placeholder="Search sent ..." />
+                                    <i class="ace-icon fa fa-search nav-search-icon"></i>
+                                </span>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="draft-list">
+                    @{ Html.RenderAction("GetMessagePage", "Inbox", new { area = "Teacher", page = 1, type = 3 }); }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+        
+    
+</div><!-- /.tabbable -->
+
+@(Html.Kendo().Dialog()
+      .Name("messageDialog")
+      .Title("Notification")
+      .Content(message)
+      .Width(400)
+      .Modal(true)
+      .Visible(!string.IsNullOrEmpty(message))
+      .Actions(actions => { actions.Add().Text("OK"); })
+      )

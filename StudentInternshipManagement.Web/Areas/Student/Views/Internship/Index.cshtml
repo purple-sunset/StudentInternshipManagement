@@ -1,0 +1,44 @@
+﻿@using Kendo.Mvc.UI
+@using Microsoft.AspNet.Identity
+@using StudentInternshipManagement.Services.ViewModel
+@{
+    ViewBag.Title = "Nguyện vọng thực tập";
+    ViewBag.Category = "Thực tập";
+    ViewBag.Section = "Nguyện vọng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var studentId = User.Identity.GetUserName();
+}
+
+@section Kendo
+{
+    @Styles.Render("~/Content/kendo/styles")
+    @Scripts.Render("~/Scripts/kendo/scripts")
+}
+
+@(Html.Kendo().Grid<InternshipViewModel>()
+          .Name("grid")
+          .Columns(columns =>
+          {
+              columns.Bound(p => p.Student);
+              columns.Bound(p => p.Class);
+              columns.Bound(p => p.Semester);
+              columns.Bound(p => p.TrainingMajor);
+              columns.Bound(p => p.Company);
+              columns.Bound(c => c.RegistrationDate);
+              columns.Bound(c => c.Status);
+              columns.Bound(c => c.MidTermPoint);
+              columns.Bound(c => c.EndTermPoint);
+              columns.Bound(c => c.TotalPoint);
+              columns.Bound(c => c.Group);
+              columns.Bound(c => c.Teacher);
+          })
+          .Pageable()
+          .Sortable(sortable => { sortable.SortMode(GridSortMode.SingleColumn); })
+          .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
+          .Scrollable()
+          .DataSource(dataSource => dataSource
+              .Ajax()
+              .Model(model => model.Id(p => p.Id))
+              .Read(read => read.Action("Internships_Read", "Internship"))
+          )
+)

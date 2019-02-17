@@ -1,0 +1,115 @@
+﻿@model StudentInternshipManagement.Models.Entities.Message
+@{
+    ViewBag.Title = "Trao đổi thông tin";
+    ViewBag.Category = "Thực tập";
+    ViewBag.Section = "Sinh viên";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div id="id-message-item-navbar" class="message-navbar clearfix">
+    <div class="message-bar">
+        <div class="message-toolbar">
+            <div class="inline position-relative align-left">
+                <button type="button" class="btn btn-xs btn-white btn-primary"  onclick="location.href = '@Url.Action("Write", "Inbox", new {student = Model.SenderId})'">
+                    <i class="ace-icon fa fa-mail-reply blue"></i>
+                    <span class="bigger-110">Reply</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <div class="messagebar-item-left">
+            <a href="/Student/Inbox/Index" class="btn-back-message-list">
+                <i class="ace-icon fa fa-arrow-left blue bigger-110 middle"></i>
+                <b class="bigger-110 middle">Back</b>
+            </a>
+        </div>
+
+        <div class="messagebar-item-right">
+            <i class="ace-icon fa fa-clock-o bigger-110 orange"></i>
+            <span class="grey">@Model.CreatedAt.ToString("dd/MM/yyyy HH:mm:ss")</span>
+        </div>
+    </div>
+</div>
+
+<div class="message-content" id="id-message-content">
+    <div class="message-header clearfix">
+        <div class="blue bigger-125" >
+            <div style="text-align:center;">@Model.Title</div>
+        </div>
+        <div class="pull-left">
+
+
+            <div class="space-4"></div>
+
+            <i class="ace-icon fa fa-star orange2"></i>
+
+            &nbsp;
+            <img class="middle" alt="Avatar" src='~/@($"Images/avatars/{Model.Receiver.Avatar}")' width="32">
+            &nbsp;
+            <a href="#" class="sender">@Model.Receiver.UserName</a>
+
+            &nbsp;
+            <i class="ace-icon fa fa-clock-o bigger-110 orange middle"></i>
+            <span class="time grey">@Model.CreatedAt.ToString("dd/MM/yyyy HH:mm:ss")</span>
+        </div>
+
+        <div class="pull-right action-buttons">
+            <a href="#">
+                <i class="ace-icon fa fa-reply green icon-only bigger-130"></i>
+            </a>
+
+            <a href="#">
+                <i class="ace-icon fa fa-mail-forward blue icon-only bigger-130"></i>
+            </a>
+
+            <a href="#">
+                <i class="ace-icon fa fa-trash-o red icon-only bigger-130"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="hr hr-double"></div>
+
+    <div class="message-body ace-scroll" style="position: relative;">
+        <div class="scroll-track scroll-visible scroll-active" style="display: block; height: 150px;"><div class="scroll-bar" style="height: 129px; top: 0px;"></div></div><div class="scroll-content" style="max-height: 150px;">
+    @Html.Raw(HttpUtility.HtmlDecode(Model.Content))
+</div>
+    </div>
+
+    <div class="hr hr-double"></div>
+
+    <div class="message-attachment clearfix">
+        <div class="attachment-title">
+            <span class="blue bolder bigger-110">Attachment</span>
+            &nbsp;
+            
+        </div>
+
+        &nbsp;
+        @if (!string.IsNullOrEmpty(Model.File))
+        {
+            <ul class="attachment-list pull-left list-unstyled">
+                <li>
+                    <a href="" class="attached-file">
+                        <i class="ace-icon fa fa-file-o bigger-110"></i>
+                        <span class="attached-name">@Model.File</span>
+                    </a>
+
+                    <span class="action-buttons">
+                        <a href="#">
+                            <i class="ace-icon fa fa-download bigger-125 blue"></i>
+                        </a>
+
+                        <a href="#">
+                            <i class="ace-icon fa fa-trash-o bigger-125 red"></i>
+                        </a>
+                    </span>
+                </li>
+
+            </ul>
+        }
+
+    </div>
+</div>

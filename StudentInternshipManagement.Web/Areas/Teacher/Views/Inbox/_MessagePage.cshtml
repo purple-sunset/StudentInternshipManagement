@@ -1,0 +1,62 @@
+﻿@using PagedList.Mvc
+@using StudentInternshipManagement.Models.Constants
+@model PagedList.IPagedList<StudentInternshipManagement.Models.Entities.Message>
+
+@{
+        var type = (int) ViewBag.Type;
+        var target = string.Empty;
+        switch (type)
+        {
+            case 2:
+                target = "received-list";
+                break;
+            case 1:
+                target = "sent-list";
+                break;
+            case 3:
+                target = "draft-list";
+                break;
+            default:
+                target = "";
+                break;
+        }
+    }
+<div class="message-list-container">
+<div class="message-list">
+    @foreach (var item in Model)
+    {
+        <div class='message-item @(item.Status != MessageStatus.Read?"":"message-unread")'>
+            <label class="inline">
+                <input type="checkbox" class="ace" />
+                <span class="lbl"></span>
+            </label>
+
+            <i class="message-star ace-icon fa fa-star orange2"></i>
+            <span class="sender" title="">@(item.ReceiverId) </span>
+            <span class="time">@item.CreatedAt.ToString("dd/MM/yyyy HH:mm:ss")</span>
+
+            <span class="attachment" style='display: @(string.IsNullOrEmpty(item.File) ? "none":"inline-block")'>
+                <i class="ace-icon fa fa-paperclip"></i>
+            </span>
+
+            <span class="summary">
+                <a href='@($"Inbox/View/{item.Id}")'>
+                    <span class="text">
+                        @item.Title
+                    </span>
+                </a>
+            </span>
+        </div>
+    }
+</div>
+</div>
+
+<div class="message-footer clearfix">
+    @Html.PagedListPager(
+        Model,
+        page => Url.Action("GetMessagePage", new { page = page, type = type}),
+        PagedListRenderOptions.EnableUnobtrusiveAjaxReplacing(new AjaxOptions() { HttpMethod = "GET", UpdateTargetId = target })
+        )          
+</div>
+
+

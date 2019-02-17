@@ -1,0 +1,55 @@
+﻿@using StudentInternshipManagement.Web.Controllers
+@if (Request.IsAuthenticated)
+{
+    var controller = new BaseController();
+    string username = controller.CurrentUser.UserName;
+    string role = controller.CurrentRole;
+    string avatar = controller.CurrentUser.Avatar;
+
+
+    <ul class="nav ace-nav">
+        <li class="light-blue dropdown-modal">
+            <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                <img class="nav-user-photo" src='~/@($"Images/avatars/{avatar}")' alt='@($"{username}'s photo")'/>
+                <span class="user-info">
+                    <small>Chào mừng,</small>
+                    @username
+                </span>
+
+                <i class="ace-icon fa fa-caret-down"></i>
+            </a>
+
+            <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                <li>
+                    <a href='@($"/{role}/Profile/Index")'>
+                        <i class="ace-icon fa fa-user"></i>
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href='/Account/ChangePassword'>
+                        <i class="ace-icon fa fa-cog"></i>
+                        Đổi mật khẩu
+                    </a>
+                </li>
+                <li class="divider"></li>
+                <li>
+                    <a href="javascript:document.getElementById('logoutForm').submit()">
+                        <i class="ace-icon fa fa-power-off"></i>
+                        Đăng xuất
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    using (Html.BeginForm("LogOff", "Account", new {Area = ""}, FormMethod.Post, new {id = "logoutForm", @class = "navbar-right"}))
+    {
+        @Html.AntiForgeryToken()
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Log in", "Login", "Account", null, new {area = "", id = "loginLink"})</li>
+    </ul>
+}

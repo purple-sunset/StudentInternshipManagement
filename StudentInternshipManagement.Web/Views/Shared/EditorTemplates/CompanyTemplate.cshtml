@@ -1,0 +1,12 @@
+﻿@using Kendo.Mvc.UI
+@using Models
+@using StudentInternshipManagement.Models.Entities
+@model int
+@(Html.Kendo().ComboBoxFor(m => m)  
+      .Filter("contains")
+      .Placeholder("Chọn Công ty")
+      .Suggest(true)
+      .DataValueField("CompanyId")
+      .DataTextField("CompanyName")
+      .BindTo((IQueryable<Company>)ViewBag.Companies)
+      )

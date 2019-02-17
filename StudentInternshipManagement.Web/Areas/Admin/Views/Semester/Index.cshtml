@@ -1,0 +1,57 @@
+﻿@using Kendo.Mvc.UI
+@using StudentInternshipManagement.Models.Entities
+@{
+    ViewBag.Title = "Quản lý học kỳ";
+    ViewBag.Category = "Quản lý";
+    ViewBag.Section = "Học kỳ";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section Kendo
+{
+    @Styles.Render("~/Content/kendo/styles")
+    @Scripts.Render("~/Scripts/kendo/scripts")
+}
+
+
+@(Html.Kendo().Grid<Semester>()
+      .Name("grid")
+      .Columns(columns =>
+      {
+          columns.Bound(c => c.Id).Hidden(true);
+          columns.Bound(c => c.StartDate);
+          columns.Bound(c => c.EndDate);
+          columns.Command(command => { command.Edit(); command.Destroy(); }).Width(180);
+      })
+      .ToolBar(toolbar =>
+      {
+          toolbar.Create();
+      })
+      .Editable(editable => editable.Mode(GridEditMode.PopUp))
+      .Pageable()
+      .Sortable(sortable =>
+      {
+          sortable.SortMode(GridSortMode.SingleColumn);
+      })
+      .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
+      .Scrollable()
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model => model.Id(p => p.Id))
+          .Read(read => read.Action("Semesters_Read", "Semester"))
+          .Create(create => create.Action("Semesters_Create", "Semester"))
+          .Update(update => update.Action("Semesters_Update", "Semester"))
+          .Destroy(destroy => destroy.Action("Semesters_Destroy", "Semester"))
+      )
+      .Events(events => events
+          .Edit("onEdit")
+      ))
+
+<script type="text/javascript">
+
+    function onEdit(e) {
+        if (!e.model.isNew()) {
+            $('[name="Id"]').attr("readonly", true);
+        }
+    }
+</script>

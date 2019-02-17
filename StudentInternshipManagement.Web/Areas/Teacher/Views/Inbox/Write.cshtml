@@ -1,0 +1,144 @@
+﻿@using System.Activities.Expressions
+@using System.Net.Mail
+@using Kendo.Mvc.UI
+@using Microsoft.AspNet.Identity
+@model StudentInternshipManagement.Models.Entities.Message
+@{
+    ViewBag.Title = "Trao đổi thông tin";
+    ViewBag.Category = "Thực tập";
+    ViewBag.Section = "Sinh viên";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+    var student = (string)ViewBag.Student;
+    var username = User.Identity.GetUserName();
+}
+
+@section Kendo
+{
+    @Styles.Render("~/Content/kendo/styles")
+    @Scripts.Render("~/Scripts/kendo/scripts")
+}
+
+@using (Html.BeginForm("Write", "Inbox", FormMethod.Post, new {enctype = "multipart/form-data", @class = "form-horizontal message-form col-xs-12", id = "id-message-form" }))
+{
+    @Html.AntiForgeryToken()
+    <div id="id-message-new-navbar" class="message-navbar clearfix">
+        <div class="message-bar">
+            <div class="message-toolbar">
+                <button type="button" class="btn btn-xs btn-white btn-primary">
+                    <i class="ace-icon fa fa-floppy-o bigger-125"></i>
+                    <span class="bigger-110">Save Draft</span>
+                </button>
+
+                <button type="button" class="btn btn-xs btn-white btn-primary">
+                    <i class="ace-icon fa fa-times bigger-125 orange2"></i>
+                    <span class="bigger-110">Discard</span>
+                </button>
+            </div>
+        </div>
+
+        <div>
+            <div class="messagebar-item-left">
+                <a href="/Student/Inbox/Index" class="btn-back-message-list">
+                    <i class="ace-icon fa fa-arrow-left bigger-110 middle blue"></i>
+                    <b class="middle bigger-110">Back</b>
+                </a>
+            </div>
+
+            <div class="messagebar-item-right">
+                <span class="inline btn-send-message">
+                    <button type="submit" class="btn btn-sm btn-primary no-border btn-white btn-round">
+                        <span class="bigger-110">Send</span>
+
+                        <i class="ace-icon fa fa-arrow-right icon-on-right"></i>
+                    </button>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="space-10"></div>
+
+    <div>
+        <div class="form-group">
+            <label class="col-sm-3 control-label no-padding-right" for="form-field-recipient">Người nhận:</label>
+
+            <div class="col-sm-9">
+                <span class="input-icon">
+                    <input type="text" name="StudentId" id="form-field-recipient" value="@student" />
+                    <i class="ace-icon fa fa-user"></i>
+                </span>
+            </div>
+        </div>
+
+        <div class="form-group hidden" >
+                <label class="col-sm-3 control-label no-padding-right" for="form-field-recipient">Người gửi:</label>
+
+                <div class="col-sm-9">
+                    <span class="input-icon">
+                        <input type="text" name="TeacherId" id="form-field-recipient" value="@username" />
+                        <i class="ace-icon fa fa-user"></i>
+                    </span>
+                </div>
+            </div>
+
+        <div class="hr hr-18 dotted"></div>
+
+        <div class="form-group">
+            <label class="col-sm-3 control-label no-padding-right" for="form-field-subject">Tiêu đề:</label>
+
+            <div class="col-sm-6 col-xs-12">
+                <div class="input-icon block col-xs-12 no-padding">
+                    <input maxlength="100" type="text" class="col-xs-12" name="Title" id="form-field-subject" />
+                    <i class="ace-icon fa fa-comment-o"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="hr hr-18 dotted"></div>
+
+        <div class="form-group">
+            <label class="col-sm-3 control-label no-padding-right">
+                <span class="inline space-24 hidden-480"></span>
+                Nội dung:
+            </label>
+
+            <div class="col-sm-9">
+                @(Html.Kendo().Editor()
+                              .Name("Content")
+                              .HtmlAttributes(new { style = "height:300px", aria_label = "editor" })
+                              .Resizable(resizable => resizable.Content(true).Toolbar(true))
+                )
+            </div>
+        </div>
+
+        <div class="hr hr-18 dotted"></div>
+
+        <div class="form-group no-margin-bottom">
+            <label class="col-sm-3 control-label no-padding-right">Attachments:</label>
+
+            <div class="col-sm-9">
+                <div id="form-attachments">
+                    <input type="file" name="File" />
+                </div>
+            </div>
+        </div>
+
+        <div class="align-right">
+            <button id="id-add-attachment" type="button" class="btn btn-sm btn-danger">
+                <i class="ace-icon fa fa-paperclip bigger-140"></i>
+                Add Attachment
+            </button>
+        </div>
+
+        <div class="space"></div>
+    </div>
+}
+
+
+@section Scripts
+{
+    @Scripts.Render("~/Scripts/jquery.hotkeys.index.min.js")
+    @Scripts.Render("~/Scripts/bootstrap-wysiwyg.min.js")
+    @Scripts.Render("~/Scripts/site-extra.js")
+    @Scripts.Render("~/Scripts/site/message.js")
+
+}

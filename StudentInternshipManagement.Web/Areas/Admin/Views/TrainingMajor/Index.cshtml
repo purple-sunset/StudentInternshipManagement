@@ -1,0 +1,101 @@
+﻿@using Kendo.Mvc.UI
+@using StudentInternshipManagement.Models.Entities
+@{
+    ViewBag.Title = "Quản lý định hướng";
+    ViewBag.Category = "Quản lý";
+    ViewBag.Section = "Định hướng";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+@section Kendo
+{
+    @Styles.Render("~/Content/kendo/styles")
+    @Scripts.Render("~/Scripts/kendo/scripts")
+}
+
+
+@(Html.Kendo().Grid<TrainingMajor>()
+      .Name("grid")
+      .Columns(columns =>
+      {
+          columns.Bound(c => c.Id).Hidden(true);
+          columns.Bound(c => c.TrainingMajorName);
+          columns.ForeignKey(p => p.SubjectId, (IQueryable<Subject>) ViewBag.Subjects, "SubjectId", "SubjectName").EditorTemplateName("SubjectTemplate");
+          columns.Command(command =>
+          {
+              command.Edit();
+              command.Destroy();
+          }).Width(180);
+      })
+      .ToolBar(toolbar => { toolbar.Create(); })
+      .Editable(editable => editable.Mode(GridEditMode.PopUp))
+      .Pageable()
+      .Sortable(sortable => { sortable.SortMode(GridSortMode.SingleColumn); })
+      .Filterable(filterable => filterable.Mode(GridFilterMode.Row))
+      .Scrollable()
+      .Events(events => { events.Edit("onEdit"); })
+      .ClientDetailTemplateId("template")
+      .DataSource(dataSource => dataSource
+          .Ajax()
+          .Model(model => model.Id(p => p.Id))
+          .Read(read => read.Action("TrainingMajors_Read", "TrainingMajor"))
+          .Create(create => create.Action("TrainingMajors_Create", "TrainingMajor"))
+          .Update(update => update.Action("TrainingMajors_Update", "TrainingMajor"))
+          .Destroy(destroy => destroy.Action("TrainingMajors_Destroy", "TrainingMajor"))
+      )
+      .Events(events => events
+          .Edit("onEdit")
+      )
+      )
+
+<script id="template" type="text/kendo-tmpl">
+    @(Html.Kendo().Grid<CompanyTrainingMajor>()
+          .Name("grid_#=TrainingMajorId#") // template expression, to be evaluated in the master context
+          .Columns(columns =>
+          {
+              columns.ForeignKey(p => p.CompanyId, (IQueryable<Company>) ViewBag.Companies, "CompanyId", "CompanyName").EditorTemplateName("CompanyTemplate");
+              columns.Bound(o => o.TotalTraineeCount);
+              columns.Bound(c => c.AvailableTraineeCount);
+              columns.Command(command =>
+              {
+                  command.Edit();
+                  command.Destroy();
+              }).Width(180);
+          })
+          .ToolBar(toolbar => { toolbar.Create(); })
+          .Editable(editable => editable.Mode(GridEditMode.InLine))
+          .DataSource(dataSource => dataSource
+              .Ajax()
+              .PageSize(10)
+              .Model(model =>
+              {
+                  model.Id(p => p.CompanyId);
+                  model.Id(p => p.TrainingMajorId);
+              })
+              .Read(read => read.Action("CompanyTrainingMajors_Read", "CompanyTrainingMajor", new {majorId = "#=TrainingMajorId#"}))
+              .Create(create => create.Action("CompanyTrainingMajors_Create", "CompanyTrainingMajor"))
+              .Update(update => update.Action("CompanyTrainingMajors_Update", "CompanyTrainingMajor"))
+              .Destroy(destroy => destroy.Action("CompanyTrainingMajors_Destroy", "CompanyTrainingMajor"))
+          )
+          .Pageable()
+          .Sortable()
+          .Events(events => events
+              .Edit("onChildEdit")
+          )
+          .ToClientTemplate())
+</script>
+<script type="text/javascript">
+
+    function onEdit(e) {
+        $('[name="Id"]').attr("readonly", true);
+    }
+    function onChildEdit(e) {
+        if (e.model.isNew()) {
+            var parentGrid = $("#grid").data("kendoGrid");
+            var parentRow = e.container.closest(".k-detail-row").prev(".k-master-row");
+            var parentDataItem = parentGrid.dataItem(parentRow);
+
+            e.model.set("TrainingMajorId", parentDataItem.TrainingMajorId);
+        }
+    }
+</script>

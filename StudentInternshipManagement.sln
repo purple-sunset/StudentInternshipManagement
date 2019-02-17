@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInternshipManagement", "StudentInternshipManagement\StudentInternshipManagement.csproj", "{B5B05CAA-00C4-484D-8A25-E355B20790C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInternshipManagement.Web", "StudentInternshipManagement.Web\StudentInternshipManagement.Web.csproj", "{B5B05CAA-00C4-484D-8A25-E355B20790C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{00C097BE-838B-4C1D-9C62-03232FF77A40}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInternshipManagement.Models", "StudentInternshipManagement.Models\StudentInternshipManagement.Models.csproj", "{00C097BE-838B-4C1D-9C62-03232FF77A40}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utilities", "Utilities\Utilities.csproj", "{F2B9EFC1-B0A3-4D60-B1C9-184767D2D9AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInternshipManagement.Utilities", "StudentInternshipManagement.Utilities\StudentInternshipManagement.Utilities.csproj", "{F2B9EFC1-B0A3-4D60-B1C9-184767D2D9AB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{5EF0F288-7112-4185-A261-DB37061C8FC2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInternshipManagement.Repositories", "StudentInternshipManagement.Repositories\StudentInternshipManagement.Repositories.csproj", "{5EF0F288-7112-4185-A261-DB37061C8FC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{8F3749CF-ABBF-486B-8CCC-7E273D7F5FB1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StudentInternshipManagement.Services", "StudentInternshipManagement.Services\StudentInternshipManagement.Services.csproj", "{8F3749CF-ABBF-486B-8CCC-7E273D7F5FB1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

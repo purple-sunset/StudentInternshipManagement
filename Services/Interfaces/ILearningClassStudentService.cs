@@ -10,6 +10,6 @@ namespace Services.Interfaces
         LearningClassStudent GetById(int classId, int studentId);
         Task<LearningClassStudent> GetByIdAsync(int classId, int studentId);
         IQueryable<LearningClassStudent> GetByStudent(string studentCode);
-        IQueryable<LearningClassStudent> GetByTeacher(int teacherId);
+        IQueryable<LearningClassStudent> GetByTeacher(string teacherCode);
     }
 }

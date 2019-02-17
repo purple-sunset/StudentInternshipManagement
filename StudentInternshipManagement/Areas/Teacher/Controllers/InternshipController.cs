@@ -13,15 +13,23 @@ using Kendo.Mvc.UI;
  using Models.Entities;
  using Services;
  using Services.Implements;
+ using Services.Interfaces;
 
-namespace StudentInternshipManagement.Areas.Teacher.Controllers
+ namespace StudentInternshipManagement.Areas.Teacher.Controllers
 {
     [Authorize(Roles = "Teacher")]
     public class InternshipController : Controller
     {
-        private readonly LearningClassStudentService _service = new LearningClassStudentService();
-        private readonly StudentService _studentService = new StudentService();
-        private readonly LearningClassService _learningClassService = new LearningClassService();
+        private readonly ILearningClassStudentService _learningClassStudentService;
+        private readonly IStudentService _studentService;
+        private readonly ILearningClassService _learningClassService;
+
+        public InternshipController(ILearningClassStudentService learningClassStudentService, IStudentService studentService, ILearningClassService learningClassService)
+        {
+            _learningClassStudentService = learningClassStudentService;
+            _studentService = studentService;
+            _learningClassService = learningClassService;
+        }
 
         public ActionResult Index()
         {
@@ -33,7 +41,7 @@ namespace StudentInternshipManagement.Areas.Teacher.Controllers
         public ActionResult LearningClassStudents_Read([DataSourceRequest]DataSourceRequest request)
         {
             var id = User.Identity.GetUserName();
-            DataSourceResult result = _service.GetByTeacher(id).ToDataSourceResult(request, learningClassStudent => new {
+            DataSourceResult result = _learningClassStudentService.GetByTeacher(id).ToDataSourceResult(request, learningClassStudent => new {
                 ClassId = learningClassStudent.ClassId,
                 StudentId = learningClassStudent.StudentId,
                 MidTermPoint = learningClassStudent.MidTermPoint,
@@ -61,18 +69,10 @@ namespace StudentInternshipManagement.Areas.Teacher.Controllers
                 if (entity.TotalPoint != null)
                     entity.TotalPoint = (float) Math.Round(entity.TotalPoint.Value, 1);
 
-                _service.Update(entity);
+                _learningClassStudentService.Update(entity);
             }
 
             return Json(new[] { learningClassStudent }.ToDataSourceResult(request, ModelState));
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            _service.Dispose();
-            _studentService.Dispose();
-            _learningClassService.Dispose();
-            base.Dispose(disposing);
         }
     }
 }

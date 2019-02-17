@@ -57,7 +57,7 @@ namespace StudentInternshipManagement.Areas.Student.Controllers
         public ActionResult Write(string teacher)
         {
             var id = User.Identity.GetUserName();
-            ViewBag.TeacherList = _groupService.GetByStudent(id).Select(g => g.Teacher.Id);
+            ViewBag.TeacherList = _groupService.GetByStudent(id).Select(g => g.Teacher.TeacherCode);
             ViewBag.Teacher = teacher;
             return View();
         }

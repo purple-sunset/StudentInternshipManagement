@@ -11,15 +11,23 @@ using Kendo.Mvc.UI;
 using Models;
  using Services;
  using Services.Implements;
+ using Services.Interfaces;
 
-namespace StudentInternshipManagement.Areas.Student.Controllers
+ namespace StudentInternshipManagement.Areas.Student.Controllers
 {
     [Authorize(Roles = "Student")]
     public class TrainingMajorController : Controller
     {
-        private readonly TrainingMajorService _service=new TrainingMajorService();
-        private readonly SubjectService _subjectService=new SubjectService();
-        private readonly CompanyService _companyService = new CompanyService();
+        private readonly ITrainingMajorService _trainingMajorService;
+        private readonly ISubjectService _subjectService;
+        private readonly ICompanyService _companyService;
+
+        public TrainingMajorController(ITrainingMajorService trainingMajorService, ISubjectService subjectService, ICompanyService companyService)
+        {
+            _trainingMajorService = trainingMajorService;
+            _subjectService = subjectService;
+            _companyService = companyService;
+        }
 
         public ActionResult Index()
         {
@@ -30,10 +38,10 @@ namespace StudentInternshipManagement.Areas.Student.Controllers
 
         public ActionResult TrainingMajors_Read([DataSourceRequest]DataSourceRequest request)
         {
-            DataSourceResult result = _service.GetAll().ToDataSourceResult(request, trainingMajor => new {
-                TrainingMajorId = trainingMajor.TrainingMajorId,
-                TrainingMajorName = trainingMajor.TrainingMajorName,
-                SubjectId = trainingMajor.SubjectId
+            DataSourceResult result = _trainingMajorService.GetAll().ToDataSourceResult(request, trainingMajor => new {
+                trainingMajor.Id,
+                trainingMajor.TrainingMajorName,
+                trainingMajor.SubjectId
             });
 
             return Json(result);
@@ -41,14 +49,7 @@ namespace StudentInternshipManagement.Areas.Student.Controllers
 
         public ActionResult GetCompanyList(int majorId, [DataSourceRequest]DataSourceRequest request)
         {
-            return Json(_service.GetCompanyList(majorId), JsonRequestBehavior.AllowGet);
-        }
-        protected override void Dispose(bool disposing)
-        {
-            _service.Dispose();
-            _subjectService.Dispose();
-            _companyService.Dispose();
-            base.Dispose(disposing);
+            return Json(_trainingMajorService.GetCompanyList(majorId), JsonRequestBehavior.AllowGet);
         }
     }
 }

@@ -42,9 +42,9 @@ namespace Services.Implements
             return UnitOfWork.Repository<LearningClassStudent>().TableNoTracking.Where(s => s.Student.StudentCode == studentCode);
         }
 
-        public IQueryable<LearningClassStudent> GetByTeacher(int teacherId)
+        public IQueryable<LearningClassStudent> GetByTeacher(string teacherCode)
         {
-            IQueryable<Group> groups = _groupService.GetByTeacher(teacherId);
+            IQueryable<Group> groups = _groupService.GetByTeacher(teacherCode);
             IQueryable<int> students = groups.SelectMany(g => g.Members).Select(s => s.Id);
             return GetAll().Where(l => students.Contains(l.StudentId));
         }

@@ -1,4 +1,5 @@
-﻿@using PagedList.Mvc
+﻿@using Models.Constants
+@using PagedList.Mvc
 @model PagedList.IPagedList<Models.Entities.Message>
 
 @{
@@ -24,22 +25,22 @@
 <div class="message-list">
     @foreach (var item in Model)
     {
-        <div class='message-item @(item.IsRead?"":"message-unread")'>
+        <div class='message-item @(item.Status != MessageStatus.Read?"":"message-unread")'>
             <label class="inline">
                 <input type="checkbox" class="ace" />
                 <span class="lbl"></span>
             </label>
 
             <i class="message-star ace-icon fa fa-star orange2"></i>
-            <span class="sender" title="">@(item.Student.StudentName) </span>
-            <span class="time">@item.Time.ToString() </span>
+            <span class="sender" title="">@(item.ReceiverId) </span>
+            <span class="time">@item.CreatedAt.ToString("dd/MM/yyyy HH:mm:ss")</span>
 
             <span class="attachment" style='display: @(string.IsNullOrEmpty(item.File) ? "none":"inline-block")'>
                 <i class="ace-icon fa fa-paperclip"></i>
             </span>
 
             <span class="summary">
-                <a href='@($"Inbox/View/{item.MessageId}")'>
+                <a href='@($"Inbox/View/{item.Id}")'>
                     <span class="text">
                         @item.Title
                     </span>

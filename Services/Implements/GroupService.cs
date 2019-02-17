@@ -31,9 +31,9 @@ namespace Services.Implements
                 g.ClassId == internship.ClassId && g.Members.Select(s => s.Id).Contains(internship.StudentId));
         }
 
-        public IQueryable<Group> GetByTeacher(int teacherId)
+        public IQueryable<Group> GetByTeacher(string teacherCode)
         {
-            return UnitOfWork.Repository<Group>().TableNoTracking.Where(g => g.TeacherId == teacherId);
+            return UnitOfWork.Repository<Group>().TableNoTracking.Where(g => g.Teacher.TeacherCode == teacherCode);
         }
 
         public IQueryable<Group> GetBySemester(int semesterId)

@@ -8,19 +8,25 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Services;
 using Services.Implements;
+using Services.Interfaces;
 
 namespace StudentInternshipManagement.Areas.Teacher.Controllers
 {
     [Authorize(Roles = "Teacher")]
     public class ProfileController : Controller
     {
-        private readonly TeacherService _service = new TeacherService();
+        private readonly ITeacherService _teacherService;
 
         // GET: Student/Profile
+        public ProfileController(ITeacherService teacherService)
+        {
+            _teacherService = teacherService;
+        }
+
         public ActionResult Index()
         {
             var id = User.Identity.GetUserName();
-            var teacher = _service.GetById(id);
+            var teacher = _teacherService.GetByTeacherCode(id);
             var userManager = HttpContext.GetOwinContext().GetUserManager<ApplicationUserManager>();
             ViewBag.Email = userManager.FindByName(id).Email;
             return View(teacher);
@@ -29,7 +35,7 @@ namespace StudentInternshipManagement.Areas.Teacher.Controllers
         public ActionResult Edit()
         {
             var id = User.Identity.GetUserName();
-            var teacher = _service.GetById(id);
+            var teacher = _teacherService.GetByTeacherCode(id);
             return View(teacher);
         }
 
@@ -43,12 +49,12 @@ namespace StudentInternshipManagement.Areas.Teacher.Controllers
                 {
                     var extension = Path.GetExtension(file.FileName);
                     var physicalPath = Path.Combine(Server.MapPath("~/Images/avatars/"),
-                        $"{model.TeacherId}{extension}");
+                        $"{model.TeacherCode}{extension}");
                     file.SaveAs(physicalPath);
-                    model.Avatar = $"{model.TeacherId}{extension}";
+                    model.User.Avatar = $"{model.TeacherCode}{extension}";
                 }
 
-                ViewBag.Message = _service.Update(model) ? "Thành công" : "Thất bại";
+                ViewBag.Message = _teacherService.Update(model) ? "Thành công" : "Thất bại";
             }
 
             return RedirectToAction("Index");

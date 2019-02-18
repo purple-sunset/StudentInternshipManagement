@@ -33,8 +33,7 @@ namespace StudentInternshipManagement.Web.Areas.Student.Controllers
 
         public ActionResult LearningClasses_Read([DataSourceRequest] DataSourceRequest request)
         {
-            var id = User.Identity.GetUserName();
-            var result = _studentService.GetLearningClassBySemesterList(id).ToDataSourceResult(request, learningClass =>
+            var result = _studentService.GetLearningClassBySemesterList(CurrentStudentId).ToDataSourceResult(request, learningClass =>
                 new
                 {
                     ClassId = learningClass.Id,
@@ -48,9 +47,7 @@ namespace StudentInternshipManagement.Web.Areas.Student.Controllers
 
         public ActionResult GetAll([DataSourceRequest] DataSourceRequest request)
         {
-            var id = User.Identity.GetUserName();
-
-            return Json(_studentService.GetLearningClassBySemesterList(id), JsonRequestBehavior.AllowGet);
+            return Json(_studentService.GetLearningClassBySemesterList(CurrentStudentId), JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult GetTrainingMajorList(int classId, [DataSourceRequest] DataSourceRequest request)

@@ -26,7 +26,11 @@ namespace StudentInternshipManagement.Models.Contexts
             {
                 UserName = "20131070",
                 Email = "20131070@yopmail.com",
-                Avatar = "20131070.png"
+                Avatar = "20131070.png",
+                FullName = "Trần Văn Đức",
+                Address = "MK",
+                BirthDate = new DateTime(1995, 5, 14),
+                Phone = "0123456789"
             };
             userManager.Create(user, "Ab=123456789");
 
@@ -36,7 +40,11 @@ namespace StudentInternshipManagement.Models.Contexts
             {
                 UserName = "20130325",
                 Email = "20130325@yopmail.com",
-                Avatar = "20130325.png"
+                Avatar = "20130325.png",
+                FullName = "Cao Thị Ngân",
+                Address = "MK",
+                BirthDate = new DateTime(1995, 5, 14),
+                Phone = "0123456789",
             };
             userManager.Create(user2, "Ab=123456789");
 
@@ -46,7 +54,11 @@ namespace StudentInternshipManagement.Models.Contexts
             {
                 UserName = "20134713",
                 Email = "20134713@yopmail.com",
-                Avatar = "20134713.png"
+                Avatar = "20134713.png",
+                FullName = "Trần Danh Hoàn",
+                Address = "MK",
+                BirthDate = new DateTime(1995, 5, 14),
+                Phone = "0123456789",
             };
             userManager.Create(user3, "Ab=123456789");
 
@@ -56,7 +68,11 @@ namespace StudentInternshipManagement.Models.Contexts
             {
                 UserName = "20133847",
                 Email = "20133847@yopmail.com",
-                Avatar = "20133847.png"
+                Avatar = "20133847.png",
+                FullName = "Trần Đức Mạnh",
+                Address = "MK",
+                BirthDate = new DateTime(1995, 5, 14),
+                Phone = "0123456789",
             };
             userManager.Create(user4, "Ab=123456789");
 
@@ -66,7 +82,11 @@ namespace StudentInternshipManagement.Models.Contexts
             {
                 UserName = "20132820",
                 Email = "20132820@yopmail.com",
-                Avatar = "20132820.png"
+                Avatar = "20132820.png",
+                FullName = "Hà Văn Hoàn",
+                Address = "MK",
+                BirthDate = new DateTime(1995, 5, 14),
+                Phone = "0123456789",
             };
             userManager.Create(user5, "Ab=123456789");
 
@@ -76,7 +96,11 @@ namespace StudentInternshipManagement.Models.Contexts
             {
                 UserName = "20132231",
                 Email = "20132231@yopmail.com",
-                Avatar = "20132231.png"
+                Avatar = "20132231.png",
+                FullName = "Phạm Anh Tân",
+                Address = "MK",
+                BirthDate = new DateTime(1995, 5, 14),
+                Phone = "0123456789",
             };
             userManager.Create(user6, "Ab=123456789");
 
@@ -86,7 +110,11 @@ namespace StudentInternshipManagement.Models.Contexts
             {
                 UserName = "20130707",
                 Email = "20130707@yopmail.com",
-                Avatar = "20130707.png"
+                Avatar = "20130707.png",
+                FullName = "Triệu Văn Dũng",
+                Address = "MK",
+                BirthDate = new DateTime(1995, 5, 14),
+                Phone = "0123456789",
             };
             userManager.Create(user7, "Ab=123456789");
 
@@ -96,7 +124,11 @@ namespace StudentInternshipManagement.Models.Contexts
             {
                 UserName = "20132558",
                 Email = "20132558@yopmail.com",
-                Avatar = "20132558.png"
+                Avatar = "20132558.png",
+                FullName = "Mai Thị Giang",
+                Address = "MK",
+                BirthDate = new DateTime(1995, 5, 14),
+                Phone = "0123456789",
             };
             userManager.Create(user8, "Ab=123456789");
 
@@ -106,7 +138,11 @@ namespace StudentInternshipManagement.Models.Contexts
             {
                 UserName = "20134579",
                 Email = "20134579@yopmail.com",
-                Avatar = "20134579.png"
+                Avatar = "20134579.png",
+                FullName = "Nguyễn Thúc Huynh",
+                Address = "MK",
+                BirthDate = new DateTime(1995, 5, 14),
+                Phone = "0123456789",
             };
             userManager.Create(user9, "Ab=123456789");
 
@@ -116,7 +152,11 @@ namespace StudentInternshipManagement.Models.Contexts
             {
                 UserName = "TrungLD",
                 Email = "TrungLD@yopmail.com",
-                Avatar = "TrungLD.png"
+                Avatar = "TrungLD.png",
+                FullName = "Lê Đức Trung",
+                Address = "MK",
+                BirthDate = new DateTime(1995, 5, 14),
+                Phone = "0123456789",
             };
 
             userManager.Create(user10, "Ab=123456789");
@@ -127,7 +167,11 @@ namespace StudentInternshipManagement.Models.Contexts
             {
                 UserName = "Admin",
                 Email = "Admin@yopmail.com",
-                Avatar = "Admin.png"
+                Avatar = "Admin.png",
+                FullName = "Admin 1",
+                Address = "MK",
+                BirthDate = new DateTime(1995, 5, 14),
+                Phone = "0123456789",
             };
 
             userManager.Create(user12, "Ab=123456789");
@@ -185,108 +229,54 @@ namespace StudentInternshipManagement.Models.Contexts
             {
                 new Student
                 {
-                    StudentCode = "20131070",
-                    StudentName = "Trần Văn Đức",
-                    //Avatar = "20131070.png",
-                    Address = "MK",
-                    BirthDate = new DateTime(1995, 5, 14),
-                    Phone = "0123456789",
                     Cpa = 3.0f,
                     Program = "Kỹ sư",
                     Class = studenClasses[3]
                 },
                 new Student
                 {
-                    StudentCode = "20130325",
-                    StudentName = "Cao Thị Ngân",
-                    //Avatar = "20131070.png",
-                    Address = "MK",
-                    BirthDate = new DateTime(1995, 5, 14),
-                    Phone = "0123456789",
                     Cpa = 3.0f,
                     Program = "Kỹ sư",
                     Class = studenClasses[0]
                 },
                 new Student
                 {
-                    StudentCode = "20134713",
-                    StudentName = "Trần Danh Hoàn",
-                    //Avatar = "20131070.png",
-                    Address = "MK",
-                    BirthDate = new DateTime(1995, 5, 14),
-                    Phone = "0123456789",
                     Cpa = 3.0f,
                     Program = "Kỹ sư",
                     Class = studenClasses[1]
                 },
                 new Student
                 {
-                    StudentCode = "20133847",
-                    StudentName = "Trần Đức Mạnh",
-                    //Avatar = "20131070.png",
-                    Address = "MK",
-                    BirthDate = new DateTime(1995, 5, 14),
-                    Phone = "0123456789",
                     Cpa = 3.0f,
                     Program = "Kỹ sư",
                     Class = studenClasses[1]
                 },
                 new Student
                 {
-                    StudentCode = "20132820",
-                    StudentName = "Hà Văn Hoàn",
-                    //Avatar = "20131070.png",
-                    Address = "MK",
-                    BirthDate = new DateTime(1995, 5, 14),
-                    Phone = "0123456789",
                     Cpa = 3.0f,
                     Program = "Kỹ sư",
                     Class = studenClasses[1]
                 },
                 new Student
                 {
-                    StudentCode = "20132231",
-                    StudentName = "Phạm Anh Tân",
-                    //Avatar = "20131070.png",
-                    Address = "MK",
-                    BirthDate = new DateTime(1995, 5, 14),
-                    Phone = "0123456789",
                     Cpa = 3.0f,
                     Program = "Kỹ sư",
                     Class = studenClasses[2]
                 },
                 new Student
                 {
-                    StudentCode = "20130707",
-                    StudentName = "Triệu Văn Dũng",
-                    //Avatar = "20131070.png",
-                    Address = "MK",
-                    BirthDate = new DateTime(1995, 5, 14),
-                    Phone = "0123456789",
                     Cpa = 3.0f,
                     Program = "Kỹ sư",
                     Class = studenClasses[2]
                 },
                 new Student
                 {
-                    StudentCode = "20132558",
-                    StudentName = "Mai Thị Giang",
-                    //Avatar = "20131070.png",
-                    Address = "MK",
-                    BirthDate = new DateTime(1995, 5, 14),
-                    Phone = "0123456789",
                     Cpa = 3.0f,
                     Program = "Kỹ sư",
                     Class = studenClasses[3]
                 },
                 new Student
                 {
-                    StudentCode = "20134579",
-                    StudentName = "Nguyễn Thúc Huynh",
-                    //Avatar = "20131070.png",
-                    Address = "MK",
-                    BirthDate = new DateTime(1995, 5, 14),
-                    Phone = "0123456789",
                     Cpa = 3.0f,
                     Program = "Kỹ sư",
                     Class = studenClasses[3]
@@ -299,12 +289,7 @@ namespace StudentInternshipManagement.Models.Contexts
             {
                 new Admin
                 {
-                    AdminCode = "Admin",
-                    AdminName = "Admin 1",
-                    //Avatar = "avatar.png",
-                    Address = "MK",
-                    BirthDate = new DateTime(1995, 5, 14),
-                    Phone = "0123456789",
+                    
                     Department = departments[0]
                 }
             };
@@ -315,12 +300,7 @@ namespace StudentInternshipManagement.Models.Contexts
             {
                 new Teacher
                 {
-                    TeacherCode = "TrungLD",
-                    TeacherName = "Lê Đức Trung",
-                    //Avatar = "avatar.png",
-                    Address = "MK",
-                    BirthDate = new DateTime(1995, 5, 14),
-                    Phone = "0123456789",
+                    
                     Department = departments[0]
                 }
             };

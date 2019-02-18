@@ -58,11 +58,11 @@ namespace StudentInternshipManagement.Web.Areas.Student.Controllers
             var result = _groupService.GetById(groupId).Members.ToDataSourceResult(request, student => new
             {
                 student.Id,
-                student.StudentCode,
-                student.StudentName,
-                student.BirthDate,
-                student.Address,
-                student.Phone,
+                student.User.UserName,
+                student.User.FullName,
+                student.User.BirthDate,
+                student.User.Address,
+                student.User.Phone,
                 student.Cpa,
                 student.ClassId
             });

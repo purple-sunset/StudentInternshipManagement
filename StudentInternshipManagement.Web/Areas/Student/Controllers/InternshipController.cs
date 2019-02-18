@@ -50,15 +50,14 @@ namespace StudentInternshipManagement.Web.Areas.Student.Controllers
 
         public ActionResult Internships_Read([DataSourceRequest] DataSourceRequest request)
         {
-            var id = User.Identity.GetUserName();
-            var internships = _internshipService.GetByStudent(id);
+            var internships = _internshipService.GetByStudent(CurrentStudentId);
 
             var result = internships.ToDataSourceResult(request, internship => new
             {
                 internship.Id,
                 internship.RegistrationDate,
                 internship.Status,
-                Student = internship.Student.StudentName,
+                Student = internship.Student.User.FullName,
                 Class = internship.Class.ClassName,
                 Semester = internship.Class.SemesterId,
                 Company = internship.Major.Company.CompanyName,
@@ -70,7 +69,7 @@ namespace StudentInternshipManagement.Web.Areas.Student.Controllers
                 internship.Student.LearningClassStudents.FirstOrDefault(l => l.ClassId == internship.ClassId)
                     ?.TotalPoint,
                 Group = _groupService.GetByInternship(internship)?.GroupName,
-                Teacher = _groupService.GetByInternship(internship)?.Teacher.TeacherName
+                Teacher = _groupService.GetByInternship(internship)?.Teacher.User.FullName
             });
 
             return Json(result);

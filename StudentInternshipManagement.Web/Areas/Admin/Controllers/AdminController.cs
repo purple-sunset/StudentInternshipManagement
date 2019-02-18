@@ -26,16 +26,7 @@ namespace StudentInternshipManagement.Web.Areas.Admin.Controllers
 
         public ActionResult Admins_Read([DataSourceRequest] DataSourceRequest request)
         {
-            DataSourceResult result = _adminService.GetAll().ToDataSourceResult(request, admin => new
-            {
-                admin.Id,
-                admin.AdminCode,
-                admin.AdminName,
-                admin.BirthDate,
-                admin.Address,
-                admin.Phone,
-                admin.DepartmentId
-            });
+            DataSourceResult result = _adminService.GetAll().ToDataSourceResult(request);
 
             return Json(result);
         }

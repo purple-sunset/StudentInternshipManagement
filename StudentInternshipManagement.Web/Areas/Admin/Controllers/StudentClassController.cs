@@ -79,11 +79,11 @@ namespace StudentInternshipManagement.Web.Areas.Admin.Controllers
                 student => new
                 {
                     StudentId = student.Id,
-                    student.StudentCode,
-                    student.StudentName,
-                    student.BirthDate,
-                    student.Address,
-                    student.Phone,
+                    student.User.UserName,
+                    student.User.FullName,
+                    student.User.BirthDate,
+                    student.User.Address,
+                    student.User.Phone,
                     student.Cpa,
                     student.ClassId
                 });

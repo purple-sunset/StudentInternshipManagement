@@ -20,11 +20,11 @@
       .Columns(columns =>
       {
           columns.Bound(c => c.Id).Hidden(true);
-          columns.Bound(c => c.AdminCode);
-          columns.Bound(c => c.AdminName);
-          columns.Bound(c => c.BirthDate);
-          columns.Bound(c => c.Address);
-          columns.Bound(c => c.Phone);
+          columns.Bound(c => c.User.UserName);
+          columns.Bound(c => c.User.FullName);
+          columns.Bound(c => c.User.BirthDate);
+          columns.Bound(c => c.User.Address);
+          columns.Bound(c => c.User.Phone);
           columns.ForeignKey(p => p.DepartmentId, (IQueryable<Department>) ViewBag.Departments, "DepartmentId", "DepartmentName").EditorTemplateName("DepartmentTemplate");
           columns.Command(command =>
           {

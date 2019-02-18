@@ -30,17 +30,7 @@ namespace StudentInternshipManagement.Web.Areas.Admin.Controllers
 
         public ActionResult Students_Read([DataSourceRequest] DataSourceRequest request)
         {
-            DataSourceResult result = _studentService.GetAll().ToDataSourceResult(request, student => new
-            {
-                student.Id,
-                student.StudentCode,
-                student.StudentName,
-                student.BirthDate,
-                student.Address,
-                student.Phone,
-                student.Cpa,
-                student.ClassId
-            });
+            DataSourceResult result = _studentService.GetAll().ToDataSourceResult(request);
 
             return Json(result);
         }

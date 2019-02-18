@@ -82,7 +82,7 @@ namespace StudentInternshipManagement.Web.Areas.Admin.Controllers
                 internship.Id,
                 internship.RegistrationDate,
                 internship.Status,
-                Student = internship.Student.StudentName,
+                Student = internship.Student.User.FullName,
                 Class = internship.Class.ClassName,
                 Company = internship.Major.Company.CompanyName,
                 TrainingMajor = internship.Major.TrainingMajor.TrainingMajorName,
@@ -93,7 +93,7 @@ namespace StudentInternshipManagement.Web.Areas.Admin.Controllers
                 internship.Student.LearningClassStudents.FirstOrDefault(l => l.ClassId == internship.ClassId)
                     ?.TotalPoint,
                 Group = _groupService.GetByInternship(internship)?.GroupName,
-                Teacher = _groupService.GetByInternship(internship)?.Teacher.TeacherName
+                Teacher = _groupService.GetByInternship(internship)?.Teacher.User.FullName
             });
 
             return Json(result);

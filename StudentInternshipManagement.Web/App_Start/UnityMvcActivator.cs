@@ -3,10 +3,10 @@ using System.Web.Mvc;
 
 using Unity.AspNet.Mvc;
 
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(StudentInternshipManagement.UnityMvcActivator), nameof(StudentInternshipManagement.UnityMvcActivator.Start))]
-[assembly: WebActivatorEx.ApplicationShutdownMethod(typeof(StudentInternshipManagement.UnityMvcActivator), nameof(StudentInternshipManagement.UnityMvcActivator.Shutdown))]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(StudentInternshipManagement.Web.UnityMvcActivator), nameof(StudentInternshipManagement.Web.UnityMvcActivator.Start))]
+[assembly: WebActivatorEx.ApplicationShutdownMethod(typeof(StudentInternshipManagement.Web.UnityMvcActivator), nameof(StudentInternshipManagement.Web.UnityMvcActivator.Shutdown))]
 
-namespace StudentInternshipManagement
+namespace StudentInternshipManagement.Web
 {
     /// <summary>
     /// Provides the bootstrapping for integrating Unity with ASP.NET MVC.

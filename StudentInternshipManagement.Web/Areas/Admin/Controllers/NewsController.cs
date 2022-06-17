@@ -22,6 +22,11 @@ namespace StudentInternshipManagement.Web.Areas.Admin.Controllers
             return View();
         }
 
+        public ActionResult List()
+        {
+            return PartialView("_List");
+        }
+
         public ActionResult Newses_Read([DataSourceRequest] DataSourceRequest request)
         {
             DataSourceResult result = _newsService.GetAll().ToDataSourceResult(request, news => new

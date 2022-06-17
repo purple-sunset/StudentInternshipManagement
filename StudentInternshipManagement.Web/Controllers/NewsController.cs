@@ -22,6 +22,11 @@ namespace StudentInternshipManagement.Web.Controllers
             return View();
         }
 
+        public ActionResult List()
+        {
+            return PartialView("_List");
+        }
+
         public async Task<ActionResult> News_Read([DataSourceRequest]DataSourceRequest request)
         {
             IQueryable<News> products = _service.GetAll();

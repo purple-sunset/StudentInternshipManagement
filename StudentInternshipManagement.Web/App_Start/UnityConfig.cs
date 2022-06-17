@@ -1,24 +1,24 @@
-using System;
-using System.Data.Entity;
-using Unity;
-using Unity.Lifetime;
+using Hangfire;
+using Hangfire.Dashboard;
 using Microsoft.AspNet.Identity;
-using Unity.Injection;
-using System.Web;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.AspNet.Identity.Owin;
-using Microsoft.Owin.Security;
-using Hangfire.Dashboard;
-using Hangfire;
-using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin;
+using Microsoft.Owin.Security;
+using Microsoft.Owin.Security.Cookies;
 using StudentInternshipManagement.Models.Contexts;
 using StudentInternshipManagement.Models.Entities;
 using StudentInternshipManagement.Repositories.Implements;
 using StudentInternshipManagement.Services.Implements;
-using StudentInternshipManagement.Web;
+using System;
+using System.Data.Entity;
+using System.Web;
+using Unity;
+using Unity.AspNet.Mvc;
+using Unity.Injection;
+using Unity.Lifetime;
 
-namespace StudentInternshipManagement
+namespace StudentInternshipManagement.Web
 {
     /// <summary>
     /// Specifies the Unity configuration for the main container.
@@ -33,8 +33,6 @@ namespace StudentInternshipManagement
               RegisterTypes(container);
               return container;
           });
-
-        private static readonly LifetimeManager manager = new SingletonLifetimeManager(); 
 
         /// <summary>
         /// Configured Unity Container.
@@ -54,22 +52,17 @@ namespace StudentInternshipManagement
         /// </remarks>
         public static void RegisterTypes(IUnityContainer container)
         {
-            // NOTE: To load from web.config uncomment the line below.
-            // Make sure to add a Unity.Configuration to the using statements.
-            // container.LoadConfiguration();
+            //container.RegisterType<WebContext>(manager);
+            container.RegisterType<DbContext, WebContext>(new PerRequestLifetimeManager());
 
-            container.RegisterType<WebContext>(manager);
-            container.RegisterType<DbContext, WebContext>(manager);
-            
-            container.RegisterType<IAuthenticationManager>(
-                new InjectionFactory(c => HttpContext.Current.GetOwinContext().Authentication));
-            container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>(
-                new InjectionConstructor(typeof(DbContext)));
-            container.RegisterType<ApplicationSignInManager>(manager);
-            container.RegisterType<ApplicationUserManager>(manager);
+            container.RegisterFactory<IAuthenticationManager>(c => HttpContext.Current?.GetOwinContext()?.Authentication, new PerRequestLifetimeManager());
+            container.RegisterType<IUserStore<ApplicationUser>, UserStore<ApplicationUser>>(new PerRequestLifetimeManager());
+            container.RegisterType<ApplicationSignInManager>(new PerRequestLifetimeManager());
+            container.RegisterType<ApplicationUserManager>(new PerRequestLifetimeManager());
 
             container.RegisterInstance<CookieAuthenticationOptions>(new CookieAuthenticationOptions
             {
+                CookieSameSite = Microsoft.Owin.SameSiteMode.Lax,
                 AuthenticationType = DefaultAuthenticationTypes.ApplicationCookie,
                 LoginPath = new PathString("/Account/Login"),
                 Provider = new CookieAuthenticationProvider
@@ -80,40 +73,40 @@ namespace StudentInternshipManagement
                         validateInterval: TimeSpan.FromMinutes(30),
                         regenerateIdentity: (manager, user) => user.GenerateUserIdentityAsync(manager))
                 }
-            }, manager);
+            });
 
-            container.RegisterType<IDashboardAuthorizationFilter, HangfireAuthorizationFilter>();
-            container.RegisterInstance<DashboardOptions>(new DashboardOptions()
-            {
-                Authorization = new[] {container.Resolve<IDashboardAuthorizationFilter>()}
-            }, manager);
+            //container.RegisterType<IDashboardAuthorizationFilter, HangfireAuthorizationFilter>(new SingletonLifetimeManager());
+            //container.RegisterInstance<DashboardOptions>(new DashboardOptions()
+            //{
+            //    Authorization = new[] { container.Resolve<IDashboardAuthorizationFilter>() }
+            //}, new SingletonLifetimeManager());
 
-            container.RegisterType<IUserRepository, UserRepository>(manager);
-            container.RegisterType(typeof(IGenericRepository<>), typeof(GenericRepository<>), manager);
-            container.RegisterType<IUnitOfWork, UnitOfWork>(manager);
-            container.RegisterType(typeof(IGenericService<>), typeof(GenericService<>), manager);
-            container.RegisterType<IUserService, UserService>(manager);
-            container.RegisterType<IAdminService, AdminService>(manager);
-            container.RegisterType<ICompanyTrainingMajorService, CompanyTrainingMajorService>(manager);
-            container.RegisterType<ICompanyService, CompanyService>(manager);
-            container.RegisterType<ITrainingMajorService, TrainingMajorService>(manager);
-            container.RegisterType<IDepartmentService, DepartmentService>(manager);
-            container.RegisterType<IEmailHistoryService, EmailHistoryService>(manager);
-            container.RegisterType<IEmailTemplateService, EmailTemplateService>(manager);
-            container.RegisterType<IGroupService, GroupService>(manager);
-            container.RegisterType<ISemesterService, SemesterService>(manager);
-            container.RegisterType<ILearningClassService, LearningClassService>(manager);
-            container.RegisterType<ILearningClassStudentService, LearningClassStudentService>(manager);
-            container.RegisterType<IMessageService, MessageService>(manager);
-            container.RegisterType<INewsService, NewsService>(manager);
-            container.RegisterType<INotificationService, NotificationService>(manager);
-            container.RegisterType<IStatisticService, StatisticService>(manager);
-            container.RegisterType<IStudentClassService, StudentClassService>(manager);
-            container.RegisterType<IStudentService, StudentService>(manager);
-            container.RegisterType<ISubjectService, SubjectService>(manager);
-            container.RegisterType<ITeacherService, TeacherService>(manager);
-            container.RegisterType<IInternshipService, InternshipService>(manager);
-            container.RegisterType<IEmailService, EmailService>(manager);
+            container.RegisterType<IUserRepository, UserRepository>(new PerRequestLifetimeManager());
+            container.RegisterType(typeof(IGenericRepository<>), typeof(GenericRepository<>), new PerRequestLifetimeManager());
+            container.RegisterType<IUnitOfWork, UnitOfWork>(new PerRequestLifetimeManager());
+            container.RegisterType(typeof(IGenericService<>), typeof(GenericService<>), new PerRequestLifetimeManager());
+            container.RegisterType<IUserService, UserService>(new PerRequestLifetimeManager());
+            container.RegisterType<IAdminService, AdminService>(new PerRequestLifetimeManager());
+            container.RegisterType<ICompanyTrainingMajorService, CompanyTrainingMajorService>(new PerRequestLifetimeManager());
+            container.RegisterType<ICompanyService, CompanyService>(new PerRequestLifetimeManager());
+            container.RegisterType<ITrainingMajorService, TrainingMajorService>(new PerRequestLifetimeManager());
+            container.RegisterType<IDepartmentService, DepartmentService>(new PerRequestLifetimeManager());
+            container.RegisterType<IEmailHistoryService, EmailHistoryService>(new PerRequestLifetimeManager());
+            container.RegisterType<IEmailTemplateService, EmailTemplateService>(new PerRequestLifetimeManager());
+            container.RegisterType<IGroupService, GroupService>(new PerRequestLifetimeManager());
+            container.RegisterType<ISemesterService, SemesterService>(new PerRequestLifetimeManager());
+            container.RegisterType<ILearningClassService, LearningClassService>(new PerRequestLifetimeManager());
+            container.RegisterType<ILearningClassStudentService, LearningClassStudentService>(new PerRequestLifetimeManager());
+            container.RegisterType<IMessageService, MessageService>(new PerRequestLifetimeManager());
+            container.RegisterType<INewsService, NewsService>(new PerRequestLifetimeManager());
+            container.RegisterType<INotificationService, NotificationService>(new PerRequestLifetimeManager());
+            container.RegisterType<IStatisticService, StatisticService>(new PerRequestLifetimeManager());
+            container.RegisterType<IStudentClassService, StudentClassService>(new PerRequestLifetimeManager());
+            container.RegisterType<IStudentService, StudentService>(new PerRequestLifetimeManager());
+            container.RegisterType<ISubjectService, SubjectService>(new PerRequestLifetimeManager());
+            container.RegisterType<ITeacherService, TeacherService>(new PerRequestLifetimeManager());
+            container.RegisterType<IInternshipService, InternshipService>(new PerRequestLifetimeManager());
+            container.RegisterType<IEmailService, EmailService>(new PerRequestLifetimeManager());
         }
     }
 }

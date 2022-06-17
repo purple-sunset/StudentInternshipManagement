@@ -13,7 +13,7 @@ namespace StudentInternshipManagement.Web
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
-                namespaces: new[] { "StudentInternshipManagement.Controllers" }
+                namespaces: new[] { "StudentInternshipManagement.Web.Controllers" }
 
             );
         }

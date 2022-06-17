@@ -1,15 +1,4 @@
 ﻿@using StudentInternshipManagement.Models.Entities
-@{
-    Layout = "~/Views/Shared/_Layout.cshtml";
-    ViewBag.Title = "Tin tức";
-    ViewBag.Category = "Tin tức";
-    ViewBag.Section = "Tin tức";
-}
-
-@section Kendo {
-    @Styles.Render("~/Content/kendo/styles")
-    @Scripts.Render("~/Scripts/kendo/scripts")
-}
 
 @(Html.Kendo().ListView<News>()
       .Name("listView")

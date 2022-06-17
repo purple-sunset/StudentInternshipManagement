@@ -9,7 +9,7 @@
     if (Request.IsAuthenticated)
     {
         var controller = new BaseController();
-        string username = controller.CurrentUser.UserName;
+        string username = controller.CurrentUser?.UserName;
         role = controller.CurrentRole;
     }
 }
@@ -60,7 +60,7 @@
 
                     <div class="tab-content">
                         <div id="home" class="tab-pane active">
-                            @{ Html.RenderAction("Index", "News", new {areas = ""}); }
+                            @{ Html.RenderAction("List", "News", new { area = ""}); }
                         </div>
 
                     </div>

@@ -12,7 +12,7 @@ namespace StudentInternshipManagement.Web.Areas.Admin
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
                 new {action = "Index", id = UrlParameter.Optional},
-                new[] {"StudentInternshipManagement.Areas.Admin.Controllers"}
+                new[] { "StudentInternshipManagement.Web.Areas.Admin.Controllers" }
             );
         }
     }

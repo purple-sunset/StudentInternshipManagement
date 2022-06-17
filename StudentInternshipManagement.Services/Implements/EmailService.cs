@@ -15,8 +15,11 @@ namespace StudentInternshipManagement.Services.Implements
 
     public interface IEmailService
     {
+        void CreateProcessAttachment();
+        string CreateProcessCSV(IQueryable<Group> groups);
+        List<MailMessage> CreateProcessEmailToCompany();
+        List<MailMessage> CreateProcessEmailToTeacher();
         void SendCreateEmail();
-        void SendProcessEmail();
         Task SendResetPasswordMailAsync(ResetPasswordViewModel model);
     }
 
@@ -36,16 +39,14 @@ namespace StudentInternshipManagement.Services.Implements
         private readonly IEmailHistoryService _emailHistoryService;
         private readonly IGroupService _groupService;
 
-        private readonly IInternshipService _internshipService;
         private readonly ISemesterService _semesterService;
         private readonly ITeacherService _teacherService;
 
-        public EmailService(IInternshipService internshipService, ITeacherService teacherService,
+        public EmailService(ITeacherService teacherService,
             ISemesterService semesterService, IGroupService groupService,
             ICompanyTrainingMajorService companyTrainingMajorService, ICompanyService companyService,
             IEmailHistoryService emailHistoryService)
         {
-            _internshipService = internshipService;
             _teacherService = teacherService;
             _semesterService = semesterService;
             _groupService = groupService;
@@ -74,22 +75,7 @@ namespace StudentInternshipManagement.Services.Implements
             throw new NotImplementedException();
         }
 
-        public void SendProcessEmail()
-        {
-            CreateProcessAttachment();
-
-            List<MailMessage> mailToCompanies = CreateProcessEmailToCompany();
-            foreach (MailMessage mail in mailToCompanies) _emailHistoryService.CreateAndSend(mail);
-
-            List<MailMessage> mailToTeachers = CreateProcessEmailToTeacher();
-            foreach (MailMessage mail in mailToTeachers) _emailHistoryService.CreateAndSend(mail);
-
-            MailMessage mailToStudents = CreateProcessEmailToStudent();
-            _emailHistoryService.CreateAndSend(mailToStudents);
-        }
-
-
-        private void CreateProcessAttachment()
+        public void CreateProcessAttachment()
         {
             int semester = _semesterService.GetLatest().Id;
             IQueryable<Group> groups = _groupService.GetBySemester(semester);
@@ -117,7 +103,7 @@ namespace StudentInternshipManagement.Services.Implements
         }
 
         // ReSharper disable once InconsistentNaming
-        private string CreateProcessCSV(IQueryable<Group> groups)
+        public string CreateProcessCSV(IQueryable<Group> groups)
         {
             var sb = new StringBuilder();
             sb.AppendLine(Header);
@@ -134,7 +120,7 @@ namespace StudentInternshipManagement.Services.Implements
             return sb.ToString();
         }
 
-        private List<MailMessage> CreateProcessEmailToCompany()
+        public List<MailMessage> CreateProcessEmailToCompany()
         {
             var result = new List<MailMessage>();
 
@@ -161,7 +147,7 @@ namespace StudentInternshipManagement.Services.Implements
             return result;
         }
 
-        private List<MailMessage> CreateProcessEmailToTeacher()
+        public List<MailMessage> CreateProcessEmailToTeacher()
         {
             var result = new List<MailMessage>();
 
@@ -188,28 +174,6 @@ namespace StudentInternshipManagement.Services.Implements
             }
 
             return result;
-        }
-
-        private MailMessage CreateProcessEmailToStudent()
-        {
-            IQueryable<Student> students = _internshipService.GetByLatestSemester().Select(i => i.Student);
-            int semester = _semesterService.GetLatest().Id;
-            var mail = new MailMessage();
-
-            foreach (Student st in students)
-            {
-                mail.Subject = $"Thông tin phân công hướng dẫn thực tập kỳ {semester}";
-
-                var emailBody = new StringBuilder();
-                emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi kết quả đăng ký thực tâp");
-                emailBody.Append(@"<p>Nhấn vào liên kết để xem thông tin thực tập kỳ này: <a href = '" +
-                                 @"http://sim.hust.edu.vn/Student/Internship" + "'> thực tập </a></p>");
-                mail.IsBodyHtml = true;
-                mail.Body = emailBody.ToString();
-                mail.To.Add(new MailAddress(st.User.Email));
-            }
-
-            return mail;
         }
     }
 

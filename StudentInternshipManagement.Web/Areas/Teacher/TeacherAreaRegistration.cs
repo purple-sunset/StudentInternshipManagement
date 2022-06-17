@@ -17,7 +17,8 @@ namespace StudentInternshipManagement.Web.Areas.Teacher
             context.MapRoute(
                 "Teacher_default",
                 "Teacher/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { action = "Index", id = UrlParameter.Optional },
+                new[] { "StudentInternshipManagement.Web.Areas.Teacher.Controllers" }
             );
         }
     }

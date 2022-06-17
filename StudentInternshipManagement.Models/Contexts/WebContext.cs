@@ -1,4 +1,6 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using Microsoft.AspNet.Identity.EntityFramework;
 using StudentInternshipManagement.Models.Entities;
 
@@ -8,15 +10,16 @@ namespace StudentInternshipManagement.Models.Contexts
     {
         public WebContext() : base("name=StudentInternshipManagement")
         {
-            Database.SetInitializer(new DataInitializer());
         }
 
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
-        //    modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+            modelBuilder.Conventions.Remove<ManyToManyCascadeDeleteConvention>();
 
-        //}
+            modelBuilder.Properties<DateTime>().Configure(c => c.HasColumnType("datetime2"));
+        }
 
         public DbSet<Student> Students { get; set; }
 

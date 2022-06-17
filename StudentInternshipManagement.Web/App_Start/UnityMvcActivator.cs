@@ -3,10 +3,10 @@ using System.Web.Mvc;
 
 using Unity.AspNet.Mvc;
 
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(StudentInternshipManagement.UnityMvcActivator), nameof(StudentInternshipManagement.UnityMvcActivator.Start))]
-[assembly: WebActivatorEx.ApplicationShutdownMethod(typeof(StudentInternshipManagement.UnityMvcActivator), nameof(StudentInternshipManagement.UnityMvcActivator.Shutdown))]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(StudentInternshipManagement.Web.UnityMvcActivator), nameof(StudentInternshipManagement.Web.UnityMvcActivator.Start))]
+[assembly: WebActivatorEx.ApplicationShutdownMethod(typeof(StudentInternshipManagement.Web.UnityMvcActivator), nameof(StudentInternshipManagement.Web.UnityMvcActivator.Shutdown))]
 
-namespace StudentInternshipManagement
+namespace StudentInternshipManagement.Web
 {
     /// <summary>
     /// Provides the bootstrapping for integrating Unity with ASP.NET MVC.
@@ -24,7 +24,7 @@ namespace StudentInternshipManagement
             DependencyResolver.SetResolver(new UnityDependencyResolver(UnityConfig.Container));
 
             // TODO: Uncomment if you want to use PerRequestLifetimeManager
-            // Microsoft.Web.Infrastructure.DynamicModuleHelper.DynamicModuleUtility.RegisterModule(typeof(UnityPerRequestHttpModule));
+            //Microsoft.Web.Infrastructure.DynamicModuleHelper.DynamicModuleUtility.RegisterModule(typeof(UnityPerRequestHttpModule));
         }
 
         /// <summary>

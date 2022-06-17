@@ -1,16 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.EntityFramework;
-using StudentInternshipManagement.Models.Constants;
-using StudentInternshipManagement.Models.Entities;
-
-namespace StudentInternshipManagement.Models.Contexts
+﻿namespace StudentInternshipManagement.Models.Migrations
 {
-    public class DataInitializer : DropCreateDatabaseIfModelChanges<WebContext>
+    using System;
+    using System.Data.Entity.Migrations;
+    using System.Collections.Generic;
+    using Microsoft.AspNet.Identity;
+    using Microsoft.AspNet.Identity.EntityFramework;
+    using StudentInternshipManagement.Models.Constants;
+    using StudentInternshipManagement.Models.Entities;
+
+    internal sealed class Configuration : DbMigrationsConfiguration<StudentInternshipManagement.Models.Contexts.WebContext>
     {
-        protected override void Seed(WebContext context)
+        public Configuration()
+        {
+            AutomaticMigrationsEnabled = false;
+        }
+
+        protected override void Seed(StudentInternshipManagement.Models.Contexts.WebContext context)
         {
             var roleStore = new RoleStore<IdentityRole>(context);
             var roleManager = new RoleManager<IdentityRole>(roleStore);
@@ -289,7 +294,7 @@ namespace StudentInternshipManagement.Models.Contexts
             {
                 new Admin
                 {
-                    
+
                     Department = departments[0]
                 }
             };
@@ -300,7 +305,7 @@ namespace StudentInternshipManagement.Models.Contexts
             {
                 new Teacher
                 {
-                    
+
                     Department = departments[0]
                 }
             };

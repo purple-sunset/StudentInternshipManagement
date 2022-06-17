@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using System.Net.Mail;
+using System.Text;
 using StudentInternshipManagement.Models.Constants;
 using StudentInternshipManagement.Models.Entities;
 using StudentInternshipManagement.Repositories.Implements;
@@ -28,16 +30,18 @@ namespace StudentInternshipManagement.Services.Implements
     {
         private readonly IEmailService _emailService;
         private readonly ISemesterService _semesterService;
+        private readonly IEmailHistoryService _emailHistoryService;
 
         public InternshipService(IUnitOfWork unitOfWork) : base(unitOfWork)
         {
         }
 
-        public InternshipService(IUnitOfWork unitOfWork, ISemesterService semesterService, IEmailService emailService) :
+        public InternshipService(IUnitOfWork unitOfWork, ISemesterService semesterService, IEmailService emailService, IEmailHistoryService emailHistoryService) :
             base(unitOfWork)
         {
             _semesterService = semesterService;
             _emailService = emailService;
+            _emailHistoryService = emailHistoryService;
         }
 
         public IQueryable<Internship> GetByStudent(int studentId)
@@ -60,7 +64,7 @@ namespace StudentInternshipManagement.Services.Implements
         {
             AssignInternship();
             CreateGroup();
-            _emailService.SendProcessEmail();
+            SendProcessEmail();
         }
 
         public void AssignInternship()
@@ -165,6 +169,42 @@ namespace StudentInternshipManagement.Services.Implements
                     groupId++;
                 }
             }
+        }
+
+        public void SendProcessEmail()
+        {
+            _emailService.CreateProcessAttachment();
+
+            List<MailMessage> mailToCompanies = _emailService.CreateProcessEmailToCompany();
+            foreach (MailMessage mail in mailToCompanies) _emailHistoryService.CreateAndSend(mail);
+
+            List<MailMessage> mailToTeachers = _emailService.CreateProcessEmailToTeacher();
+            foreach (MailMessage mail in mailToTeachers) _emailHistoryService.CreateAndSend(mail);
+
+            MailMessage mailToStudents = CreateProcessEmailToStudent();
+            _emailHistoryService.CreateAndSend(mailToStudents);
+        }
+
+        private MailMessage CreateProcessEmailToStudent()
+        {
+            IQueryable<Student> students = GetByLatestSemester().Select(i => i.Student);
+            int semester = _semesterService.GetLatest().Id;
+            var mail = new MailMessage();
+
+            foreach (Student st in students)
+            {
+                mail.Subject = $"Thông tin phân công hướng dẫn thực tập kỳ {semester}";
+
+                var emailBody = new StringBuilder();
+                emailBody.AppendLine("Trường đại học Bách Khoa Hà Nội gửi kết quả đăng ký thực tâp");
+                emailBody.Append(@"<p>Nhấn vào liên kết để xem thông tin thực tập kỳ này: <a href = '" +
+                                 @"http://sim.hust.edu.vn/Student/Internship" + "'> thực tập </a></p>");
+                mail.IsBodyHtml = true;
+                mail.Body = emailBody.ToString();
+                mail.To.Add(new MailAddress(st.User.Email));
+            }
+
+            return mail;
         }
     }
 

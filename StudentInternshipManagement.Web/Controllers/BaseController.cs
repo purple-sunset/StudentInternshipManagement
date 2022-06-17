@@ -22,14 +22,18 @@ namespace StudentInternshipManagement.Web.Controllers
             _userService = userService;
         }
 
-        public string CurrentUserId => User.Identity.GetUserId();
+        public string CurrentUserId => User?.Identity?.GetUserId();
 
         public ApplicationUser CurrentUser
         {
             get
             {
-                string id = User.Identity.GetUserId();
-                return _userService.GetById(id);
+                string id = User?.Identity?.GetUserId();
+                if(id != null)
+                {
+                    return _userService.GetById(id);
+                }
+                return null;
             }
         }
 
@@ -37,8 +41,12 @@ namespace StudentInternshipManagement.Web.Controllers
         {
             get
             {
-                return ((ClaimsIdentity) User.Identity).Claims.Where(c => c.Type == ClaimTypes.Role)
+                if(User != null && User.Identity != null)
+                {
+                    return ((ClaimsIdentity)User.Identity).Claims.Where(c => c.Type == ClaimTypes.Role)
                     .Select(c => c.Value).FirstOrDefault();
+                }
+                return string.Empty;
             }
         }
 

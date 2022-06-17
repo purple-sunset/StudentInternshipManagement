@@ -18,9 +18,9 @@ namespace StudentInternshipManagement.Web
                 "~/Content/site2.css"));
 
             bundles.Add(new StyleBundle("~/Content/kendo/styles").Include(
-                "~/Content/kendo/{version}/kendo.common.min.css",
-                "~/Content/kendo/{version}/kendo.mobile.all.min.css",
-                "~/Content/kendo/{version}/kendo.default.min.css"));
+                "~/Content/kendo/2019.1.115/kendo.common.min.css",
+                "~/Content/kendo/2019.1.115/kendo.mobile.all.min.css",
+                "~/Content/kendo/2019.1.115/kendo.default.min.css"));
 
             bundles.Add(new ScriptBundle("~/Script/jquery").Include(
                 "~/Scripts/jquery-{version}.js"));
@@ -38,10 +38,10 @@ namespace StudentInternshipManagement.Web
                 "~/Scripts/respond.js"));
 
             bundles.Add(new ScriptBundle("~/Scripts/kendo/scripts").Include(
-                "~/Scripts/kendo/{version}/jszip.min.js",
-                "~/Scripts/kendo/{version}/kendo.all.min.js",
-                "~/Scripts/kendo/{version}/kendo.aspnetmvc.min.js",
-                "~/Scripts/kendo/{version}/cultures/kendo.culture.vi-VN.min.js",
+                "~/Scripts/kendo/2019.1.115/jszip.min.js",
+                "~/Scripts/kendo/2019.1.115/kendo.all.min.js",
+                "~/Scripts/kendo/2019.1.115/kendo.aspnetmvc.min.js",
+                "~/Scripts/kendo/2019.1.115/cultures/kendo.culture.vi-VN.min.js",
                 "~/Scripts/kendo.modernizr.custom.js",
                 "~/Scripts/site/kendo_culture.js"));
 

@@ -8,14 +8,14 @@
     using StudentInternshipManagement.Models.Constants;
     using StudentInternshipManagement.Models.Entities;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<StudentInternshipManagement.Models.Contexts.WebContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<Contexts.WebContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(StudentInternshipManagement.Models.Contexts.WebContext context)
+        protected override void Seed(Contexts.WebContext context)
         {
             var roleStore = new RoleStore<IdentityRole>(context);
             var roleManager = new RoleManager<IdentityRole>(roleStore);
